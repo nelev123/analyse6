@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+
+<subsection>
+  <title>Partiële integratie</title>
+  <p>
+    Stel dat je de onbepaalde integraal <m>\int x \sin x \; dx</m> wil
+    berekenen. Het product <m>x \sin x</m> is één van de
+    termen die je krijgt bij het afleiden van <m>- x \cos x</m>. De andere term
+    is makkelijk te integreren en je kan deze integraal dus als volgt
+    berekenen:
+    <md>
+      <mrow>  \amp D(-x \cos x) = - \cos x + x \sin x</mrow>
+      <mrow>\Rightarrow \amp -x \cos x = -\int \cos x \; dx + \int x \sin x \; dx </mrow>
+      <mrow>\Rightarrow \amp \int x \sin x \; dx = - x \cos x + \int \cos x \; dx</mrow>
+      <mrow>\Rightarrow \amp \int x \sin x \; dx = - x \cos x + \int \cos x \; dx</mrow>
+      <mrow>\Rightarrow \amp \int x \sin x \; dx = - x \cos x + \sin x + c </mrow>
+    </md>
+  </p>
+  <p>
+    Deze techniek wordt partiële integratie genoemd. Het afleiden van de
+    algemene formule verloopt op dezelfde manier:
+    <md>
+      <mrow>  \amp (f(x) \cdot g(x))' = f'(x)\cdot g(x)+f(x) \cdot g'(x)</mrow>
+      <mrow>\Rightarrow \; \amp f(x) \cdot g(x)= \int f'(x) \cdot g(x) \; dx + \int f(x) \cdot g'(x) \; dx</mrow>
+      <mrow>\Rightarrow \; \amp \int f(x) \cdot g'(x) \; dx  = f(x) \cdot g(x) - \int f'(x) \cdot g(x) \; dx</mrow>
+    </md>
+    Partiële integratie werkt natuurlijk enkel maar als <m>g(x)</m> kan bepaald worden en als de integraal <m>\int f'(x) \cdot g(x) \; dx</m> verder kan uitgerekend worden.
+  </p>
+  <assemblage>
+    <title>Partiële integratie</title>
+    <p>
+      Partiële integratie is een techniek om een integraal stapsgewijs te berekenen:
+      <me>
+        \int f(x) \cdot g'(x) \; dx  = f(x) \cdot g(x) - \int f'(x) \cdot g(x) \; dx
+      </me>
+      of gewoon kortweg:
+        <m>\int f dg = fg - \int g df</m>
+    </p>
+    <p>
+      Voor een bepaalde integraal krijgen we
+      <md>
+        <mrow>\int_a^b f(x) \cdot g'(x) \; dx  = \amp f(x) \cdot g(x) \Bigg\rvert_a^b - \int_a^b f'(x) \cdot g(x) \; dx</mrow>
+        <mrow> = \amp f(b)g(b)-f(a)g(a)- \int_a^b f'(x) \cdot g(x) \; dx</mrow>
+      </md>
+    </p>
+  </assemblage>
+  <example>
+    <p>
+      Soms leidt partiële integratie tot een vergelijking met de gevraagde integraal als onbekende. Als voorbeeld berekenen we de integraal <m>\int \sin^3 x \; dx</m>:
+      <md>
+        <mrow>\int \sin^3 x \; dx = \amp \int \sin^2 x \cdot \sin x \; dx</mrow>
+        <mrow>= \amp \; \sin^2 x \cdot (-\cos x) + \int 2 \sin x \cdot \cos^2 x \; dx</mrow>
+        <mrow>= \amp \; -\sin^2 x \cdot \cos x + 2 \int \sin x (1-\sin^2 x) \; dx</mrow>
+        <mrow>= \amp \; -\sin^2 x \cdot \cos x + 2 \int \sin x \; dx - 2\int \sin^3 x \; dx</mrow>
+      </md>
+      Stellen we nu <m>\int \sin^3 x \; dx=I</m> dan krijgen we de vergelijking
+      <md>
+        <mrow>\amp 3I=-\sin^2 x \cdot \cos x - 2 \cos x </mrow>
+        <mrow>\Leftrightarrow \; \amp 3I=-(1-\cos^2 x)\cos x -2\cos x</mrow>
+        <mrow>\Leftrightarrow \; \amp I=-\cos x +\frac{\cos^3 x}{3}</mrow>
+      </md>
+    </p>
+  </example>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande integralen met partiële integratie:
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \int x \cos x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int x^2 \sin 2x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int_0^{\pi} (x^3+1) \sin x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \cos^3 x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int x \sin^2 x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \cos^4 x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{x}{\sin^2 x} \; dx</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          (enkel voor 7u) Bewijs onderstaande recursieformules:
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \int \sin^{n}x \; dx=-\dfrac{1}{n} \sin^{n-1} x \cdot \cos x + \frac{n-1}{n}\int \sin^{n-2}x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \tan^n x \; dx=\dfrac{1}{n-1} \tan^{n-1} x - \int \tan^{n-2} x \; dx</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          (enkel voor 7u) Bereken <m>\int \sin^5 x \; dx</m> met bovenstaande recursieformule.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+</subsection>

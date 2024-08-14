@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="bepaaldeintegraal" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title>De bepaalde integraal</title>
+
+
+<section xml:id="definitie-oppervlakte">
+  <title>Oppervlakte onder de grafiek van een functie</title>
+  <introduction>
+    <p>
+      In dit hoofdstuk leer je hoe je de oppervlakte onder de grafiek van een functie kan berekenen. Dit leidt meteen ook tot een formele definitie voor het begrip <q>oppervlakte</q>. We tonen ook aan dat er een eenvoudig verband bestaat tussen het berekenen van oppervlakten en het afleiden van functies en benutten dit om oppervlakten te berekenen.
+    </p>
+
+    <activity>
+      <title>Wat is oppervlakte?</title>
+      <task>
+        <p>
+          Hoe bereken je de oppervlakte van een trapezium?
+        </p>
+      </task>
+      <task>
+        <p>
+          Probeer een definitie te formuleren voor het begrip <term>oppervlakte</term>.
+        </p>
+      </task>
+    </activity>
+
+    <p>
+      De oppervlakte berekenen van figuren die begrensd worden door lijnstukken is vrij eenvoudig. Nauwkeurig formuleren wat de betekenis is van oppervlakte en de oppervlakte berekenen van figuren die begrensd worden door kromme lijnen zijn echter moeilijke wiskundige problemen.
+    </p>
+
+    <sidebyside widths="60% 35%" margins="0% 0%" valign="middle">
+      <p>
+         We beginnen met ons af te vragen hoe we de oppervlakte kunnen berekenen van het gebied ingesloten door de grafiek van <m>f(x)</m>, de <m>x</m>-as en de rechten <m>x=1</m> en <m>x=4</m> (zie nevenstaande tekening). Voorlopig beperken we ons tot veeltermfucties en intervallen waarvoor <m>f(x)</m> overal positief is.  Als we het interval <m>[1,4]</m> verdelen in een aantal equidistante deelintervallen, dan kunnnen we de opppervlakte benaderen door de som van de oppervlakten van een aantal rechthoeken. Hoe groter het aantal deelintervallen, hoe beter de benadering van de oppervlakte zal zijn:
+      </p>
+      <image xml:id="fig-oppervlakte-1">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}[
+              xtick={0,...,5},ytick={5,10,15},
+              y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+              enlargelimits=true,
+              axis lines=middle,
+              clip=false,
+              domain=0:5,
+              axis on top,
+              xlabel=$x$,
+              ylabel=$f(x)$
+              ]
+          \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+          \addplot[smooth,fill=green!20!,domain=1:4,samples=100]{(x+1)*(x-2)*(x-4)+5}\closedcycle;
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </sidebyside>
+
+    <sidebyside widths="32% 32% 32%" margins="auto">
+      <image xml:id="fig-oppervlakte-1a">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}[
+              xtick={0,...,5},ytick={5,10,15},
+              y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+              enlargelimits=true,
+              axis lines=middle,
+              clip=false,
+              domain=0:5,
+              axis on top,
+              xlabel=$x$,
+              ylabel=$f(x)$
+              ]
+          \addplot [draw=green, fill=green!20, ybar interval, domain=1:4,samples=8]
+              {(x+1)*(x-2)*(x-4)+5}\closedcycle;
+          \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+      <image xml:id="fig-oppervlakte-1b">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}[
+              xtick={0,...,5},ytick={5,10,15},
+              y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+              enlargelimits=true,
+              axis lines=middle,
+              clip=false,
+              domain=0:5,
+              axis on top,
+              xlabel=$x$,
+              ylabel=$f(x)$
+              ]
+          \addplot [draw=green, fill=green!20, ybar interval, domain=1:4,samples=16]
+              {(x+1)*(x-2)*(x-4)+5}\closedcycle;
+          \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+      <image xml:id="fig-oppervlakte-1c">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}[
+              xtick={0,...,5},ytick={5,10,15},
+              y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+              enlargelimits=true,
+              axis lines=middle,
+              clip=false,
+              domain=0:5,
+              axis on top,
+              xlabel=$x$,
+              ylabel=$f(x)$
+              ]
+          \addplot [draw=green, fill=green!20, ybar interval, domain=1:4,samples=32]
+              {(x+1)*(x-2)*(x-4)+5}\closedcycle;
+          \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </sidebyside>
+
+    <p>
+      In bovenstaand voorbeeld wordt de linkergrens van elk deelinterval gebruikt om de hoogte van elke rechthoek te berekenen, maar we kunnen hiervoor gelijk welk ander punt van het interval gebruiken.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Riemannsommen</title>
+    <p>
+      Gegeven het gebied ingesloten door de grafiek van een functie <m>f(x)</m>, de <m>x</m>-as en de rechten <m>x=a</m> en <m>x=b</m>. Bovendien geldt dat <m>f(x)>0</m> in het interval <m>[a,b]</m> en dat <m>a \le b</m>.  We verdelen het interval <m>[a,b]</m> in <m>n</m> gelijke deelintervallen met breedte <m>\Delta x =\dfrac{b-a}{n}</m> en stellen de linkergrenzen<fn>Dit is een keuze. In principe kunnen we een willekeurig punt van elk deelinterval gebruiken.</fn> van elk deelinterval voor door <m>x_i</m> met <m>i=1,\ldots,n</m>. De som
+      <me>
+        f(x_1) \Delta x + f(x_2) \Delta x + \ldots + f(x_{n}) \Delta x
+      </me> is een benadering voor de oppervlakte onder de grafiek en noemen we een eindige Riemannsom.
+    </p>
+
+    <activity>
+      <introduction>
+        <p>
+          Je kan gebruik maken van deze <url href="https://www.desmos.com/calculator/ardhnofuvo"> Desmos link </url> om de oplossingen van onderstaande opdrachten te controleren.
+        </p>
+        <interactive desmos="ardhnofuvo" width="100%" aspect="4:3" preview="desmos-riemann.png"/>
+      </introduction>
+      <task>
+        <p>
+          Gegeven <m>f(x)=\dfrac{x}{2}</m>. Beschouw het gebied ingesloten door de grafiek van <m>f</m>, de <m>x</m>-as, de <m>y</m>-as en de rechte <m>x=2</m>.
+          <ol>
+            <li>
+              <p>
+                Bereken de exacte oppervlakte van dit gebied.
+              </p>
+            </li>
+            <li>
+              <p>
+                Kies <m>\Delta x=\dfrac{1}{2}</m> en benader de oppervlakte door een eindige Riemannsom (gebruik linkergrenzen voor <m>x_i</m>).
+              </p>
+            </li>
+            <li>
+              <p>
+                Herhaal, maar met <m>\Delta x =\dfrac{1}{4}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bereken voor beide benaderingen de procentuele fout.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </task>
+      <task>
+        <p>
+          Gegeven <m>f(x)=\sqrt{1-x^2}</m>. Beschouw het gebied ingesloten door de grafiek van <m>f</m>, de <m>x</m>-as en de rechten <m>x=\pm 1</m>.
+          <ol>
+            <li>
+              <p>
+                Bereken de exacte oppervlakte van dit gebied.
+              </p>
+            </li>
+            <li>
+              <p>
+                Kies <m>\Delta x=\dfrac{1}{2}</m> en benader de oppervlakte door een eindige Riemannsom (gebruik linkergrenzen voor <m>x_i</m>).
+              </p>
+            </li>
+            <li>
+              <p>
+                Herhaal, maar met <m>\Delta x =\dfrac{1}{4}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bereken voor beide benaderingen de procentuele fout.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </task>
+    </activity>
+
+    <p>
+      Met behulp van een eindige Riemannsom kunnen we een benadering van de oppervlakte bereken. Maar hoe berekenen we nu de exacte oppervlakte? Hoe groot we <m>n</m> ook kiezen, er bestaat steeds een grotere waarde en bijgevolg ook een betere benadering van de oppervlakte. De exacte oppervlakte vinden we door de limiet voor <m>n \to +\infty</m> te berekenen:
+      <me>
+          \lim_{n \to +\infty} [f(x_1) \Delta x + f(x_2) \Delta x + \ldots + f(x_{n}) \Delta x]
+      </me>
+      Merk op dat dit intuïtief neerkomt op het berekenen van een oneindige som waarbij elke term infinitesimaal klein is (<m>\Delta x \to 0</m> als <m>n \to +\infty</m>).
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>De bepaalde integraal</title>
+    <assemblage>
+      <title>Bepaalde integraal</title>
+      <p>
+         We noemen <m>  \int_a^b f(x) \; dx </m> de bepaalde integraal van <m>a</m> tot <m>b</m> van de functie <m>f</m>. We definiëren:
+        <me>
+          \int_a^b f(x) \; dx = \lim_{n \to +\infty} \frac{b-a}{n} \cdot \sum_{i=1}^{n} f(x_i)
+        </me>
+        De functie <m>f(x)</m> noemen we de integrand en <m>a</m> en <m>b</m> de integratiegrenzen. We stellen per definitie ook dat
+        <me>
+          \int_a^a f(x) \; dx =0
+        </me>
+      </p>
+      <p>
+        De bepaalde integraal <m>\int_a^b f(x) \; dx</m> of <m>\int_a^b f</m> of is gelijk aan de oppervlakte ingesloten door de grafiek van <m>f(x)</m> en de rechten <m>x=a</m> en <m>x=b</m>.
+      </p>
+    </assemblage>
+
+    <aside>
+      <title>Dummy variabele</title>
+      <p>
+        Merk op dat de naam van de variabele die we gebruiken om een bepaalde integraal te noteren er eigenlijk niet toe doet. Een bepaalde integraal stelt een reëel getal voor, dus is de variabele een <q>dummy</q> variabele:
+        <md>
+          <mrow>  \amp \int_a^b f(x) \; dx </mrow>
+          <mrow> = \amp \int_a^b f(t) \; dt </mrow>
+          <mrow> = \amp \int_a^b f(u) \; du </mrow>
+        </md>
+      </p>
+    </aside>
+
+    <p>
+      De praktische berekening van de bepaalde integraal <m>\int_a^b f(x) \; dx</m> verloopt als volgt:
+      <ol>
+        <li>
+          Verdeel <m>[a,b]</m> in <m>n</m> gelijke deelintervallen met breedte <m>\Delta x = \dfrac{b-a}{n}</m>.
+        </li>
+        <li>
+          <p>
+            Bereken de functiewaarde <m>f(x_i)</m> van een willekeurig getal <m>x_i</m> uit elk deelinterval. De linker- of rechtergrens van elk deelinterval is de gemakkelijkste optie.
+          </p>
+        </li>
+        <li>
+          <p>
+            Bepaal de eindige Riemannsom <m> \Delta x \cdot \sum_{i=1}^{n} f(x_i) </m> en vereenvoudig zoveel mogelijk.
+          </p>
+        </li>
+        <li>
+          Bereken de limiet voor <m>n \to +\infty </m>.
+        </li>
+      </ol>
+    </p>
+
+    <example>
+      <title>Oppervlakte van een rechthoek</title>
+      <p>
+        We berekenen de bepaalde integraal <m>\displaystyle \int_0^b h \; dx</m> via de definitie. Uit de meetkundige interpretatie van de integraal volgt onmiddellijk dat <m>\int_0^b h \; dx = hb </m>. De bepaalde integraal stelt immers de oppervlakte van een rechthoek met zijden <m>b</m> en <m>h</m> voor. De berekening via de definitie is bijna triviaal:
+        <ol>
+          <li>
+            <p>
+              <m>\Delta x = \frac{b}{n} </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              De functie is constant, dus <m>f(x_i)=h</m> voor <m>i=1,\ldots n</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              De Riemannsom is gelijk aan <m>\dfrac{b}{n} (h+h+\ldots+h)=\dfrac{b}{n} \cdot nh=bh</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              De Riemannsom hangt niet meer af van <m>n</m>, dus <m>\int_a^b f(x) \; dx=bh</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+
+    <example>
+      <title>Oppervlakte van een driehoek</title>
+      <p>
+        We controleren nu dat <m>\displaystyle \int_0^b \dfrac{h}{b} x \; dx = \dfrac{bh}{2}</m><fn>Als de hoogte van de driehoek <m>h</m> is, dan ligt de schuine zijde op de rechte met vergelijking <m>y=\dfrac{h}{b}x</m></fn>.
+        <ol>
+          <li>
+            <p>
+              <m>\Delta x = \frac{b}{n} </m>
+            </p>
+          </li>
+          <li>
+            <p>
+                We bepalen de linkergrenzen van de deelintervallen en de bijhorende functiewaarden:
+            </p>
+            <sidebyside>
+              <tabular top="major">
+                <row bottom="medium">
+                  <cell>
+                    <m>i</m>
+                  </cell>
+                  <cell>
+                    <m>x_i</m>
+                  </cell>
+                  <cell>
+                    <m>f(x_i)</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>1</m>
+                  </cell>
+                  <cell>
+                    <m>0</m>
+                  </cell>
+                  <cell>
+                    <m>0</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>2</m>
+                  </cell>
+                  <cell>
+                    <m>\dfrac{b}{n}</m>
+                  </cell>
+                  <cell>
+                    <m> \dfrac{h}{n}</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell>
+                    <m>2 \dfrac{b}{n}</m>
+                  </cell>
+                  <cell>
+                    <m>2 \dfrac{h}{n}</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>\ldots</m>
+                  </cell>
+                  <cell>
+                    <m>\ldots</m>
+                  </cell>
+                  <cell>
+                    <m>\ldots</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>n-1</m>
+                  </cell>
+                  <cell>
+                    <m>(n-2)\dfrac{b}{n}</m>
+                  </cell>
+                  <cell>
+                    <m>(n-2)\dfrac{h}{n}</m>
+                  </cell>
+                </row>
+                <row bottom="major">
+                  <cell>
+                    <m>n</m>
+                  </cell>
+                  <cell>
+                    <m>(n-1) \dfrac{b}{n}</m>
+                  </cell>
+                  <cell>
+                    <m>(n-1) \dfrac{h}{n}</m>
+                  </cell>
+                </row>
+              </tabular>
+            </sidebyside>
+          </li>
+          <li>
+            <p>
+              De Riemannsom is gelijk aan
+              <md>
+                <mrow>
+                    \amp \frac{b}{n} (0+\frac{h}{n}+2\frac{h}{n}+ \ldots + (n-2) \frac{h}{n} + (n-1)\frac{h}{n})
+                </mrow>
+                <mrow>
+                    = \amp \frac{hb}{n^2} (1+2+ \ldots + (n-2) + (n-1))
+                </mrow>
+                <mrow>
+                    = \amp \frac{hb}{n^2} \frac{(n-1)(n)}{2}
+                </mrow>
+                <mrow>
+                    = \amp \frac{hb}{2} \frac{n^2-n}{n^2}
+                </mrow>
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              Aangezien <m>\lim_{n \to +\infty} \dfrac{n^2-n}{n^2} = 1 </m>, krijgen we inderdaad dat <m>\displaystyle \int_0^b \dfrac{h}{b} x \; dx = \dfrac{bh}{2}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </example>
+    <activity>
+      <statement>
+        <p>
+          Ga na dat de oppervlakte ingesloten door de grafiek van de parabool <m>y=x^2</m>, de coördinaatsassen en de rechte <m>x=b</m> gelijk is aan <m>\int_0^b x^2 \; dx=\dfrac{b^3}{3}</m>. (Tip: <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\Delta x = \frac{b}{n} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                  We bepalen de linkergrenzen van de deelintervallen en de bijhorende functiewaarden:
+              </p>
+              <sidebyside>
+                <tabular top="major">
+                  <row bottom="medium">
+                    <cell>
+                      <m>i</m>
+                    </cell>
+                    <cell>
+                      <m>x_i</m>
+                    </cell>
+                    <cell>
+                      <m>f(x_i)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>1</m>
+                    </cell>
+                    <cell>
+                      <m>0</m>
+                    </cell>
+                    <cell>
+                      <m>0</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>2</m>
+                    </cell>
+                    <cell>
+                      <m>\dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m> \dfrac{b^2}{n^2}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>3</m>
+                    </cell>
+                    <cell>
+                      <m>2 \dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m>4 \dfrac{b^2}{n^2}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>\ldots</m>
+                    </cell>
+                    <cell>
+                      <m>\ldots</m>
+                    </cell>
+                    <cell>
+                      <m>\ldots</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>n-1</m>
+                    </cell>
+                    <cell>
+                      <m>(n-2)\dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m>(n-2)^2\dfrac{b^2}{n^2}</m>
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell>
+                      <m>n</m>
+                    </cell>
+                    <cell>
+                      <m>(n-1) \dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m>(n-1)^2 \dfrac{b^2}{n^2}</m>
+                    </cell>
+                  </row>
+                </tabular>
+              </sidebyside>
+            </li>
+            <li>
+              <p>
+                De Riemannsom is gelijk aan
+                <md>
+                  <mrow>
+                      \amp \Delta x (0+\frac{b^2}{n^2}+4\frac{b^2}{n^2}+ \ldots + (n-2)^2 \frac{b^2}{n^2} + (n-1)^2\frac{b^2}{n^2})
+                  </mrow>
+                  <mrow>
+                      = \amp \Delta x \frac{b^2}{n^2} (1+4+ \ldots + (n-2)^2 + (n-1)^2)
+                  </mrow>
+                  <mrow>
+                      = \amp \frac{b^3}{n^3} \frac{(n-1)(n)(2n-1)}{6}
+                  </mrow>
+                  <mrow>
+                      = \amp \frac{b^3}{6} \frac{(n-1)n(2n-1)}{n^3}
+                  </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Aangezien <m>\displaystyle \lim_{n \to +\infty} \dfrac{(n-1)n(2n-1)}{n^3} = 2 </m>, krijgen we inderdaad dat <m>\displaystyle \int_0^b x^2 \; dx = \dfrac{b^3}{3}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+</section>
+
+<section>
+  <title>Eigenschappen van de bepaalde integraal</title>
+  <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+      Als we de oppervlakte willen berekenen onder nevenstaande grafiek tussen de grenzen <m>x=1</m> en <m>x=4</m>, dan kunnen we natuurlijk eerst de oppervlakte berekenen tussen de grenzen <m>x=1</m> en <m>x=3</m> en daarbij vervolgens de oppervlakte optellen tussen de grenzen <m>x=3</m> en <m>x=4</m>:
+      <me>
+        \int_1^3 f(x) \; dx + \int_3^4 f(x) \; dx = \int_1^4 f(x) \; dx
+      </me>
+    </p>
+    <image source="oppervlakte1.png"/>
+  </sidebyside>
+  <p>
+    Algemeen geldt er dat
+    <me>
+      \boxed{\int_a^b f(x) dx = \int_a^c f(x) \; dx + \int_c^b f(x) \; dx \qquad (a \lt c \lt b)}
+    </me>
+  </p>
+  <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+      Als we de grafiek van <m>f</m> herschalen met een factor 0,5 volgens de <m>y</m>-richting, dan wordt de oppervlakte ook gehalveerd.
+      <me>
+        \int_1^4 \frac{1}{2} f(x) \; dx  = \frac{1}{2} \int_1^4 f(x) \; dx
+      </me>
+    </p>
+    <image source="oppervlakte2.png"/>
+  </sidebyside>
+  <p>
+    Algemeen geldt er dat
+    <me>
+      \boxed{\int_a^b k \cdot f(x) dx = k \int_a^b f(x) \; dx \qquad (k \in \mathbb{R}^+)}
+    </me>
+  </p>
+  <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+      Voor de som van twee functies <m>f</m> en <m>g</m> geldt er dat de oppervlakte onder de grafiek van <m>f(x)+g(x)</m> gelijk is aan de som van de oppervlakte onder de grafiek van <m>f(x)</m> en de oppervlakte onder de grafiek van <m>g</m>:
+      <me>
+        \int_1^4  [f(x)+g(x)] \; dx  = \int_1^4 f(x) \; dx + \int_1^4 g(x) \; dx
+      </me>
+    </p>
+    <image source="oppervlakte3.png"/>
+  </sidebyside>
+  <p>
+    Algemeen geldt er dat
+    <me>
+      \boxed{\int_a^b [f(x) + g(x)] dx = \int_a^b f(x) \; dx + \int_a^b g(x) \; dx}
+    </me>
+  </p>
+
+</section>
+
+<section>
+  <title>Georiënteerde oppervlakte en de bepaalde integraal</title>
+  <example>
+    <title>Verplaatsing</title>
+    <p>
+      Beschouw onderstaande <m>x(t)</m>-grafieken van drie fietsers. De verplaatsingen kunnen we onmiddellijk aflezen: <m>\Delta x_1=100</m> m, <m>\Delta x_2=40</m> m en <m>\Delta x_3=-40</m> m. De snelheden zijn constant en gelijk aan de richtingscoëfficiënten van de <m>x(t)</m>-grafieken: <m>v_1=10</m> m/s, <m>v_2=4</m> m/s, <m>v_3=-4</m> m/s.
+    </p>
+    <sidebyside widths="45% 45%" margins="auto">
+      <image xml:id="fig-verplaatsing">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}
+          [
+          xmin=-1,%
+          xmax=13,%
+          ymin=-45,%
+          ymax=105,%
+          axis lines=middle,%
+          %ticks=none,%
+          %xtick={-4,-2,...,10},%
+          ytick={-40,-20,...,100},%
+          minor x tick num={1},%
+          minor y tick num={1},%
+          %x=0.7cm,%
+          %y=0.7cm,%
+          grid=both,%
+          xlabel=$t$ (s),%
+          ylabel=$x$ (m)
+          ]
+          \addplot[color = black,domain=0:10,samples=300,ultra thick]{10*x};
+          \addplot[color = black,domain=0:10,samples=300,ultra thick]{4*x};
+          \addplot[color = black,domain=0:10,samples=300,ultra thick]{-4*x};
+          \node[fill=white,inner sep=2pt] at (axis cs:11,90) {fietser 1};
+          \node[fill=white,inner sep=2pt] at (axis cs:7,40) {fietser 2};
+          \node[fill=white,inner sep=2pt] at (axis cs:10,-30) {fietser 3};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+      <image xml:id="fig-verplaatsing-b">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}
+          [
+          xmin=-1,%
+          xmax=13,%
+          ymin=-6,%
+          ymax=12,%
+          axis lines=middle,%
+          %ticks=none,%
+          %xtick={-4,-2,...,10},%
+          ytick={-4,-2,...,10},%
+          %minor x tick num={1},%
+          %minor y tick num={1},%
+          %x=0.7cm,%
+          %y=0.7cm,%
+          grid=both,%
+          xlabel=$t$ (s),%
+          ylabel=$v$ (m/s)
+          ]
+          \addplot[color = black,domain=0:10,samples=300,ultra thick]{10};
+          \addplot[color = black,domain=0:10,samples=300,ultra thick]{4};
+          \addplot[domain=0:10,samples=300,fill=green!20,very thin, dashed]{-4}\closedcycle;
+          \addplot[color = black,domain=0:10,samples=300,ultra thick]{-4};
+          \addplot[color = black,domain=0:10,samples=300,very thin]{0};
+          \node[fill=white,inner sep=2pt] at (axis cs:10,9) {fietser 1};
+          \node[fill=white,inner sep=2pt] at (axis cs:10,3) {fietser 2};
+          \node[fill=white,inner sep=2pt] at (axis cs:10,-3) {fietser 3};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </sidebyside>
+    <p>
+      Je weet uit de lessen fysica dat de verplaatsing gelijk is aan <m>\Delta x=v\Delta t</m> en bijgevolg ook kan berekend worden door de oppervlakte onder de <m>x(t)</m>-grafiek te bepalen. Voor fietser 3 is de verplaatsing en dus ook die oppervlakte negatief.
+    </p>
+  </example>
+
+  <example>
+    <title>Volume</title>
+    <p>
+      Een waterbekken wordt gedurende 40 seconden met water gevuld. De snelheid waarmee het water in het bekken stroomt is 3 l/s (debiet <m>d</m> in liter per seconde). Daarna loopt het bekken leeg met een snelheid van <m>-2</m> l/s. Na 40 seconden is de hoeveelheid water in het bekken dus gelijk aan 120 l. Dit is gelijk aan de oppervlakte onder de <m>d(t)</m>-grafiek voor het tijdsinterval <m>[0,40]</m> s. Na 50 seconden zit er nog maar 100 l water in het bekken omdat er 20 l water wegstroomde tijdens het tijdsinterval <m>[40,50]</m> s. De oppervlakte onder de <m>d(t)</m>-grafiek voor het tijdsinterval <m>[40,50]</m> s is gelijk aan <m>-20</m> l.
+    </p>
+    <sidebyside widths="45% 45%" margins="auto">
+      <image xml:id="fig-volume">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}
+          [
+          xmin=-1,%
+          xmax=70,%
+          ymin=-1,%
+          ymax=140,%
+          axis lines=middle,%
+          %ticks=none,%
+          %xtick={-4,-2,...,10},%
+          ytick={-40,-20,...,140},%
+          minor x tick num={1},%
+          minor y tick num={1},%
+          %x=0.7cm,%
+          %y=0.7cm,%
+          grid=both,%
+          xlabel=$t$ (s),%
+          ylabel=$V$ (l)
+          ]
+          \addplot[color = black,domain=0:40,samples=300,ultra thick]{3*x};
+          \addplot[color = black,domain=40:70,samples=300,ultra thick]{-2*(x-40)+120};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+      <image xml:id="fig-volume-b">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}
+          [
+          xmin=-1,%
+          xmax=70,%
+          ymin=-4,%
+          ymax=4,%
+          axis lines=middle,%
+          %ticks=none,%
+          %xtick={-4,-2,...,10},%
+          ytick={-4,-3,...,10},%
+          %minor x tick num={1},%
+          %minor y tick num={1},%
+          %x=0.7cm,%
+          %y=0.7cm,%
+          grid=both,%
+          xlabel=$t$ (s),%
+          ylabel=$d$ (l/s)
+          ]
+          \addplot[domain=0:40,samples=300,fill=green!20,very thin, dashed]{3}\closedcycle;
+          \addplot[domain=40:50,samples=300,fill=green!20,very thin, dashed]{-2}\closedcycle;
+          \addplot[domain=0:40,samples=300,ultra thick]{3};
+          \addplot[domain=40:70,samples=300,ultra thick]{-2};
+          \addplot[domain=40:50,samples=300,very thin]{0};
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </sidebyside>
+  </example>
+  <example>
+    <title>Oplossingen van een kwadratische vergelijking</title>
+    <p>
+      Beschouw de eenvoudige vergelijking <m>x^2=4</m>. De oplossingen zijn <m>x=-2</m> of <m>x=2</m>. We kunnen deze vergelijking echter ook meetkundig interpreteren: <q>Wat is de lengte van de zijde van een vierkant met oppervlakte 4?</q>. Beide vierkanten zijn hieronder getekend:
+    </p>
+    <sidebyside width="50%">
+      <image xml:id="fig-vierkant">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}
+          [
+          xmin=-4,%
+          xmax=4,%
+          ymin=-4,%
+          ymax=4,%
+          axis lines=middle,%
+          %ticks=none,%
+          xtick={-4,-3,...,10},%
+          ytick={-4,-3,...,10},%
+          %minor x tick num={1},%
+          %minor y tick num={1},%
+          %x=0.7cm,%
+          %y=0.7cm,%
+          grid=both,%
+          xlabel=$x$,%
+          ylabel=$y$
+          ]
+          \addplot[domain=-2:0,samples=300,fill=green!20,very thin]{-2}\closedcycle;
+          \addplot[domain=0:2,samples=300,fill=green!20,very thin]{2}\closedcycle;
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </sidebyside>
+  </example>
+  <activity>
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Een boor draait met een snelheid van 10 toeren per seconde (tps). Elke 10 seconden wordt het toerental met 5 opgevoerd. Hoeveel toeren heeft de boor gemaakt na 60 seconden?
+            </p>
+          </li>
+          <li>
+            <p>
+              Zelfde vraag als de snelheid van de boor in 10 seconden traploos wordt opgevoerd van 10 tps tot 15 tps.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>  10 (10+15+\ldots+35)=10 \cdot 6 \dfrac{10+35}{2}=1350 </m>
+            </p>
+          </li>
+          <li>
+            <sidebyside widths="50% 50%">
+              <p>
+                Aantal toeren is de oppervlakte onder de grafiek: <m>600+\dfrac{30 \cdot 60}{2}=1500</m>
+              </p>
+              <image source="boor.png"/>
+            </sidebyside>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Iemand neemt een bad. Na 5 minuten wordt de kraan gelijkmatig dichtgedraaid gedurdende 15 seconden en het bad zelf duurt 10 minuten. Onderstaande grafiek toont het debiet in l/min. Hoeveel water is er in het bad na 5, 6 en 20 minuten?
+      </p>
+      <sidebyside width="50%">
+        <image xml:id="fig-oef-bad">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}
+            [
+            xmin=-1,%
+            xmax=30,%
+            ymin=-12,%
+            ymax=25,%
+            axis lines=middle,%
+            %ticks=none,%
+            %xtick={-4,-2,...,10},%
+            ytick={-10,-5,...,20},%
+            %minor x tick num={1},%
+            %minor y tick num={1},%
+            %x=0.7cm,%
+            %y=0.7cm,%
+            grid=both,%
+            xlabel=$t$ (min),%
+            ylabel=$d$ (l/min)
+            ]
+            \addplot[domain=0:5,samples=300,ultra thick]{20};
+            \addplot[domain=5:5.25,samples=300,ultra thick]{20-80*(x-5)};
+            \addplot[domain=5.25:15.25,samples=300,very thick]{0};
+            \addplot[domain=15.25:25,samples=300,ultra thick]{-10};
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Na de eerste 5 minuten is het volume <m>20</m> l/min <m>\cdot</m> 5 min <m>=100</m> l.
+            </p>
+          </li>
+          <li>
+            <p>
+              Tijdens het dichtdraaien van de kraan komt er <m>\dfrac{20 \text{ l} \cdot 0,25 \text{ min}}{2}=2,5</m> l bij (oppervlakte driehoek), dus het volume is dan 102,5 l.
+            </p>
+          </li>
+          <li>
+            <p>
+              Na 20 minuten is er 10 l/min <m>\cdot</m> 4,75 min <m>=47,5</m> l water weggelopen, dus is het volume nog 55 l.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+    <answer>
+      <p>
+        100 l, 102,5 l en 55 l
+      </p>
+    </answer>
+  </activity>
+  <p>
+    Het idee van een negatieve oppervlakte volgt ook rechtstreeks uit de eigenschappen van de bepaalde integraal als we veronderstellen dat <m>\int_a^b k \cdot f(x) dx = k \cdot \int_a^b f(x) dx</m> geldt voor <m>k \lt 0</m> en <m>\int_a^b f(x) dx = \int_a^c f(x) \; dx + \int_c^b f(x) \; dx </m> geldt voor elke ligging van <m>a, b</m> en <m>c</m>.
+    <ol>
+      <li>
+        <p>
+           Stel dat <m>f(x) \gt 0</m> in het interval <m>[a,b]</m> en <m>k \lt 0</m>. Uit <m>\int_a^b k \cdot f(x) dx = k \int_a^b f(x) dx</m> volgt dan onmiddellijk dat <m>\int_a^b k \cdot f(x) dx \lt 0</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+            Als we opnieuw stellen dat <m>f(x) \gt 0</m> in het interval <m>[a,b]</m> dan kunnen we als volgt beredeneren dat  <m>\int_b^a f(x) \; dx \lt 0 </m>:
+            <md>
+              <mrow>\amp \int_a^b f(x) \; dx  + \int_b^a f(x) \; dx = \int_a^a f(x) \; dx</mrow>
+              <mrow>\Rightarrow \; \amp \int_a^b f(x) \; dx  + \int_b^a f(x) \; dx = 0 </mrow>
+              <mrow>\Rightarrow \; \amp \int_b^a f(x) \; dx = - \int_a^b f(x) \; dx </mrow>
+            </md>
+      </p>
+      </li>
+    </ol>
+  </p>
+
+  <assemblage>
+    <title>Georiënteerde oppervlakte</title>
+    <sidebyside widths="45% 50%" margins="0% 0%" valign="middle">
+      <p>
+        De bepaalde integraal <m>\int_a ^b f(x) \; dx</m> is dus gelijk aan de georiënteerde oppervlakte van het gebied ingesloten door de grafiek van <m>f(x)</m>, de <m>x</m>-as en de rechten <m>x=a</m> en <m>x=b</m>. Afhankelijk van het teken van <m>f(x)</m> en het teken van <m>b-a</m> onderscheiden we vier gevallen:
+        <ol>
+          <li>
+            <p>
+              <m>a \lt b</m> en <m>f(x) \gt 0 \Rightarrow \int_a^b f(x) \; dx \gt 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a \lt b</m> en <m>f(x) \lt 0 \Rightarrow \int_a^b f(x) \; dx \lt 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>b \lt a</m> en <m>f(x) \gt 0 \Rightarrow \int_a^b f(x) \; dx \lt 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>b \lt a</m> en <m>f(x) \lt 0 \Rightarrow \int_a^b f(x) \; dx \gt 0</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <image source="georienteerde-opp.png"/>
+    </sidebyside>
+    <p>
+      Als je over de kromme, die de rand van de opppervlakte vormt, loopt van <m>a \to b</m>, dan is
+      <ul>
+        <li>
+          <p>
+            de oppervlakte positief als je in tegenwijzerzin loopt;
+          </p>
+        </li>
+        <li>
+          <p>
+            de oppervlakte negatief als je in wijzerzin loopt.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </assemblage>
+
+  <assemblage>
+    <title>Optelbaarheid van de bepaalde integraal</title>
+    <p>
+      Als <m>a,b</m> en <m>c</m> behoren tot een interval waarin <m>f</m> integreerbaar<fn>We zullen later nog precies definiëren wat dit betekent.</fn> is, dan heeft men voor elke ligging van <m>a, b</m> en <m>c</m>:
+      <me>
+        \int_a^b f(x) dx = \int_a^c f(x) \; dx + \int_c^b f(x) \; dx
+      </me>
+      Een belangrijk gevolg van deze eigenschap is
+      <me>
+        \int_b^a f(x) \; dx = - \int_a^b f(x) \; dx
+      </me>
+    </p>
+  </assemblage>
+  <p>
+    Bovendien geldt er dat
+    <me>
+    \int_a^b k \cdot f(x) dx = k \int_a^b f(x) \; dx \qquad (k \in \mathbb{R})
+    </me>
+    en
+    <me>
+    \int_a^b [f(x) + g(x)] dx = \int_a^b f(x) \; dx + \int_a^b g(x) \; dx
+  </me>
+  Deze twee eigenschappen kunnen we als volgt samenvatten:
+  </p>
+
+  <assemblage>
+    <title>Lineariteit van de bepaalde integraal</title>
+    <p>
+      <me>\int_a^b [k \cdot f(x)+l \cdot g(x)]\; dx = k \int_a^b f(x) \; dx + l \int_a^b g(x) \; dx \qquad (k,l \in \mathbb{R})</me>
+    </p>
+  </assemblage>
+
+
+  <activity>
+    <statement>
+      <p>
+        Bepaal de volgende integralen door ze meetkundig te interpreteren:
+        <ol>
+          <li>
+            <p>
+              <m>\int_{-5}^1 x \; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_{-1}^2 (-3x+4) \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>-12</m> en <m>7,5</m>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <sidebyside widths="50% 50%">
+              <p>
+                <m>\int_{-5}^1 x \; dx = \int_{-5}^0 x \; dx + \int_{0}^1 x \; dx = - </m>(oppervlakte grote driehoek) <m>+</m> (oppervlakte kleine driehoek)<m>-12,5+0,5=-12</m>
+              </p>
+              <image source ="oef-int-opp.png"/>
+            </sidebyside>
+          </li>
+          <li>
+            <sidebyside widths="50% 50%">
+              <p>
+                <m>\int_{-1}^2 (-3x+4) \; dx = \int_{-1}^{\sfrac{4}{3}} (-3x+4) \; dx</m> <m>+ \int_{\sfrac{4}{3}}^2 (-3x+4) \; dx = </m>(oppervlakte grote driehoek) <m>-</m> (oppervlakte kleine driehoek)<m>=\dfrac{49}{6}-\dfrac{4}{6}=7,5</m>
+              </p>
+              <image source ="oef-int-opp-2.png"/>
+            </sidebyside>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        We hebben aangetoond dat
+        <md>
+          <mrow>\int_0^b h \; dx=hb</mrow>
+          <mrow>\int_0^b \frac{h}{b}x \; dx=\frac{bh}{2}</mrow>
+          <mrow>\int_0^b x^2 \; dx=\frac{b^3}{3}</mrow>
+        </md>
+        Toon aan, met behulp van de optelbaarheid en de lineariteit, dat
+        <ol>
+          <li>
+            <p>
+              <m>\int_a^b dx = b-a</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_a^b x\; dx = \frac{b^2}{2}-\frac{a^2}{2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_a^b x^2 \; dx = \frac{b^3}{3}-\frac{a^3}{3}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>\int_a^b dx = b-a = \int_a^0 dx + \int_0^b dx = -\int_0^a dx + \int_0 b dx = -a + b = b - a</m> en analoog voor de twee andere formules.
+      </p>
+    </solution>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Bereken (zonder meetkundig te interpreteren)
+        <ol>
+          <li>
+            <p>
+              <m>\int_1^2 (-3x^2) \; dx </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_0^4 (-x+2) \; dx </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_{-1}^{1} (x+1)(2x-1) \; dx </m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>\int_1^2 (-3x^2) \; dx = -3 \int_1^2 x^2 \; dx = -3 \left (\dfrac{2^3}{3} - \dfrac{1^3}{3} \right ) = -7 </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_0^4 (-x+2) \; dx = -\int_0^4 x \; dx +2 \int_0^4 \; dx = -\left (\dfrac{4^2}{2}  \right ) +2 \cdot 4 =  0 </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\int_{-1}^{1} (x+1)(2x-1) \; dx = \int_{-1}^1 \left (2x^2+x-1 \right ) \; dx </m> <m> = 2 \left (\dfrac{1^3}{3} -\dfrac{(-1)^3}{3} \right)+ \left ( \dfrac{1^2}{2} - \dfrac{(-1)^2}{2}\right ) - ( 1 - (-1) ) = \dfrac{4}{3} -2 =  -\dfrac{2}{3}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Vereenvoudig onderstaande uitdrukking, i.e. schrijf als één bepaalde integraal.
+        <me>
+          \int_0^2 3 f(x)\; dx + \int_1^3 3 f(x) \; dx - \int_0^3 2 f(x) \; dx - \int_1^2 3 f(x) \; dx
+        </me>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\int_0^3 f(x) \; dx</m>
+      </p>
+    </answer>
+    <solution>
+      <p>
+        <md>
+          <mrow>\int_0^2 3 f(x)\; dx = \int_0^1 3 f(x)\; dx  + \int_1^2 3 f(x)\; dx </mrow>
+          <mrow>\Rightarrow \int_0^2 3 f(x)\; dx - \int_1^2 3 f(x)\; dx = \int_0^1 3 f(x)\; dx</mrow>
+          <mrow>\int_0^1 3 f(x)\; dx + \int_1^3 3 f(x)\; dx = \int_0^3 3 f(x)\; dx</mrow>
+          <mrow>\int_0^3 3 f(x)\; dx - \int_0^3 2 f(x)\; dx= \int_0^3  f(x)\; dx</mrow>
+        </md>
+      </p>
+    </solution>
+  </activity>
+</section>
+
+
+<section>
+  <title>Oppervlakte berekenen met behulp van integralen</title>
+  <subsection>
+    <title>Oppervlakte tussen een kromme en de <m>x</m>-as</title>
+    <p>
+      Stel dat we de oppervlakte <m>S</m> willen berekenen tussen de grafiek van <m>y=-x^2+4</m>, de coördinaatsassen en de rechte <m>x=3</m>.
+    </p>
+
+    <sidebyside widths="60% 35%" margins="0% 0%" valign="middle">
+      <p>
+         De georiënteerde oppervlakte is positief is over <m>[0,2]</m> en negatief over <m>[2,3]</m>. De oppervlakte is dus gelijk aan de georiënteerde oppervlakte als we integreren van 0 tot 2, maar tegengesteld aan de georiënteerde oppervlakte als we integreren van 2 tot 3. De totale oppervlakte is bijgevolg
+      </p>
+      <image xml:id="fig-oppervlakte-2">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}[
+              xtick={0,...,4},ytick={-5,0,5},
+              y=0.4cm, xmax=3.5,ymax=6,ymin=-6,xmin=0,
+              enlargelimits=true,
+              axis lines=middle,
+              clip=false,
+              domain=0:3,
+              axis on top,
+              xlabel=$x$,
+              ylabel=$f(x)$
+              ]
+          \addplot[smooth, thick,domain=0:3,samples=100]{-x^2+4 };
+          \addplot[smooth,fill=green!20!,domain=0:3,samples=100]{-x^2+4}\closedcycle;
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </sidebyside>
+    <p>
+      <me>
+        S=\int_0^2 (-x^2+4) \; dx - \int_2^3 (-x^2+4) \; dx = \frac{16}{3} - (-\frac{7}{3})=\frac{23}{3}
+      </me>
+    </p>
+      <sidebyside widths="60% 35%" margins="0% 0%" valign="middle">
+        <p>
+          Door de absolute waarde van <m>-x^2+4</m> te nemen, kunnen we de oppervlakte ook met behulp van één integraal noteren
+          <me>
+            S=\int_0^3 |-x^2+4| \; dx
+          </me>
+        </p>
+        <image xml:id="fig-oppervlakte-2b">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}[
+                xtick={0,...,4},ytick={-5,0,5},
+                y=0.4cm, xmax=3.5,ymax=6,ymin=-6,xmin=0,
+                enlargelimits=true,
+                axis lines=middle,
+                clip=false,
+                domain=0:3,
+                axis on top,
+                xlabel=$x$,
+                ylabel=$f(x)$
+                ]
+            \addplot[smooth, thick,domain=0:3,samples=100]{abs(-x^2+4) };
+            \addplot[smooth,fill=green!20!,domain=0:3,samples=100]{abs(-x^2+4)}\closedcycle;
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+  </subsection>
+
+  <subsection>
+    <title>Oppervlakte begrensd door twee krommen</title>
+    <p>
+      Stel dat we de oppervlakte <m>S</m> willen berekenen begrensd door de grafieken van <m>f(x)=x^3-3x</m> en <m>g(x)=x</m>.
+    </p>
+    <p>
+       In het interval <m>[-2,0]</m> ligt de grafiek van <m>f(x)</m> boven de grafiek van <m>g(x)</m> en kunnen we de oppervlakte berekenen met behulp van de integraal
+       <me>
+         \int_{-2}^0 [f(x)-g(x)] \; dx
+       </me>
+       Dit is het makkelijkst in te zien door te veronderstellen dat je beide grafieken omhoog schuift tot ze boven de <m>x</m>-as liggen.
+    </p>
+
+    <sidebyside widths="40% 40%" margins="0% 0%" valign="middle">
+      <image source="desmos-opp-tussen.png"/>
+      <image source="desmos-opp-tussen-2.png"/>
+    </sidebyside>
+
+    <p>
+      In het interval <m>[0,2]</m> ligt de grafiek van <m>g(x)</m> boven de grafiek van <m>f(x)</m> en is de oppervlakte gelijk aan
+      <me>
+        \int_{0}^2 [g(x)-f(x)] \; dx
+      </me>
+      De totale oppervlakte van het gebied is gelijk aan
+      <me>
+        S= \int_{-2}^0 (x^3-4x) \; dx + \int_0^2 (-x^3+4x) \; dx = 4 + 4 = 8
+      </me>
+      We kunnen dit opnieuw noteren m.b.v één integraal door de absolute waarde <m>|f(x)-g(x)|</m> te integreren
+      <me>
+        S=\int_{-2}^2 |x^3-4x| \; dx
+      </me>
+    </p>
+
+    <p>
+      Om de oppervlakte begrensd door de grafieken van twee functies <m>f(x)</m> en <m>g(x)</m> te berekenen, ga je dus als volgt te werk:
+      <ol>
+        <li>
+          <p>
+            Bepaal de <m>x</m>-waarden van de snijpunten van beide grafieken, i.e. los de vergelijking <m>f(x)=g(x)</m> op.
+          </p>
+        </li>
+        <li>
+          <p>
+            De snijpunten delen het integratie-interval in deelintervallen op. Voor elke deelinterval ga je na wat het teken is van <m>f(x)-g(x)</m>. Dit kan je eventueel doen door een tekentabel op te stellen.
+          </p>
+        </li>
+        <li>
+          <p>
+            Als <m>f(x)-g(x) \gt 0</m> voor een deelinterval, dan ligt de grafiek van <m>f(x)</m> boven de grafiek van <m>g(x)</m> en bereken je de oppervlakte door <m>f(x)-g(x)</m> te integreren.
+          </p>
+        </li>
+        <li>
+          <p>
+            Als <m>f(x)-g(x) \lt 0</m> voor een deelinterval, dan ligt de grafiek van <m>g(x)</m> boven de grafiek van <m>f(x)</m> en bereken je de oppervlakte door <m>g(x)-f(x)</m> te integreren.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Bereken de oppervlakte van het gebied begrensd door de parabool <m>y=2x^2+2x-4</m>, de <m>x</m>-as en de rechten <m>x=0</m> en <m>x=2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Alle oplossingen vind je <url href="https://www.desmos.com/calculator/wup0iluoxu">hier</url>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bereken de oppervlakte van het gebied begrensd door de parabool <m>y=x^2</m> en de rechte <m>y=4</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bereken de oppervlakte van het gebied begrensd door de grafiek van <m>x^3+4x</m> en de rechten <m>x=-\sqrt{3}</m> en <m>x=2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bereken de oppervlakte van het gebied begrensd door de parabolen <m>y=x^2-4x+3</m> en <m>y=-x^2-x+2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bereken de oppervlakte van het gebied begrensd door de grafieken van <m>f(x)=x^3+2x^2-4</m>, <m>g(x)=x^2+4x</m> en de rechten <m>x=-3</m> en <m>x=2</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          De oppervlakte van het vlakdeel ingesloten door de grafiek van <m>f(x)=x^2-4x+3</m>, de <m>x</m>-as, de <m>y</m>-as en de rechte <m>x=k</m> (<m>k \in \mathbb{R}^+</m>) is gelijk aan 4. Bereken <m>k</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          De grafiek van <m>f(x)=x^3+3x^2</m> sluit met de raaklijn in <m>P(2,f(2))</m> en de <m>x</m>-as een gebied in. Bereken de oppervlakte van dit gebied.
+        </p>
+      </statement>
+    </exercise>
+  </exercises>
+</section>
+
+<section>
+  <title>Het verband tussen afleiden en integreren</title>
+  <introduction>
+    <p>
+      Het berekenen van een bepaalde integraal met behulp van de definitie lukt enkel als er een gesloten uitdrukking bestaat voor <m>\sum_{i=1}^nf(x_i)</m>. Voor de meeste functies is dit niet mogelijk. Gelukkig bestaat er een alternatieve manier om integralen te berekenen die eenvoudiger is.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Middelwaardestelling van de integraalrekening</title>
+    <p>
+      Veronderstel dat een garagepoort parabolisch van vorm is met een maximale hoogte van 2 m en een maximale breedte van 3 m. Wat is de gemiddelde hoogte van deze poort?
+    </p>
+    <sidebyside widths="45% 45%" margins="0% 0%">
+      <image source="desmos-gemiddeldehoogte.png"/>
+      <image source="desmos-gemiddeldehoogte2.png"/>
+    </sidebyside>
+    <p>
+      Als de hoogte stapsgewijs i.p.v. continu zou variëren, dan kunnen we de gemiddelde hoogte eenvoudig berekenen door alle hoogtes op te tellen en te delen door het aantal. Voor bovenstaand voorbeeld hebben we de parabool benaderd door 20 horizontale lijnstukken en de gemiddelde hoogte is bijgevolg gelijk aan <m> \frac{1}{20}\sum_{i=1}^{20} h_i </m>.
+    </p>
+    <p>
+      Als we de parabool benaderen door <m>n</m> horizontale lijnstukken met lengte <m>\Delta x</m>, dan kunnen we stellen dat <m>n=\dfrac{3}{\Delta x}</m> en de gemiddelde hoogte kan dan geschreven worden als
+      <me>
+        \frac{1}{n}\sum_{i=1}^{n} h_i=\frac{\Delta x}{3} \sum_{i=1}^{n} h_i = \frac{h_1 \Delta x+ h_2 \Delta x + \ldots +h_n \Delta x}{3}
+      </me>
+      De teller is gewoon een benadering voor de oppervlakte onder de parabool (eindige Riemannsom) en als we de limiet nemen voor <m>n \to +\infty</m>, dan krijgen we onderstaande uitdrukking voor de gemiddelde hoogte van de poort
+      <me>
+        \frac{1}{3}\int_0^3 h(x) \; dx
+      </me>
+      met <m>h(x)</m> de functie die de hoogte van de poort beschrijft. De gemiddelde hoogte is dus gewoon gelijk aan de oppervlakte onder de grafiek van de parabool gedeeld door de maximale breedte van de poort. Of, anders gefomuleerd, de gemiddelde hoogte is de hoogte van de rechthoek die dezelfde breedte en oppervlakte heeft als de poort.
+    </p>
+    <figure>
+      <caption>
+          De oppervlakte van de rechthoek met hoogte <m>\frac{1}{3}\int_0^3 h(x) \; dx</m> is gelijk aan de oppervlakte onder de grafiek van de parabool
+      </caption>
+      <image source="desmos-gemiddeldehoogte3.png" width="50%"/>
+    </figure>
+
+    <assemblage>
+      <title>Middelwaardestelling</title>
+      <p>
+        Als <m>f</m> continu is over <m>[a,b]</m>, dan bestaat er een <m>c \in [a,b]</m> zodat
+        <me>
+          \int_a^b f(x) \; dx = f(c)(b-a)
+        </me>
+        Het getal <m>f(c)=\dfrac{1}{b-a}\int_a^b f(x) \; dx</m> noemen we de <term>gemiddelde waarde</term> van <m>f</m> over het interval <m>[a,b]</m>.
+      </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Bereken de gemiddelde waarde van <m>f(x)=x^2</m> over <m>[0,3]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal het getal <m>c</m> uit de middelwaardestelling.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>f(c)=\dfrac{1}{3} \int_0^3 f(x) \; dx \Rightarrow f(c) = 3 \Rightarrow c^2=3 \Rightarrow c=\sqrt{3}</m>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Gegeven dat <m>\displaystyle \int_0^1 \dfrac{1}{1+x^2} \; dx=\frac{\pi}{4}</m> (dit leer je later nog berekenen). Bepaal een getal <m>c</m> waarvoor <m>f</m> zijn gemiddelde waarde bereikt. Maak een tekening in Desmos en interpreteer dit resultaat grafisch.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>\dfrac{1}{1+x^2} = \dfrac{\pi}{4} \Leftrightarrow 1+x^2=\dfrac{4}{\pi} \Leftrightarrow x^2 = \dfrac{4-\pi}{\pi} \Rightarrow x=\sqrt{\dfrac{4-\pi}{\pi}}</m>
+        </p>
+        <sidebyside width="50%">
+          <image source="oef-gem.png"/>
+        </sidebyside>
+      </solution>
+    </activity>
+  </subsection>
+
+  <subsection>
+    <title>Hoofdstelling van de integraalrekening</title>
+    <example>
+      <title>Van snelheid naar verplaatsing</title>
+      <p>
+        Onderstaande grafiek (links) beschrijft de snelheid van een loper in functie van de tijd. De gemiddelde snelheid van de loper over het tijdsinterval <m>[1,8]</m> s is gelijk aan
+        <me>
+          v_g=\frac{1}{7}\int_1^8 v(t) \; dt
+        </me>
+        en is afgerond op 2 cijfers na de komma gelijk aan <m>2,07</m> m/s. De gemiddelde snelheid kunnen we natuurlijk ook gewoon berekenen door de verplaatsing (zie grafiek rechts) van de loper te delen door het tijdsinterval. Er geldt dus dat
+        <me>
+            v_g=\frac{1}{7}\int_1^8 v(t) \; dt=\frac{x(8)-x(1)}{7}
+        </me>
+        Hieruit halen we dat
+        <me>
+          \int_1^8 v(t) \; dt=x(8)-x(1)
+        </me>
+        De oppervlakte onder de grafiek van <m>v(t)</m> over het tijdsinterval <m>[1,8]</m> s is dus gelijk aan de verplaatsing gedurende dat tijdsinterval.
+      </p>
+      <sidebyside widths="45% 45%" margins="0% 0%">
+        <image source="desmos-gemiddelde-snelheid.png"/>
+        <image source="desmos-gemiddelde-snelheid2.png"/>
+      </sidebyside>
+      <p>
+        Als we als bovengrens voor het tijdsinterval een willekeurig tijdstip <m>t</m> nemen, kunnen we schrijven dat
+        <md>
+          <mrow>\amp \int_1^t v(u) \; du=x(t)-x(1)</mrow>
+          <mrow>\Leftrightarrow \; \amp x(t)=x(1)+\int_1^t v(u) \; du</mrow>
+        </md>
+        We weten echter dat <m>\dfrac{d}{dt}x(t)=v(t)</m>, dus volgt hieruit dat ook
+        <me>
+          \frac{d}{dt}\left(\int_1^t v(u)\; du \right)=v(t)
+        </me>
+        We besluiten hieruit dat afleiden en integreren eigenlijk <q>inverse processen</q> zijn. Omdat de afgeleide van een constante nul is, kunnen we wel enkel de verplaatsing <m>\Delta x</m> bepalen en niet <m>x(t)</m> zelf. Bij het afleiden gaat er dus informatie over <m>x(t)</m> verloren die we niet meer kunnen achterhalen.
+      </p>
+    </example>
+
+    <assemblage>
+      <title>Hoofdstelling van de integraalrekening</title>
+      <p>
+        De functie <m>F_a(x)=\int_a^x f(t) \; dt</m> is de functie die <m>x</m> afbeeldt op de georiënteerde oppervlakte onder de grafiek van <m>f</m> over het interval <m>[a,x]</m>. <m>F_a(x)</m> noemen we de integraalfunctie van <m>f</m> met ondergrens <m>a</m>.
+      </p>
+      <p>
+        Als <m>f</m> continu is over <m>[a,b]</m>, dan geldt dat
+        <me>
+          \frac{d}{dx}F_a(x) = \frac{d}{dx} \left( \int_a^x f(t) \; dt \right)=f(x)
+        </me>
+        De afgeleide van een integraalfunctie is dus gewoon de oorspronkelijke functie.
+      </p>
+    </assemblage>
+
+    <proof>
+      <p>
+        We beperken ons tot het geval waarvoor <m>x \in ]a,b[ </m> en berekenen <m>\frac{d}{dx}F_a(x)</m> rechtstreeks via de definitie:
+        <md>
+          <mrow>\frac{d}{dx}F_a(x) \amp \; = \lim_{\Delta x \to 0} \frac{F_a(x+\Delta x)-F_a(x)}{\Delta x}</mrow>
+          <mrow> \amp \; = \lim_{\Delta x \to 0} \frac{\int_a^{x+\Delta x} f(t) \; dt - \int_a^x f(t) \; dt}{\Delta x}</mrow>
+          <mrow> \amp \; = \lim_{\Delta x \to 0} \frac{\int_a^{x+\Delta x} f(t) \; dt + \int_x^a f(t) \; dt}{\Delta x}</mrow>
+          <mrow> \amp \; = \lim_{\Delta x \to 0} \frac{\int_x^{x+\Delta x} f(t) \; dt}{\Delta x}</mrow>
+        </md>
+        Volgens de middelwaardestelling bestaat er bestaat er een <m>c \in [x,x+\Delta x]</m> zodat 
+        <me>
+          \int_x^{x+\Delta x} f(t) \; dt = f(c) \Delta x
+        </me>
+        Hieruit volgt dan dat
+        <me>
+          \frac{d}{dx}F_a(x) = \lim_{\Delta x \to 0} \frac{f(c) \Delta x}{\Delta x} = \lim_{\Delta x \to 0} f(c) = f(x)
+        </me>
+        aangezien <m>x \to c</m> als <m>\Delta x \to 0</m>. 
+      </p>
+      <image source="hoofdstelling.png" width="60%"/>
+    </proof>
+  </subsection>
+
+  <subsection>
+    <title>Bepaalde integralen berekenen m.b.v. primitieve functies</title>
+    <assemblage>
+      <title>Primitieve functies</title>
+      <p>
+        <m>F</m> is een primitieve functie van <m>f</m> als en slechts als <m>\dfrac{dF}{dx}=f</m>. Een functie <m>f</m> heeft een oneindig aantal primitieve functies die slechts in een constante term van elkaar verschillen.
+      </p>
+    </assemblage>
+    <p>
+      Uit de hoofdstelling volgt dat de integraalfuntie <m>F_a(x)=\int_a^x f(t) \; dt</m> een primitieve functie is van <m>f</m>. Er geldt dus dat <m>F_a(x)=F(x)+c</m>, met <m>F(x)</m> een willekeurige primitieve functie en <m>c</m> een constante. Invullen van <m>a=0</m> geeft
+      <me>
+         \int_a^a f(t) \; dt=F(a)+c \Rightarrow 0=F(a)+c \Rightarrow c=-F(a)
+      </me>
+      Dit betekent dat
+      <me>
+        \int_a^x f(t) \; dt=F(x)-F(a)
+      </me>
+      en dus dat
+      <me>
+        \int_a^b f(t) \; dt=F(b)-F(a)
+      </me>
+    </p>
+    <assemblage>
+      <title>Praktische berekening van bepaalde integralen</title>
+      <p>
+        Als <m>f</m> continu is over <m>[a,b]</m> en <m>F</m> een willekeurige primitieve functie van <m>f</m> is, dan is
+        <me>
+          \int_a^b f(x) \; dx = F(b)-F(a)=F(x)\Bigg\rvert^b_a
+        </me>
+      </p>
+    </assemblage>
+   
+    <interactive desmos="x59mcnl4ez" width="100%" aspect="4:3" preview="hoofdstelling-2.png"/>
+  
+  </subsection>
+  <activity>
+    <statement>
+      <p>
+        Stel m.b.v. de berekening via primitieve functies de formules voor <m>\int_a^b \;dx</m>, <m>\int_a^b x\;dx</m> en  <m>\int_a^b x^2\;dx</m> opnieuw op. Algemeen geldt er dus dat
+        <me>
+          \boxed{\int_a^b x^n \; dx=\frac{x^{n+1}}{n+1}\Bigg\rvert^b_a \quad(n \in \mathbb{N}, n \neq -1)}
+        </me>
+      </p>
+    </statement>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Bereken onderstaande integralen
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int_2^9 (4x+10)\; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_1^5 (3x^2+40)\; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_1^2 (5x^2+3x-4)\; dx</m>
+            </p>
+          </li>
+        <!--  <li>
+            <p>
+              <m>\displaystyle \int_1^2 \left(\frac{2}{x^3}+4 \right)\; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_1^2 \left(\frac{1}{x^2}+1+x^2 \right)\; dx</m>
+            </p>
+          </li>-->
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Controleer zelf met rekenmachine of Desmos.
+      </p>
+    </answer>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Bepaal <m>k</m> zodat <m>\displaystyle \int_{-1}^{1}(-x^3+k)\,dx=4</m>.
+      </p>
+    </statement>
+    <solution>
+      <me>
+        -\frac{x^4}{4}\Bigg\rvert^1_{-1} + kx\Bigg\rvert^1_{-1}=4 \Leftrightarrow 2k=4 \Leftrightarrow k=2
+      </me>
+    </solution>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Bepaal een functie <m>f</m> en een getal <m>a \in \mathbb{R}</m> zodat <m>\int_a^x f(t)\;dt=F_a(x)</m> als
+        <ol>
+          <li>
+            <p>
+              <m>F_a(x)=x+5</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>F_a(x)=x^3-9x</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>f(x)=1</m> en <m>F_a(x)\Bigg\rvert^x_a = x +5 \Leftrightarrow (x+5)-(a+5)=x+5 \Leftrightarrow a=-5</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(x)=3x^2-9</m> en <m>F_a(x)\Bigg\rvert^x_a = x^3 -9x \Leftrightarrow (x^3-9x)-(a^3-9a)=x^3-9x </m> <m>\Leftrightarrow a(a^2-9)=0 \Leftrightarrow a=0 \text{ of } a=\pm 3</m> </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </activity>
+  <activity>
+    <statement>
+      <p>
+        Voor welke waarde van <m>x</m> bereikt <m>\displaystyle F(x)=\int_0^x\frac{t-3}{t^2+7}dt</m> een minimum?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>F'(x)=0 \Leftrightarrow \dfrac{x-3}{x^2+7} = 0 \Leftrightarrow x=3</m>
+      </p>
+    </solution>
+  </activity>
+</section>
+
+</chapter>

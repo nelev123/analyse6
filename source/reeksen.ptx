@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="reeksen" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title>Reeksen</title>
+
+<section>
+    <title>Inleiding: Achilles en de schildpad</title>
+    <p>
+      Het verhaal van Achilles en de schildpad is één van de zogenaamde paradoxen van Zeno van Elea (495 - 435 v. Chr.). Je kan dit eventueel <url href="https://nl.wikipedia.org/wiki/Zeno%27s_paradoxen">
+      hier</url> eens nalezen. Samengevat:
+      <ol>
+        <li>
+          <p>
+            Achilles bevindt zich in een punt A en de schildpad in een punt B dat 10 m verderop ligt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Na het startschot beginnen ze allebei te <q>lopen</q> en Achilles loopt tienmaal zo snel als de schildpad.
+          </p>
+        </li>
+        <li>
+          <p>
+            Als Achilles punt B bereikt, bevindt de schildpad zich intussen in een punt C dat 1 m verderop ligt.
+          </p>
+        </li>
+        <li>
+          <p>
+            Bereikt Achilles punt C, dan bevindt de schildpad zich in een punt D op 10 cm van Achilles.
+          </p>
+        </li>
+        <li>
+          <p>
+            Telkens als Achilles de vorige positie van de schildpad heeft bereikt, bevindt de schildpad zich alweer een eindje verder. De afstand tussen Achilles en de schildpad wordt steeds kleiner, maar volgens bovenstaande redenering haalt Achilles de schildpad nooit in. Dit strookt natuurlijk niet met de realiteit, dus dit lijkt een paradox.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Wat elementaire fysica leidt onmiddellijk tot de positie waar Achilles de schildpad inhaalt. Stel dat Achilles loopt met een snelheid van 5 m/s en de schildpad met 0,5 m/s (iets te snel voor een schildpad).
+      De positie van Achilles in functie van de tijd is <m>x=5t</m> en die van de schildpad <m>x=10+0,5t</m>.
+      Achilles haalt de schildpad in na <m>5t=10+0,5t \Rightarrow t=\dfrac{20}{9}</m> seconden en de positie is dan <m>x=\dfrac{100}{{9}}\approx 11,11</m> m.
+    </p>
+    <p>
+      De afstand die Achilles aflegt tot hij de schildpad inhaalt kan ook geschreven worden als de <q>oneindige som</q>
+      <me>
+        10+1+\frac{1}{10}+\frac{1}{100}+\frac{1}{1000}+\ldots
+      </me>
+      en is een voorbeeld van een meetkundige reeks. We zullen verderop zien dat de reekssom ook gelijk is aan <m>\dfrac{100}{9}</m>.
+    </p>
+</section>
+
+<section>
+    <title>Definitie en voorbeelden</title>
+    <p>
+      Een reeks wordt genoteerd als een oneindige som (en vaak ook zo benoemd), maar is eigenlijk een rij.
+      De reeks
+      <me>
+         \sum_{i=1}^{+\infty} 10^{2-i} = 10+1+\frac{1}{10}+\frac{1}{100}+\frac{1}{1000}+\ldots
+      </me>
+      is de rij
+      <me>
+        10 \quad 11 \quad  11,1 \quad 11,11 \quad 11,111 \quad \ldots
+      </me>
+      waarbij de <m>i</m>-de term gelijk is aan de som <m>s_i</m> van de eerste <m>i</m> termen van de rij <m>10, 1, \dfrac{1}{10}, \dfrac{1}{100}, \dfrac{1}{1000}, \ldots</m>
+    </p>
+    <assemblage>
+      <title>Reeks</title>
+      <p>
+        Gegeven de rij <m>(u_n)</m>, dan noemen we de rij <m>(s_n)</m> met <m>s_n=u_1+u_2+\ldots+u_n</m> een reeks en we noteren die reeks als
+        <me>
+          \sum_{i=1}^{+\infty} u_i = u_1+u_2+u_3+\ldots
+        </me>
+        De reeks wordt ook de rij van de <term>partieelsommen</term> genoemd en <m>s_n</m> de <m>n</m>-de partieelsom.
+      </p>
+    </assemblage>
+    <p>
+      <ul>
+        <li>
+            <p>
+              Een rekenkundige reeks is een reeks die ontstaat uit een rekenkundige rij. Bijvoorbeeld:
+              <me>
+                5+10+15+ \ldots
+              </me>
+            </p>
+        </li>
+        <li>
+            <p>
+              Een meetkundige reeks is een reeks die ontstaat uit een meetkundige rij. Bijvoorbeeld:
+              <me>
+                2+4+8+\ldots
+              </me>
+            </p>
+        </li>
+        <li>
+          <p>
+            De harmonische reeks is
+            <me>
+              1+\dfrac{1}{2}+\dfrac{1}{3}+\ldots
+            </me>
+          </p>
+        </li>
+      </ul>
+    </p>
+</section>
+  
+<section>
+    <title>Convergentie van reeksen</title>
+    <assemblage>
+      <title>Convergente en divergente reeksen</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              Een reeks is convergent enkel en alleen als de rij van de partieelsommen convergent is. De limiet van de rij van de partieelsommen noemen we de <term>reekssom</term> <m>s</m>:
+              <me>s=\lim_{n \to +\infty} s_n</me>
+              De reekssom wordt meestal ook gewoon genoteerd als <m>  \sum_{i=1}^{+\infty} u_i</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Een reeks is divergent enkel en alleen als de rij van de partieelsommen divergent is.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+    <p>
+      <ul>
+        <li>
+          <p>
+            Een rekenkundige reeks is divergent behalve als de reeks ontstaat uit de nulrij.
+          </p>
+        </li>
+        <li>
+          <p>
+            Een meetkundige rij <m>(u_n)</m> met <m>u_n=u_1 q^{n-1}</m> is convergent enkel en alleen als <m> -1 \lt q \le 1</m>. Voor <m>q=1</m> is de <m>n</m>-de partieelsom van de corresponderende meetkundige reeks:
+            <me>
+              s_n = n u_1 \Rightarrow s=\lim_{n \to +\infty} s_n =+\infty
+            </me>
+            en de reeks is bijgevolg divergent. Voor <m>|q| \le 1</m> is de <m>n</m>-de partieelsom
+            <me>
+              s_n=u_1 \frac{1-q^n}{1-q} \Rightarrow s=\lim_{n \to +\infty} s_n =\frac{u_1}{1-q}
+            </me>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <assemblage>
+      <title>Reekssom van een meetkundige reeks</title>
+      <p>
+        Een meetkundige reeks die ontstaat uit een meetkundige rij met eerste term verschillend van nul, is convergent enkel en alleen als <m>|q| \lt 1</m> en de reekssom is
+        <me>
+          s=\sum_{i=1}^{+\infty} u_1 q^{i-1}=\frac{u_1}{1-q}
+        </me>
+      </p>
+    </assemblage>
+    <example>
+      <title>Achilles en de schildpad</title>
+      <p>
+       De afstand die Achilles aflegt vooraleer hij de schildpad inhaalt, is gelijk aan de reekssom
+        <me>
+          \sum_{i=1}^{+\infty} 10^{2-i} = \frac{10}{1-10^{-1}}=\frac{100}{9}
+        </me>
+        en dit komt overeen met de kinematische behandeling uit de inleiding.
+      </p>
+    </example>
+    <example>
+      <title>Repeterende decimale getallen</title>
+      <p>
+        Een willekeurig reëel getal <m>r</m> tussen 0 en 1 kan geschreven worden als <m>0,d_1d_2d_3\ldots</m> met <m>d_i \in \lbrace 0, 1,2,3,4,5,6,7,8,9 \rbrace </m>. Schrijven we de machten van 10 expliciet uit, dan krijgen we de reeks
+        <me>
+          r = \frac{d_1}{10}+ \frac{d_2}{100}+\frac{d_3}{1000}+\ldots = \sum_{i=1}^{+\infty} \frac{d_i}{10^i}
+        </me>
+        Reële getallen kunnen dus voorgesteld worden door reeksen! Dit leidt tot een handige manier om repeterende decimale getallen in breukvorm te schrijven. Twee voorbeelden
+        <md>
+          <mrow>3,11111\ldots =3,\overline{11} \amp = 3+\sum_{i=1}^{+\infty} 10^{-i} = 3+\frac{10^{-1}}{1-10^{-1}} =3+\frac{1}{9}=\frac{28}{9}</mrow>
+          <mrow>0,52473473\ldots =0,52\overline{473} \amp = \frac{52}{100} + \frac{473}{10^5} + \frac{473}{10^8} + \ldots = \frac{52}{100}+\frac{473 \cdot 10^{-5}}{1-10^{-3}}</mrow>
+          <mrow> \amp = \frac{52}{100}+\frac{473}{99900}=\frac{52421}{99900}</mrow>
+        </md>
+      </p>
+    </example>
+    <p>
+      <ul>
+        <li>
+          <p>
+            Een harmonische rij convergeert naar 0, maar de harmonische reeks is divergent. Het bewijs hiervan verloopt gemakkelijker als je kan integreren, dus stellen we uit tot later.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <assemblage>
+      <title>Twee convergentiecriteria voor reeksen</title>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Als een reeks convergeert, dan is <m>\displaystyle \lim_{n \to +\infty} u_n = 0</m>.
+              <ul>
+                <li>
+                  <p>
+                     Merk op dat het omgekeerde niet noodzakelijk geldt. Als de limiet van de rij nul is, dan is de reeks niet noodzakelijk convergent.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Als <m>\displaystyle \lim_{n \to +\infty} u_n \neq 0</m>, dan is de reeks divergent (contrapositie). <!-- product van twee lineaire functies is kwadratische functie-->
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              Beschouw de limiet <m>\displaystyle \lim_{n \to +\infty} \left | \frac{u_{n+1}}{u_n} \right|=r</m>. De reeks is
+              <ul>
+                <li>
+                  <p>
+                    convergent als <m>r \lt 1</m>;
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    divergent als <m>r \gt 1</m>;
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    er kan geen besluit getrokken worden als <m>r=1</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+
+    <example>
+      <title>De convergentiecriteria toepassen</title>
+      <p>
+        De reeks <m>\displaystyle \sum_{n=1}^{+\infty}\frac{n}{2n-1}</m> is divergent want
+        <me>
+          \lim_{n \to +\infty} \frac{n}{2n-1} = \frac{1}{2} \neq 0
+        </me>
+      </p>
+      <p>
+        De reeks <m>\displaystyle \sum_{n=1}^{+\infty}\frac{n^2}{3^n}</m> is convergent want
+        <me>
+          \lim_{n \to +\infty} \frac{n^2+2n+1}{3^{n+1}} \cdot \frac{3^n}{n^2} =  \lim_{n \to +\infty} \frac{1}{3} \cdot \frac{n^2+2n+1}{n^2}=\frac{1}{3} \lt 1
+        </me>
+      </p>
+    </example>
+  </section>
+
+<!--;bepalen van u_1 beter uitleggen-->
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal de reekssom van onderstaande meetkundige reeksen.
+          <ol>
+            <li>
+              <p>
+                <m>16+8+4+2+\ldots</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>1-\dfrac{3}{4}+\dfrac{9}{16}-\dfrac{27}{64}+\ldots</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sum_{k=1}^{+\infty}\dfrac{3}{7^k}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sum_{n=1}^{+\infty}\dfrac{5}{10^{3n}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>16+8+4+2+\ldots=32</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>1-\dfrac{3}{4}+\dfrac{9}{16}-\dfrac{27}{64}+\ldots=\dfrac{4}{7}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sum_{k=1}^{+\infty}\dfrac{3}{7^k}=\dfrac{1}{2}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sum_{n=1}^{+\infty}\dfrac{5}{10^{3n}}=\dfrac{5}{999}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Schrijf onderstaande repeterende decimale vormen als een reeks en vervolgens als een breuk:
+          <ol>
+            <li>
+              <p>
+                <m>0,\overline{23}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>1,\overline{002}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>0,\overline{23}=\sum_{i=1}^{+\infty} 23 \cdot 10^{-2i} =\dfrac{23}{99}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>1,\overline{002}=1+\sum_{i=1}^{+\infty} 2 \cdot 10^{-3i} =\dfrac{1001}{999}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Een patiënt krijg iedere morgen 50 mg van een pijnstillend middel. Na 24 uur is 75 % van de pijnstiller door het lichaam afgebroken. De behandelende arts vindt een hoeveelheid van meer dan 70 mg niet verantwoord. Kan zo een overdosis zich voordoen?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Nee, de hoeveelheid pijnstiller is nooit meer dan <m>\dfrac{200}{3}</m> mg.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Een elastische bal bereikt na botsing nog 3/4 van de hoogte waarop hij losgelaten werd. Stel dat je de bal laat vallen vanaf een hoogte van 2 m en dat hij blijft botsen. Welke afstand legt de bal dan af?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          14 m
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Je trekt met terugleggen telkens een kaart uit een kaartspel. Bereken de kans dat je ten minste 10 trekkingen nodig hebt vooraleer je een aas trekt.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left ( \dfrac{12}{13} \right ) ^9 \approx 0,49</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Beginnend met een gelijkbenige driehoek <m>A_1</m> verlengen we een rechthoekszijde en brengen daarop een tweede gelijkvormige driehoek <m>A_2</m> aan, waarvan de afmetingen de helft zijn van de eerste figuur. We doen dit opnieuw uitgaande van <m>A_2</m> om <m>A_3</m> te construeren tot in het oneindige. Bereken de totale oppervlakte van deze figuur.
+        </p>
+        <sidebyside width="50%">
+          <image source="zaagtand.png"/>
+        </sidebyside>
+      </statement>
+      <answer>
+        <p>
+          De oppervlakte is <m>\dfrac{2a^2}{3}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <sidebyside widths="60% 40%">
+          <p>
+            We vormen een toren door kubusvormige houten blokken op elkaar te stapelen (zie figuur). De ribbe van de onderste kubus is 6 m en vier hoekpunten van de tweede kubus vallen samen met de middens van de bovenste ribben van de eerste kubus. Veronderstel dat we een oneindig aantal blokken op elkaar stapelen.
+            <ol>
+              <li>
+                <p>
+                  Bestaat er een gebouw waarin we deze toren kunnen opstellen? Indien ja, hoe hoog moet dit gebouw dan minstens zijn?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Hoeveel liter verf heb je nodig als je de hele toren wil schilderen? Je schildert voor elke kubus natuurlijk enkel de vier zijvlakken en het zichtbare deel van het bovenvlak. Met 1 l verf kan je 6 m<m>^2</m> schilderen.
+                </p>
+              </li>
+            </ol>
+          </p>
+          <image source="Toren.png"/>
+        </sidebyside>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                De lengte van een ribbe vermindert met een factor <m>\dfrac{\sqrt{2}}{2}</m> en totale hoogte wordt dan <m>6(2+\sqrt{2}).</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Voor elke kubus met ribbe <m>a</m> moet er een oppervlakte van <m>\dfrac{9}{2} a^2</m> geschilderd worden en de oppervlakte halveert voor elke stap. De totale oppervlakte die moet geschilderd worden is dus <m>\dfrac{9}{2} \cdot 36 \cdot 2</m> en daarvoor is er 54 l verf nodig.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Ga voor onderstaande reeksen na of ze convergent of divergent zijn.
+          <ol>
+            <li>
+              <p>
+                <m>1-1+1-1+1-1+\ldots</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{99^n}{n!}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{n}{2n-1}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{i=1}^{+\infty} \frac{1+2^{i+1}}{3^i}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{2^n}{n+1}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{n!}{n^n}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>1-1+1-1+1-1+\ldots</m> is divergent omdat de rij van de partieelsommen divergeert.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{99^n}{n!}</m> is convergent omdat <m>\displaystyle \lim_{n \to +\infty} \frac{u_{n+1}}{u_n} \lt 1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{n}{2n-1}</m> is divergent omdat <m>\displaystyle \lim_{n \to +\infty} u_n \neq 0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{i=1}^{+\infty} \frac{1+2^{i+1}}{3^i}</m> is convergent (som van twee convergente meetkundige reeksen).
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{2^n}{n+1}</m> is divergent omdat <m>\displaystyle \lim_{n \to +\infty} \frac{u_{n+1}}{u_n} \gt 1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{n=1}^{+\infty} \frac{n!}{n^n}</m> is convergent omdat <m>\displaystyle \lim_{n \to +\infty} \frac{u_{n+1}}{u_n} \lt 1</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+  </exercises>
+
+  <section>
+    <title>(<m>\star</m>) Enkele moeilijkere reekssommen</title>
+    <p>
+      We tonen aan dat <m>\sum_{n=1}^{+\infty} \dfrac{1}{n(n+1)}=1</m>.
+     <ol>
+       <li>
+         <p>
+           Er geldt dat <m>\dfrac{1}{n(n+1)}=\dfrac{1}{n}-\dfrac{1}{n+1}</m>.
+         </p>
+       </li>
+       <li>
+         <p>
+           De <m>n</m>-de partieelsom kan dan geschreven worden als
+             <md>
+               <mrow> s_n = \amp  \sum_{i=1}^{n} \dfrac{1}{i} - \sum_{i=1}^{n} \dfrac{1}{i+1}</mrow>
+               <mrow> = \amp \sum_{i=1}^{n} \dfrac{1}{i} - \sum_{i=2}^{n+1} \dfrac{1}{i} </mrow>
+               <mrow> = \amp \; 1 - \dfrac{1}{n+1} </mrow>
+             </md>
+         </p>
+       </li>
+       <li>
+         <p>
+           Hieruit volgt de reekssom door de limiet voor <m>n \to +\infty</m> te nemen:
+           <me>
+             s=\lim_{n \to +\infty} s_n = 1
+           </me>
+         </p>
+       </li>
+     </ol>
+    </p>
+    <p>
+      Een rationale functie schrijven als een som van eenvoudigere rationale functies wordt <term>partieelbreuksplitsing</term> genoemd. Het voorbeeld hierboven was op het zicht op te lossen; voor moeilijkere gevallen, kan je altijd terugvallen op het oplossen van een stelsel.
+     </p>
+     <p>
+       Stel dat we <m>\dfrac{1}{n(n+2)}</m> willen splitsen in partieelbreuken. We schrijven dan dat
+      <md>
+        <mrow>\dfrac{1}{n(n+2)}=\dfrac{A}{n}+\dfrac{B}{n+2}=\dfrac{(A+B)n+2A}{n(n+2)}</mrow>
+        <mrow>\Rightarrow \begin{cases} A+B = 0 \\ 2A=1  \end{cases} \Leftrightarrow \begin{cases} A=\frac{1}{2} \\ B=-\frac{1}{2} \end{cases} </mrow>
+      </md>
+      Het onderstaande trucje gaat sneller dan het oplossen van een stelsel:
+      <ol>
+        <li>
+          <p>
+            Vertrek van <m>\dfrac{1}{n(n+2)}=\dfrac{A}{n}+\dfrac{B}{n+2}</m> en vermenigvuldig de gelijkheid met telkens met één van de noemers uit het rechterlid:
+            <me>
+              \dfrac{1}{n+2}=A+\dfrac{nB}{n+2} \quad \text{en} \quad \dfrac{1}{n}=\dfrac{(n+2)A}{n}+B
+            </me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Je kan nu gemakkelijk een term in het rechterlid laten wegvallen door <m>n</m> gelijk te stellen aan <m>0</m> of <m>-2</m>:
+            <me>
+              \frac{1}{2}=A \quad \text{en} \quad -\frac{1}{2}=B
+            </me>
+          </p>
+        </li>
+      </ol>
+      Een partieelbreuksplitsing kan je snel berekenen met Sage:
+      <sage>
+        <input>
+          f(x)=1/(x*(x+2))
+          f(x).partial_fraction().show()
+        </input>
+      </sage>
+      of met Geogebra: <url href="https://www.geogebra.org/cas/ncbrk5kn"/>.
+     </p>
+     <activity>
+       <statement>
+         <p>
+           Bepaal voor onderstaande reeksen een uitdrukking voor de <m>n</m>-de partieelsom en de reekssom zelf.
+           <ol>
+             <li>
+               <p>
+                 <m>\displaystyle \sum_{n=1}^{+\infty} \dfrac{1}{n(n+2)} </m>
+               </p>
+             </li>
+             <li>
+               <p>
+                 <m>\displaystyle \sum_{n=1}^{+\infty} \dfrac{1}{(3n-2)(3n+1)} </m>
+               </p>
+             </li>
+             <li>
+               <p>
+                 <m>\displaystyle \sum_{n=1}^{+\infty} \dfrac{1}{n(n+1)(n+2)}</m>
+               </p>
+             </li>
+           </ol>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <ol>
+             <li>
+               <p>
+                 <m>s_n=\dfrac{3}{4} - \dfrac{1}{2(n+1)} - \dfrac{1}{2(n+2)}</m> en <m>s=\dfrac{3}{4}</m>
+               </p>
+             </li>
+             <li>
+               <p>
+                 <m>s_n=\dfrac{1}{3} - \dfrac{1}{3(3n+1)} </m> en <m>s=\dfrac{1}{3}</m>
+               </p>
+             </li>
+             <li>
+               <p>
+                 <m>s_n=\dfrac{1}{4} - \dfrac{1}{2n+2} +  \dfrac{1}{2n+4} </m> en <m>s=\dfrac{1}{4}</m>
+               </p>
+             </li>
+           </ol>
+         </p>
+       </answer>
+      </activity>
+  </section>
+
+</chapter>

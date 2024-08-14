@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection xml:id="subsec-cyclo-int">
+    <title>(7u) Cyclometrische functies integreren</title>
+
+    <p>
+      De afgeleiden van de inverse goniometrische functies <m>\sin^{-1}</m>, <m>\cos^{-1}</m> en <m>\tan^{-1}</m> (ook cyclometrische functies genoemd) kunnen bepaald worden via de kettingregel en de eigenschappen van inverse functies. We voeren ook alternatieve namen in voor deze functies: de boogsinus, boogcosinus en de boogtangens.
+    </p>
+
+    <assemblage>
+      <title>Cyclometrische functies</title>
+      <sidebyside widths="50% 50%">
+        <p>
+          De boogsinus is de inverse functie van <m>\sin x</m> beperkt tot <m>\left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</m>.   Er geldt dus dat het domein gelijk is aan het interval <m>[-1,1]</m> en het bereik is het interval <m>\left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</m>.
+          <md>
+            <mrow>y= \sin x \quad \text{en} \quad x \in \left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</mrow>
+            <mrow>\Updownarrow</mrow>
+            <mrow>x=\text{Bgsin } y</mrow>
+          </md>
+          De afgeleide is
+          <me>D(\text{Bgsin } x)=\frac{1}{\sqrt{1-x^2}}</me>
+        </p>
+        <image source="Bgsin.png"/>
+      </sidebyside>
+      <sidebyside widths="50% 50%">
+        <p>
+          De boogcosinus is de inverse functie van <m>\cos x</m> beperkt tot <m>\left [ 0,\pi \right ]</m>. Er geldt dus dat het domein gelijk is aan het interval <m>[-1,1]</m> en het bereik is het interval <m>\left [0,\pi \right ]</m>.
+          <md>
+            <mrow>y= \cos x \quad \text{en} \quad x \in \left [0,\pi\right ]</mrow>
+            <mrow>\Updownarrow</mrow>
+            <mrow>x=\text{Bgcos } y</mrow>
+          </md>
+          De afgeleide is
+          <me>D(\text{Bgcos } x)=-\frac{1}{\sqrt{1-x^2}}</me>
+        </p>
+        <image source="Bgcos.png"/>
+      </sidebyside>
+      <sidebyside widths="50% 50%">
+        <p>
+          De boogtangens is de inverse functie van <m>\tan x</m> beperkt tot <m>\left ] -\frac{\pi}{2},\frac{\pi}{2} \right [</m>. Er geldt dus dat het domein gelijk is aan <m>\mathbb{R}</m> en het bereik is het interval <m>\left ]-\frac{\pi}{2},\frac{\pi}{2} \right [ </m>.
+          <md>
+            <mrow>y= \tan x \quad \text{en} \quad x \in \left ] -\frac{\pi}{2},\frac{\pi}{2} \right [ </mrow>
+            <mrow>\Updownarrow</mrow>
+            <mrow>x=\text{Bgtan } y</mrow>
+          </md>
+          De afgeleide is
+          <me>D(\text{Bgtan } x)=\frac{1}{1+x^2}</me>
+        </p>
+        <image source="Bgtan.png"/>
+      </sidebyside>
+    </assemblage>
+
+    <activity>
+        <statement>
+            <p>
+                Bewijs de formules voor de afgeleiden van de cyclometrische functies.
+            </p>
+        </statement>
+    </activity>
+
+    <example>
+        <p>
+            <md>
+                <mrow>\displaystyle \int \frac{1}{4+x^2} \; dx = \; \amp \frac{1}{4} \int \frac{1}{1+\left (\frac{x}{2} \right )^2} \; dx </mrow>
+                <mrow> = \; \amp \frac{1}{4} \int \frac{1}{1+t^2} \; 2 dt </mrow>
+                <mrow> = \; \amp \frac{1}{8} \int \frac{1}{1+t^2} \;  dt </mrow>
+                <mrow> = \; \amp \frac{1}{8} \text{Bgtan}\, t + c </mrow>
+                <mrow> = \; \amp \frac{1}{8} \text{Bgtan} \frac{x}{2} + c </mrow>
+            </md>
+        </p>
+    </example>
+
+    <example>
+        <p>
+            <md>
+                <mrow> \int \text{Bgcos}\, x \; dx =\; \amp  x \text{Bgcos}\, x + \int \frac{x}{\sqrt{1-x^2}} \; dx </mrow>
+                <mrow> =\;  \amp x \text{Bgcos}\, x  - \frac{1}{2} \int \frac{d(1-x^2)}{\sqrt{1-x^2}}</mrow>
+                <mrow> =\; \amp x \text{Bgcos}\, x - \sqrt{1-x^2}</mrow>
+            </md>
+        </p>
+    </example>
+
+    <exercises xml:id="exercises-cyclo-int">
+    <exercise>
+        <statement>
+            <p>
+              Leid onderstaande functies af: 
+              <ol>
+                <li>
+                    <p>
+                        <m>f(x) =\text{Bgsin } 5x</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>f(x) = x^2\text{Bgtan } x - x</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>f(x) = (\text{Bgcos } x)^2</m>
+                    </p>
+                </li>
+              </ol>
+            </p>
+        </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande onbepaalde integralen:
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{1}{1+4x^2} \; dx</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{x}{7+x^4} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{x^2}{x^2+1} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{6}{\sqrt{9-4x^2}} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{x^2-1}{x^2+1} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{x^2}{1+x^6} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{\sin 8x}{9+\sin^4 4x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{x+7}{\sqrt{1-x^2}} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \text{Bgcos } 2x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int x \text{Bgsin } x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \text{Bgsin}^2 x \; dx</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+        
+    </exercises>
+    
+</subsection>

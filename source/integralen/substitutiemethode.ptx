@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+  <title>De substitutiemethode</title>
+  <p>
+    De substitutiemethode is een integratietechniek die de tegenhanger is van de kettingregel voor het afleiden van functies. We gaan eerst even dieper in op de meetkundige verklaring met behulp van enkele eenvoudige voorbeelden.
+  </p>
+  <example>
+    <sidebyside widths="50% 50%">
+      <p>
+        Stel dat je de integraal <m>\int_3^4 (x-2)^2 \; dx</m> wil berekenen. Dit
+        is de oppervlakte onder de grafiek van de parabool <m>y=(x-2)^2</m> in het
+        interval <m>[3,4]</m>. Als we deze parabool over een afstand van twee
+        eenheden naar links schuiven dan zien we dat er eigenlijk moet gelden dat
+        <me>
+          \int_3^4 (x-2)^2 \; dx = \int_1^2 x^2 \; dx
+        </me>
+      </p>
+      <image source="zelfdeS.png"/>
+    </sidebyside>
+    <p>
+      Algebraïsch pakken we dit als volgt aan
+      <ol>
+        <li>
+          <p>
+            We gaan over naar de veranderlijke <m>t</m> door te stellen dat
+          <m>t=x-2</m>. De integrand wordt dus <m>t^2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De ondergrens verschuift mee naar <m>t=3-2=1</m> en de bovengrens
+          naar <m>t=4-2=2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Voor de Riemannsom geldt dat <m>\Delta t = \Delta x</m>. Alle rechthoekjes verschuiven immers gewoon.
+          </p>
+        </li>
+        <li>
+          <p>
+            De integraal herleidt zich dus tot:
+          </p>
+        </li>
+      </ol>
+      <me>
+        \int_3^4 (x-2)^2 \; dx = \int_1^2 t^2 \; dt
+      </me>
+    </p>
+  </example>
+  <example>
+    <sidebyside widths="50% 50%">
+      <p>
+        Als tweede voorbeeld kijken we naar een herschaling. De integraal <m>\displaystyle \int_{\frac{1}{2}}^1 (2x)^2 \; dx</m> is natuurlijk gewoon gelijk aan <m>\displaystyle 4 \int_{\frac{1}{2}}^1 x^2 \; dx</m> (zie nevenstaande tekening). We willen de integrand echter herschalen volgens volgens de <m>x</m>-as en niet volgens de <m>y</m>-as. Voor een parabool kan je elke uitrekking volgens <m>y</m> ook beschouwen als een inkrimping volgens <m>x</m>, maar voor de functie <m>\sin x</m> is dat bijvoorbeeld niet het geval.
+      </p>
+        <image source="herschaaldy.png"/>
+    </sidebyside>
+    <p>
+      <ol>
+        <li>
+          <p>
+            We stellen nu <m>t=2x</m> om de integrand opnieuw te herleiden tot <m>t^2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De ondergrens wordt <m>t=2 \cdot \frac{1}{2} = 1</m> en de bovengrens <m>t=2 \cdot 1 =2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Voor de Riemannsom geldt er nu echter dat dat <m>\Delta t = 2 \Delta x</m>. De breedte <m>\Delta x</m> van elk rechthoekje verdubbelt immers.
+          </p>
+        </li>
+        <li>
+          <p>
+            De integraal herleidt zich dus tot:
+            <me>
+              \int_{\frac{1}{2}}^1 (2x)^2 \; dx = \frac{1}{2} \int_1^2 t^2 \; dt
+            </me>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <image width="50%" source="herschaaldx.png"/>
+  </example>
+  <p>
+    Het doel van de substitutiemethode is het vereenvoudigen van de integrand door het invoeren van een nieuwe variabele. Het is niet voldoende om enkel de integrand aan te passen. De breedte van de rechthoekjes in de Riemannsom zal ook veranderen. Het is echter niet nodig om terug te keren naar de Riemannsom: het volstaat om de substitutie ook toe te passen op de differentiaal <m>dx</m>. Bijvoorbeeld
+    <me>
+      t=2 x \Rightarrow dt = 2 dx
+    </me>
+  </p>
+  <example>
+    <p>
+      Het derde voorbeeld is wat moeilijker. Veronderstel dat we willen aantonen dat de oppervlakte van een cirkelschijf met straal <m>r</m> gelijk is aan <m>\pi r^2</m>. Voor het gemak stellen we <m>r=1</m> en berekenen we een kwart van de oppervlakte. Dit betekent dat we de integraal
+      <me>
+        \int_0^1 \sqrt{1-x^2} \; dx
+      </me>
+      moeten berekenen.
+      <ol>
+        <li>
+          <p>
+            We laten ons leiden door de grondformule en stellen <m>x = \sin t </m>. Hieruit volgt dat <m>dx = \cos t \; dt</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De ondergrens is <m>t=0</m> en de bovengrens wordt <m>t= \frac{\pi}{2}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De integraal herleidt zich dus tot
+            <me>
+              \int_0^1 \sqrt{1-x^2} \; dx = \int_0^{\frac{\pi}{2}} \sqrt{1-\sin^2 t} \cos t \; dt =\int_0^{\frac{\pi}{2}} \cos^2 t \; dt
+            </me>
+          </p>
+        </li>
+      </ol>
+      Deze integraal kan verder berekend worden door de identiteit <me>\cos^2 \theta = \frac{1+\cos 2 \theta}{2}</me> te gebruiken. Na splitsing van de integrand krijgen we dan 
+      <md>
+        <mrow> \int_0^{\frac{\pi}{2}} \cos^2 t \; dt = \amp \frac{1}{2} \int_0^{\frac{\pi}{2}} dt + \frac{1}{2} \int_0^{\frac{\pi}{2}} \cos 2t \;  dt </mrow>
+        <mrow> = \amp \frac{\pi}{4} + \frac{1}{2} \int_0^{\pi} \cos u \; \frac{du}{2} \quad (u=2t \Rightarrow du = 2 dt) </mrow>
+        <mrow> = \amp  \frac{\pi}{4} + \frac{1}{4} \sin u \Bigg\rvert^{\pi}_0 = \frac{\pi}{4}</mrow>
+      </md>
+    </p>
+  </example>
+  <assemblage>
+
+    <title>Werkwijze substitutiemethode</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Vereenvoudig de integrand door een substitutie <m>t=f(x)</m> of <m>x=f(t)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Vervang eveneens <m>dx</m> door <m>\dfrac{dt}{f'(x)}</m> of door <m>f'(t) dt</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Gebruik de substitutie om de grenzen aan te passen.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Bereken met de substitutiemethode:
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int_1^2 (3x-2)^5 \; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_0^1 x \left (4x^2+5 \right )^3  \; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_0^{\frac{\pi}{2}} \sin(3x+\pi) \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <p>
+    Probeer onderstaande integraal met de substitutiemethode te berekenen. Je zal merken dat dit niet lukt.
+    <me>
+      \int_1^2 (3x^2-1)^5 \; dx
+    </me>
+    De integraal <m>\int_1^2 x (3x^2-1)^5 \; dx</m> kan wel met substitutiemethode berekend worden:
+    <md>
+      <mrow>\int_1^2 x (3x^2-1)^5 \; dx = \int_2^{11} x t^5 \; \frac{dt}{6x} = \frac{1}{6} \int_2^{11}  t^5 \; dt </mrow>
+      <mrow>t=3x^2-1 \Rightarrow dt = 6x \; dx</mrow>
+    </md>
+    Dit werkt omdat de integrand <m>f(x)=x (3x^2-1)^5</m> op een factor na eigenlijk gelijk is aan de afgeleide van <m>F(x)= (3x^2-1)^6</m>.
+  </p>
+  <assemblage>
+    <title>Substitutiemethode als tegenhanger van de kettingregel</title>
+    <p>
+      De afgeleide van een samengestelde functie <m>F(g(x))</m> is gelijk aan <m>f(g(x)) g'(x)</m> (<m>F'(x)=f(x)</m>), dus geldt er na een substitutie <m>t=g(x)</m>
+      <me>
+        \int_a^b f(g(x)) g'(x) \; dx = \int_{g(a)}^{g(b)} f(t) \; dt = F(g(b)) - F(g(a))
+      </me>
+    </p>
+  </assemblage>
+  <assemblage>
+    <title>Tips bij het toepassen van de substitutiemethode</title>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Als je de afgeleide van een samengestelde functie herkent, is de juiste substitutie snel gevonden.
+          </p>
+        </li>
+        <li>
+          <p>
+            De substitutiemethode kan ook gebruikt worden voor integralen die afwijken van de vorm <m>  \int_a^b f(g(x)) g'(x) \; dx</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Als er na het toepassen van een substitutie twee variabelen voorkomen, heb je waarschijnlijk een verkeerde substitutie gebruikt. Maak een andere keuze!
+          </p>
+        </li>
+      </ol>
+    </p>
+  </assemblage>
+
+  <exercise>
+    <statement>
+      <p>
+        Bereken met de substitutiemethode:
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int_0^1 18 x^2 \left ( 6x^3+5 \right)^4 \; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_0^1 x^2 \left ( 3-10x^3 \right )^7 \; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_0^1 \left (x^4 + 4x^2+5 \right )  (x^3+2x) \; dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int_0^1 2 x^3 \left (x^2+1 \right)^3 \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <p>
+    Je kan de substitutiemethode natuurlijk ook toepassen op een onbepaalde integraal. 
+  </p>
+
+  <example>
+    <p>
+        <md>
+            <mrow> \int 18x^2(6x^3+5)^4 \; dx = \amp \int t^4 dt \quad (t=6x^3+5 \Rightarrow dt = 18x^2 dx)</mrow>
+            <mrow> = \amp \frac{t^5}{5} + c = \frac{(6x^3+5)^5}{5} + c</mrow>
+        </md>
+        Vervolgens kan gelijk welke bepaalde integraal als volgt berekend worden:
+        <me>
+            \int_a^b 18x^2(6x^3+5)^4 \; dx = \frac{(6x^3+5)^5}{5}\bigg\rvert^b_a
+        </me>
+        
+    </p>
+  </example>
+
+</section>
