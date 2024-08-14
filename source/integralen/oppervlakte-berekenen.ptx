@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Oppervlakte berekenen met behulp van integralen</title>
+    <subsection>
+      <title>Oppervlakte tussen een kromme en de <m>x</m>-as</title>
+      <p>
+        Stel dat we de oppervlakte <m>S</m> willen berekenen tussen de grafiek van <m>y=-x^2+4</m>, de coördinaatsassen en de rechte <m>x=3</m>.
+      </p>
+  
+      <sidebyside widths="60% 35%" margins="0% 0%" valign="middle">
+        <p>
+           De georiënteerde oppervlakte is positief is over <m>[0,2]</m> en negatief over <m>[2,3]</m>. De oppervlakte is dus gelijk aan de georiënteerde oppervlakte als we integreren van 0 tot 2, maar tegengesteld aan de georiënteerde oppervlakte als we integreren van 2 tot 3. De totale oppervlakte is bijgevolg
+        </p>
+        <image xml:id="fig-oppervlakte-2">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}[
+                xtick={0,...,4},ytick={-5,0,5},
+                y=0.4cm, xmax=3.5,ymax=6,ymin=-6,xmin=0,
+                enlargelimits=true,
+                axis lines=middle,
+                clip=false,
+                domain=0:3,
+                axis on top,
+                xlabel=$x$,
+                ylabel=$f(x)$
+                ]
+            \addplot[smooth, thick,domain=0:3,samples=100]{-x^2+4 };
+            \addplot[smooth,fill=green!20!,domain=0:3,samples=100]{-x^2+4}\closedcycle;
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+      <p>
+        <me>
+          S=\int_0^2 (-x^2+4) \; dx - \int_2^3 (-x^2+4) \; dx = \frac{16}{3} - (-\frac{7}{3})=\frac{23}{3}
+        </me>
+      </p>
+        <sidebyside widths="60% 35%" margins="0% 0%" valign="middle">
+          <p>
+            Door de absolute waarde van <m>-x^2+4</m> te nemen, kunnen we de oppervlakte ook met behulp van één integraal noteren
+            <me>
+              S=\int_0^3 |-x^2+4| \; dx
+            </me>
+          </p>
+          <image xml:id="fig-oppervlakte-2b">
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}
+              \begin{axis}[
+                  xtick={0,...,4},ytick={-5,0,5},
+                  y=0.4cm, xmax=3.5,ymax=6,ymin=-6,xmin=0,
+                  enlargelimits=true,
+                  axis lines=middle,
+                  clip=false,
+                  domain=0:3,
+                  axis on top,
+                  xlabel=$x$,
+                  ylabel=$f(x)$
+                  ]
+              \addplot[smooth, thick,domain=0:3,samples=100]{abs(-x^2+4) };
+              \addplot[smooth,fill=green!20!,domain=0:3,samples=100]{abs(-x^2+4)}\closedcycle;
+              \end{axis}
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </sidebyside>
+    </subsection>
+  
+    <subsection>
+      <title>Oppervlakte begrensd door twee krommen</title>
+      <p>
+        Stel dat we de oppervlakte <m>S</m> willen berekenen begrensd door de grafieken van <m>f(x)=x^3-3x</m> en <m>g(x)=x</m>.
+      </p>
+      <p>
+         In het interval <m>[-2,0]</m> ligt de grafiek van <m>f(x)</m> boven de grafiek van <m>g(x)</m> en kunnen we de oppervlakte berekenen met behulp van de integraal
+         <me>
+           \int_{-2}^0 [f(x)-g(x)] \; dx
+         </me>
+         Dit is het makkelijkst in te zien door te veronderstellen dat je beide grafieken omhoog schuift tot ze boven de <m>x</m>-as liggen.
+      </p>
+  
+      <sidebyside widths="40% 40%" margins="0% 0%" valign="middle">
+        <image source="desmos-opp-tussen.png"/>
+        <image source="desmos-opp-tussen-2.png"/>
+      </sidebyside>
+  
+      <p>
+        In het interval <m>[0,2]</m> ligt de grafiek van <m>g(x)</m> boven de grafiek van <m>f(x)</m> en is de oppervlakte gelijk aan
+        <me>
+          \int_{0}^2 [g(x)-f(x)] \; dx
+        </me>
+        De totale oppervlakte van het gebied is gelijk aan
+        <me>
+          S= \int_{-2}^0 (x^3-4x) \; dx + \int_0^2 (-x^3+4x) \; dx = 4 + 4 = 8
+        </me>
+        We kunnen dit opnieuw noteren m.b.v één integraal door de absolute waarde <m>|f(x)-g(x)|</m> te integreren
+        <me>
+          S=\int_{-2}^2 |x^3-4x| \; dx
+        </me>
+      </p>
+  
+      <p>
+        Om de oppervlakte begrensd door de grafieken van twee functies <m>f(x)</m> en <m>g(x)</m> te berekenen, ga je dus als volgt te werk:
+        <ol>
+          <li>
+            <p>
+              Bepaal de <m>x</m>-waarden van de snijpunten van beide grafieken, i.e. los de vergelijking <m>f(x)=g(x)</m> op.
+            </p>
+          </li>
+          <li>
+            <p>
+              De snijpunten delen het integratie-interval in deelintervallen op. Voor elke deelinterval ga je na wat het teken is van <m>f(x)-g(x)</m>. Dit kan je eventueel doen door een tekentabel op te stellen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Als <m>f(x)-g(x) \gt 0</m> voor een deelinterval, dan ligt de grafiek van <m>f(x)</m> boven de grafiek van <m>g(x)</m> en bereken je de oppervlakte door <m>f(x)-g(x)</m> te integreren.
+            </p>
+          </li>
+          <li>
+            <p>
+              Als <m>f(x)-g(x) \lt 0</m> voor een deelinterval, dan ligt de grafiek van <m>g(x)</m> boven de grafiek van <m>f(x)</m> en bereken je de oppervlakte door <m>g(x)-f(x)</m> te integreren.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </subsection>
+  
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Bereken de oppervlakte van het gebied begrensd door de parabool <m>y=2x^2+2x-4</m>, de <m>x</m>-as en de rechten <m>x=0</m> en <m>x=2</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Alle oplossingen vind je <url href="https://www.desmos.com/calculator/wup0iluoxu">hier</url>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bereken de oppervlakte van het gebied begrensd door de parabool <m>y=x^2</m> en de rechte <m>y=4</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bereken de oppervlakte van het gebied begrensd door de grafiek van <m>x^3+4x</m> en de rechten <m>x=-\sqrt{3}</m> en <m>x=2</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bereken de oppervlakte van het gebied begrensd door de parabolen <m>y=x^2-4x+3</m> en <m>y=-x^2-x+2</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bereken de oppervlakte van het gebied begrensd door de grafieken van <m>f(x)=x^3+2x^2-4</m>, <m>g(x)=x^2+4x</m> en de rechten <m>x=-3</m> en <m>x=2</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            De oppervlakte van het vlakdeel ingesloten door de grafiek van <m>f(x)=x^2-4x+3</m>, de <m>x</m>-as, de <m>y</m>-as en de rechte <m>x=k</m> (<m>k \in \mathbb{R}^+</m>) is gelijk aan 4. Bereken <m>k</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            De grafiek van <m>f(x)=x^3+3x^2</m> sluit met de raaklijn in <m>P(2,f(2))</m> en de <m>x</m>-as een gebied in. Bereken de oppervlakte van dit gebied.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+  </section>

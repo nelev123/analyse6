@@ -59,10 +59,7 @@
       <colophon>
 
         <website>
-          <name>
-            <c>neledavinci.classy.be/</c>
-          </name>
-          <address>http://neledavinci.classy.be/meetkunde2d</address>
+          <url href="http://neledavinci.classy.be/analyse6">neledavinci.classy.be/</url>
         </website>
 
         <copyright>
@@ -108,11 +105,12 @@
     </frontmatter>
 
     <!-- <xi:include href="./afleiden/verloop.ptx"/> -->
-    <xi:include href="./machten-logaritmen.ptx"/>
-    <xi:include href="./rijen.ptx" />
+    <!-- <xi:include href="./machten-logaritmen.ptx"/> -->
+    <!-- <xi:include href="./rijen.ptx" /> -->
     <!-- <xi:include href="./reeksen.ptx" /> Niet meer in leerplan-->
     <!-- <xi:include href="./limieten.ptx" /> -->
     <xi:include href="./bepaalde-integraal.ptx" />
+    <!-- <xi:include href="./integratietechnieken.ptx" /> -->
     <!-- <xi:include href="./explog.ptx" /> -->
 
     <!-- <xi:include href="./toepassingen-df.ptx" /> -->

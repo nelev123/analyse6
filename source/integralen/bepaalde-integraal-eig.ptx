@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Eigenschappen van de bepaalde integraal</title>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+      <p>
+        Als we de oppervlakte willen berekenen onder nevenstaande grafiek tussen de grenzen <m>x=1</m> en <m>x=4</m>, dan kunnen we natuurlijk eerst de oppervlakte berekenen tussen de grenzen <m>x=1</m> en <m>x=3</m> en daarbij vervolgens de oppervlakte optellen tussen de grenzen <m>x=3</m> en <m>x=4</m>:
+        <me>
+          \int_1^3 f(x) \; dx + \int_3^4 f(x) \; dx = \int_1^4 f(x) \; dx
+        </me>
+      </p>
+      <image source="oppervlakte1.png"/>
+    </sidebyside>
+    <p>
+      Algemeen geldt er dat
+      <me>
+        \boxed{\int_a^b f(x) dx = \int_a^c f(x) \; dx + \int_c^b f(x) \; dx \qquad (a \lt c \lt b)}
+      </me>
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+      <p>
+        Als we de grafiek van <m>f</m> herschalen met een factor 0,5 volgens de <m>y</m>-richting, dan wordt de oppervlakte ook gehalveerd.
+        <me>
+          \int_1^4 \frac{1}{2} f(x) \; dx  = \frac{1}{2} \int_1^4 f(x) \; dx
+        </me>
+      </p>
+      <image source="oppervlakte2.png"/>
+    </sidebyside>
+    <p>
+      Algemeen geldt er dat
+      <me>
+        \boxed{\int_a^b k \cdot f(x) dx = k \int_a^b f(x) \; dx \qquad (k \in \mathbb{R}^+)}
+      </me>
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+      <p>
+        Voor de som van twee functies <m>f</m> en <m>g</m> geldt er dat de oppervlakte onder de grafiek van <m>f(x)+g(x)</m> gelijk is aan de som van de oppervlakte onder de grafiek van <m>f(x)</m> en de oppervlakte onder de grafiek van <m>g</m>:
+        <me>
+          \int_1^4  [f(x)+g(x)] \; dx  = \int_1^4 f(x) \; dx + \int_1^4 g(x) \; dx
+        </me>
+      </p>
+      <image source="oppervlakte3.png"/>
+    </sidebyside>
+    <p>
+      Algemeen geldt er dat
+      <me>
+        \boxed{\int_a^b [f(x) + g(x)] dx = \int_a^b f(x) \; dx + \int_a^b g(x) \; dx}
+      </me>
+    </p>
+  
+  </section>

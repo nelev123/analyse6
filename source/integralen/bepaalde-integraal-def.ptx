@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="definitie-oppervlakte">
+    <title>Oppervlakte onder de grafiek van een functie</title>
+    <introduction>
+      <activity>
+        <title>Wat is oppervlakte?</title>
+        <task>
+          <p>
+            Hoe bereken je de oppervlakte van een trapezium?
+          </p>
+        </task>
+        <task>
+          <p>
+            Probeer een definitie te formuleren voor het begrip <term>oppervlakte</term>.
+          </p>
+        </task>
+      </activity>
+  
+      <p>
+        De oppervlakte berekenen van figuren die begrensd worden door lijnstukken is vrij eenvoudig. Nauwkeurig formuleren wat de betekenis is van oppervlakte en de oppervlakte berekenen van figuren die begrensd worden door kromme lijnen zijn echter moeilijke wiskundige problemen.
+      </p>
+  
+      <sidebyside widths="60% 35%" margins="0% 0%" valign="middle">
+        <p>
+           We beginnen met ons af te vragen hoe we de oppervlakte kunnen berekenen van het gebied ingesloten door de grafiek van <m>f(x)</m>, de <m>x</m>-as en de rechten <m>x=1</m> en <m>x=4</m> (zie nevenstaande tekening). Voorlopig beperken we ons tot veeltermfucties en intervallen waarvoor <m>f(x)</m> overal positief is.  Als we het interval <m>[1,4]</m> verdelen in een aantal equidistante deelintervallen, dan kunnnen we de opppervlakte benaderen door de som van de oppervlakten van een aantal rechthoeken. Hoe groter het aantal deelintervallen, hoe beter de benadering van de oppervlakte zal zijn:
+        </p>
+        <image xml:id="fig-oppervlakte-1">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}[
+                xtick={0,...,5},ytick={5,10,15},
+                y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+                enlargelimits=true,
+                axis lines=middle,
+                clip=false,
+                domain=0:5,
+                axis on top,
+                xlabel=$x$,
+                ylabel=$f(x)$
+                ]
+            \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+            \addplot[smooth,fill=green!20!,domain=1:4,samples=100]{(x+1)*(x-2)*(x-4)+5}\closedcycle;
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+  
+      <sidebyside widths="32% 32% 32%" margins="auto">
+        <image xml:id="fig-oppervlakte-1a">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}[
+                xtick={0,...,5},ytick={5,10,15},
+                y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+                enlargelimits=true,
+                axis lines=middle,
+                clip=false,
+                domain=0:5,
+                axis on top,
+                xlabel=$x$,
+                ylabel=$f(x)$
+                ]
+            \addplot [draw=green, fill=green!20, ybar interval, domain=1:4,samples=8]
+                {(x+1)*(x-2)*(x-4)+5}\closedcycle;
+            \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+        <image xml:id="fig-oppervlakte-1b">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}[
+                xtick={0,...,5},ytick={5,10,15},
+                y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+                enlargelimits=true,
+                axis lines=middle,
+                clip=false,
+                domain=0:5,
+                axis on top,
+                xlabel=$x$,
+                ylabel=$f(x)$
+                ]
+            \addplot [draw=green, fill=green!20, ybar interval, domain=1:4,samples=16]
+                {(x+1)*(x-2)*(x-4)+5}\closedcycle;
+            \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+        <image xml:id="fig-oppervlakte-1c">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}[
+                xtick={0,...,5},ytick={5,10,15},
+                y=0.3cm, xmax=5.4,ymax=16,ymin=0,xmin=0,
+                enlargelimits=true,
+                axis lines=middle,
+                clip=false,
+                domain=0:5,
+                axis on top,
+                xlabel=$x$,
+                ylabel=$f(x)$
+                ]
+            \addplot [draw=green, fill=green!20, ybar interval, domain=1:4,samples=32]
+                {(x+1)*(x-2)*(x-4)+5}\closedcycle;
+            \addplot[smooth, thick,domain=0:4.5,samples=100]{(x+1)*(x-2)*(x-4)+5};
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+  
+      <p>
+        In bovenstaand voorbeeld wordt de linkergrens van elk deelinterval gebruikt om de hoogte van elke rechthoek te berekenen, maar we kunnen hiervoor gelijk welk ander punt van het interval gebruiken.
+      </p>
+    </introduction>
+
+    <subsection>
+      <title>Riemannsommen</title>
+      <p>
+        Gegeven het gebied ingesloten door de grafiek van een functie <m>f(x)</m>, de <m>x</m>-as en de rechten <m>x=a</m> en <m>x=b</m>. Bovendien geldt dat <m>f(x)>0</m> in het interval <m>[a,b]</m> en dat <m>a \le b</m>.  We verdelen het interval <m>[a,b]</m> in <m>n</m> gelijke deelintervallen met breedte <m>\Delta x =\dfrac{b-a}{n}</m> en stellen de linkergrenzen<fn>Dit is een keuze. In principe kunnen we een willekeurig punt van elk deelinterval gebruiken.</fn> van elk deelinterval voor door <m>x_i</m> met <m>i=1,\ldots,n</m>. De som
+        <me>
+          f(x_1) \Delta x + f(x_2) \Delta x + \ldots + f(x_{n}) \Delta x
+        </me> is een benadering voor de oppervlakte onder de grafiek en noemen we een eindige Riemannsom.
+      </p>
+  
+      <activity>
+        <introduction>
+          <p>
+            Je kan gebruik maken van deze <url href="https://www.desmos.com/calculator/ardhnofuvo"> Desmos link </url> om de oplossingen van onderstaande opdrachten te controleren.
+          </p>
+          <interactive desmos="ardhnofuvo" width="100%" aspect="4:3" preview="desmos-riemann.png"/>
+        </introduction>
+        <task>
+          <p>
+            Gegeven <m>f(x)=\dfrac{x}{2}</m>. Beschouw het gebied ingesloten door de grafiek van <m>f</m>, de <m>x</m>-as, de <m>y</m>-as en de rechte <m>x=2</m>.
+            <ol>
+              <li>
+                <p>
+                  Bereken de exacte oppervlakte van dit gebied.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Kies <m>\Delta x=\dfrac{1}{2}</m> en benader de oppervlakte door een eindige Riemannsom (gebruik linkergrenzen voor <m>x_i</m>).
+                </p>
+              </li>
+              <li>
+                <p>
+                  Herhaal, maar met <m>\Delta x =\dfrac{1}{4}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Bereken voor beide benaderingen de procentuele fout.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </task>
+        <task>
+          <p>
+            Gegeven <m>f(x)=\sqrt{1-x^2}</m>. Beschouw het gebied ingesloten door de grafiek van <m>f</m>, de <m>x</m>-as en de rechten <m>x=\pm 1</m>.
+            <ol>
+              <li>
+                <p>
+                  Bereken de exacte oppervlakte van dit gebied.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Kies <m>\Delta x=\dfrac{1}{2}</m> en benader de oppervlakte door een eindige Riemannsom (gebruik linkergrenzen voor <m>x_i</m>).
+                </p>
+              </li>
+              <li>
+                <p>
+                  Herhaal, maar met <m>\Delta x =\dfrac{1}{4}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Bereken voor beide benaderingen de procentuele fout.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </task>
+      </activity>
+  
+      <p>
+        Met behulp van een eindige Riemannsom kunnen we een benadering van de oppervlakte bereken. Maar hoe berekenen we nu de exacte oppervlakte? Hoe groot we <m>n</m> ook kiezen, er bestaat steeds een grotere waarde en bijgevolg ook een betere benadering van de oppervlakte. De exacte oppervlakte vinden we door de limiet voor <m>n \to +\infty</m> te berekenen:
+        <me>
+            \lim_{n \to +\infty} [f(x_1) \Delta x + f(x_2) \Delta x + \ldots + f(x_{n}) \Delta x]
+        </me>
+        Merk op dat dit intuïtief neerkomt op het berekenen van een oneindige som waarbij elke term infinitesimaal klein is (<m>\Delta x \to 0</m> als <m>n \to +\infty</m>).
+      </p>
+      <!--TODO Kort ondersom, bovensom en bestaan bepaalde integraal bespreken. Starten met opdracht.-->
+    </subsection>
+  
+    <subsection>
+      <title>De bepaalde integraal</title>
+      <assemblage>
+        <title>Bepaalde integraal</title>
+        <p>
+           We noemen <m>  \int_a^b f(x) \; dx </m> de bepaalde integraal van <m>a</m> tot <m>b</m> van de functie <m>f</m>. We definiëren:
+          <me>
+            \int_a^b f(x) \; dx = \lim_{n \to +\infty} \frac{b-a}{n} \cdot \sum_{i=1}^{n} f(x_i)
+          </me>
+          De functie <m>f(x)</m> noemen we de integrand en <m>a</m> en <m>b</m> de integratiegrenzen. We stellen per definitie ook dat
+          <me>
+            \int_a^a f(x) \; dx =0
+          </me>
+        </p>
+        <p>
+          De bepaalde integraal <m>\int_a^b f(x) \; dx</m> of <m>\int_a^b f</m> is gelijk aan de oppervlakte ingesloten door de grafiek van <m>f(x)</m> en de rechten <m>x=a</m> en <m>x=b</m>.
+        </p>
+      </assemblage>
+  
+      <aside>
+        <title>Dummy variabele</title>
+        <p>
+          Merk op dat de naam van de variabele die we gebruiken om een bepaalde integraal te noteren er eigenlijk niet toe doet. Een bepaalde integraal stelt een reëel getal voor, dus is de variabele een <q>dummy</q> variabele:
+          <md>
+            <mrow>  \amp \int_a^b f(x) \; dx </mrow>
+            <mrow> = \amp \int_a^b f(t) \; dt </mrow>
+            <mrow> = \amp \int_a^b f(u) \; du </mrow>
+          </md>
+        </p>
+      </aside>
+  
+      <p>
+        De praktische berekening van de bepaalde integraal <m>\int_a^b f(x) \; dx</m> verloopt als volgt:
+        <ol>
+          <li>
+            Verdeel <m>[a,b]</m> in <m>n</m> gelijke deelintervallen met breedte <m>\Delta x = \dfrac{b-a}{n}</m>.
+          </li>
+          <li>
+            <p>
+              Bereken de functiewaarde <m>f(x_i)</m> van een willekeurig getal <m>x_i</m> uit elk deelinterval. De linker- of rechtergrens van elk deelinterval is de gemakkelijkste optie.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bepaal de eindige Riemannsom <m> \Delta x \cdot \sum_{i=1}^{n} f(x_i) </m> en vereenvoudig zoveel mogelijk.
+            </p>
+          </li>
+          <li>
+            Bereken de limiet voor <m>n \to +\infty </m>.
+          </li>
+        </ol>
+      </p>
+  
+      <example>
+        <title>Oppervlakte van een rechthoek</title>
+        <p>
+          We berekenen de bepaalde integraal <m>\displaystyle \int_0^b h \; dx</m> via de definitie. Uit de meetkundige interpretatie van de integraal volgt onmiddellijk dat <m>\int_0^b h \; dx = hb </m>. De bepaalde integraal stelt immers de oppervlakte van een rechthoek met zijden <m>b</m> en <m>h</m> voor. De berekening via de definitie is bijna triviaal:
+          <ol>
+            <li>
+              <p>
+                <m>\Delta x = \frac{b}{n} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                De functie is constant, dus <m>f(x_i)=h</m> voor <m>i=1,\ldots n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                De Riemannsom is gelijk aan <m>\dfrac{b}{n} (h+h+\ldots+h)=\dfrac{b}{n} \cdot nh=bh</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                De Riemannsom hangt niet meer af van <m>n</m>, dus <m>\int_a^b f(x) \; dx=bh</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </example>
+  
+      <example>
+        <title>Oppervlakte van een driehoek</title>
+        <p>
+          We controleren nu dat <m>\displaystyle \int_0^b \dfrac{h}{b} x \; dx = \dfrac{bh}{2}</m><fn>Als de hoogte van de driehoek <m>h</m> is, dan ligt de schuine zijde op de rechte met vergelijking <m>y=\dfrac{h}{b}x</m></fn>.
+          <ol>
+            <li>
+              <p>
+                <m>\Delta x = \frac{b}{n} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                  We bepalen de linkergrenzen van de deelintervallen en de bijhorende functiewaarden:
+              </p>
+              <sidebyside>
+                <tabular top="major">
+                  <row bottom="medium">
+                    <cell>
+                      <m>i</m>
+                    </cell>
+                    <cell>
+                      <m>x_i</m>
+                    </cell>
+                    <cell>
+                      <m>f(x_i)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>1</m>
+                    </cell>
+                    <cell>
+                      <m>0</m>
+                    </cell>
+                    <cell>
+                      <m>0</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>2</m>
+                    </cell>
+                    <cell>
+                      <m>\dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m> \dfrac{h}{n}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>3</m>
+                    </cell>
+                    <cell>
+                      <m>2 \dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m>2 \dfrac{h}{n}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>\ldots</m>
+                    </cell>
+                    <cell>
+                      <m>\ldots</m>
+                    </cell>
+                    <cell>
+                      <m>\ldots</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      <m>n-1</m>
+                    </cell>
+                    <cell>
+                      <m>(n-2)\dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m>(n-2)\dfrac{h}{n}</m>
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell>
+                      <m>n</m>
+                    </cell>
+                    <cell>
+                      <m>(n-1) \dfrac{b}{n}</m>
+                    </cell>
+                    <cell>
+                      <m>(n-1) \dfrac{h}{n}</m>
+                    </cell>
+                  </row>
+                </tabular>
+              </sidebyside>
+            </li>
+            <li>
+              <p>
+                De Riemannsom is gelijk aan
+                <md>
+                  <mrow>
+                      \amp \frac{b}{n} (0+\frac{h}{n}+2\frac{h}{n}+ \ldots + (n-2) \frac{h}{n} + (n-1)\frac{h}{n})
+                  </mrow>
+                  <mrow>
+                      = \amp \frac{hb}{n^2} (1+2+ \ldots + (n-2) + (n-1))
+                  </mrow>
+                  <mrow>
+                      = \amp \frac{hb}{n^2} \frac{(n-1)(n)}{2}
+                  </mrow>
+                  <mrow>
+                      = \amp \frac{hb}{2} \frac{n^2-n}{n^2}
+                  </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Aangezien <m>\lim_{n \to +\infty} \dfrac{n^2-n}{n^2} = 1 </m>, krijgen we inderdaad dat <m>\displaystyle \int_0^b \dfrac{h}{b} x \; dx = \dfrac{bh}{2}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </example>
+      <activity>
+        <statement>
+          <p>
+            Ga na dat de oppervlakte ingesloten door de grafiek van de parabool <m>y=x^2</m>, de coördinaatsassen en de rechte <m>x=b</m> gelijk is aan <m>\int_0^b x^2 \; dx=\dfrac{b^3}{3}</m>. (Tip: <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>)
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>\Delta x = \frac{b}{n} </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                    We bepalen de linkergrenzen van de deelintervallen en de bijhorende functiewaarden:
+                </p>
+                <sidebyside>
+                  <tabular top="major">
+                    <row bottom="medium">
+                      <cell>
+                        <m>i</m>
+                      </cell>
+                      <cell>
+                        <m>x_i</m>
+                      </cell>
+                      <cell>
+                        <m>f(x_i)</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <m>1</m>
+                      </cell>
+                      <cell>
+                        <m>0</m>
+                      </cell>
+                      <cell>
+                        <m>0</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <m>2</m>
+                      </cell>
+                      <cell>
+                        <m>\dfrac{b}{n}</m>
+                      </cell>
+                      <cell>
+                        <m> \dfrac{b^2}{n^2}</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <m>3</m>
+                      </cell>
+                      <cell>
+                        <m>2 \dfrac{b}{n}</m>
+                      </cell>
+                      <cell>
+                        <m>4 \dfrac{b^2}{n^2}</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <m>\ldots</m>
+                      </cell>
+                      <cell>
+                        <m>\ldots</m>
+                      </cell>
+                      <cell>
+                        <m>\ldots</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <m>n-1</m>
+                      </cell>
+                      <cell>
+                        <m>(n-2)\dfrac{b}{n}</m>
+                      </cell>
+                      <cell>
+                        <m>(n-2)^2\dfrac{b^2}{n^2}</m>
+                      </cell>
+                    </row>
+                    <row bottom="major">
+                      <cell>
+                        <m>n</m>
+                      </cell>
+                      <cell>
+                        <m>(n-1) \dfrac{b}{n}</m>
+                      </cell>
+                      <cell>
+                        <m>(n-1)^2 \dfrac{b^2}{n^2}</m>
+                      </cell>
+                    </row>
+                  </tabular>
+                </sidebyside>
+              </li>
+              <li>
+                <p>
+                  De Riemannsom is gelijk aan
+                  <md>
+                    <mrow>
+                        \amp \Delta x (0+\frac{b^2}{n^2}+4\frac{b^2}{n^2}+ \ldots + (n-2)^2 \frac{b^2}{n^2} + (n-1)^2\frac{b^2}{n^2})
+                    </mrow>
+                    <mrow>
+                        = \amp \Delta x \frac{b^2}{n^2} (1+4+ \ldots + (n-2)^2 + (n-1)^2)
+                    </mrow>
+                    <mrow>
+                        = \amp \frac{b^3}{n^3} \frac{(n-1)(n)(2n-1)}{6}
+                    </mrow>
+                    <mrow>
+                        = \amp \frac{b^3}{6} \frac{(n-1)n(2n-1)}{n^3}
+                    </mrow>
+                  </md>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Aangezien <m>\displaystyle \lim_{n \to +\infty} \dfrac{(n-1)n(2n-1)}{n^3} = 2 </m>, krijgen we inderdaad dat <m>\displaystyle \int_0^b x^2 \; dx = \dfrac{b^3}{3}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </activity>
+    </subsection>
+  </section>
