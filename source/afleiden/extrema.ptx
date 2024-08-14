@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-">
+    <title>Extrema van een functie</title>
+
+    <definition xml:id="def-min">
+        <statement>
+            <p>
+                <m>f</m> bereikt een <term> lokaal minimum </term> in <m>a</m> als er een open interval <m>I</m> rond <m>a</m> bestaat waar <m>f(x) \gt f(a)</m> voor elk punt <m>x \in I</m>. 
+            </p>
+        </statement>
+    </definition>
+
+    <definition xml:id="def-max">
+        <statement>
+            <p>
+                <m>f</m> bereikt een <term> lokaal maximum </term> in <m>a</m> als er een open interval <m>I</m> rond <m>a</m> bestaat waar <m>f(x) \lt f(a)</m> voor elk punt <m>x \in I</m>. 
+            </p>
+        </statement>
+    </definition>    
+
+    <p>
+        Een lokaal <term>extremum</term> is een lokaal minimum of een maximum.
+    </p>
+
+    <interactive desmos="noadeeklxx" width="100%" aspect="4:3" preview="preview-extrema.png"/>
+
+    <p>
+        (<url href="https://www.desmos.com/calculator/tw0unwkypn" />)
+    </p>
+
+    <p>
+        Als <m>f</m> een lokaal extremum bereikt in <m>a</m>, dan is <m>f'(a)=0</m> en is de raaklijn aan de grafiek in <m>(a,f(a))</m> horizontaal. 
+        <me>
+            \boxed{f \text{ bereikt lokaal extremum in } a \Rightarrow f'(a)=0}
+        </me>
+        <m>f'(a)=0</m> is echter geen voldoende voorwaarde voor het bereiken van een extremum in <m>a</m>. Beschouw bijvoorbeeld de functie <m>f(x)=(x-2)^3+1</m>. Er geldt
+        <me>
+            f'(x)=3(x-2)^2 \Rightarrow f'(2)=0
+        </me>
+        en de raaklijn in <m>(2,1)</m> is horizontaal. De functie <m>f</m> bereikt echter geen extremum in <m>x=2</m><fn><m>(2,1)</m> is een buigpunt, zie later.</fn>. 
+        <me>
+            \boxed{f'(a)=0 \nRightarrow f \text{ bereikt lokaal extremum in } a }
+        </me>
+    </p>
+
+    <interactive desmos="1lwr0n9mj3" width="100%" aspect="4:3" preview="preview-buigpunt.png"/>
+
+    <p>
+       <m>f'(x) \gt 0</m> voor elke <m>x</m>, behalve voor <m>x=2</m> en bijgevolg is <m>f(x)</m> stijgend in elk interval:
+    </p>
+
+    <image xml:id="fig_verloop_1" width="45%">
+        <latex-image>
+            <!--<xi:include href="images/verloop1.tex" parse="text"/>werkt zo niet?-->
+            <![CDATA[
+                \begin{tikzpicture}[node style/.style={fill opacity=1,text opacity=1}]
+                \tkzTabInit[espcl=2.00,lgt=2]{$x$/1.,$f'(x)$/.7,$f(x)$/1.5}{$-\infty$, $2$ ,$+\infty$} \tkzTabLine{,+,0,+,}
+                \tkzTabVar{-/$-\infty$,R/,+/$+\infty$}
+                \tkzTabIma{1}{3}{2}{1}
+                \end{tikzpicture}           
+            ]]>
+        </latex-image>
+    </image>    
+
+    <p>
+      Je hebt pas een extremum gevonden als <m>f'(x)</m> wisselt van teken. Een lokaal maximum betekent immers een overgang van stijgen naar dalen; en een lokaal minimum een overgang van dalen naar stijgen.     
+    </p>
+
+    <assemblage>
+      <title>Lokale extrema zoeken</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+                Als <m>f'(a)=0</m> en <m>f'(x)</m> verandert van strikt positief links van <m>a</m> naar strikt negatief rechts van <m>a</m>, dan bereikt <m>f(x)</m> een lokaal <term>maximum</term> in <m>a</m>.
+            </p>    
+            <image xml:id="fig_verloop6" width="70%">
+            <latex-image>
+            <!--<xi:include href="images/verloop1.tex" parse="text"/>werkt zo niet?-->
+            <![CDATA[
+                \begin{tikzpicture}[node style/.style={fill opacity=1,text opacity=1}]
+                  \tkzTabInit[espcl=3.50,lgt=2]{$x$/1.,$f'(x)$/.7,$f(x)$/1.5}{$-\infty$,$a$,$+\infty$} 
+                  \tkzTabLine{,+,0,-,}
+                  \tkzTabVar{-/,+/$f(a)$,-/}
+                \end{tikzpicture}          
+            ]]>
+            </latex-image>
+            </image>   
+            <image source="lokaal-max.png" width="50%"/>
+          </li>
+          <li>
+            <p>
+              Als <m>f'(a)=0</m> en <m>f'(x)</m> verandert van strikt negatief links van <m>a</m> naar strikt positief rechts van <m>a</m>, dan bereikt <m>f(x)</m> een lokaal <term>minimum</term> in <m>a</m>.
+            </p>    
+            <image xml:id="fig_verloop_7" width="70%">
+            <latex-image>
+            <!--<xi:include href="images/verloop1.tex" parse="text"/>werkt zo niet?-->
+            <![CDATA[
+                \begin{tikzpicture}[node style/.style={fill opacity=1,text opacity=1}]
+                  \tkzTabInit[espcl=3.50,lgt=2]{$x$/1.,$f'(x)$/.7,$f(x)$/1.5}{$-\infty$,$a$,$+\infty$} 
+                  \tkzTabLine{,-,0,+,}
+                  \tkzTabVar{+/,-/$f(a)$,+/}
+                \end{tikzpicture}          
+            ]]>
+            </latex-image>
+            </image>   
+            <image source="lokaal-min.png" width="50%"/>
+
+          </li>
+        </ul>
+      </p>
+        <p>
+          We gebruiken de term <term>lokaal</term> omdat een functie in een bepaald interval <m>[a,b]</m> natuurlijk meerdere maxima of minima kan hebben. 
+        </p>
+    </assemblage>
+
+    <assemblage>
+        <title>Globale extrema zoeken</title>
+        <p>
+          De grootste (kleinste) functiewaarde in een interval <m>[a,b]</m> noemen we het <term>globaal</term> maximum (minimum). Merk op dat het globaal maximum (minimum) natuurlijk ook kan bereikt worden in <m>x=a</m> of <m>x=b</m>. Je gaat dus als volgt te werk:
+          <ol>
+            <li>
+              <p>
+                Bepaal de punten waarvoor <m>f'(x)=0</m> in <m>]a,b[</m>. Vaak noemt men dit de <term>stationaire punten </term>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Stel de tekentabel van <m>f'</m> op en ga na in welke stationaire punten de functie een lokaal extremum bereikt.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal de functiewaarden van de lokale extrema en bereken eveneens <m>f(a)</m> en <m>f(b)</m>. De grootste functiewaarde is dan het globaal maximum en de kleinste het globaal minimum.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </assemblage>
+
+    <example>
+        <p>
+          Om de lokale extrema van de functie <m>f(x)=x^3-x^2-x</m> te bepalen, stellen we dus gewoon de tekentabel van <m>f'(x)</m>op:
+          <me>
+            f'(x)=3x^2-2x-1=3(x-1)\left(x+\frac{1}{3}\right)
+          </me>
+        </p>
+        <image xml:id="fig_verloop_2" width="60%">
+            <latex-image>
+            <!--<xi:include href="images/verloop1.tex" parse="text"/>werkt zo niet?-->
+            <![CDATA[
+                \begin{tikzpicture}[node style/.style={fill opacity=1,text opacity=1}]
+                \tkzTabInit[espcl=2.00,lgt=2]{$x$/1.,$f'(x)$/.7,$f(x)$/1.5}{$-\infty$, $-\dfrac{1}{3}$,$1$,$+\infty$} 
+                \tkzTabLine{,+,0,-,0,+,}
+                \tkzTabVar{-/$-\infty$,+/$\dfrac{5}{27}$,-/$-1$,+/$+\infty$}
+                \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image> 
+        <p>
+            Stel dat er nu gevraagd wordt om het globale minimum en maximum van <m>f</m> te bepalen op het interval <m>[-1,2]</m>, dan volstaat het om bijkomend de functiewaarden <m>f(-1)</m> en <m>f(2)</m> te berekenen:
+            <md>
+                <mrow> \amp f(-1)=-1</mrow>
+                <mrow> \amp f(2) = 2</mrow>
+            </md>
+            Het globale maximum op dit interval is dus <m>2</m> en wordt bereikt in <m>x=2</m>; het globale minimum is <m>-1</m> en dit wordt bereikt in <m>x=-1</m> of <m>x=1</m>.
+        </p>
+        <image source="voorbeeld-verloop.png" width="60%">
+        </image>
+    </example>
+
+</section>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    
+<section>
+  <title>Rekenkundige en meetkundige rijen</title>
+  <p>
+    In deze paragraaf focussen we op rekenkundige en meetkundige rijen. Bij een rekenkundige rij is het verschil <m>v</m> van twee opeenvolgende termen constant. Bijvoorbeeld:
+    <me>
+      1, 6, 11, 16, 21, 26, 31, \ldots
+    </me>
+    Het verschil <m>v</m> is in dit geval gelijk aan <m>5</m> en een recursief voorschrift is 
+    <me>
+      u_{n+1}=u_n+5 \quad \text{met } u_1=1
+    </me>
+    <m>31</m> is de <m>7</m>-de term en er geldt dat
+    <md>
+      <mrow> \amp 31 = 26 + 5 </mrow>
+      <mrow> \amp 31 = 21 + 2 \cdot 5 </mrow>
+      <mrow> \amp 31 = 16 + 3 \cdot 5 </mrow>
+      <mrow> \amp \qquad \ldots </mrow>
+      <mrow> \amp 31 = 1 + 6 \cdot 5 </mrow>
+    </md>
+    Het expliciet voorschrift van een rekenkundige rij kunnen we dus algemeen noteren als
+    <me>
+      u_n=u_1+(n-1)v
+    </me>
+    Als je drie willekeurige opeenvolgende termen neemt, is de middelste altijd het rekenkundig gemiddelde van de andere twee:
+    <md>
+      <mrow> \amp 11 = \dfrac{6+16}{2}</mrow>
+      <mrow> \amp 26 = \dfrac{21+31}{2}</mrow>
+    </md>
+    Als we som van de termen willen berekenen, kunnen we volgend trucje gebruiken
+    <md>
+      <mrow> s_7 = \; \amp  \phantom{3}1 + \phantom{3}6 +  11  + 16  +  21  +  26  + 31 </mrow>
+      <mrow> s_7 = \; \amp 31 + 26  + 21  + 16 + 11 +  \phantom{3}6  + \phantom{3}1 </mrow>
+      <mrow> \hline</mrow>
+      <mrow> \Rightarrow 2 s_7 = \;  \amp 32 + 32 + 32 + 32 + 32 +32 +32 </mrow>
+    </md>
+    waarbij <m>s_7</m> de som van de eerste <m>7</m> termen voorstelt. Hieruit volgt dat 
+    <me>
+      s_7 = 7 \cdot \frac{32}{2}
+    </me>
+    Algemeen bereken je de som van de eerste <m>n</m>-termen van een rekenkundige rij met verschil <m>v</m> via de formule
+    <me>
+      s_n= n  \frac{u_1+u_n}{2}
+    </me>
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        Toon aan dat de som van de eerste <m>n</m>-termen van een rekenkundige rij met verschil <m>v</m> gelijk is aan <m>s_n= n  \dfrac{u_1+u_n}{2}</m>. 
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Pas bovenstaand trucje gewoon toe op een algemene rekenkundige rij. 
+      </p>
+    </hint>
+  </activity>
+  <assemblage>
+    <title>Rekenkundige rij</title>
+    <p>
+      Bij een rekenkundige rij is het verschil <m>v</m> van twee opeenvolgende termen constant. Het  recursief voorschrift is <me>u_{n+1}=u_n+v</me> en het expliciet voorschrift <me>u_n=u_1+(n-1)v</me>. Enkele eigenschappen van rekenkundige rijen:
+      <ul>
+        <li>
+          <p>
+            <m>a, b, c</m> zijn 3 opeenvolgende termen <m>\Leftrightarrow b= \dfrac{a+c}{2}</m>
+          </p>
+          <p>
+            Dit betekent dat <m>b</m> het rekenkundig gemiddelde is van <m>a</m> en <m>c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>u_1+u_n=u_2+u_{n-1}=u_3+u_{n-2}=\ldots</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            De som <m>s_n</m> van de eerste <m>n</m>-termen is gelijk aan <me>s_n=n \dfrac{u_1+u_n}{2}</me>
+          </p>
+        </li>
+      </ul>
+    </p>
+  </assemblage>
+  <assemblage>
+    <title>Meetkundige rij</title>
+    <p>
+      Bij een meetkundige rij is het quotiënt <m>q</m> van twee opeenvolgende termen constant. <m>q</m> noemen we de <term>reden</term> van de meetkundige rij. Het recursief voorschrift is <me>u_{n+1}=u_n \cdot q</me> en het expliciet voorschrift <me>u_n = u_1 \cdot q^{n-1}</me> Enkele eigenschappen van meetkundige rijen:
+      <ul>
+        <li>
+          <p>
+            <m>a, b, c</m> zijn 3 opeenvolgende termen <m>\Leftrightarrow b^2= ac</m>
+          </p>
+          <p>
+            Dit betekent dat <m>b</m> het meetkundig gemiddelde is van <m>a</m> en <m>c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>u_1 \cdot u_n=u_2 \cdot u_{n-1}=u_3 \cdot u_{n-2}=\ldots</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            De som <m>s_n</m> van de eerste <m>n</m>-termen is gelijk aan <me>s_n=u_1 \dfrac{1-q^n}{1-q}</me>
+          </p>
+        </li>
+      </ul>
+    </p>
+  </assemblage>
+
+  <p>
+    De rij 
+    <me>
+      3, \frac{3}{2}, \frac{3}{4}, \frac{3}{8}, \frac{3}{16}, \frac{3}{32}, \frac{3}{64}, \ldots 
+    </me>
+    is een meetkundige rij met reden <m>q=\dfrac{1}{2}</m>.
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        Toon aan dat de som van de eerste <m>n</m>-termen van een meetkundige rij met reden <m>q</m> gelijk is aan <m>s_n=u_1 \dfrac{1-q^n}{1-q}</m>. 
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Bekijk onderstaand voorbeeld:
+        <md>
+          <mrow> s_7 = \; \amp  3 +  \frac{3}{2} + \frac{3}{4} + \frac{3}{8} +  \frac{3}{16} +  \frac{3}{32} + \frac{3}{64} </mrow>
+          <mrow> \frac{1}{2}s_7 = \; \amp  \frac{3}{2} + \frac{3}{4} + \frac{3}{8} +  \frac{3}{16} +  \frac{3}{32} + \frac{3}{64} + \frac{3}{128}</mrow>
+          <mrow> \hline</mrow>
+          <mrow> \Rightarrow \frac{1}{2} s_7 = \;  \amp 3 - \frac{3}{128} </mrow>
+        </md>
+      </p>
+    </hint>
+  </activity>
+
+</section>

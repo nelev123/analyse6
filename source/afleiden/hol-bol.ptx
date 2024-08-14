@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-hol-bol">
+  <title>De vorm van een grafiek</title>
+
+  <example>
+    <title>Een bal omhoog gooien</title>
+    <p>
+      Als je een bal vanaf een hoogte van 1,5 m omhoog gooit met een snelheid van 7,0 m/s, dan bereikt de bal een maximale hoogte van 4,0 m. Het functievoorschrift van de hoogte in functie van de tijd is <m>y(t)=1,5+7t-\dfrac{9,81}{2}t^{2}</m> (bij verwaarlozing van de luchtweerstand). De ogenblikkelijke<fn>Aangezien de onafhankelijke veranderlijke de tijd is, spreken we over ogenblikkelijke verandering i.p.v. puntsgewijze verandering.</fn> snelheid is
+      <me>
+          v_y(t)=\frac{dy(t)}{dt}=7-9,81t
+      </me>
+      en deze wordt nul als <m>t=\dfrac{7}{9,81}=0,71</m>. De snelheid <m>v_y(t)</m> wisselt op dit tijdstip van positief (volgens de zin van de <m>y</m>-as) naar negatief (tegengesteld aan de zin van de <m>y</m>-as), dus de bal bereikt daar zijn maximale hoogte.
+    </p>
+    <figure xml:id="fig_positie_snelheid">
+      <caption>Hoogte in functie van de tijd (volle lijn) en snelheid in functie van de tijd (streepjeslijn).</caption>  
+      <image source="bal-yv.png"  width="60%">
+      </image>   
+    </figure>
+  
+    <p>
+       Er is echter nog een ander criterium dat we kunnen gebruiken om af te leiden dat het maximum bereikt wordt op <m>t=0,71</m> s: het feit dat de grafiek bol is. Dit betekent dat de snelheid afneemt op weg naar de maximale hoogte; de raaklijn aan de grafiek van <m>y(t)</m> wordt steeds minder steil. Na het bereiken van het maximum (als de bal terug naar beneden valt), wordt de raaklijn steeds steiler. De grafiek is dus bol omdat de ogenblikkelijke verandering van de snelheid negatief is.
+    </p>
+    <p>
+      De ogenblikkelijke verandering van de snelheid <m>v_y</m> noemen we de ogenblikkelijke versnelling <m>a_y</m>. We noteren
+      <me>
+       a_y=\frac{dv_y}{dt}=\frac{d^2y}{dt^2}
+      </me>
+      Hier geldt er dat <m>a_y(t)=-9,81</m> m/s<m>^2</m> (<m>=</m> de valversnelling).
+   </p>
+   <p>
+    Merk op dat een negatieve versnelling niet noodzakelijk betekent dat de bal minder snel gaat bewegen. Dit hangt af van het teken van de snelheid zelf: als <m>v \gt 0</m>, dan beweegt de bal inderdaad trager als <m>a \lt 0</m>; als <m>v \lt 0</m>, dan beweegt de bal sneller als <m>a \lt 0</m>.
+   </p>
+  </example>
+
+  <example>
+    <title>Een afkoelende kop thee</title>
+    <p>
+       De snelheid waarmee een kop thee afkoelt is rechtevenredig met het temperatuursverschil tussen de thee en de omgeving. Dit betekent dat de snelheid waarmee de thee afkoelt langzaamaan vermindert. Voor een kop thee van <m>100\;\g</m>C en een omgevingstemperatuur van <m>20\; \g</m>C krijgen we bijvoorbeeld onderstaand temperatuursverloop:
+    </p>
+  <figure xml:id="fig_afkoelende-thee">
+    <caption>Grafiek van de temperatuur <m>\theta(t)</m> (volle lijn), de ogenblikkelijke verandering van de temperatuur <m>\dfrac{d\theta(t)}{dt}</m> (streepjeslijn) en de ogenblikkelijke verandering van de ogenblikkelijke verandering van de temperatuur <m>\dfrac{d^2\theta(t)}{dt^2}</m> (stippellijn)</caption>  
+    <image source="thee-afkoelen.png"  width="50%">
+    </image>   
+  </figure>
+
+    <p>
+      De raaklijnen aan de grafiek van <m>\theta(t)</m> worden steeds minder stijl en de grafiek van <m>\theta(t)</m> is hol. Aangezien <m>\dfrac{d\theta(t)}{dt} \lt 0</m> op elk tijdstip betekent dit dat <m>\dfrac{d^2\theta(t)}{dt^2} \gt 0</m>. 
+    </p>
+  </example>
+
+  <assemblage>
+      <title>Bolle en holle grafiek; buigpunten</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              <m>f''(x) \lt 0</m> in <m>]a,b[</m> <m>\Leftrightarrow</m> grafiek van <m>f(x)</m> is bol in <m>]a,b[</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f''(x) \gt 0</m> in <m>]a,b[</m> <m>\Leftrightarrow</m> grafiek van <m>f(x)</m> is hol in <m>]a,b[</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f''(x)</m> verandert van teken in <m>a</m> en de raaklijn in <m>(a,f(a))</m> bestaat
+                <m>\Leftrightarrow</m> grafiek van <m>f(x)</m> heeft een buigpunt in <m>(a,f(a))</m>
+            </p>
+          </li>
+        </ul>
+              Als de grafiek bol (hol) is in een interval noemen we de functie <term>convex</term> (<term>concaaf</term>) in dit interval.
+        </p>
+    </assemblage>
+
+    <remark>
+      <p>
+        Merk op dat de voorwaarde <m>f''(a)=0</m> opnieuw geen voldoende voorwaarde is voor het bestaan van een buigpunt. Denk maar aan de functie <m>f(x)=x^4</m> waarvoor de eerste en tweede afgeleiden gelijk zijn aan <m>f'(x)=4 x^3</m> en <m>f''(x)=12 x^2</m>. Er geldt dat <m>f''(0)=0</m>, maar <m>(0,0)</m> is geen buigpunt omdat <m>f''(x)</m> niet verandert van teken in <m>0</m>. De functie bereikt wel een minimum in <m>x=0</m>, zoals je kan afleiden uit de tekenwissel van <m>f'(x)</m> in <m>0</m>.
+      </p>
+    <figure xml:id="fig_4demacht">
+    <caption>Grafiek van <m>f(x)=x^4</m> (volle lijn), <m>f'(x)</m> (streepjeslijn) en <m>f''(x)</m> (stippellijn).</caption>  
+    <image source="geen-buigpunt.png"  width="50%">
+    </image>   
+    </figure>
+    </remark>
+
+      <p>
+        In plaats van te controleren of <m>f'(x)</m> van teken wisselt in <m>x=a</m> kan je dus ook het teken van <m>f''(a)</m> controleren om extrema van <m>f(x)</m> op te sporen.
+      </p>
+
+      <assemblage>
+        <title>Lokale extrema en het teken van <m>f''</m></title>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  Als <m>f'(a)=0</m> en <m>f''(a) \lt  0</m> dan bereikt <m>f(x)</m> een lokaal maximum.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Als <m>f'(a)=0</m> en <m>f''(a) \gt  0</m> dan bereikt <m>f(x)</m> een lokaal minimum.
+                </p>
+              </li>
+            </ul>
+          </p>
+      </assemblage>
+
+      <example>
+        <p>
+            We hernemen het voorbeeld van de functie <m>f(x)=x^3-x^2-x</m>. Er geldt
+             <md>
+                <mrow> \amp f'(x) = 3x^2-2x-1=3(x-1)\left(x+\frac{1}{3}\right)</mrow>
+                <mrow> \amp f''(x) = 6x-2 = 6 \left (x-\dfrac{1}{3} \right )</mrow>
+             </md>
+             We voegen de tekentabel van <m>f''(x)</m> toe aan het overzicht. De overgang van bol naar hol gebeurt in <m>x=\dfrac{1}{3}</m> en <m>\left(\dfrac{1}{3},-\dfrac{11}{27}\right)</m> is het buigpunt van de grafiek. <m>f'(x)</m> bereikt dan zijn minimale waarde en <m>f''\left(\dfrac{1}{3}\right)=0</m>. De raaklijn in het buigpunt, ook wel de <term>buigraaklijn</term> genoemd, loopt dwars door de grafiek.
+        </p>
+        <image xml:id="fig_verloop_12" width="90%">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[node style/.style={fill opacity=1,text opacity=1}]
+             \tkzTabInit[espcl=3.50,lgt=2]{$x$/1.,$f'(x)$/.7,$f''(x)$/.7,$f(x)$/1.5}
+             {$-\infty$, $-\dfrac{1}{3}$,$\dfrac{1}{3}$,$1$,$+\infty$} 
+             \tkzTabLine{,+,0,-,t,-,0,+,}
+             \tkzTabLine{,-,t,-,0,+,t,+,}
+             \tkzTabVar{-/$-\infty$,+/$\dfrac{5}{27}$,R/,-/$-1$,+/$+\infty$}
+             \tkzTabIma{2}{4}{3}{$-\dfrac{11}{27}$}
+          \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+        <image source="voorbeeld-vorm.png" width="70%"/>
+      </example>
+
+      <activity>
+        <statement>
+          <p>
+            Gegeven een functie <m>f</m> met <m>f(0)=\dfrac{1}{2}</m> en waarvan de grafiek van <m>f'(x)</m> er als volgt uitziet:
+          </p>
+          <sidebyside widths="70%" margins="10%" valign="bottom">
+            <image source="opdracht-verloop.png"/>
+          </sidebyside>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Geef de posities van de lokale extrema. Specifieer ook telkens of het om een maximum of een minimum gaat. 
+                </p>
+              </li>
+              <li>
+                <p>
+                  Geef <mdash/> eventueel bij benadering <mdash/> de posities van de buigpunten.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Voeg de grafieken van <m>f''(x)</m> en <m>f(x)</m> toe aan bovenstaande tekening. 
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <sidebyside widths="50%" margins="10%" valign="bottom">
+            <image source="opdracht-verloop-2.png"/>
+          </sidebyside>
+        </solution>
+      </activity>
+
+      <activity>
+        <statement>
+          <p>
+            Gegeven de functie <m>f(x)=x^3-ax^2</m> met <m>a \gt 0</m>. 
+            <ol>
+              <li>
+                <p>
+                  Bepaal de lokale extrema en de buigpunten.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Beschrijf hoe de lokale extrema en de buigpunten veranderen i.f.v. de parameter <m>a</m>. Controleer jezelf met Desmos. 
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </activity>
+</section>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="df-gonio" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Goniometrische functies afleiden</title>
+
+    <assemblage xml:id="assemblage-onbepaaldeint">
+        <title>Goniometrische functies afleiden</title>
+        <p>
+         <md>
+           <mrow> \amp D(\sin x) = \cos x </mrow>
+           <mrow> \amp D(\cos x) = - \sin x </mrow>
+           <mrow> \amp D(\tan x) = \frac{1}{\cos^2 x} </mrow>
+           <mrow> \amp D(\cot x) = - \frac{1}{\sin^2 x}  </mrow>
+         </md>  
+       </p>
+       </assemblage>
+
+       <activity>
+        <statement>
+          <p>
+            Bewijs de formules voor <m>D(\tan x)</m> en <m>D(\cot x)</m>.
+          </p>
+        </statement>
+      </activity>
+
+      <activity>
+        <statement>
+          <p>
+            Aangezien <m>\dfrac{f(x)}{g(x)}= f(x) \cdot \dfrac{1}{g(x)}</m> kan je een quotiënt steeds afleiden via de productregel. Natuurlijk bestaat er ook een formule om een quotiënt rechtstreeks af te leiden:
+            <me>
+              D\left(\dfrac{f(x)}{g(x)} \right)=\dfrac{Df(x)\cdot g(x)- f(x) \cdot Dg(x)}{\left[g(x) \right ]^2}
+            </me>
+            Bewijs deze formule.
+          </p>
+        </statement>
+      </activity>
+    
+</section>

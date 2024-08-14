@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Logaritmen</title>
+    <exercise>
+        <statement>
+          <p>
+            Bereken zonder rekenmachine:
+            <ol>
+                <li>
+                    <p>
+                      <m>\log 1000  </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_7 49 </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_2 64 </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>\log_2 \dfrac{1}{8} </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_3 \dfrac{1}{81} </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>\log_7 1 </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>\log 0,01  </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_4 2</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log \sqrt{1000}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_{16} 32 </m>
+                    </p>
+                  </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+                <li>
+                    <p>
+                      <m>\log 1000 =3</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_7 49 =2</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_2 64 =6</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>\log_2 \dfrac{1}{8} = -3</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_3 \dfrac{1}{81} =-4</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>\log_7 1 = 0</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>\log 0,01 = -2 </m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_4 2 =\sfrac{1}{2}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log \sqrt{1000} =\sfrac{3}{2}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\log_{16} 32 = \sfrac{5}{4}</m>
+                    </p>
+                  </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bepaal <m>a</m> als
+            <ol>
+              <li>
+                <p>
+                    <m>\log_a 25 = 2</m>
+                </p>
+             </li>
+              <li>
+                <p>
+                  <m>\log_a 64 = 3</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_a 5 = -1 </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_a 9 = -2 </m>
+                </p>
+              </li>
+              <li>
+                <p>
+                   <m>\log_a 64 = 12</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_a 64 = \dfrac{3}{2}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                    <m>a=5</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>a=4</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>a=\dfrac{1}{5}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>a=\dfrac{1}{3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                   <m>a^{12}=64 \Leftrightarrow a=64^{\frac{1}{12}}=\sqrt{2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>a^{\frac{3}{2}}=64 \Leftrightarrow a=64^{\frac{2}{3}}=16</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+             Bepaal <m>n</m> als <m>\log_3 (\log_5 n)=1</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Stel <m>\log_5 n = a</m>. Uit <m>\log_3 a = 1 </m> volgt dat <m>a=3</m>. Uit <m>\log_5 n = 3</m> volgt dat <m>n=125</m>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bereken zonder rekenmachine:
+            <ol>
+              <li>
+                <p>
+                  <m>\log_3 36 - \log_3 4</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_2 25 + \log_2 12 -\log_2 75</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\log_2 12 -3 \log_2 3 + 2 \log_2 6</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                    <m>\log_2 3 \cdot \log_3 8</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\dfrac{\log 27}{\log 81}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\dfrac{4}{\log 5}-\dfrac{2}{\log_4 5}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                      <p>
+                        <m>\log_3 36 - \log_3 4=\log_3 9=2</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <m>\log_2 25 + \log_2 12 -\log_2 75=\log_2 \dfrac{25 \cdot 12}{75}=\log_2{4}=2</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <m>\log_2 12 -3 \log_2 3 + 2 \log_2 6=\log_2 \dfrac{12 \cdot 6^2}{3^3}=\log_2 16=4</m>
+                      </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\log_2 3 \cdot \log_3 8 = \log_2 8 =3</m>
+                        </p>
+                      </li>
+                    <li>
+                      <p>
+                        <m>\dfrac{\log 27}{\log 81}=\frac{\log_3 27}{\log_3 81} = \sfrac{3}{4}</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <m>\dfrac{4}{\log 5}-\dfrac{2}{\log_4 5}=4\log_5 10 - 2 \log_5 4=\log_5 \dfrac{10^4}{4^2}=\log_5 5^4=4</m>
+                      </p>
+                    </li>
+                  </ol>                
+            </p>
+      </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                Bepaal <m>x</m>:
+                <me>
+                    \log x + \log 4x = 2
+                </me>
+            </p>
+        </statement>
+        <answer>
+            <p>
+                <m>x=5</m>
+            </p>
+        </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Toon aan dat <m>\log 500 = 3 - \log 2</m> en <m>1 + \log x= \log (10x)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Schrijf onderstaande uitdrukkingen in de vorm <m>a + b \log x + c \log y + d \log z</m>:
+          <ol>
+            <li>
+                <p>
+                    <m>\log \left ( 10 \dfrac{x^4y^2}{z^3} \right )</m>
+                </p>
+            </li>
+            <li>
+              <p>
+                <m>\log \left ( x^4 \sqrt{\dfrac{y}{z}}\right )</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log \sqrt[3]{\dfrac{x^2 y^2}{x z^4}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log \dfrac{1}{\sqrt{0,01 x^3 y z}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p> 
+            <ol>
+                <li>
+                    <p>
+                        <m> \log \left ( 10 \dfrac{x^4y^2}{z^3} \right ) = 1 + 4\log x + 2\log y - 3 \log z </m>
+                    </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\log \left ( x^4 \sqrt{\dfrac{y}{z}}\right )=4 \log x+\frac{1}{2}\log y-\frac{1}{2}\log z</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\log \sqrt[3]{\dfrac{x^2 y^2}{x z^4}}=\frac{1}{3} \log x+\frac{2}{3}\log y-\frac{4}{3}\log z</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\log \dfrac{1}{\sqrt{0,01 x^3 y z}}=1-\frac{3}{2} \log x-\frac{1}{2}\log y-\frac{1}{2}\log z</m>
+                  </p>
+                </li>
+              </ol>
+        </p>
+      </solution>
+    </exercise>
+    
+    <exercise>
+      <statement>
+        <p>
+          Bewijs dat
+          <ol>
+            <li>
+              <p>
+                <m>a^{\log b} = b^{\log a}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log_a b \cdot \log_b c \cdot \log_c d \cdot \log_d a = 1</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\dfrac{1}{\log_a c} +\dfrac{1}{\log_b c}=\dfrac{1}{\log_{ab} c}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log_c ax=(1+\log_a x) \cdot \log_b a \cdot \log_c b</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Zie nota's les en map modeloplossingen op Smartschool.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                Toon aan dat 
+                <m>
+                    \log{\left (\sqrt{6+2\sqrt{5}} + \sqrt{6-2\sqrt{5}} \right)} - \log {\left (\sqrt{6+2\sqrt{5}} - \sqrt{6-2\sqrt{5}} \right)} =\frac{1}{2} \log 5
+                </m>
+                
+            </p>
+        </statement>   
+    </exercise>
+    
+</subexercises>

@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+
+<section>
+  <title><m>n</m>-de wortels in <m>\mathbb{R}</m></title>
+  <p>
+    Het getal 2 heeft twee reële vierkantswortels, <m>\sqrt{2}</m> en <m>-\sqrt{2}</m>, want er geldt dat <m>\left ( \pm \sqrt{2} \right )^2=2</m>. Analoog zeggen we dat <m>2</m> en <m>-2</m> de vierdewortels zijn uit 16 omdat <m> \left ( \pm 2 \right)^4=16</m>. We noteren:
+    <me>
+      \sqrt[4]{16}=2 \qquad \text{ en } \qquad -\sqrt[4]{16}=-2
+    </me>
+  </p>
+  <p>
+    Elk positief reëel getal heeft steeds twee <m>n</m>-de wortels als <m>n</m> even is; deze <m>n</m>-de wortels zijn elkaars tegengestelde. Een negatief getal heeft geen <m>n</m>-de wortels als <m>n</m> even is<fn>in <m>\mathbb{R}</m></fn>. Als <m>n</m> oneven is, bestaat er voor elk reëel getal één <m>n</m>-de wortel. Zo is de derdewortel uit 8 gelijk aan 2 en de derdewortel uit <m>-27</m> gelijk aan -3:
+    <me>
+      \sqrt[3]{8}=2 \qquad \text{ en } \qquad \sqrt[3]{-27}=-3
+    </me>
+  </p>
+  <definition>
+    <title><m>n</m>-de wortels (<m>n \neq 0</m>)</title>
+    <statement>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <m>b</m> is een <m>n</m>-de wortel uit <m>a</m> <m>\Leftrightarrow b^n=a</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>n</m> even en <m>a \in \mathbb{R}^+</m>:
+            <ul>
+              <li>
+                <p>
+                  <m>\sqrt[n]{a}</m> is de positieve <m>n</m>-de wortel uit <m>a</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>-\sqrt[n]{a}</m> is de negatieve <m>n</m>-de wortel uit <m>a</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>n</m> oneven en <m>a \in \mathbb{R}</m>: <m>\sqrt[n]{a}</m> heeft hetzelfde teken als <m>a</m>
+          </p>
+        </li>
+      </ul>
+    </p>
+  </statement>
+  </definition>
+
+  <aside>
+    <title>Absolute waarde</title>
+    <p>
+      Er geldt dat <m>\sqrt{(-3)^2}=\sqrt{3^2}=3</m> of algemeen
+      dat
+       <me>
+         \sqrt{x^2}=|x|=\begin{cases}x \quad \text{ als }
+             x \ge 0 \\ -x \quad \text{ als } x \lt 0 \end{cases}
+      </me>
+      Merk op dat <m>\sqrt{x^2} \neq (\sqrt{x})^2</m>. <m>\sqrt{x}</m> is immers niet gedefinieerd voor <m>x \lt 0</m>. Er geldt wel dat <m>\sqrt{x^2}=(\sqrt{x})^2</m> als <m>x\ge 0</m>.
+    </p>
+  </aside>
+
+  <p>
+    We bekijken <m>n</m>- wortels nu even door een functiebril. De functie <m>f(x)=x^2</m> kan niet geïnverteerd worden omdat elke functiewaarde <mdash/> op <m>0</m> na <mdash/> het beeld is van twee verschillende argumenten. Zowel <m>2</m> als <m>-2</m> worden bijvoorbeeld door <m>f</m> afgebeeld op <m>4</m> en <m>f^{-1}(4)</m> is bijgevolg niet ondubbelzinnig bepaald.
+    <md>
+      <mrow>f(2)=2^2=4 \quad \text{ en } \quad f(-2)=(-2)^2 = 4</mrow>
+      <mrow>f^{-1}(4)= \text{ ?}</mrow>
+    </md>
+    Dit geldt voor elke machtsfunctie <m>f(x)=x^n</m> met een even exponent <m>n</m>. Machtsfuncties <m>f(x)=x^n</m> met oneven exponent <m>n</m> kunnen wel zonder problemen geïnverteerd worden omdat elke functiewaarde het beeld is van precies één argument. Bijvoorbeeld voor <m>f(x)=x^3</m>
+    <md>
+        <mrow>f(2)=2^3=8  \Leftrightarrow f^{-1}(8) = \sqrt[3]{8} = 2</mrow>
+        <mrow>f(-2)=(-2)^3=-8  \Leftrightarrow f^{-1}(-8) = \sqrt[3]{-8} = -2</mrow>
+    </md>
+  </p>
+  <sidebyside widths="40% 40%" margins="auto">
+    <image xml:id="fig-ndewortel-even">
+        <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}
+            [
+            xmin=-3.2,%
+            xmax=3.2,%
+            ymin=-2,%
+            ymax=10,%
+            axis lines=middle,%
+            xtick={-3,1,3},%
+            ytick={0,2,...,8},%
+            %minor x tick num={1},%
+            %minor y tick num={1},%
+            %x=0.5cm,%
+            %y=0.5cm,%
+            grid=both,%
+            xlabel=x,%
+            ylabel=y
+            ]
+            \addplot[color = black,domain=-3:3,samples=300,very thick]{x^2};
+            \addplot[color = black,domain=-3:3,samples=300,very thick,dashed]{x^4};
+            \draw[thick,red] (axis cs:-2,4) -- (axis cs:-2,0);
+            \draw[thick,red] (axis cs:2,4) -- (axis cs:2,0);
+            \draw[thick,green!50!black] (axis cs:-1.41,4) -- (axis cs:-1.41,0);
+            \draw[thick,green!50!black] (axis cs:1.41,4) -- (axis cs:1.41,0);
+            \draw (axis cs:-3,4) -- (axis cs:3,4);
+            \node[red,below,circle,fill=white,inner sep=0pt] at (axis cs:-2.2,0) {\small{$-\sqrt{4}$}};
+            \node[red,below,circle,fill=white,inner sep=0pt] at (axis cs:2,0) {\small{$\sqrt{4}$}};
+            \node[green!50!black,below,circle,fill=white,inner sep=0pt] at (axis cs:-1.37,0) {\small{$-\sqrt[4]{4}$}};
+            \node[green!50!black,below,circle,fill=white,inner sep=0pt] at (axis cs:1.41,0) {\small{$\sqrt[4]{4}$}};
+            \legend{$y=x^2$,$y=x^4$}
+            \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+        <image xml:id="fig-ndewortel-oneven">
+            <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}
+                \begin{axis}
+                [
+                xmin=-4,%
+                xmax=4,%
+                ymin=-30,%
+                ymax=35,%
+                axis lines=middle,%
+                xtick={-3,-2,...,3},%
+                ytick={-25,-15,...,35},%
+                %minor x tick num={1},%
+                %minor y tick num={1},%
+                %x=0.5cm,%
+                %y=0.5cm,%
+                grid=both,%
+                xlabel=x,%
+                ylabel=y,%
+                legend pos = north west
+                ]
+                \addplot[color = black,domain=-4:4,samples=300,very thick]{x^3};
+                \addplot[color = black,domain=-4:4,samples=300,very thick,dashed]{x^5};
+                \draw[thick,red] (axis cs:2,32) -- (axis cs:2,0);
+                \draw[thick,green!50!black] (axis cs:3,27) -- (axis cs:3,0);
+                \draw[thick,red] (axis cs:-2,-8) -- (axis cs:-2,0);
+                \draw[thick,green!50!black] (axis cs:-3,-27) -- (axis cs:-3,0);
+                \draw (axis cs:0,32) -- (axis cs:4,32);
+                \draw (axis cs:0,27) -- (axis cs:4,27);
+                \draw (axis cs:-4,-8) -- (axis cs:0,-8);
+                \draw (axis cs:-4,-27) -- (axis cs:0,-27);
+                \node[red,below,circle,fill=white,inner sep=0pt] at (axis cs:2,0) {\small{$\sqrt[5]{32}$}};
+                \node[red,above,circle,fill=white,inner sep=0pt] at (axis cs:-2,0) {\small{$\sqrt[3]{-8}$}};
+                \node[green!50!black,above,circle,fill=white,inner sep=0pt] at (axis cs:-3,0) {\small{$\sqrt[3]{-27}$}};
+                \node[green!50!black,below,circle,fill=white,inner sep=0pt] at (axis cs:3,0) {\small{$\sqrt[3]{27}$}};
+                \legend{$y=x^3$,$y=x^5$}
+                \end{axis}
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+  </sidebyside>
+
+  <definition xml:id="def-bijectie">
+    <title>Bijectie</title>
+    <statement>
+      <p>
+        Een functie <m>f</m> die de eigenschap heeft dat elke functiewaarde <m>y</m> het beeld is van precies één <m>x</m> noemen we een bijectie. Grafisch impliceert dit dat elke horizontale rechte de grafiek van <m>f</m> in hoogstens één punt snijdt. Enkel een bijectie kan geïnverteerd worden. 
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We frissen even kort de belangrijkste eigenschappen van de inverse functie op.
+  </p>
+
+  <assemblage xml:id="assemblage-inverse-functies">
+    <title>Eigenschappen van de inverse functie</title>
+    <p>
+      Gegeven een bijectie <m>f</m>. De inverse functie van <m>f</m> noteren we als <m>f^{-1}</m> en voor alle <m>x \in \textrm{dom} f</m> en <m>y \in \textrm{ber} f</m> geldt er dat:
+      <me>
+        f(x) = y \Leftrightarrow x = f^{-1}(y)
+      </me>
+      Uit deze definitie volgt onmiddellijk dat
+      <ul>
+        <li>
+          <p>
+            <m>\textrm{dom} f^{-1} = \textrm{ber} f</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\textrm{ber} f^{-1} = \textrm{dom} f</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>(a,b)</m> behoort tot de grafiek van <m>f \Leftrightarrow (b,a) </m> behoort tot de grafiek van <m>f^{-1}</m>, d.w.z. dat de grafieken elkaars spiegelbeeld zijn om de rechte met vergelijking <m>y=x</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>(f^{-1} \circ f)(x)=x</m> voor alle <m>x \in \textrm{dom} f</m> en <m>(f \circ f^{-1})(y)=y</m> voor alle <m>y \in \textrm{dom} f^{-1}</m>
+          </p>
+        </li>
+      </ul>
+      Als we de functie <m>f</m> als een proces beschouwen, dan doet <m>f^{-1}</m> dit proces teniet, d.w.z. <m>f</m> en <m>f^{-1}</m> neutraliseren elkaar.
+    </p>
+  </assemblage>
+
+  <p>
+    Om machtsfuncties met even exponent toch te kunnen inverteren moeten we het domein beperken tot positieve of negatieve argumenten.
+  </p>
+
+  <assemblage>
+    <title>De functies <m>x^n</m> en <m>\sqrt[n]{x}</m></title>
+    <p>
+      <dl width="narrow">
+        <li>
+          <title><m>n</m> oneven</title>
+          <sidebyside width="70%">
+            <image xml:id="fig-finv-xn-oneven" width="50%">
+                <latex-image>
+                    <![CDATA[
+                    \begin{tikzpicture}
+                    \tikzset{->-/.style={decoration={markings,mark=at position .5 with {\arrow{latex}}},postaction={decorate}}}
+                    \tikzset{-<-/.style={decoration={markings,mark=at position .5 with {\arrowreversed{latex}}},postaction={decorate}}}
+                    \begin{pgfonlayer}{nodelayer}
+                      \node [style=none] (0) at (-2, 0) {};
+                      \node [style=none] (1) at (0, 0) {};
+                      \node [style=none] (2) at (2, 0) {};
+                      \node [style=functie klein] (3) at (0, 0) {$f(x)=x^n$};
+                      \node [style=none] (4) at (-2, -1) {};
+                      \node [style=none] (5) at (0, -1) {};
+                      \node [style=none] (6) at (2, -1) {};
+                      \node [style=functie klein] (7) at (0, -1) {$f^{-1}(y)=\sqrt[n]{y}$};
+                      \node [style=none] (8) at (3, -0.5) {};
+                      \node [style=none] (9) at (2, -1) {};
+                      \node [style=none, label={right:$y$}] (10) at (3, -0.5) {};
+                      \node [style=none] (11) at (-2, 0) {};
+                      \node [style=none] (12) at (-3, -0.5) {};
+                      \node [style=none] (13) at (-2, -1) {};
+                      \node [style=none, label={left:$x$}] (14) at (-3, -0.5) {};
+                    \end{pgfonlayer}
+                    \begin{pgfonlayer}{edgelayer}
+                      \draw [style=pijl] (0.center) to (3);
+                      \draw [style=pijl] (3) to (2.center);
+                      \draw [style=invpijl] (4.center) to (7);
+                      \draw [style=invpijl] (7) to (6.center);
+                      \draw [in=90, out=0, looseness=0.75,thick] (2.center) to (8.center);
+                      \draw [in=-90, out=0, looseness=0.75,thick] (9.center) to (10.center);
+                      \draw [in=90, out=180, looseness=0.75,thick] (11.center) to (12.center);
+                      \draw [in=-90, out=-180, looseness=0.75,thick] (13.center) to (14.center);
+                    \end{pgfonlayer}
+                  \end{tikzpicture}]]>
+                </latex-image>
+            </image>
+          </sidebyside>
+          <p>
+            Uit <m>(f^{-1} \circ f)(x)=x</m> en <m>(f \circ f^{-1})(y) = y</m> volgt dat
+            <me>
+              \boxed{\sqrt[n]{x^n} =  (\sqrt[n]{x} )^n = x }
+            </me>
+            Bijvoorbeeld
+            <me>
+              \sqrt[3]{4^3}=(\sqrt[3]{4})^3 = 4
+            </me>
+          </p>
+          <sidebyside widths="48% 48%">
+              <image source="x3macht.png"/>
+              <image source="wortel3.png"/>
+          </sidebyside>
+          <p>
+            Grafiek van <m>f(x)=x^3</m> (links) en van  <m>f^{-1}(y)=\sqrt[3]{y}</m> (rechts).
+          </p>
+        </li>
+        <li>
+          <title><m>n</m> even</title>
+          <sidebyside width="75%">
+            <image xml:id="fig-finv-xn-evenpos" width="50%">
+                <latex-image>
+                    <![CDATA[
+                    \begin{tikzpicture}
+                    \tikzset{->-/.style={decoration={markings,mark=at position .5 with {\arrow{latex}}},postaction={decorate}}}
+                    \tikzset{-<-/.style={decoration={markings,mark=at position .5 with {\arrowreversed{latex}}},postaction={decorate}}}
+                    \begin{pgfonlayer}{nodelayer}
+                      \node [style=none] (0) at (-2, 0) {};
+                      \node [style=none] (1) at (0, 0) {};
+                      \node [style=none] (2) at (2, 0) {};
+                      \node [style=functie klein] (3) at (0, 0) {$f(x)=x^n$};
+                      \node [style=none] (4) at (-2, -1) {};
+                      \node [style=none] (5) at (0, -1) {};
+                      \node [style=none] (6) at (2, -1) {};
+                      \node [style=functie klein] (7) at (0, -1) {$f^{-1}(y)=\sqrt[n]{y}$};
+                      \node [style=none] (8) at (3, -0.5) {};
+                      \node [style=none] (9) at (2, -1) {};
+                      \node [style=none, label={right:$y \in \mathbb{R}^+$}] (10) at (3, -0.5) {};
+                      \node [style=none] (11) at (-2, 0) {};
+                      \node [style=none] (12) at (-3, -0.5) {};
+                      \node [style=none] (13) at (-2, -1) {};
+                      \node [style=none, label={left:$x \in \mathbb{R}^+$}] (14) at (-3, -0.5) {};
+                    \end{pgfonlayer}
+                    \begin{pgfonlayer}{edgelayer}
+                      \draw [style=pijl] (0.center) to (3);
+                      \draw [style=pijl] (3) to (2.center);
+                      \draw [style=invpijl] (4.center) to (7);
+                      \draw [style=invpijl] (7) to (6.center);
+                      \draw [in=90, out=0, looseness=0.75,thick] (2.center) to (8.center);
+                      \draw [in=-90, out=0, looseness=0.75,thick] (9.center) to (10.center);
+                      \draw [in=90, out=180, looseness=0.75,thick] (11.center) to (12.center);
+                      \draw [in=-90, out=-180, looseness=0.75,thick] (13.center) to (14.center);
+                    \end{pgfonlayer}
+                  \end{tikzpicture}]]>
+                </latex-image>
+            </image>
+          </sidebyside>
+          <p>
+            Voor <m>x \in \mathbb{R}^+</m> geldt er opnieuw dat
+            <me>
+              \sqrt[n]{x^n} =  (\sqrt[n]{x} )^n = x
+            </me>
+            Bijvoorbeeld
+            <me>
+              \sqrt{4^2}=(\sqrt{4})^2 = 4
+            </me>
+          </p>
+          <sidebyside widths="40% 40%">
+              <image source="x2macht-pos.png"/>
+              <image source="wortel2-pos.png"/>
+          </sidebyside>
+          <p>
+            Grafiek van <m>f(x)=x^2</m> als <m>x \in \mathbb{R}^+</m> (links) en van <m>f^{-1}(y)=\sqrt{y}</m> (rechts).
+          </p>
+          <sidebyside width="75%">
+            <image xml:id="fig-finv-xn-even-neg" width="50%">
+                <latex-image>
+                    <![CDATA[
+                    \begin{tikzpicture}
+                    \tikzset{->-/.style={decoration={markings,mark=at position .5 with {\arrow{latex}}},postaction={decorate}}}
+                    \tikzset{-<-/.style={decoration={markings,mark=at position .5 with {\arrowreversed{latex}}},postaction={decorate}}}
+                    \begin{pgfonlayer}{nodelayer}
+                      \node [style=none] (0) at (-2, 0) {};
+                      \node [style=none] (1) at (0, 0) {};
+                      \node [style=none] (2) at (2, 0) {};
+                      \node [style=functie klein] (3) at (0, 0) {$f(x)=x^n$};
+                      \node [style=none] (4) at (-2, -1) {};
+                      \node [style=none] (5) at (0, -1) {};
+                      \node [style=none] (6) at (2, -1) {};
+                      \node [style=functie klein] (7) at (0, -1) {$f^{-1}(y)=-\sqrt[n]{y}$};
+                      \node [style=none] (8) at (3, -0.5) {};
+                      \node [style=none] (9) at (2, -1) {};
+                      \node [style=none, label={right:$y \in \mathbb{R}^+$}] (10) at (3, -0.5) {};
+                      \node [style=none] (11) at (-2, 0) {};
+                      \node [style=none] (12) at (-3, -0.5) {};
+                      \node [style=none] (13) at (-2, -1) {};
+                      \node [style=none, label={left:$x \in \mathbb{R}^-$}] (14) at (-3, -0.5) {};
+                    \end{pgfonlayer}
+                    \begin{pgfonlayer}{edgelayer}
+                      \draw [style=pijl] (0.center) to (3);
+                      \draw [style=pijl] (3) to (2.center);
+                      \draw [style=invpijl] (4.center) to (7);
+                      \draw [style=invpijl] (7) to (6.center);
+                      \draw [in=90, out=0, looseness=0.75,thick] (2.center) to (8.center);
+                      \draw [in=-90, out=0, looseness=0.75,thick] (9.center) to (10.center);
+                      \draw [in=90, out=180, looseness=0.75,thick] (11.center) to (12.center);
+                      \draw [in=-90, out=-180, looseness=0.75,thick] (13.center) to (14.center);
+                    \end{pgfonlayer}
+                  \end{tikzpicture}]]>
+                </latex-image>
+            </image>
+          </sidebyside>
+          <p>
+            Voor <m>x \in \mathbb{R}^-</m> geldt er nu enkel dat
+            <me>
+              \sqrt[n]{x^n} = - x
+            </me>
+            omdat <m>\sqrt[n]{x}</m> niet gedefinieerd is voor <m>x \lt 0</m>.
+            Bijvoorbeeld
+            <me>
+              \sqrt{(-4)^2}= 4 \quad \text{ maar } \quad (\sqrt{-4})^2  \text{ is niet gedefinieerd }
+            </me>
+          </p>
+          <!-- <sidebyside widths="40% 40%">
+              <image source="x2macht-neg.png"/>
+              <image source="wortel2-neg.png"/>
+          </sidebyside>
+          <p>
+            Grafiek van <m>f(x)=x^2</m> als <m>x \in \mathbb{R}^-</m> (links) en van <m>f^{-1}(y)=-\sqrt{y}</m> (rechts).
+          </p> -->
+        </li>
+      </dl>
+    </p>
+  </assemblage>
+
+  <p>
+    De rekenregels voor <m>n</m>-de wortels volgen uit de definitie en de rekenregels van machten. Bij het rekenen met <m>n</m>-de wortels moet je wel oppassen dat je de rekenregels niet zomaar toepast voor negatieve grondtallen. Bijvoorbeeld
+    <me>
+        \sqrt[4]{-4} \cdot \sqrt[4]{-4} \neq \sqrt[4]{16}
+    </me>
+    Het linkerlid is immers niet gedefinieerd en het rechterlid is gelijk aan <m>2</m>.
+  </p>
+
+  <assemblage>
+    <title>Rekenregels voor <m>n</m>-de wortels</title>
+    <p>
+      <m>\forall m,n \in \mathbb{N}_0, \forall a,b \in \mathbb{R}^+_0:</m>
+      <md>
+        <mrow>\amp \sqrt[n]{a^n}=(\sqrt[n]{a})^n=a \qquad (\text{ definitie })</mrow>
+        <mrow>\amp \sqrt[n]{a^m}=(\sqrt[n]{a})^m</mrow>
+        <mrow>\amp \sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b}</mrow>
+        <mrow>\amp \sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}</mrow>
+        <mrow>\amp \sqrt[m]{\sqrt[n]{a}}=\sqrt[m \cdot n]{a}</mrow>
+      </md>
+    </p>
+  </assemblage>
+
+  <aside>
+    <title>Opgelet!</title>
+    <p>
+      <m>\sqrt[n]{a \pm b} \neq \sqrt[n]{a} \pm \sqrt[n]{b}</m>
+    </p>
+  </aside>
+
+  <example>
+    <title>Rekenregels bewijzen</title>
+    <p>
+      We bewijzen als voorbeeld twee van de rekenregels. We starten met <m>\sqrt[n]{a^m}=(\sqrt[n]{a})^m</m>. Uit de defintie van de <m>n</m>-de wortel volgt dat we moeten bewijzen dat 
+      <me>
+        \left [ (\sqrt[n]{a})^m \right ]^n = a^m
+      </me>
+      Welnu
+      <md>
+        <mrow>\left [ (\sqrt[n]{a})^m \right ]^n = \; \amp (\sqrt[n]{a})^{m \cdot n} \quad \textrm{(rekenregel machten)} </mrow>
+        <mrow> = \; \amp \left [ (\sqrt[n]{a})^n \right ]^m  \quad \textrm{(rekenregel machten)}</mrow>
+        <mrow> = \;  \amp a^m \quad \textrm{(definitie)} </mrow>
+      </md>
+    </p>
+    <p>
+      We tonen vervolgens aan dat <m>\sqrt[n]{a \cdot b} = \sqrt[n]{a} \cdot \sqrt[n]{b} </m>. Dit is equivalent met bewijzen dat <m>\left (\sqrt[n]{a} \cdot \sqrt[n]{b} \right )^n = a \cdot b</m>:
+      <md>
+        <mrow> \left (\sqrt[n]{a} \cdot \sqrt[n]{b} \right )^n  = \; \amp (\sqrt[n]{a})^n \cdot (\sqrt[n]{b})^n \quad \textrm{(rekenregel machten)}</mrow>
+        <mrow> = \; \amp a \cdot b \quad \textrm{(definitie)}  </mrow>
+      </md>
+    </p>
+  </example>
+
+  <activity>
+    <statement>
+      <p>
+        Bewijs zelf de twee overgebleven rekenregels.
+      </p>
+    </statement>
+  </activity>
+</section>

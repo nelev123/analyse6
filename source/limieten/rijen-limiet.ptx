@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+  <title>Convergentie van rijen</title>
+  <introduction>
+    <p>
+      Tot nog toe hebben we een rij gewoon gedefinieerd als een geordende lijst van getallen. Vanaf nu beschouwen we enkel rijen met een oneindig aantal termen en definiëren we een rij als een afbeelding van <m>\mathbb{N}_0 \to \mathbb{R}</m>.
+    </p>
+    <aside>
+      <title>Afbeelding</title>
+      <p>
+        Een afbeelding is een relatie tussen twee verzamelingen <m>X</m> en <m>Y</m> met de eigenschap dat aan elke <m>x \in X</m> precies één <m>y \in Y</m> gekoppeld wordt. Als je een functie van <m>X \to Y</m> beperkt tot zijn domein krijg je een afbeelding.
+      </p>
+    </aside>
+    <definition>
+      <statement>
+        <p>
+          Een rij <m>u</m> is een afbeelding van <m>\mathbb{N}_0 \to \mathbb{R}</m>:
+          <me>
+            u: \mathbb{N}_0 \to \mathbb{R}: n \to u_n=u(n)
+          </me>
+        </p>
+      </statement>
+    </definition>
+  </introduction>
+
+  <subsection>
+    <title>Limiet van een rij</title>
+    <p>
+      Beschouw de harmonische rij <m>1,\dfrac{1}{2},\dfrac{1}{3},\dfrac{1}{4}, \ldots</m>. De grafiek van deze rij bestaat uit afzonderlijke punten en we merken op dat <m>u_n</m> bij toenemende waarden van <m>n</m> steeds dichter tot 0 nadert. We zeggen dat de rij convergeert naar 0 en noemen 0 de limiet van de rij:
+      <me>
+        \lim_{n \to +\infty} u_n =0
+      </me>
+    </p>
+    <sidebyside width="50%">
+      <image source="desmos-limiet-rij.png"/>
+    </sidebyside>
+    <p>
+      De termen van de meetkundige rij <m>\dfrac{1}{5}, \dfrac{2}{5}, \dfrac{4}{5}, \dfrac{8}{5}, \dfrac{16}{5}, \ldots</m> nemen onbegrensd toe. We zeggen dat de rij divergeert en noteren
+      <me>
+        \lim_{n \to +\infty} u_n = +\infty
+      </me>
+    </p>
+    <sidebyside width="50%">
+      <image source="desmos-limiet-rij-2.png"/>
+    </sidebyside>
+
+    <activity>
+      <statement>
+        <p>
+          Bepaal of onderstaande rijen convergent of divergent zijn door grafisch de limieten te bepalen. <url href="https://www.desmos.com/calculator/s2b6fgcgjh">Hier</url> zie je bijvoorbeeld hoe je de grafiek van een rij in Desmos kan tekenen. 
+          <ol>
+            <li>
+              <p>
+                <m>\lim_{n \to +\infty} \sqrt{n}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{n \to +\infty} \log{n}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{n \to +\infty} \dfrac{\log{n}}{n}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{n \to +\infty} n \sin \left ( \dfrac{1}{n} \right )</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </activity>
+
+    <definition xml:id="def-convergente-rij">
+      <title>Convergente rij</title>
+      <statement>
+        <p>
+          <m>u_n</m> convergeert naar <m>a \in \mathbb{R}</m> <m>\Leftrightarrow</m> Voor elk strikt positief getal <m>\epsilon</m> bestaat er een natuurlijk getal <m>n_0</m> zodat alle termen van de rij <m>(u_n)</m> met  index <m>n \gt n_0</m> in het interval <m>]a-\epsilon, a+\epsilon[</m> liggen. In symbolen:
+          <md>
+            <mrow> \lim_{n \to +\infty} u_n \amp \; =  a</mrow>
+            <mrow> \Updownarrow \amp </mrow>
+            <mrow> \forall \epsilon \in \mathbb{R}^+_0, \exists \, n_0 \in \mathbb{N}_0, \forall \,  n \in \mathbb{N}_0: \; \amp  n \gt n_0 \Rightarrow u_n \in \; ]a-\epsilon, a+\epsilon[ </mrow>
+          </md>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Hieronder zie je de definitie in actie bij de rij <m>u_n=\dfrac{1}{n}+2</m>.
+    </p>
+
+    <interactive desmos="kcm019gsbc" width="100%" aspect="4:3" preview="preview-limiet-rij.png"/>
+
+    <example>
+      <p>
+        We gebruiken bovenstaande definitie om te bewijzen dat <m>\displaystyle \lim_{n \to +\infty} \dfrac{1}{n} =0 </m>. Voor elke <m>\epsilon \gt 0 </m> moet er gelden dat
+        <me>
+          -\epsilon \lt \dfrac{1}{n} \lt \epsilon
+        </me>
+        voor alle <m>n</m> groter dan een bepaalde <m>n_0</m> (nog te bepalen). De voorwaarde <m>- \epsilon \lt \dfrac{1}{n} </m> is altijd waar, dus we moeten <m>n_0</m> bepalen m.b.v. de tweede voorwaarde:
+        <me>
+          \frac{1}{n} \lt \epsilon \Leftrightarrow \frac{1}{\epsilon} \lt n
+        </me>
+        Kiezen we <m>n_0 \ge \dfrac{1}{\epsilon}</m>, dan zal voor <m>n \gt n_0</m> gelden dat <m>-\epsilon \lt \dfrac{1}{n} \lt \epsilon</m> en bijgevolg dat <m>\displaystyle \lim_{n \to +\infty} \dfrac{1}{n} =0 </m>.
+      </p>
+    </example>
+    <activity>
+      <statement>
+        <p>
+          Gebruik de definitie om te bewijzen dat <m>\displaystyle \lim_{n \to +\infty} \dfrac{n+1}{n-1} =1 </m> en bepaal <m>n_0</m> als <m>\epsilon=0,1</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Kies <m>n_0 \ge \dfrac{2}{\epsilon}+1</m>. Als <m>\epsilon=0,1</m> dan <m>n_0 \ge 21</m>.
+        </p>
+      </answer>
+    </activity>
+
+    <remark>
+      <p>
+        Merk op dat je de limiet <m>a</m> eigenlijk al moet kennen om met behulp van de definitie te bewijzen dat <m>a</m> effectief de limiet is. We zullen wat verderop dan ook rekenregels invoeren om limieten te berekenen.
+      </p>       
+    </remark>
+
+    <definition xml:id="def-divergente-rij">
+      <title>Divergente rij</title>
+      <statement>
+        <p>
+          <ul>
+            <li>
+              <p>
+                <m>u_n</m> divergeert naar <m>+\infty</m> <m>\Leftrightarrow</m> Voor elk strikt positief getal <m>P</m> bestaat er een natuurlijk getal <m>n_0</m> zodat alle termen van de rij <m>(u_n)</m> met index <m>n \gt n_0</m> groter zijn dan <m>P</m>. In symbolen:
+                <md>
+                  <mrow> \lim_{n \to +\infty} u_n \amp \; = +\infty </mrow>
+                  <mrow> \Updownarrow \amp </mrow>
+                  <mrow> \forall P \in \mathbb{R}^+_0, \exists \, n_0 \in \mathbb{N}_0, \forall \,  n \in \mathbb{N}_0 \amp \; : n \gt n_0 \Rightarrow u_n \gt P</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>u_n</m> divergeert naar <m>-\infty</m> <m>\Leftrightarrow</m> Voor elk strikt positief getal <m>P</m> bestaat er een natuurlijk getal <m>n_0</m> zodat alle termen van de rij <m>(u_n)</m> met index <m>n \gt n_0</m> kleiner zijn dan <m>-P</m>. In symbolen:
+                <md>
+                  <mrow> \lim_{n \to +\infty} u_n \amp \; = -\infty </mrow>
+                  <mrow> \Updownarrow \amp </mrow>
+                  <mrow> \forall P \in \mathbb{R}^+_0, \exists \, n_0 \in \mathbb{N}_0, \forall \,  n \in \mathbb{N}_0\amp \; : n \gt n_0 \Rightarrow u_n \lt -P  </mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <p>
+                Als de limiet niet bestaat, noemen we de rij eveneens divergent. Beschouw bijvoorbeeld
+                de rij <m>-1,2,-3,4,\ldots</m>. De limiet bestaat niet omdat de termen wisselen van teken en we noemen de rij divergent.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+
+    <remark>
+      <p>
+        Een rekenkundige rij is altijd divergent, behalve in het triviale geval dat <m>v=0</m> en de rij bijgevolg constant is.
+      </p>
+    </remark>
+
+
+  </subsection>
+
+  <subsection>
+    <title>Convergentie van meetkundige rijen </title>
+
+    <p>
+      Om de limiet van een meetkundige rij <m>u_n=u_1 q^n</m> te bepalen is het voldoende om de limiet van <m>q^n</m> te bepalen voor verschillende waarden van <m>q</m>.
+    </p>
+    <assemblage>
+      <title>De limiet van de rij <m>u_n=q^n</m></title>
+      <p>
+        De meetkundige rij <m>u_n=q^n</m> met <m>
+        q \in \mathbb{R}</m> convergeert of divergeert afhankelijk van de waarde van <m>q</m>:
+        <me>
+          \lim_{n \to +\infty} q^n = \begin{cases}
+          +\infty \qquad \text{als } q \gt 1 \\
+          \backslash \qquad \text{als } q \le -1 \\
+          0 \qquad \text{als } -1 \lt q \lt 1 \\
+          1 \qquad \text{als } q=1
+          \end{cases}
+        </me>
+        De rij is convergent als <m>-1 \lt q \le 1</m> en divergent in alle andere gevallen. (<url href="https://www.desmos.com/calculator/tzdztikbgv">
+        Interactieve tekening
+      </url>)
+      </p>
+    </assemblage>
+
+    <interactive desmos="urzd14frly" width="100%" aspect="4:3" preview="preview-mtk-rij.png"/>
+
+    <proof>
+      <p>
+        <dl width="narrow">
+          <li>
+            <title><m>q = \pm 1</m> </title>
+            <p>
+              Dit is triviaal. De rij <m>1,1,1,\ldots</m> convergeert naar 1 en de rij <m>-1,1,-1,\ldots</m> is divergent.
+            </p>
+          </li>
+          <li>
+            <title><m>q \gt 1</m></title>
+            <p>
+              We moeten aantonen dat <m>\forall P \in \mathbb{R}^+_0, \exists \, n_0 \in \mathbb{N}_0, \forall \,  n \in \mathbb{N}_0: n \gt n_0 \Rightarrow q^n \gt P </m>. 
+              We nemen een willeurige <m>P \in \mathbb{R}^+_0</m> en zoeken een natuurlijk getal <m>n_0</m> waarvoor geldt dat <m>n \gt n_0 \Rightarrow q^n \gt P</m>:
+              <md>
+                <mrow>\amp \; q^n \gt P </mrow>
+                <mrow>\Leftrightarrow \amp \;  n \log q \gt \log P </mrow>
+                <mrow>\Leftrightarrow \amp \;  n \gt \frac{\log P}{\log q} </mrow>
+              </md>
+              Als we <m>n_0 \ge \dfrac{\log P}{\log q}</m> kiezen dan geldt:
+              <me>
+                n \gt n_0 \Rightarrow q^n \gt P
+              </me>
+              en dit is wat we moesten bewijzen.
+            </p>
+          </li>
+          <li>
+            <title><m>q \lt -1</m></title>
+            <p>
+              De termen van de rij wisselen van teken <mdash/> dit noemt men een alternerende rij <mdash/> en <m>\lim_{n \to +\infty} |q_n|=+\infty</m> (zie vorige geval). De rij is dus divergent.
+            </p>
+          </li>
+          <li>
+            <title><m>-1 \lt q \lt 1 </m></title>
+            <p>
+              Als <m>q=0</m>, dan is de limiet natuurlijk ook nul. We beschouwen eerst <m>0 \lt q \lt 1</m> en tonen aan dat voor elke <m>\epsilon \gt 0 </m> geldt dat
+              <me>
+                -\epsilon \lt q^n \lt \epsilon
+              </me>
+              voor alle <m>n</m> groter dan een bepaalde <m>n_0</m> (nog te bepalen). De voorwaarde <m>- \epsilon \lt q^n </m> is altijd waar, dus we moeten <m>n_0</m> bepalen m.b.v. de tweede voorwaarde. 
+              <md>
+                <mrow>\amp \; q^n \lt \epsilon </mrow>
+                <mrow>\Leftrightarrow \amp \;  n \log q \lt \log \epsilon </mrow>
+                <mrow>\Leftrightarrow \amp \;  n \gt \frac{\log \epsilon}{\log q}  \qquad (\log q \lt 0)</mrow>
+              </md>
+              Kiezen we <m>n_0 \ge \dfrac{\log \epsilon}{\log q}</m>, dan zal voor <m>n \gt n_0</m> gelden dat <m>-\epsilon \lt q^n \lt \epsilon</m> en bijgevolg dat <m>\displaystyle \lim_{n \to +\infty} q^n =0 </m>.
+            </p>
+            <p>
+              Als <m>-1 \lt q \lt 0</m>, dan geldt <m>q^n=(-1)^n (-q)^n</m> en dus dat <m>\lim_{n \to +\infty} q^n=0</m>. De termen van de rij wissselen wel nu wel van teken.
+            </p>
+          </li>
+        </dl>
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Rekenregels voor het berekenen van limieten</title>
+    <p>
+      Het berekenen van limieten via de definitie is moeilijk en tijdrovend. In de praktijk zullen we limieten berekenen door te steunen op enkele standaardlimieten en rekenregels. Naast de limiet voor een meetkundige rij, beschouwen we ook volgende standaardlimieten:
+    </p>
+    <assemblage>
+      <title>Twee standaardlimieten</title>
+      <p>
+        <md>
+          <mrow>\amp \lim_{n \to +\infty} n^p=+\infty \quad \text{en} \lim_{n \to +\infty} \frac{1}{n^p}=0 \quad \text{ als p} \in \mathbb{N}_0</mrow>
+        </md>
+      </p>
+    </assemblage>
+    <p>
+      De bewijzen stellen we voorlopig even uit. Voor het berekenen van limieten gebruiken we onderstaande rekenregels:
+    </p>
+    <assemblage>
+      <title>Rekenregels voor limieten</title>
+      <p>
+        Gegeven twee rijen <m>(u_n)</m> en <m>(v_n)</m>. Als beide rijen convergent zijn en <m>\lim_{n \to +\infty} u_n=a</m>, <m>\lim_{n \to +\infty} v_n=b</m> dan geldt er dat :
+        <ol>
+          <li>
+            <p>
+               <m>\lim_{n \to +\infty} (k \cdot u_n )= k \cdot (\lim_{n \to +\infty}  u_n )=k \cdot a  \qquad (k \in \mathbb{R})</m>
+            </p>
+          </li>
+          <li>
+            <p>
+               <m>\lim_{n \to +\infty} (k + u_n ) = k + (\lim_{n \to +\infty}  u_n ) = k + a \qquad (k \in \mathbb{R})</m>
+            </p>
+          </li>
+          <li>
+            <p>
+               <m>\lim_{n \to +\infty} (u_n \pm v_n)= ( \lim_{n \to +\infty} u_n )  \pm (\lim_{n \to +\infty} v_n)= a \pm b</m>
+            </p>
+          </li>
+          <li>
+            <p>
+               <m>\lim_{n \to  +\infty} (u_n \cdot v_n)= (\lim_{n \to  +\infty} u_n ) \cdot (\lim_{n \to  +\infty} v_n) = a \cdot b </m>
+            </p>
+          </li>
+          <li>
+            <p>
+               <m>\lim_{n \to  +\infty} \frac{u_n}{v_n}=\frac{\lim_{n \to  +\infty} u_n}{\lim_{n \to  +\infty} v_n}=\frac{a}{b} \qquad (\text{als }b \neq 0)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+               <m>\lim_{n \to +\infty} (u_n )^{\frac{m}{n}}= (\lim_{n \to +\infty} u_n )^{\frac{m}{n}}= a^{\frac{m}{n}}  \qquad (m \in \mathbb{Z}, n \in \mathbb{N}_0)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </assemblage>
+    <proof>
+      <p>
+        Ter illustratie bewijzen we dat <m>\displaystyle \lim_{n \to +\infty} (u_n + v_n)=(\lim_{n \to +\infty} u_n)+ (\lim_{n \to +\infty} v_n) = a + b</m>. Voor elke <m>\epsilon \gt 0 </m> moet er gelden dat
+        <me>
+          (a+b)-\epsilon \lt u_n+v_n \lt (a+b)+\epsilon
+        </me>
+        voor alle <m>n</m> groter dan een bepaalde <m>n_0</m> (nog te bepalen). We herschrijven deze ongelijkheden m.b.v. de absolute waarde en gebruiken de driehoeksongelijkheid <m>|a+b| \le |a| +|b|</m>.
+        <md>
+          <mrow> \amp \; (a+b)-\epsilon \lt u_n+v_n \lt (a+b)+\epsilon</mrow>
+          <mrow>  \Leftrightarrow \amp \;-\epsilon \lt (u_n+v_n)-(a+b) \lt \epsilon</mrow>
+          <mrow>  \Leftrightarrow \amp \;|(u_n+v_n)-(a+b)| \lt \epsilon</mrow>
+          <mrow>  \Leftrightarrow \amp \; |(u_n-a)+(v_n-b)| \lt \epsilon</mrow>
+        </md>
+        Aangezien <m> |(u_n-a)+(v_n-b)| \le |u_n-a|+|v_n-b| </m>, zoeken we dus een <m>n_0</m> zodat <m>n \gt n_0 \Rightarrow |u_n-a|+|v_n-b| \le \epsilon</m>. Er geldt dat er twee natuurlijke getallen <m>n_1</m> en <m>n_2</m> bestaan zodat
+        <md>
+          <mrow>\amp n \gt n_1 \Rightarrow |u_n-a| \lt \frac{\epsilon}{2}</mrow>
+          <mrow>\amp n \gt n_2 \Rightarrow |v_n-b| \lt \frac{\epsilon}{2}</mrow>
+        </md>
+        Stellen we <m>n_0</m> gelijk aan het minimum van <m>n_1</m> en <m>n_2</m>, dan geldt
+        <me>
+          n \gt n_0 \Rightarrow |u_n-a|+|v_n-b| \lt \epsilon
+        </me>
+        en bijgevolg ook dat
+        <me>
+          n \gt n_0 \Rightarrow |(u_n+v_n)-(a+b)| \lt \epsilon
+        </me>
+        en dit is wat we moesten bewijzen.
+      </p>
+    </proof>
+
+    <p>
+      Als <m>\lim_{n \to +\infty} u_n=\pm \infty</m> en/of <m>\lim_{n \to +\infty} v_n=\pm \infty</m>, dan mag je bovenstaande rekenregels wel toepassen, maar moet je voorzichtig zijn bij het rekenen met <m>\pm \infty</m>. Beschouw bijvoorbeeld de limiet van de rij <m>u_n=n^3+5n^2+1</m>
+      <me>
+        \lim_{n \to +\infty} u_n=(\lim_{n \to +\infty} n^3 )+5 (\lim_{n \to +\infty} n^2) +1=+\infty+5(+\infty)+1 
+      </me>
+      Dit vormt geen probleem: <m>+\infty+5(+\infty)+1 = +\infty </m> en de rij divergeert naar <m>+\infty</m>. 
+    </p>
+    <p>
+      Voor het rekenen met <m>\pm \infty</m>, kan je steunen op onderstaande rekenregels:
+    </p>
+    <assemblage xml:id="assemblage-rekenen-infty">
+      <title>Rekenen met <m>\infty</m></title>
+      <p>
+        <md>
+          <mrow> \amp k \cdot (+\infty) = \begin{cases} +\infty \quad \text{als } k \gt 0 \\ -\infty \quad \text{als } k \lt 0  \end{cases} \amp \amp  k \cdot (-\infty) = \begin{cases} -\infty \quad \text{als } k \gt 0 \\ +\infty \quad \text{als } k \lt 0  \end{cases}  </mrow>
+          <mrow> \amp k + (+\infty) = +\infty \amp \amp  k + (-\infty) = -\infty</mrow>
+          <mrow> \amp (+\infty)+(+\infty)=+\infty \amp \amp (-\infty)+(-\infty)=-\infty</mrow>
+          <mrow> \amp (+\infty) \cdot (+\infty)=+\infty \amp \amp (-\infty) \cdot (-\infty)=+\infty </mrow>
+           <mrow> \amp (+\infty) \cdot (-\infty)=-\infty \amp \amp (-\infty) \cdot (+\infty)=-\infty </mrow>
+           <mrow> \amp \sqrt[n]{+\infty} = + \infty \quad (n \in \mathbb{N}_0) \amp \amp \sqrt[n]{-\infty} = - \infty \quad (n \in \mathbb{N}_0 \text{ en } n \text{ is oneven}) </mrow>
+        </md>
+      </p>
+    </assemblage>
+
+    <p>
+      Door toepassen van de rekenregels voor limieten kan je ook onbepaalde vormen krijgen. Beschouw bijvoorbeeld de limiet van de rij  <m>v_n=n^3-5n^2+1</m>:
+      <md>
+        <mrow>\amp \lim_{n \to +\infty} v_n=(\lim_{n \to +\infty} n^3 )-5 (\lim_{n \to +\infty} n^2) +1=+\infty - \infty = \text{ ?}</mrow>
+      </md>
+      <m>+\infty - \infty </m> is een onbepaalde vorm en je kan hieruit niet besluiten wat de waarde van de limiet is. Als je geconfronteerd wordt met een onbepaalde vorm, moet je het voorschrift van de rij herschrijven om de onbepaalde vorm weg te werken.
+    </p>
+    <assemblage>
+      <title>Onbepaalde vormen</title>
+      <p>
+        <md>
+          <mrow>\amp +\infty - \infty </mrow>
+          <mrow>\amp \frac{\pm \infty}{\pm \infty} </mrow>
+          <mrow>\amp 0 \cdot (\pm \infty) </mrow>
+          <mrow>\amp \frac{0}{0} </mrow>
+          <mrow>\amp 1^{\pm \infty} </mrow>
+        </md>
+      </p>
+    </assemblage>
+    <example>
+      <title>Onbepaaldheden wegwerken via ontbinden</title>
+      <p>
+        Om de onbepaaldheid bij de limiet <m>\lim_{n \to +\infty} (n^3-5n^2+1)</m> weg te werken, ontbinden we het voorschrift van de rij door een factor <m>n^3</m> voorop te zetten:
+        <me>
+          n^3-5n^2+1=n^3 \left(1-\frac{5}{n}+\frac{1}{n^3}\right)
+        </me>
+        De limiet van de tweede en derde term binnen de haakjes is nul:
+        <me>
+          \lim_{n \to +\infty} \frac{5}{n} = 0 \quad \text{en} \quad \lim_{n \to +\infty} \frac{1}{n^3}=0
+        </me>
+        en we krijgen bijgevolg
+        <md>
+          <mrow>\amp \displaystyle \lim_{n \to +\infty} (n^3-5n^2+1)</mrow>
+          <mrow> = \amp \lim_{n \to +\infty} n^3 \cdot \lim_{n \to +\infty} \left(1-\frac{5}{n}+\frac{1}{n^3}\right)</mrow>
+          <mrow> = \amp +\infty \cdot 1=+\infty</mrow>
+        </md>
+        en besluiten dat de rij divergent is. <alert>Het wegwerken van onbepaaldheden door termen van de vorm <m>\dfrac{1}{n^p}</m> (<m>p \in \mathbb{N}_0</m>) te creëren is een strategie die vaak werkt.</alert>
+      </p>
+    </example>
+    <example>
+      <title>Onbepaaldheden wegwerken via ontbinden <mdash/>2</title>
+      <p>
+        Als het voorschrift van de rij een rationale functie is, kan de limiet eveneens berekend worden door een macht van <m>n</m> voorop te zetten in teller en/of noemer. Bijvoorbeeld:
+        <md>
+          <mrow>\lim_{n \to +\infty} \left ( \frac{n^2+n-2}{n^2+2n-3} \right ) = \lim_{n \to +\infty} \left ( \frac{n^2}{n^2} \right ) \cdot \lim_{n \to +\infty} \left (\frac{1+\frac{1}{n}-\frac{2}{n^2}}{1+\frac{2}{n}-\frac{3}{n^2}} \right )</mrow>
+          <mrow>= \frac{\lim_{n \to +\infty} \left ( 1+\frac{1}{n}-\frac{2}{n^2} \right )}{\lim_{n \to +\infty} \left ( 1+\frac{2}{n}-\frac{3}{n^2} \right )} =1 </mrow>
+        </md>
+      </p>
+    </example>
+    <example>
+      <title>Onbepaaldheden wegwerken via rationaal maken</title>
+      <p>
+        Beschouw de limiet van de rij <m>u_n=\dfrac{2n-3+\sqrt{n^2+5}}{3n+1}</m>. Het berekenen verloopt opnieuw door een factor <m>n</m> in teller en noemer voorop te zetten. Denk eraan dat <m>\sqrt{n^2+5}=\sqrt{n^2 \left ( 1+\dfrac{5}{n^2} \right ) }=n \sqrt{\left ( 1+\dfrac{5}{n^2} \right )}</m>
+        <me>
+          \lim_{n \to +\infty} \frac{2n-3+\sqrt{n^2+5}}{3n+1} = \lim_{n \to +\infty} \frac{2-\frac{3}{n}+\sqrt{1+\frac{5}{n^2}}}{3+\frac{1}{n}} = 1
+        </me>
+        Beschouwen we echter de rij <m>v_n=\sqrt{4n^2+n}-2n</m>, dan leidt ontbinden tot de onbepaalde vorm <m>(+\infty) \cdot 0</m>:
+        <me>
+            \lim_{n \to +\infty} \left (   \sqrt{4n^2+n}-2n  \right )= \lim_{n \to +\infty} \left ( n \left ( \sqrt{4+\dfrac{1}{n}} -2 \right) \right )=(+\infty) \cdot 0
+        </me>
+        <alert>Als het voorschrift van de rij wortels bevat, kunnen onbepaaldheden vaak weggewerkt worden door teller en/of noemer rationaal te maken.</alert> We herschrijven het voorschrift dus als volgt:
+        <md>
+          <mrow>\sqrt{4n^2+n}-2n=\amp \; \frac{(\sqrt{4n^2+n}-2n)(\sqrt{4n^2+n}+2n)}{\sqrt{4n^2+n}+2n}</mrow>
+          <mrow>=\amp \; \frac{n}{\sqrt{4n^2+n}+2n}</mrow>
+          <mrow>=\amp \; \frac{n}{n\left(\sqrt{4+\frac{1}{n}}+2 \right)}</mrow>
+        </md>
+        De onbepaaldheid is nu weggewerkt en de limiet wordt
+        <me>
+            \lim_{n \to +\infty} \left (   \sqrt{4n^2+n}-2n  \right )=  \lim_{n \to +\infty} \frac{1}{\sqrt{4+\frac{1}{n}}+2}=\frac{1}{4}
+        </me>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Convergentiecriteria voor monotone rijen</title>
+
+    <definition xml:id="def-monotoon">
+      <statement>
+        <p>
+               <ul>
+        <li>
+          <p>
+            Een rij <m>(u_n)</m> is <term>stijgend</term> <m>\Leftrightarrow \forall n \in \mathbb{N}_0: u_n \le u_{n+1}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Een rij <m>(u_n)</m> is <term>dalend</term> <m>\Leftrightarrow \forall n \in \mathbb{N}_0: u_n \ge u_{n+1}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Als <m>u_n \lt u_{n+1}</m> of <m>u_n \gt u_{n+1}</m> noemen we de rij <term>strikt</term> stijgend of dalend.
+          </p>
+        </li>
+        <li>
+          <p>
+            Een rij is (strikt) <term>monotoon</term> als ze (strikt) stijgend of (strikt) dalend is.
+          </p>
+        </li>
+      </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <p>
+        De rij <m>(u_n)</m> met <m>u_n=\dfrac{n}{n+1}</m> is strikt stijgend, want
+        <me>
+          u_{n+1}-u_n = \frac{n+1}{n+2}-\frac{n}{n+1}=\frac{1}{(n+1)(n+2)} \gt 0
+        </me>
+      </p>
+    </example>
+
+    <definition xml:id="def-supinf">
+      <statement>
+        <p>
+               <ul>
+        <li>
+          <p>
+            Een rij <m>(u_n)</m> is naar boven begrensd als ze minstens één <term>bovengrens</term> <m>b</m> heeft zodat <m>\forall n \in \mathbb{N}_0: u_n \le b</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Een rij <m>(u_n)</m> is naar onder begrensd als ze minstens één <term>ondergrens</term> <m>b</m> heeft zodat <m>\forall n \in \mathbb{N}_0: u_n \ge b</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De kleinste bovengrens noemt men het <term>supremum</term> en de grootste ondergrens het <term>infimum</term>.
+          </p>
+        </li>
+      </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <assemblage>
+      <title>Convergentie van monotone rijen</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              Een stijgende rij die naar boven begrensd is, convergeert.
+            </p>
+          </li>
+          <li>
+            <p>
+              Een dalende rij die naar onder begrensd is, convergeert.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+    <example xml:id="vb-rij-stijgend-bovengrens">
+      <p>
+        Gegeven de rij <m>\dfrac{1}{2}, \dfrac{3}{8}, \dfrac{5}{16}, \dfrac{1 \cdot 3 \cdot 5 \ldots (2n-1)}{2 \cdot 4 \cdot 6 \ldots 2n}</m>. Ondanks het feit dat we de limiet van de algemene term niet kunnen berekenen, kunnen we toch aantonen dat de rij convergeert omdat de rij daalt
+        <md>
+          <mrow>u_{n+1}-u_n = \; \amp \dfrac{1 \cdot 3 \cdot \ldots (2n-1) (2n+1)}{2 \cdot 4 \cdot \ldots (2n) (2n+2)} - \dfrac{1 \cdot 3 \cdot \ldots (2n-1)}{2 \cdot 4 \cdot \ldots (2n)}</mrow>
+          <mrow>= \; \amp  \dfrac{1 \cdot 3 \cdot \ldots (2n-1)}{2 \cdot 4 \cdot \ldots (2n)} \cdot \left ( \frac{2n+1}{2n+2} - 1 \right )</mrow>
+          <mrow>= \; \amp  \dfrac{1 \cdot 3 \cdot \ldots (2n-1)}{2 \cdot 4 \cdot \ldots (2n)} \cdot \left ( \frac{-1}{2n+2} \right )</mrow>
+          <mrow>\; \lt 0 </mrow>
+        </md>
+        en nul als ondergrens heeft (alle termen zijn immers groter dan nul).
+      </p>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Limiet van een recursief gedefinieerde rij</title>
+    <p>
+      Als je weet dat een rij <m>(u_n)</m> convergent is en je kan een recursief voorschrift voor de rij opstellen, dan leidt het recursief voorschrift tot een vergelijking voor de limiet <m>b</m> van de rij omdat er geldt dat <m>\lim_{n \to +\infty} u_n = \lim_{n \to +\infty} u_{n+1}=b</m>.
+    </p>
+    <example>
+      <p>
+        We bepalen de limiet <m>b</m> van de rij <m>(u_n)</m> met recursief voorschrift <m>u_{n+1}=\dfrac{1}{2} \left ( u_n + \dfrac{3}{u_n} \right)</m> en <m>u_1=1</m>. Als we de grafiek tekenen, zien we dat de rij convergeert naar een getal tussen 1 en 2. We veronderstellen dus dat <m>\lim_{n \to +\infty} u_n = \lim_{n \to +\infty} u_{n+1}=b</m> en berekenen <m>b</m>.
+        <md>
+          <mrow> \displaystyle \amp \lim_{n \to +\infty} u_{n+1} =1/2 \left ( \lim_{n \to +\infty} u_{n} +\dfrac{3}{\lim_{n \to +\infty} u_{n}} \right )</mrow>
+          <mrow>\Rightarrow \; \amp  b= \frac{1}{2} \left (b + \frac{3}{b} \right )</mrow>
+          <mrow>\Rightarrow \; \amp  2b^2 = b^2+3 </mrow>
+          <mrow>\Rightarrow \; \amp  b^2 = 3 </mrow>
+          <mrow>\Rightarrow \; \amp  b = \sqrt{3} </mrow>
+        </md>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Het getal van Euler</title>
+    <p>
+      Gegeven de rij <m>(u_n)</m> met expliciet voorschrift <m>u_n=\left (1+\dfrac{1}{n} \right)^n</m>. Het is niet onmiddellijk duidelijk wat de limiet van deze rij is. De term <m>\dfrac{1}{n}</m> gaat naar nul als <m>n \to +\infty</m>, maar de macht waartoe we het getal <m>1+\dfrac{1}{n}</m> verheffen, wordt steeds groter. We onderzoeken numeriek hoe deze rij zich gedraagt:
+    </p>
+    <sidebyside>
+      <tabular top="major">
+        <row bottom="minor">
+          <cell>
+            <m>n</m>
+          </cell>
+          <cell>
+            <m>\left ( 1+ \dfrac{1}{n} \right )^n</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>1</m>
+          </cell>
+          <cell>
+            <m>2,00000000000</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>2</m>
+          </cell>
+          <cell>
+            <m>2,25000000000</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>3</m>
+          </cell>
+          <cell>
+            <m>2,37037037037</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>4</m>
+          </cell>
+          <cell>
+            <m>2,44140625000</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>10</m>
+          </cell>
+          <cell>
+            <m>2,59374246010</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>100</m>
+          </cell>
+          <cell>
+            <m>2,70481382942</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>10^3</m>
+          </cell>
+          <cell>
+            <m>2,71692393224</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>10^5</m>
+          </cell>
+          <cell>
+            <m>2,7182682372</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>10^7</m>
+          </cell>
+          <cell>
+            <m>2,71828169398</m>
+          </cell>
+        </row>
+        <row bottom="major">
+          <cell>
+            <m>10^9</m>
+          </cell>
+          <cell>
+            <m>2,71828203081</m>
+          </cell>
+        </row>
+      </tabular>
+    </sidebyside>
+    <p>
+      De rij lijkt te convergeren naar <m>\approx 2,7183</m>. We tonen nu aan dat deze rij inderdaad convergent is omdat ze stijgend is en naar boven begrensd. We steunen hierbij op het binomium van Newton
+      <me>
+        (a+b)^n=\sum_{i=0}^n C^i_n a^{n-i} b^i
+      </me>
+      en schrijven dat
+      <md>
+        <mrow>u_n = \left (1+\frac{1}{n} \right)^n=\; \amp \sum_{i=0}^n C^i_n \left (\frac{1}{n} \right)^i</mrow>
+        <mrow> = \; \amp \sum_{i=0}^n \frac{n!}{(n-i)!i!} \left (\frac{1}{n} \right)^i</mrow>
+        <mrow> = \; \amp \sum_{i=0}^n \frac{n(n-1)\ldots(n-i+1)}{n^i} \cdot \frac{1}{i!}</mrow>
+        <mrow> = \; \amp \sum_{i=0}^n \left ( 1-\frac{1}{n} \right ) \left ( 1-\frac{2}{n} \right ) \ldots  \left ( 1-\frac{i-1}{n} \right ) \cdot \frac{1}{i!} </mrow>
+      </md>
+      Hieruit volgt dat <m>u_{n+1} \gt u_n</m> omdat elke factor <m>1-\frac{k}{n+1} \gt 1-\frac{k}{n}</m> (<m>k=1,2,\ldots i-1</m>) en <m>u_{n+1}</m> bovendien een extra term heeft. De rij is naar boven begrensd door 3:
+      <md>
+        <mrow> u_n \amp \lt \sum_{i=0}^n \frac{1}{i!} = \left (2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \right )</mrow>
+        <mrow> \amp \lt \left (2+\frac{1}{2}+\frac{1}{2^2}+\ldots \frac{1}{2^{n-1}} \right ) = 2+\frac{1}{2} \frac{1-2^{-n}}{1-\frac{1}{2}}=3-2^{-n} \lt 3</mrow>
+      </md>
+    </p>
+    <p>
+      We stellen <m>\displaystyle \lim_{n \to +\infty } \left (1+\frac{1}{n} \right)^n = e </m> en noemen dit het <term>getal van Euler</term>. Aangezien
+      <me>
+        \left (1+\frac{1}{n} \right)^n= \sum_{i=0}^n \left ( 1-\frac{1}{n} \right ) \left ( 1-\frac{2}{n} \right ) \ldots  \left ( 1-\frac{i-1}{n} \right ) \cdot \frac{1}{i!}
+      </me>
+       geldt er bovendien dat
+       <me>
+         e = \lim_{n \to +\infty}  \sum_{i=0}^n \frac{1}{i!}
+       </me>
+    </p>
+
+    <definition xml:id="def-euler">
+      <statement>
+        <p>
+                  We definiëren het getal <m>e</m> als
+        <me>
+        e=\lim_{n \to +\infty} \left (1+\frac{1}{n} \right)^n
+        </me>
+          De numerieke waarde is <m>\approx 2,71828</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <p>
+        We kunnen de definitie van <m>e</m> gebruiken om limieten te berekenen:
+        <md>
+          <mrow>\lim_{n \to +\infty } \left ( 1 +\frac{2}{n} \right )^n = \; \amp  \lim_{m \to +\infty } \left ( 1 +\frac{1}{m} \right )^{2m} \quad \left (\frac{2}{n} = \frac{1}{m} \right )</mrow>
+          <mrow> = \; \amp \left ( \lim_{m \to +\infty } \left ( 1 +\frac{1}{m} \right )^{m} \right )^2 =e^2 </mrow>
+        </md>
+      </p>
+    </example>
+  </subsection>
+
+ <subsection>
+    <title>Insluitstelling</title>
+    <assemblage>
+      <title>Insluitstelling</title>
+      <p>
+        Als er voor de rij <m>(u_n)</m> twee convergente rijen <m>(v_n)</m> en <m>(w_n)</m> met limiet <m>b</m> te vinden zijn waarvoor vanaf een zeker rangnummer <m>n_0</m> geldt dat <m>v_n \le u_n \le w_n</m> dan is de rij <m>(u_n)</m> convergent met limiet <m>b</m>. Symbolisch:
+        <me>
+          \begin{cases} \lim_{n \to +\infty} v_n = \lim_{n \to +\infty} w_n =b \\ \exists n_0 \in \mathbb{N}_0, \forall n \in \mathbb{N}_0: n \ge n_0 \Rightarrow v_n \le u_n \le w_n \end{cases} \Rightarrow \lim_{n \to +\infty} u_n = b
+        </me>
+      </p>
+    </assemblage>
+    <p>
+      Het bewijs laten we achterwege, maar we passen de stelling wel toe om aan te tonen dat <m>\displaystyle \lim_{n \to +\infty} \dfrac{1}{n^p}=0</m> voor <m> p \in \mathbb{N} \gt 1</m>. Voor elk natuurlijk getal, verschillend van nul, geldt dat <m>0 \lt \dfrac{1}{n^p} \lt \dfrac{1}{n}</m>. Aangezien <m>\displaystyle\lim_{n \to +\infty} 0 = \lim_{n \to +\infty} \dfrac{1}{n}= 0 </m>, is ook <m>\displaystyle\lim_{n \to +\infty} \dfrac{1}{n^p}=0</m>.
+    </p>
+  </subsection>
+
+  <activity>
+    <statement>
+      <p>
+        Pas de insluitstelling toe om aan te tonen dat
+        <ol>
+          <li>
+            <p>
+              <m>\lim_{n \to +\infty} \dfrac{\sin n}{n}=0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{n \to +\infty} \dfrac{n}{3^n}=0</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </activity>
+</section>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subexercises xml:id="exercises-extremumvraagstukken">
+<title>Extremumvraagstukken</title>
+<exercise>
+    <statement>
+        <p>
+            De lengte van een lijnstuk <m>[AB]</m> is 6 cm. Een punt <m>C</m> verplaatst zich tussen de punten <m>A</m> en <m>B</m>. Op het lijnstuk <m>[AC]</m> construeren we een vierkant <m>ACDE</m> en op het lijnstuk <m>[CD]</m> een vierkant <m>CBFG</m>. Bepaal de plaats van het punt <m>C</m> zodanig dat de som van de oppervlakten van de vierkanten zo klein mogelijk is.
+        </p>
+        <image source="vierkanten.png" width="50%">
+        </image>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Aan de vier hoeken van een rechthoekig stuk karton van 80 cm op 50 cm, snijdt men gelijke vierkanten weg. Van de rest maakt men een doos zonder deksel. Voor welke hoogte is het volume van de doos maximaal?
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            In een bedrijf wordt een vierkant isolatiezaaltje gebouwd met een inhoud van <m>800</m> m<m>^{3}</m>. De vloertegels kosten 45 euro/m<m>^{2}</m>, de plafondtegels 35 euro/m<m>^{2}</m> en de wandtegels 50 euro/m<m>^{2}</m>. Bepaal de afmetingen waarvoor de kostprijs van het zaaltje minimaal is.
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Een fabrikant moet cilindervormige blikken (met deksel) maken met een inhoud van één liter. Hoe hoog moeten de blikken gemaakt worden als er zo weinig mogelijk blik moet gebruikt worden?
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+          Welk punt P van de parabool met vergelijking <m>y=\dfrac{x^{2}}{4}</m> ligt het dichtst bij het punt <m>Q(3,2)</m>?
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Twee wegen hebben als kruispunt O en vormen een hoek van 90 graden. Om 8u 's morgens vertrekken twee wandelaars. Wandelaar W1 bevindt zich dan op 17 km van O en wandelt met een snelheid van 3 km/h naar O toe. Wandelaar W2 bevindt zich op 9 km van O en wandelt met een snelheid van 2 km/h naar O toe. Bereken hun kortste onderlinge afstand en het tijdstip waarop die afstand bereikt wordt.
+        </p>
+        <image source="wandelaars.png" width="50%">
+        </image>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+           Een deelnemer aan de wedstrijd Parijs-Dakar bevindt zich in <m>A</m>, midden in een woestijn, op 320 km van een grote, goed berijdbare weg. Het punt <m>B</m> ligt op de weg en de afstand <m>\left|OB\right|</m> bedraagt 600 km. In de woestijn rijdt hij 100 km/h en op de weg <m>OB</m> haalt hij 250 km/h. Bepaal de positie van P zodat hij zo snel mogelijk in B geraakt.
+        </p>
+        <image source="snelste-tijd.png" width="50%">
+        </image>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            In welk punt van het eerste kwadrant, gelegen op de parabool met vergelijking <m>y=4-x^{2}</m>, zal de raaklijn aan de parabool samen met de coördinaatsassen een driehoek met minimale oppervlakte vormen?
+        </p>
+        <image source="oppervlakte-min.png" width="50%">
+        </image>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Een raam heeft de vorm van een rechthoek met daarop een halve cirkel met diameter gelijk aan de zijde van de rechthoek waarop hij rust. Het rechthoekig deel is in helder glas, de halve cirkel in gekleurd glas dat maar half zoveel licht doorlaat per eenheid van oppervlakte. De buitenomtrek van het raam is een constant getal L. Bepaal de afmetingen van het raam waarbij het meeste licht doorgelaten wordt.
+        </p>
+    </statement>
+</exercise>
+</subexercises>

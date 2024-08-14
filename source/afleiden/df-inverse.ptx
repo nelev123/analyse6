@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-df-inverse">
+    <title>Inverse functies afleiden</title>
+       
+    <p>
+      We kunnen natuurlijk ook een algemene formule opstellen om inverse functies af te leiden. Hierbij steunen we op de kettingregel, de definitie van inverse functie
+      <me>
+        y=f(x) \Leftrightarrow x = f^{-1}(y)
+      </me>
+      en het feit dat <m>y=(f \circ f^{-1})(y)</m>. We leiden eerst de formule af met behulp van Leibniz-notatie:
+      <md>
+        <mrow>\amp \; y=f(x) \qquad (\forall y \in dom \, f^{-1})</mrow>
+        <mrow>\Rightarrow \amp \; \frac{dy}{dy}=\frac{dy}{dx} \frac{dx}{dy}</mrow>
+        <mrow>\Rightarrow \amp \; \boxed{\frac{dx}{dy}=\frac{1}{\dfrac{dy}{dx}}}</mrow>
+      </md>
+      en nog eens met de <m>'</m> notatie
+      <md>
+        <mrow>\amp \; y=f(f^{-1}(y)) \qquad (\forall y \in dom \, f^{-1})</mrow>
+        <mrow>\Rightarrow \amp \; 1 = f'(f^{-1}(y)) \cdot \left [f^{-1}(y) \right]'</mrow>
+        <mrow>\Rightarrow \amp \; \left [f^{-1}(y) \right]' = \frac{1}{f'(f^{-1}(y))}</mrow>
+        <mrow>\Rightarrow \amp \; \boxed{\left [f^{-1}(y) \right]' = \frac{1}{f'(x)}}</mrow>
+      </md>
+    </p>
+
+    <example>
+      <title>De afgeleide van <m>\sqrt[n]{x}</m></title>
+      <p>
+        We passen bovenstaande formule toe om <m>D(\sqrt[n]{x})</m> te bepalen. Er geldt dat <m>y=x^n \Leftrightarrow x=y^{\sfrac{1}{n}}</m> en <m>\dfrac{dy}{dx}=nx^{n-1}</m>. Bijgevolg is
+        <me>
+          \dfrac{dx}{dy}=\frac{1}{\dfrac{dy}{dx}}=\frac{1}{nx^{n-1}}
+        </me>
+        We moeten nu enkel nog <m>\dfrac{dx}{dy}</m> schrijven in functie van <m>y</m>:
+        <me>
+          x^{n-1}= \left ( y^{\sfrac{1}{n}}\right)^{n-1} = y^{1-\sfrac{1}{n}}
+        </me>
+        Hieruit volgt dat <m>\dfrac{dx}{dy}=\dfrac{1}{ny^{1-\sfrac{1}{n}}}= \dfrac{1}{n} y^{\sfrac{1}{n}-1}</m>.
+      </p>
+    </example>
+
+    <assemblage>
+      <title>Afgeleide van de inverse functie</title>
+      <p>
+        Gegeven een functie <m>f</m> en zijn inverse <m>f^{-1}</m>. De afgeleide van <m>f^{-1}</m> kan bepaald worden op basis van de afgeleide van <m>f</m> via
+        <me>
+           \frac{dx}{dy}=\frac{1}{\dfrac{dy}{dx}}
+        </me>
+        Met <m>D</m> en <m>'</m> notatie:
+        <md>
+          <mrow>Df^{-1}(y)=\frac{1}{Df(x)}</mrow>
+          <mrow>\left [f^{-1}(y) \right ]'=\frac{1}{f'(x)}</mrow>
+        </md>
+      </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          De raaklijn aan de grafiek van <m>y=x^2</m> in het punt <m>(3,9)</m> heeft als vergelijking <m>y=6x-9</m>. Wat is de vergelijking van de raaklijn aan de grafiek van <m>y=\sqrt{x}</m> in het punt <m>(9,3)</m>? Je kan deze vergelijking zonder rekenwerk bepalen!
+        </p>
+      </statement>
+      <solution>
+        <p>
+          De grafieken van <m>y=x^2</m> en <m>y=\sqrt{x}</m> en de punten <m>(3,9)</m> en <m>(9,3)</m> zijn elkaars spiegelbeeld om de rechte <m>y=x</m>. Hetzelfde moet dus gelden voor de raaklijnen, dus de gezochte vergelijking vinden we door de inverse functie van <m>f(x)=6x-9</m> te bepalen: <m>y=\dfrac{x+9}{6}</m> (<url href="https://www.desmos.com/calculator/tqylbbmgxf">tekening</url>).
+        </p>
+      </solution>
+    </activity>
+
+    <activity>
+      <statement>
+          <p>
+            (<m>\star</m>) Toon aan dat <me>\left [f^{-1}(y) \right ]''=-\frac{f''(x)}{(f'(x))^3}</me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We leiden de uitdrukking <m>y=f(f^{-1}(y))</m> twee keer af naar <m>y</m>:
+            <md>
+              <mrow> \amp y = f(f^{-1}(y))</mrow>
+              <mrow> \Rightarrow \; \amp  1 = f'(f^{-1}(y)) \cdot [f^{-1}(y)]' </mrow>
+              <mrow> \Rightarrow \; \amp 0 = f''(f^{-1}(y)) \cdot ([f^{-1}(y)]')^2 + f'(f^{-1}(y)) \cdot [f^{-1}(y)]''   </mrow>
+            </md>
+            Er geldt dat <m>x=f^{-1}(y)</m> en <m>[f^{-1}(y)]'=\dfrac{1}{f'(x)}</m> en als we dit invullen, krijgen we
+            <md>
+              <mrow> \amp 0 = f''(x) \cdot \left ( \frac{1}{f'(x)} \right )^2 + f'(x) \cdot [f^{-1}(y)]''  </mrow>
+              <mrow> \Rightarrow \; \amp  \left [f^{-1}(y) \right ]''=-\frac{f''(x)}{(f'(x))^3} </mrow>
+            </md>
+          </p>
+        </solution>
+      </activity>
+    
+</section>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises xml:id="exercises-gekoppelde-df">
+<title>Gekoppelde veranderingen</title>
+
+<exercise>
+<statement>
+    <p>
+       Een kegelvormige berg zand groeit langzaam aan. 
+    </p>
+    <image source="kegel.png" width="30%"> </image>
+    <p>
+        <ol>
+            <li>
+                <p>
+                  Schrijf de ogenblikkelijke verandering van het volume, <m>\dfrac{dV}{dt}</m>, in functie van <m>\dfrac{dh}{dt}</m> en <m>\dfrac{dr}{dt}</m> met <m>h</m> de hoogte en <m>r</m> de straal van het grondvlak.  
+                </p>
+            </li>
+            <li>
+                <p>
+                   Veronderstel dat de berg zo groeit dat de hoogte altijd gelijk is aan de helft van de straal en dat het zand naar beneden valt met een snelheid van 0,50 m<m>^3</m> per minuut. Hoe snel verandert de hoogte van de berg als de straal gelijk is aan 2,0 m?
+                </p>
+            </li>
+        </ol>
+    </p>
+</statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Een skater met een lengte van 1,80 m rijdt onder een straatlamp van 3,50 m hoog met een constante snelheid van 10,0 km/h.  
+        </p>
+        <image source="skater.png" width="30%"> </image>
+        <p>
+           <ol>
+            <li>
+                <p>
+                   Hoe snel neemt de lengte van zijn schaduw toe als de skater zich op een afstand van 1,50 m van de lamp bevindt?
+                </p>
+            </li>
+            <li>
+                <p>
+                    Wat is op dat moment de snelheid van het uiteinde van zijn schaduw?
+                </p>
+            </li>
+           </ol>
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Een ladder met een lengte van 4,0 m staat tegen een muuur. Plots schuift de onderkant van de ladder weg van de muur met een snelheid van 1,2 m/s. Bepaal de snelheid waarmee de bovenkant van de ladder naar beneden glijdt langs de muur op het moment dat de onderkant van de ladder zich op een afstand van 1,5 m van de muur bevindt.
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+           Gas ontsnapt uit een bolvormige ballon met een snelheid van 900 cm<m>^3</m>/min. Hoe snel verandert de oppervlakte van deze ballon als de straal gelijk is aan <m>355</m> cm?
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+            Een meisje houdt een vieger vast op een hoogte van 12 m. Als de vlieger zich in horizontale richting van het meisje verwijdert met een snelheid van 3,0 m/s, hoe snel moet het touw dan afgewikkeld worden?
+        </p>
+    </statement>
+</exercise>
+<exercise>
+    <statement>
+        <p>
+           Een zeeschip <m>A</m> vaart met een snelheid van 21 km/h naar het zuiden en een schip <m>B</m>, dat zich 40 km ten zuiden van <m>A</m> bevindt, vaart naar het oosten met een snelheid van 14 km/h. 
+           <ol>
+            <li>
+                <p>
+                   Verkleint of vergroot de onderlinge afstand tussen de schepen na 1 uur varen? Met welke snelheid?
+                </p>
+            </li>
+            <li>
+                <p>
+                   Verkleint of vergroot de onderlinge afstand tussen de schepen na 2 uur varen? Met welke snelheid?
+                </p>
+            </li>
+            <li>
+                <p>
+                   Verkleint of vergroot de onderlinge afstand tussen de schepen na 2 uur varen? Met welke snelheid?
+                </p>
+            </li>
+            <li>
+                <p>
+                    Vanaf welk moment begint hun onderlinge afstand te vergroten? 
+                </p>
+            </li>
+           </ol> 
+        </p>
+    </statement>
+</exercise>
+
+
+    
+</subexercises>

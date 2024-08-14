@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-differentiaal">
+    <title>De differentiaal</title>
+    <p>
+      De gemiddelde verandering van een functie <m>f</m> in het interval <m>[x,x+\Delta x]</m> is een benadering is voor de puntsgewijze verandering <m>f'(x)</m> in <m>x</m>. Dit betekent dat we kunnen schrijven dat:
+      <me>
+        \frac{\Delta y}{\Delta x} =  f'(x) + \epsilon
+      </me>
+      met <m>\epsilon</m> het verschil tussen puntsgewijze en gemiddelde verandering. Hieruit leiden we af dat
+      <me>
+        \Delta y  =  f'(x) \Delta x + \epsilon  \Delta x
+      </me>
+    </p>
+
+    <definition>
+      <title>Differentiaal</title>
+      <statement>
+        <p>
+          We definiëren de differentiaal van <m>f</m> als
+            <me>dy = df(x) = f'(x) \Delta x  </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Dit betekent dat
+      <me>
+        \Delta y = dy + \epsilon \Delta x
+      </me>
+      <ul>
+        <li>
+          <p>
+            <m>\Delta y</m> stelt de verandering in <m>y</m> voor langs de grafiek van <m>f</m> als <m>x</m> verandert met <m>\Delta x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>dy</m> stelt de verandering in <m>y</m> voor langs de raaklijn aan de grafiek van <m>f</m> als <m>x</m> verandert met <m>\Delta x</m>
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <sidebyside widths="70%">
+       <image source="differentiaal.png"/>
+    </sidebyside>
+
+    <p>
+      Voor de functie <m>f(x)=x</m> geldt er dat <m>\Delta x=dx</m>, dus kunnen we stellen dat
+      <me>
+        \boxed{dy = df(x) = f'(x) \; dx}
+      </me>
+      en dus dat
+      <me>
+        f'(x)=\frac{dy}{dx}
+      </me>
+      <alert>Je kan een afgeleide dus beschouwen als een verhouding van differentialen en een differentiaal zelf als een oneindig kleine verandering.</alert>  Merk op dat <m>dy</m> een functie is van zowel <m>x</m> als <m>dx</m> en we dus eigenlijk beter zouden schrijven dat <m>dy=df(x,dx)</m>
+    </p>
+
+    <activity>
+      <introduction>
+        <p>
+          Bereken
+        </p>
+      </introduction>
+      <task>
+      <statement>
+        <p>
+          <m>d(2x+1)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>d(2x+1) = 2 dx</m>
+        </p>
+      </answer>
+      </task>
+      <task>
+      <statement>
+        <p>
+          <m>d(x^2-3x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>d(x^2-3x)=(2x-3)dx</m>
+        </p>
+      </answer>
+      </task>
+    </activity>
+
+    <example>
+      <title><m>D(\sin \theta)</m> en <m>D(\cos \theta)</m> bepalen via differentialen</title>
+      <statement>
+        <p>
+          Een differentiaal <m>df</m> kan geïnterpreteerd worden als een oneindig kleine verandering. Door deze veranderingen te tekenen <mdash/> weliswaar uitvergroot <mdash/> kunnen sommige afgeleiden grafisch bepaald worden. Beschouw bijvoorbeeld onderstaande tekening van een deel van de goniometrische cirkel. Als de hoek <m>\theta</m> toeneemt met <m>d\theta</m> neemt de sinus toe met <m>d(\sin \theta)</m> en de cosinus af met <m>d(\cos \theta)</m>. Aangezien <m>d\theta</m> een oneindig kleine verandering is, is de schuine zijde van de kleine rechthoekige driehoek ook gelijk aan <m>d\theta</m> en geldt er dat
+          <md>
+            <mrow>\amp D(\sin \theta) = \frac{d(\sin \theta)}{d\theta}  = \cos \theta</mrow>
+            <mrow>\amp D (\cos \theta) = \frac{d(\cos \theta)}{d\theta}  = - \sin \theta</mrow>
+          </md>
+        </p>
+        <sidebyside width="80%">
+            <image source="df-sin-cos.png"/>
+        </sidebyside>
+      </statement>
+    </example>
+
+    <example>
+      <title>Benaderingen berekenen met differentialen</title>
+      <blockquote>
+      <p>
+          Een halfbolvormige koepel met diameter 8 meter dik wordt langs de buitenzijde belegd met bladgoud van 3 mm dik. Bereken bij benadering hoeveel goud hiervoor nodig is. (<m>\rho_{\text{Au}}=19,3</m> g/cm<m>^3</m>). 
+      </p>
+
+      </blockquote>
+      <p>
+          De straal verandert van 4 m naar 4,003 na aanbrengen van een goudlaag. Die verandering is niet oneindig klein, maar relatief gezien wel klein t.o.v. de straal zelf. We kunnen de verandering van het volume dus goed benaderen door de differentiaal <m>dV</m>
+          <me>
+              dV = V'(r)\; dr = 2 \pi r^2 \; dr = 0,3016 \text{ m}^3
+          </me>
+           Hieruit volgt dat er ongeveer 5821 kg goud nodig is om de koepel te beleggen. 
+      </p>
+    </example>
+    
+</section>

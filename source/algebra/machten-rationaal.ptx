@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<section>
+  <title>Machten met rationale exponent</title>
+  <p>
+    <m>n</m>-de wortels kunnen geschreven worden als een rationale
+    exponent. Beschouw bijvoorbeeld de derdewortel uit 8:
+    <me>
+        \sqrt[3]{8}=2 \Leftrightarrow 2^3 = 8
+    </me>
+    Als we linker- en rechterlid van de laatste gelijkheid tot de macht
+    <m>1/3</m> verheffen en veronderstellen dat de rekenregels voor machten ook voor rationale exponenten gelden, dan krijgen we
+    <md>
+      <mrow>\amp (2^3)^{\frac{1}{3}}=8^{\frac{1}{3}}</mrow>
+      <mrow>\Leftrightarrow \; \amp 2^{3 \cdot \frac{1}{3}} = 8^{\frac{1}{3}}</mrow>
+      <mrow>\Leftrightarrow \; \amp 2 = 8^{\frac{1}{3}},</mrow>
+    </md>
+    waaruit we kunnen besluiten dat <m>\sqrt[3]{8}=8^{\frac{1}{3}}</m>, en dus ook <m>\sqrt[3]{8^2}=8^{\frac{2}{3}}</m>.
+  </p>
+  <definition>
+    <title>Macht met rationale exponent</title>
+    <statement>
+      <p>
+        <m>\forall a \in \mathbb{R}^+_0, \forall m \in \mathbb{Z},
+          \forall n \in \mathbb{N}_0: a^{\frac{m}{n}}=\sqrt[n]{a^m}</m>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Let op! We beschouwen <alert>enkel strikt
+      positieve grondtallen</alert> <m>a</m>. Onderstaand voorbeeld maakt onmiddellijk duidelijk waarom:
+    <md>
+      <mrow>\amp -2 = (-8)^{\frac{1}{3}}=(-8)^{\frac{2}{6}}=\left ((-8)^{\frac{1}{6}}\right)^2 =(\sqrt[6]{-8})^2</mrow>
+      <mrow>\amp  -2 = (-8)^{\frac{1}{3}}=(-8)^{\frac{2}{6}}=\left ((-8)^{2}\right)^{\frac{1}{6}}= \sqrt[6]{64}=2</mrow>
+    </md>
+    Het eerste geval leidt tot een uitdrukking die niet gedefineerd is en het tweede geval tot een valse gelijkheid.
+  </p>
+
+  <p>
+    De rekenregels voor machten met rationale exponent volgen uit de rekenregels voor machten met gehele exponent en de rekenregels voor <m>n</m>-de wortels.  
+  </p>
+
+  <assemblage>
+    <title>Rekenregels</title>
+    <p>
+      <m>\forall a,b \in \mathbb{R}^+_0; \forall p, q \in \mathbb{Q}</m>:
+      <md>
+        <mrow> \amp a^p \cdot a^q = a^{p+q}</mrow>
+        <mrow> \amp \frac{a^p}{a^q} = a^{p-q}</mrow>
+        <mrow> \amp \left( a^p\right)^q = a^{p \cdot q}</mrow>
+        <mrow> \amp \left (a \cdot b\right)^p = a^p \cdot b^p</mrow>
+        <mrow> \amp \left ( \frac{a}{b} \right)^p=\frac{a^p}{b^p}</mrow>
+      </md>
+    </p>
+  </assemblage>
+
+  <example>
+    <title>Rekenregels bewijzen</title>
+    <p>
+      We bewijzen dat <m>a^p \cdot a^q = a^{p+q}</m>. Stel
+      <md>
+        <mrow> \amp p = \frac{m}{n}</mrow>
+        <mrow> \amp q = \frac{s}{t}</mrow>
+      </md>
+      met <m>m,s \in \mathbb{Z}</m> en <m>n,t \in \mathbb{N}_0</m>. Het bewijs verloopt makkelijker als we vertrekken van het rechterlid:
+      <md>
+        <mrow> a^{p+q} = \;  \amp a^{\frac{m}{n}+\frac{s}{t}}</mrow>
+        <mrow> = \;\amp a^{\frac{mt+ns}{nt}}</mrow>
+        <mrow> = \; \amp \sqrt[nt]{a^{mt+ns}} \quad \textrm{(definitie)}</mrow>
+        <mrow> = \; \amp \sqrt[nt]{a^{mt} \cdot a^{ns}} \quad \textrm{(rekenregel macht met gehele exponent)}</mrow>
+        <mrow> = \; \amp \sqrt[nt]{a^{mt}} \cdot \sqrt[nt]{a^{ns}} \quad \textrm{(rekenregel n-de wortel)}</mrow>
+        <mrow> =\;  \amp a^{\frac{mt}{nt}} \cdot  a^{\frac{ns}{nt}} \quad \textrm{(definitie)}</mrow>
+        <mrow> =\;  \amp a^{\frac{m}{n}} \cdot  a^{\frac{s}{t}} </mrow>
+        <mrow> = \;  \amp a^p \cdot a^q</mrow>
+      </md> 
+    </p>
+  </example>
+
+  <activity>
+    <statement>
+      <p>
+        Bewijs zelf de andere rekenregels.
+      </p>
+    </statement>
+  </activity>
+
+</section>

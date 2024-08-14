@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-2, 0) {};
+		\node [style=none] (1) at (0, 0) {};
+		\node [style=none] (2) at (2, 0) {};
+		\node [style=functie klein] (3) at (0, 0) {$f$};
+		\node [style=none] (4) at (-2, -1) {};
+		\node [style=none] (5) at (0, -1) {};
+		\node [style=none] (6) at (2, -1) {};
+		\node [style=functie klein] (7) at (0, -1) {$f^{-1}$};
+		\node [style=none] (8) at (3, -0.5) {};
+		\node [style=none] (9) at (2, -1) {};
+		\node [style=none, label={right:$\alpha _r$}] (10) at (3, -0.5) {};
+		\node [style=none] (11) at (-2, 0) {};
+		\node [style=none] (12) at (-3, -0.5) {};
+		\node [style=none] (13) at (-2, -1) {};
+		\node [style=none, label={left:$\alpha$}] (14) at (-3, -0.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=pijl] (0.center) to (3);
+		\draw [style=pijl] (3) to (2.center);
+		\draw [style=pijl] (4.center) to (7);
+		\draw [style=pijl] (7) to (6.center);
+		\draw [in=90, out=0, looseness=0.75] (2.center) to (8.center);
+		\draw [in=-90, out=0, looseness=0.75] (9.center) to (10.center);
+		\draw [in=90, out=180, looseness=0.75] (11.center) to (12.center);
+		\draw [in=-90, out=-180, looseness=0.75] (13.center) to (14.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

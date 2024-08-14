@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Impliciet afleiden</title>
+    <exercise>
+        <statement>
+            <p>
+               Bepaal de vergelijking van de raaklijn aan de kromme, voorgesteld door de vergelijking <m>3y^3-2x^3+8x+2y=0</m>, in het punt <m>P(2,0)</m>.
+            </p>
+        </statement>
+        <solution>
+          <p>
+            We leiden de vergelijking impliciet af:
+            <me>
+              (9y^2+2) dy + (-6x^2+8) dx = 0
+            </me>
+            Invullen van <m>(2,0)</m> geeft:
+            <me>
+              2dy-16 dx =0 \Leftrightarrow \dfrac{dy}{dx}=8
+            </me>
+            De vergelijking van de raaklijn is dus
+            <me>
+              y=8(x-2)
+            </me>
+            
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+            <p>
+                Bepaal de vergelijking van de raaklijn en de normaal in het punt <m>(0,\sqrt{3}-2)</m> aan de cirkel met vergelijking <m>(x-1)^2+(y+2)^2=4</m>
+            </p>
+        </statement>
+        <solution>
+          <p>
+            We leiden de vergelijking impliciet af:
+            <me>
+              2 (x-1) dx + 2 (y+2)dy = 0
+            </me>
+            Invullen van <m>(0,\sqrt{3}-2)</m> geeft:
+            <me>
+              -2 dx +2 \sqrt{3} dy =0 \Leftrightarrow \dfrac{dy}{dx}=\frac{1}{\sqrt{3}}
+            </me>
+            De vergelijking van de raaklijn is dus
+            <me>
+              y=\frac{x}{\sqrt{3}}+\sqrt{3}+3
+            </me>
+            en van de normaal
+            <me>
+              y=-\sqrt{3}x+\sqrt{3}-2
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Bepaal de vergelijking van de raaklijn en de normaal in het punt <m>P(0,2)</m> van de hyperbool <m>2y^2-x^2=8</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We leiden de vergelijking impliciet af:
+            <me>
+              -2x dx + 4y dy = 0
+            </me>
+            Invullen van <m>(0,2)</m> geeft:
+            <me>
+              dy = 0 
+            </me>
+            De vergelijking van de raaklijn is dus
+            <me>
+              y=2
+            </me>
+            en van de normaal
+            <me>
+              x=0 
+            </me>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+            <p>
+             Bereken door impliciet afleiden <m>\dfrac{dy}{dx}</m> voor de functie(s) bepaald door onderstaande vergelijkingen. Je mag het resultaat laten staan in functie van <m>x</m> en <m>y</m>.
+             <ol>
+                <li>
+                    <p>
+                        <m>(x^2+y^2)^2=x^2-y^2</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(x^2+y^2)^2-2x(x^2+y^2)=y^2</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>x^{\frac{2}{3}}+y^{\frac{2}{3}}=4^{\frac{2}{3}}</m>
+                    </p>
+                </li> 
+                <li>
+                    <p>
+                        <m>(x^2+y^2-1)^3-x^2y^3=0</m>
+                    </p>
+                </li>
+             </ol>
+            </p>
+        </statement>
+        <answer>
+          <p>
+            Je kan jezelf controleren met <url href="https://www.geogebra.org/cas/j3aw78vj">Geogebra</url>. Herleid wel het rechterlid eerst naar nul en vul vervolgens het linkerlid in bij <m>f(x,y)</m>.
+          </p>
+        </answer>
+      </exercise>
+      <!-- <exercise>
+        <statement>
+            <p>
+               Voor elke kromme uit de voorgaande oefening, kies je zelf een punt van die kromme en bepaal je de raaklijn in dit punt aan de kromme. Controleer jezelf met Desmos. 
+            </p>
+        </statement>
+        
+      </exercise> -->
+    
+</subexercises>
+
+      <!-- <exercise>
+        <statement>
+          <p>
+            Bepaal de vergelijking van de raaklijn en de normaal aan de gegeven ellips in het gegeven punt.
+            <ol>
+              <li>
+                <p>
+                  <m>\dfrac{x^2}{15}+\dfrac{y^2}{10}=1</m>; punt <m>(-3,2)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>3x^2+4y^2=12</m>; punt <m>(-1,y_1)</m> met <m>y_1 \gt 0 </m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise> -->
+
+            <!-- <exercise>
+        <statement>
+          <p>
+            Bepaal een vergelijking van de raaklijn en de normaal in het punt <m>P(x_1,-2)</m> (met <m>x_1 \lt 0 </m>) van de hyperbool <m>x^2-y^2=5</m>.
+          </p>
+        </statement>
+      </exercise> -->
+      <!-- <exercise>
+        <statement>
+          <p>
+            Zoek de vergelijkingen van de rechten die evenwijdig zijn met de rechte <m>y=x</m> en raken aan de hyperbool <m>9x^2-25y^2=225</m>. Bepaal ook de raakpunten en de vergelijking van de rechte door de raakpunten.
+          </p>
+        </statement>
+      </exercise> 
+    
+      <exercises>
+      <title>Oefeningen (enkel voor de 7-uurs leerlingen) </title>
+
+      <exercise>
+        <statement>
+          <p>
+            Bepaal de vergelijking van de ellips die de rechte <m>5x-2y-9=0</m> raakt in het punt <m>(1,-2)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Bepaal de vergelijkingen van de raaklijnen aan de hyperbool <m>\dfrac{x^2}{6}-\dfrac{y^2}{8}=1</m> die loodrecht staan op de rechte <m>x+2y-2=0</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+
+    <project>
+    <task>
+      <p>
+            Toon aan dat de vergelijking van de raaklijn in een punt <m>(x_1,y_1)</m> aan de ellips <m>\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1</m> gegeven wordt door
+            <me>
+              \frac{xx_1}{a^2}+\frac{yy_1}{b^2}=1
+            </me>
+      </p>
+    </task>
+    <task>
+      <p>
+            Toon aan dat de vergelijking van de raaklijn in een punt <m>(x_1,y_1)</m> aan de hyperbool <m>\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1</m> gegeven wordt door
+            <me>
+              \frac{xx_1}{a^2}-\frac{yy_1}{b^2}=1
+            </me>
+      </p>
+    </task>
+    
+    </project>-->

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-df-macht">
+    <title>Machtsfuncties met rationale exponent afleiden</title>
+    <p>
+        Je weet al dat 
+        <me>
+            D(x^n)=n x^{n-1} \qquad (n \in \mathbb{Z})
+        </me>
+       We hebben dit nog niet bewezen, maar deze regel gewoon veralgemeend na het bewijzen van een aantal specifieke gevallen. Via onderstaande opdrachten ga je bewijzen dat 
+       <me>
+            \boxed{D(x^p)=p x^{p-1} \qquad (p \in \mathbb{Q})}
+       </me>
+       uitgaande van het feit dat <m>D(x^n)=n x^{n-1} (n \in \mathbb{N})</m>. Dit vertrekpunt bewijzen we dan nog in een later hoofdstuk. 
+    </p>
+    <activity>
+        <statement>
+            <p>
+                Bewijs dat <m>D(x^{-n})=-n x^{-n-1}</m> (<m>n \in \mathbb{N})</m> op basis van <m>D(x^n)=n x^{n-1}</m> en de kettingregel. 
+            </p>
+        </statement>
+    </activity>
+    <p>
+        Om te bewijzen dat <m>D(\sqrt[n]{x})=D\left(x^{\sfrac{1}{n}} \right) = \dfrac{1}{n} x^{\sfrac{1}{n}-1}</m> steunen we op het feit dat <m>\sqrt[n]{x}</m> en <m>x^n</m> inverse functies zijn (waarbij we impliciet veronderstellen dat <m>x \in \mathbb{R}^+</m> als <m>n</m> even is). Als voorbeeld bewijzen we eerst het speciale geval <m>n=2</m>.
+    </p>
+    <example>
+        <title>De afgeleide van <m>\sqrt{x}</m></title>
+        <p>
+            We leiden de gelijkheid <m>(\sqrt{x})^2 = x </m> af en passen hierbij de kettingregel toe op het linkerlid:
+            <md>
+                <mrow> \amp 2 \sqrt{x} D(\sqrt{x}) = 1 </mrow>
+                <mrow> \Rightarrow \;  \amp D(\sqrt{x}) = \dfrac{1}{2 \sqrt{x}} = \frac{1}{2} x^{-\sfrac{1}{2}}</mrow>
+            </md>
+        </p>
+    </example>
+
+    <activity>
+        <statement>
+            <p>
+                Veralgemeen bovenstaande redenering om te bewijzen dat <m>D\left ( x^{\sfrac{1}{n}} \right) = \frac{1}{n} x^{\sfrac{1}{n}-1}</m> 
+            </p>
+        </statement>
+    </activity>
+
+    <activity>
+        <statement>
+            <p>
+                Gebruik bovenstaand resultaat en de kettingregel om te bewijzen dat        
+                 <m>
+                    D\left ( x^{\sfrac{m}{n}} \right) = \dfrac{m}{n} x^{\sfrac{m}{n}-1}
+                </m>
+            </p>
+        </statement>
+    </activity>
+</section>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="verloop" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Verloop van een veeltermfunctie</title>
+
+  <xi:include href="./herh_afg.ptx" />
+  
+  <xi:include href="./extrema.ptx" />
+  
+    <section>
+      <title>Herhaald afleiden</title>
+      <p>
+        De afgeleide functie van <m>f(x)=x^3-x^2-x</m> is gelijk aan
+        <m>f'(x)=3x^2-2x-1</m>. Deze functie kunnen we natuurlijk opnieuw afleiden en dan krijgen we de tweede afgeleide van <m>f(x)</m>: <m>f''(x)=6x-2</m>.
+      </p>
+  
+      <assemblage>
+        <title>Tweede afgeleide</title>
+        <p>
+          De tweede afgeleide van <m>f</m> noteren we als
+          <me>f'' \qquad \qquad D^2f \qquad \qquad \dfrac{d^2f}{dx^2}</me>
+        </p>
+      </assemblage>
+  
+      <p>
+        We kunnen nu opnieuw afleiden om de derde en de vierde
+        afgeleide te berekenen: <m>f^{(3)}(x)=6</m> en <m>f^{(4)}(x)=0</m>. Voor een veeltermfunctie van de derde graad zijn alle afgeleiden vanaf de vierde natuurlijk gelijk aan nul.
+      </p>
+  
+      <assemblage>
+        <title><m>n</m>-de afgeleide</title>
+        <p>
+          De <m>n</m>-de afgeleide van een functie <m>f</m> noteren we als
+          <me>f^{(n)} \qquad \qquad D^nf \qquad \qquad \dfrac{d^nf}{dx^n}</me>
+        </p>
+      </assemblage>
+  
+    </section>
+  
+  <xi:include href="./hol-bol.ptx" />
+
+  <xi:include href="./verloop-oef.ptx" />
+
+  </chapter>
+

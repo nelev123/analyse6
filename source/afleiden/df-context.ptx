@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="df-context" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Betekenis van de afgeleide in verschillende contexten</title>
+
+    <example>
+        <title>Verticale snelheid van een bal</title>
+        <p>
+            Veronderstel dat een bal beweegt volgens een parabool met vergelijking <m> y = 8 x - x^2</m> (met <m>x</m> en <m>y</m> uitgedrukt in meter) en dat de horizontale component van de snelheid constant is en gelijk aan 2 m/s. We willen nu de verticale component van de snelheid berekenen als <m>x=5</m>. Dit kan op twee manieren:
+            <ol>
+              <li>
+                <p>
+                  Uit <m>x=v_x t=2t</m> (met <m>t</m> uitgedrukt in seconden) en <m>y = 8 x - x^2</m> volgt dat <m>  y = 16t - 4 t^2</m>. Afleiden naar de tijd geeft dan <m>v_y=\dfrac{dy}{dt}=16-8t</m>. Als de positie <m>x=5</m> m is <m>t=2,5</m> s en <m>v_y=-4 </m> m/s.
+                </p>
+              </li>
+              <li>
+                <p>
+                  We kunnen <m>v_y</m> ook berekenen via de kettingregel:
+                  <me>
+                    v_y=\frac{dy}{dt}=\frac{dy}{dx} \frac{dx}{dt}=(8-2x)v_x
+                  </me>
+                  Invullen van <m>x=5</m> m en  <m>v_x=2</m> m/s geeft opnieuw dat <m>v_y=-4</m> m/s. 
+                </p>
+              </li>
+            </ol>
+            Voor de tweede methode hoeft het expliciet functievoorschrift <m>y(t)</m> niet bepaald te worden. De ogenblikkelijke verandering van <m>y</m> i.f.v. <m>t</m> is gelijk aan de puntsgewijze verandering van <m>y</m> i.f.v. <m>x</m> vermenigvuldigd met de ogenblikkelijke verandering van <m>x</m> i.f.v. <m>t</m>.
+          </p>    
+    </example>
+
+    <activity>
+        <statement>
+            <p>
+              (Vervolg van bovenstaand voorbeeld.) Bereken de positie waarop de bal zijn maximale hoogte  bereikt
+              <ol>
+                <li>
+                  <p>
+                    via de cartesische vergelijking;
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    door gebruik te maken van de uitdrukkingen voor <m>x(t)</m> en <m>y(t)</m>;
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+    </activity>
+
+    <activity>
+        <statement>
+            <p>
+                De coördinaat van een deeltje dat een eenparig cirkelvormige beweging uitvoert (d.w.z. beweegt op een cirkel met constante snelheid) wordt gegeven door
+                <me>
+                  \begin{cases}
+                  x = R \cos \theta(t) \\
+                  y = R \sin \theta(t)
+                  \end{cases}
+                </me>
+                met <m>R</m> de straal van de cirkel en <m>\theta</m> de hoek die het deeltje met de positieve <m>x</m>-as maakt op tijdstip <m>t</m>. Toon aan dat de snelheid van het deeltje gelijk is aan <m>v=R \dfrac{d\theta}{dt}</m> door onderstaande berekeningen uit te voeren:
+                <ol>
+                    <li>
+                        <p>
+                            Bereken eerst <m>v_x=\dfrac{dx}{dt}</m> en <m>v_y=\dfrac{dy}{dt}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            De grootte van de snelheid kan je dan bepalen via <m>v=\sqrt{v_x^2+v_y^2}</m>.
+                        </p>
+                    </li>
+                </ol>
+                Wat is de betekenis van <m>\dfrac{d\theta}{dt}</m>?
+            </p>
+        </statement>
+    </activity>
+
+    <activity>
+        <statement>
+            <p>
+                De kostprijs om <m>t</m> m touw te produceren is gelijk aan <m>K(t)</m> euro. 
+                <ol>
+                    <li>
+                        <p>
+                            Wat betekent <m>K(1250)=500</m>?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Wat betekent <m>\dfrac{dK}{dt}(1250)=0,35</m>?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Schat op basis van bovenstaande gegevens <m>K(1300)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Denk je dat <m>\dfrac{dK}{dt}(1500)</m> groter dan, kleiner dan of gelijk zal zijn aan <m>\dfrac{dK}{dt}(1250)</m>?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+    
+
+</section>

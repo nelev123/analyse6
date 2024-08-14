@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Betekenis van de afgeleide in verschillende contexten</title>
+
+
+    <exercise>
+        <statement>
+            <p>
+                Veronderstel dat de massa <m>m</m> van een persoon afhangt van het aantal geconsumeerde calorieën <m>c</m> per dag: <m>m=f(c)</m>.  
+                <ol>
+                    <li>
+                        <p>
+                            Beschrijf in woorden wat de betekenis is van <m>f^{-1}(80)=2400</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Beschrijf in woorden wat de betekenis is van <m>f'(2000)=0</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Tom verhoogt zijn dagelijkse calorie-inname van 2600 tot 2700 en dit leidt tot een massatoename van 0,5 kg. Schrijf de wiskundige vertolking van bovenstaande zin op. 
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                De waarde <m>W</m> van een bepaald automodel hangt af van het aantal gereden kilometers <m>k</m>: <m>W=f(k)</m>. Geef een schatting voor <m>f'(55000)</m>, gegeven dat <m>f(40000)=10000</m> en <m>f(70000)=6000</m>.
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                De temperatuur van koffie in een kopje bedraagt <m>\theta=f(t)</m> met <m>t</m> de tijd in minuten sinds het inschenken van de koffie. Schat de temperatuur van de koffie 36 minuten na het inschenken, gegeven dat <m>|f'(35)|=1,5</m> en <m>f(35)=68</m>.
+            </p>
+        </statement>
+    </exercise>
+
+</subexercises>

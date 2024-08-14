@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title><m>n</m>-de wortels</title>
+    <exercise>
+        <statement>
+          <p>
+              Bereken (zonder rekenmachine) of vereenvoudig zoveel mogelijk. Maak eventuele noemers steeds wortelvrij. Je mag ervan uit gaan dat <m>a,b \in \mathbb{R}^+_0</m>.
+              <ol cols="2">
+                <li>
+                  <p>
+                    <m>\sqrt[5]{-32}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sqrt[3]{-5} \cdot \sqrt[3]{-5} \cdot \sqrt[3]{-10}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(2\sqrt{a^5})^4</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(\sqrt{4}+\sqrt{6})(\sqrt{2}-\sqrt{3})</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sqrt[3]{1000^5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sqrt[4]{(-2)^{-8}}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(\sqrt[6]{3})^{8}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(\sqrt[5]{0,1})^{10}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>2 \sqrt[3]{9} \cdot \sqrt[3]{3000}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sqrt[3]{a^9 b^{12}}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\displaystyle \sqrt[3]{\sqrt{64 a^{12}}}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\left (\sqrt[n]{a^n b^{2n}}\right )^{-2}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>(2\sqrt[4]{9}+3\sqrt{3})^2</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\sqrt[4]{17-\sqrt{33}} \cdot \sqrt[4]{17+\sqrt{33}}</m>
+                  </p>
+                </li>
+              </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>\sqrt[5]{-32}=-2</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\sqrt[3]{-5} \cdot \sqrt[3]{-5} \cdot \sqrt[3]{-10}=-5\sqrt[3]{2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(2\sqrt{a^5})^4=2^4 a^{10}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\sqrt{4}+\sqrt{6})(\sqrt{2}-\sqrt{3})=-\sqrt{2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\sqrt[3]{1000^5}=10^5</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\sqrt[4]{(-2)^{-8}}=\dfrac{1}{4}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\sqrt[6]{3})^{8}=3\sqrt[3]{3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\sqrt[5]{0,1})^{10}=10^{-2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>2 \sqrt[3]{9} \cdot \sqrt[3]{3000}=60</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\sqrt[3]{a^9 b^{12}}=a^3b^4</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \sqrt[3]{\sqrt{64 a^{12}}}=2a^2</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\left (\sqrt[n]{a^n b^{2n}}\right )^{-2} =a^{-2}b^{-4}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(2\sqrt[4]{9}+3\sqrt{3})^2=75</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\sqrt[4]{17-\sqrt{33}} \cdot \sqrt[4]{17+\sqrt{33}}=4</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+  
+      <exercise>
+        <statement>
+          <p>
+            De oppervlakte van een bol is gelijk aan 100 cm<m>^2</m>. Bereken het volume op 1 cm<m>^3</m> nauwkeurig.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>V=\dfrac{10^3}{3\sqrt{4\pi}} \approx 94</m> cm<m>^3</m>
+          </p>
+        </solution>
+      </exercise>
+</subexercises>

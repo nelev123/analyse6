@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="logaritmen" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Machten en logaritmen</title>
+
+    <xi:include href="./functies/ndewortels.ptx" />
+
+    <xi:include href="./algebra/machten-rationaal.ptx" />
+
+    <xi:include href="./algebra/logaritmen.ptx" />
+
+    <exercises xml:id="exercises-machten-logaritmen">
+        <xi:include href="./algebra/ndewortel-oef.ptx" />
+        <xi:include href="./algebra/machten-rationaal-oef.ptx" />
+        <xi:include href="./algebra/log-oef.ptx" />
+    </exercises>
+</chapter>

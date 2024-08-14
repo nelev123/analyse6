@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Expliciet en recursief voorschrift</title>
+    <exercise>
+        <statement>
+            <p>
+                Stel expliciete voorschriften op voor onderstaande rijen:
+                <ol>
+                  <li>
+                    <p>
+                      <m>1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                        <m>1, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\sqrt{3}</m>, <m>\sqrt{12}</m>, <m>\sqrt{27}</m>, <m>\sqrt{48}</m>, <m>\ldots</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\frac{1}{2}, \frac{1}{2}, \frac{3}{8}, \frac{1}{4}, \frac{5}{32}, \ldots</m>
+                    </p>
+                  </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle u_n = \frac{1}{n}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle u_n = \frac{1}{2^{n-1}}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>u_n = \sqrt{3n^2} = n \sqrt{3}</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle u_n = \frac{n}{2^{n}}</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+            Stel een recursief en een expliciet voorschrift op voor onderstaande rijen:
+            <ol>
+              <li>
+                <p>
+                   <m>7, 10, 13, 16, \ldots</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                    <m>-1, 1, -1, 1, \ldots</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>2, \frac{2}{3}, \frac{2}{9}, \frac{2}{27}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+            <p>
+               <ol>
+                <li>
+                    <p>
+                        <md>
+                            <mrow> \amp u_{n+1}=u_n+3 \quad \text{met }u_1=7</mrow>
+                            <mrow> \amp u_n = 7+3(n-1)</mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <md>
+                            <mrow> \amp u_{n+1}=-u_n \quad \text{met }u_1=-1</mrow>
+                            <mrow>\amp u_n = (-1)^n </mrow>
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <md>
+                            <mrow> \amp u_{n+1}=\frac{u_n}{3} \quad \text{met }u_1=2</mrow>
+                            <mrow>\amp u_n = \frac{2}{3^{n-1}} </mrow>
+                        </md>
+                    </p>
+                </li>
+               </ol> 
+            </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Stel een recursief voorschrift op voor onderstaande rijen:
+            <ol>
+              <li>
+                <p>
+                   <m>-1, 2, -3, 4, -5, \ldots</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                    <m>0,15; 0,1515; 0,151515; \ldots</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>u_{n+1}=-u_n-\frac{u_n}{|u_n|} \quad \text{met } u_1=-1</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                          <m>u_{n+1}=0,15+\frac{u_n}{100} \quad \textrm{met } u_1=0,15</m>
+                        </p>
+                      </li>
+                </ol>
+            </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+            <p>
+                Het recursief voorschrift van een rij is <m>u_{n+1}=2u_n-1</m> en <m>u_5=113</m>. Bepaal <m>u_1</m>.
+            </p>
+        </statement>
+        <answer>
+            <p>
+                <m>u_1=8</m>
+            </p>
+        </answer>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Geef voor de rij <m>u_n=3n-2</m> het recursief voorschrift en de beginwaarde <m>u_1</m>.
+          </p>
+        </statement>
+        <solution>
+            <p>
+                <m>u_{n+1}=u_n+3 \quad \text{met } u_1=1</m>
+            </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Beschouw de rij <m>u_n=n^2+n</m>. Vanaf welk rangnummer is <m>u_n \gt 100</m>?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>n=10</m>
+          </p>
+        </answer>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Stijn heeft op 1 januari 2020 een bedrag van 500 euro op een spaarrekening gezet. Hij krijgt elk jaar <m>4\%</m> intrest en neemt elk jaar ook 50 euro van de spaarrekening op. Stel een recursief voorschrift op voor de rij die het totale bedrag op de spaarrekening voorstelt.
+          </p>
+        </statement>
+        <answer>
+            <p>
+                <m>u_{n+1}=1,04u_n -50 </m> met <m>u_1=500</m> 
+            </p>
+        </answer>
+      </exercise>
+      <exercise>
+        <statement>
+            <p>
+                Een bos heeft momenteel een populatie van 300 konijnen en dit aantal neemt jaarlijks toe met <m>15/%</m>. Om de groei wat in te perken worden er jaarlijks ook 100 konijnen door de boswachter gedood. Stel een recursief voorschrift op voor de rij die het aantal konijnen voorstelt. 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <m>u_{n+1}=1,15u_n -100 </m> met <m>u_1=300</m> 
+            </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Gegeven de rij met recursief voorschrift 
+            <me>
+              u_{n+1}=\frac{1}{1-u_n}
+            </me>
+            Toon aan dat <m>u_{n+3}=u_n</m>.
+          </p>
+        </statement>  
+      </exercise>
+      
+      <exercise>
+        <statement>
+          <p>
+            De rij <m>(v_n)</m> met <m>v_{n+1}=3v_n-2</m> en <m>v_1=2</m> heeft een expliciet voorschrift van de vorm <m>v_n=a \cdot 3^n+b</m>. Bereken <m>a</m> en <m>b</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>a=\dfrac{1}{3}</m> en <m>b=1</m>
+          </p>
+        </answer>
+        <solution>
+            <p>
+                <m>v_1=2</m> en uit het recursief voorschrift volgt onmiddellijk dat <m>v_2=4</m>. Met behulp van het expliciet voorschrift leiden deze twee waarden tot onderstaand stelsel in <m>a</m> en <m>b</m>:
+                <me>
+                    \begin{cases}
+                       3a+b=2 \\ 9a+b=4 
+                    \end{cases}
+                    \Leftrightarrow 
+                    \begin{cases}
+                      a =  \dfrac{1}{3} \\ b = 1
+                 \end{cases}
+                </me>
+            </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+            <p>
+                (<m>\star</m>) Je mag altijd het meest eenvoudige voorschrift opstellen dat correspondeert met de termen van een gegeven rij. Voor de rij <m>1, 4, 9, 16, \ldots</m> is dit <m>u_n=n^2</m> waarbij we er impliciet vanuit gaan dat de volgende term gelijk is aan 25. Het is natuurlijk ook mogelijk dat de volgende term niet gelijk is aan 25, maar bijvoorbeeld aan 31. Stel een expliciet voorschrift op voor de rij <m>1, 4, 9, 16, 31, \ldots</m>.
+            </p>
+        </statement>
+      </exercise>
+    
+      <!--Moeilijkere oefening
+    (<m>\star<m>) Beschouw een rij van positieve getallen met als eerste drie termen <m>3, 3, 3, \ldots<m> en
+    <m><m>
+    u_{n+3} = \frac{u_n+u_n+1}{u_n+2}
+    <m><m>
+    We definieren twee andere rijen waarvoor geldt <m>(b_n=a_{2n-1}<m> en <m>c_n=a_2n<m>. Zoek een expliciet functievoorschrift en bewijs dit ook.-->
+      
+</subexercises>    

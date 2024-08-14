@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="extremumvraagstukken" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Extremumvraagstukken</title>
+    <p>
+        Bij een extremumvraagstuk moet je steeds het extremum van een bepaalde grootheid bepalen. De oplossing verloopt steeds in 3 stappen.
+        <ul>
+            <li>
+                <p>
+                   Kies de onafhankelijke variabele. 
+                </p>
+            </li>
+            <li>
+                <p>
+                   Stel het functievoorschrift op van de afhankelijke variabele in functie van de onafhankelijke. 
+                </p>
+            </li>
+            <li>
+                <p>
+                   Bepaal het gevraagde extremum. Je mag hierbij je grafisch rekenmachine of Desmos/Geogebra als hulp gebruiken.
+                </p>
+            </li>
+        </ul>
+    </p>
+    
+    <example>
+        <title>Minimale oppervlakte</title>
+        <blockquote>
+            <p>
+                Een fabrikant moet cilindervormige blikken (met deksel) maken met een inhoud van één liter. Hoe hoog moeten de blikken gemaakt worden om zo weinig mogelijk blik te gebruiken? Wat is dan de verhouding tussen de diameter en de hoogte?
+            </p>
+        </blockquote>
+        <p>
+            Als onafhankelijke veranderlijke kiezen we de straal van de cilinder (de hoogte is ook een mogelijkheid). Het volume is 1 l, dus de hoogte van een blik is <m>h=\dfrac{1}{\pi r^2}</m>. De oppervlakte is dan gelijk aan <m>A(r)=2 \pi r^2+\dfrac{2}{r}</m> en deze is minimaal als <m>r=\dfrac{1}{\sqrt[3]{2 \pi}}</m>. De verhouding tussen diameter en hoogte is dan gelijk aan 1.
+        </p>
+
+    </example>
+
+    <example>
+        <title>Het principe van Fermat</title>
+        <p>
+            Het principe van Fermat stelt dat licht van een punt <m>A</m> naar een punt <m>B</m> beweegt via de snelste weg. Beschouw bijvoorbeeld onderstaande situatie waarbij licht van een punt <m>A</m> in een optisch ijle middenstof (bv. lucht) beweegt naar een punt <m>B</m> in een optisch dichte middenstof (bv. glas).
+        </p>
+        <sidebyside widths="60%">
+            <image source="snellius.png"/>
+        </sidebyside>
+        <p>
+            We willen de positie van het punt <m>P</m> bepalen zodanig dat de tijd nodig om van <m>A</m> tot <m>B</m> te geraken minimaal is. De totale tijd <m>t</m> is gelijk aan de som van de tijd nodig om van <m>A</m> naar <m>P</m> te geraken en de tijd nodig om van <m>P</m> naar <m>B</m> te geraken:
+            <md>
+                <mrow> t = \; \amp \dfrac{|AP|}{v_1} + \dfrac{|PB|}{v_2} </mrow>
+                <mrow>  = \; \amp \dfrac{\sqrt{a^2+x^2}}{v_1} + \dfrac{\sqrt{b^2+(c-x)^2}}{v_2} </mrow>
+            </md>
+            met <m>v_{1}</m> en <m>v_2</m> de snelheid van het licht in middenstof 1 en middenstof 2. Door de grafiek van de functie <m>f(x) = \dfrac{\sqrt{a^2+x^2}}{v_1} + \dfrac{\sqrt{b^2+(c-x)^2}}{v_2}</m> te tekenen, is onmiddellijk duidelijk dat de functie enkel een minimum heeft. Om de voorwaarde voor de snelste weg te bepalen, stellen we bijgevolg <m>\dfrac{dt}{dx}=0</m> en vereenvoudigen we de bekomen uitdrukking. 
+            <md>
+                <mrow> \amp \dfrac{dt}{dx}=0</mrow>
+                <mrow> \Leftrightarrow \amp \frac{x}{v_1\sqrt{a^2+x^2}} - \frac{c-x}{v_2\sqrt{b^2+(c-x)^2}} = 0 </mrow>
+                <mrow> \Leftrightarrow \amp \frac{x}{v_1 |AP|} = \frac{c-x}{v_2 |PB|} </mrow>
+                <mrow> \Leftrightarrow \amp \frac{\sin \theta_i}{v_1} = \frac{\sin \theta_r}{v_2}  </mrow>
+                <mrow> \Leftrightarrow \amp \frac{\sin \theta_i}{\sin \theta_r} = \frac{v_1}{v_2}  </mrow>
+            </md>
+            De laatste uitdrukking is de zogenaamde wet van Snellius die de breking van licht beschrijft bij de overgang tussen twee middenstoffen.
+        </p>
+        
+        
+    </example>
+
+</section>

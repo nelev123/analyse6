@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-herh-afgeleide-functie">
+  <title>Herhaling</title>
+ 
+    <p>
+      Via <url href="https://www.desmos.com/calculator/a5ftk9vc2v"/> of onderstaande interactieve grafiek kan je het verschil tussen de gemiddelde en de puntsgewijze verandering even opfrissen.
+    </p>
+
+    <interactive desmos="a5ftk9vc2v" width="100%" aspect="4:3" preview="preview-herh-afg.png"/>
+
+    <assemblage>
+    <title>Afgeleide functie</title>
+      <p>
+        De <term>afgeleide functie</term> <m>f'</m> van een gegeven reële functie <m>f</m> is de functie die <m>x</m> afbeeldt op <m>f'(x)</m> met <m>f'(x)</m> de <term>puntsgewijze verandering</term> van <m>f</m> in <m>x</m>. 
+        <me>
+          f'(x)=\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}
+        </me>
+        Bovenstaande notatie betekent dat <m> \left | \dfrac{\Delta y}{\Delta x} - f'(x) \right |</m> steeds kleiner wordt als <m>\Delta x</m> kleiner wordt, d.w.z. de gemiddelde verandering benadert de puntsgewijze verandering steeds beter. (Zie ook het numeriek voorbeeld onder deze kader.)
+      </p>
+      <p>
+         Praktisch bepaal je <m>f'(x)</m> als volgt:
+        <ol>
+          <li>
+            <p>
+              Werk <m>\Delta y = f(x+\Delta x) - f(x)</m> uit en vereenvoudig zoveel mogelijk.
+            </p>
+          </li>
+          <li>
+            <p>
+              Deel <m>\Delta y</m> door <m>\Delta x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Door <m>\Delta x</m> vervolgens gelijk te stellen aan nul, krijg je de puntsgewijze verandering <m>f'(x)</m> in <m>x</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        De afgeleide functie wordt op verschillende manieren genoteerd:
+        <me>
+          f' \qquad \text{of} \qquad \frac{df}{dx} \qquad \text{of} \qquad Df
+        </me>
+        <me>
+          f'(x) \qquad \text{of} \qquad \frac{df(x)}{dx} \qquad \text{of} \qquad Df(x)
+        </me>
+      </p>
+  </assemblage>
+
+  <example>
+    <title>De puntsgewijze verandering numeriek berekenen</title>
+    <p>
+      Gegeven de functie <m>f(x)=x^3-x^2-x</m>. De afgeleide is <m>f'(x)=3x^2-2x-1</m> en de puntsgewijze verandering in <m>x=2</m> is <m>f'(2)=7</m>. Hieronder zie je de evolutie van de gemiddelde verandering naar de puntsgewijze verandering als we <m>\Delta x</m> telkens met een factor <m>10</m> verkleinen:
+    </p>
+    <sage>
+      <input>
+      f(x)=x^3-x^2-x # functievoorschrift
+      a = 2 # punt waar we verandering willen berekenen
+      interval = 0.5 # verandering in x
+      for i in range(10):
+        b =  a + interval
+        verandering = (f(b)-f(a))/interval
+        print(n(interval,digits=10),n(verandering,digits=10))
+        interval = interval/10
+      </input>
+      <output>
+        0.5000000000 9.750000000
+        0.05000000000 7.252500000
+        0.005000000000 7.025025000
+        0.0005000000000 7.002500250
+        0.00005000000000 7.000250002
+        5.000000000e-6 7.000025000
+        5.000000000e-7 7.000002501
+        5.000000000e-8 7.000000259
+        5.000000000e-9 6.999999869
+        5.000000000e-10 7.000000579
+      </output>
+    </sage>
+  </example>
+
+    <assemblage>
+      <title>Meetkundige betekenis van <m>f'(a)</m></title>
+      <p>
+        <m>f'(a)</m> is de richtingscoëfficiënt van de raaklijn aan de grafiek van <m>f</m> in het punt <m>(a,f(a))</m>. Dit betekent dat de vergelijking van de raaklijn gegeven wordt door:
+        <me>
+          y=f'(a)(x-a)+f(a)
+        </me>
+        en dat <m>f'(a)=\tan \theta</m> met <m>\theta</m> de hoek tussen de positieve <m>x</m>-as en de raaklijn.
+      </p>
+      <image source="afg-mtk.png" width="80%">
+      </image>
+      <p>
+        Uit deze meetkundige betekenis volgt onmiddellijk 
+        <ol>
+            <li>
+                <p>
+                    als <m>f'(x) \gt 0</m> voor elk punt <m>x</m> in <m>]a,b[</m>, dan is <m>f</m> strikt stijgend in <m>[a,b]</m>;
+                </p>
+            </li>
+            <li>
+                <p>
+                    als <m>f'(x) \lt 0</m> voor elk punt <m>x</m> in <m>]a,b[</m>, dan is <m>f</m> strikt dalend in <m>[a,b]</m>.                
+                </p>
+            </li>
+            Als de ongelijkheden niet strikt zijn, noemen we de functie stijgend of dalend.
+        </ol>
+        <!-- Opmerking toevoegen over contrapositie van bovenstaande implicaties?-->
+      </p>
+    </assemblage>
+
+    <assemblage xml:id="assemblage-rekenregels-afleiden">
+        <title>Rekenregels voor het afleiden van functies</title>
+        <p>
+         <md>
+          <mrow>  \amp D(c \cdot f)=c \cdot Df \quad (c \in \mathbb{R}) </mrow>
+          <mrow> \amp  D(f+g)=Df+Dg \amp \text{(somregel)}</mrow>
+          <mrow> \amp D(f \cdot g)=Df \cdot g + f \cdot Dg \amp \text{(productregel)}</mrow>
+          <mrow> \amp D[g(f(x))] =  Dg(f(x)) \cdot Df(x) \amp \text{(kettingregel)}</mrow>
+          <mrow> \amp \qquad \text{of} \qquad \frac{dy}{dx}= \frac{dy}{du} \cdot \frac{du}{dx} </mrow>
+        </md>           
+        </p>
+    </assemblage>
+
+    <p>
+        Om veeltermfuncties af te leiden gebruik je bovenstaande rekenregels, samen met 
+        <me>
+          \displaystyle  \boxed{D(x^n)=nx^{n-1} \quad (n \in \mathbb{Z}_0)}
+        </me>
+        en
+        <me>
+          \boxed{D(c)=0 \quad \text{voor alle} \quad c \in \mathbb{R}}
+        </me>       
+    </p>
+
+</section>

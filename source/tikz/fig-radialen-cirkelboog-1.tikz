@@ -1,0 +1,9 @@
+﻿            \begin{tikzpicture}[scale=2,cap=round]
+            \draw[thick] (0,0) circle (1cm);
+            \filldraw[green!20!white] (0,0) -- (5mm,0mm) arc(0:30:5mm);
+            \draw[draw=black,->,thick] (0.5,0) arc(0:30:5mm) node[pos=0.5,right]{$30^{\circ}$};
+            \draw (0,0) -- (1,0);
+            \draw[draw=black,thick] (0,0) -- (30:1cm);
+            \draw[draw=green!80!white,very thick] (1,0) arc(0:30:1cm) node[pos=0.5,right]{$l=\frac{\pi}{6}$};
+            \draw[draw=white] (0,-1) --(0,-1.2);
+            \end{tikzpicture}

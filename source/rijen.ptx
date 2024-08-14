@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="rijen" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Rijen</title>
+
+    <xi:include href="./algebra/rijen-inl.ptx" />
+    <xi:include href="./algebra/rijen-rekenkundig-meetkundig.ptx" />
+    <xi:include href="./algebra/sigma-notatie.ptx" />
+    <xi:include href="./limieten/rijen-limiet.ptx" />
+
+    <exercises xml:id="exercises-rijen">
+        <xi:include href="./algebra/rijen-voorschrift.ptx" />
+        <xi:include href="./algebra/rekenkundig-meetkundig-oef.ptx" />
+        <xi:include href="./algebra/sigma-oef.ptx" />
+        <xi:include href="./limieten/rijen-limiet-oef.ptx" />
+    </exercises>
+
+</chapter>

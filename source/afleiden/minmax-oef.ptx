@@ -1,0 +1,26 @@
+<exercise>
+    <statement>
+      <p>
+        Tom beschikt over ijzerdraad van <m>288</m> cm lang. Hij wil met de draad een balkvormige constructie maken die tweemaal zo lang is als breed. Bovendien moet de constructie een zo groot mogelijk inhoud hebben. Bepaal de lengte van de ribben van de balk.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Er geldt dat <m>l=2b</m> en <m>l+b+h=72</m>. Hieruit volgt voor het volume in functie van de breedte:
+        <me>V(b)=-6b^3+144b^2 \Rightarrow V'(b)=-18b^2+288b=18b(b-16)</me>
+        Deze functie bereikt een lokaal maximum voor <m>b=16</m> <m>\Rightarrow l=32</m> en <m>h=24</m>.
+      </p>
+      <image xml:id="fig_verloop_11" width="80%">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}[node style/.style={fill opacity=1,text opacity=1}]
+          \definecolor{oplossing}{RGB}{255,238,255}
+           \tkzTabInit[color,colorT=oplossing,colorC=oplossing,colorL=oplossing,colorV=oplossing,espcl=3.50,lgt=2]{$x$/1.,$f'(x)$/.7,$f(x)$/1.5}{$-\infty$,$0$,$16$,$+\infty$} 
+          \tkzTabLine{,-,0,+,0,-,}
+          \tkzTabVar{+/$+\infty$,-/$0$,+/$12288$,-/$-\infty$}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </solution>
+  </exercise>
