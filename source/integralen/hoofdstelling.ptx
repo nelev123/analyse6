@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection>
+    <title>Hoofdstelling van de integraalrekening</title>
+    <example>
+      <title>Van snelheid naar verplaatsing</title>
+      <p>
+        Onderstaande grafiek (links) beschrijft de snelheid van een loper in functie van de tijd. De gemiddelde snelheid van de loper over het tijdsinterval <m>[1,8]</m> s is gelijk aan
+        <me>
+          v_g=\frac{1}{7}\int_1^8 v(t) \; dt
+        </me>
+        en is afgerond op 2 cijfers na de komma gelijk aan <m>2,07</m> m/s. De gemiddelde snelheid kunnen we natuurlijk ook gewoon berekenen door de verplaatsing (zie grafiek rechts) van de loper te delen door het tijdsinterval. Er geldt dus dat
+        <me>
+            v_g=\frac{1}{7}\int_1^8 v(t) \; dt=\frac{x(8)-x(1)}{7}
+        </me>
+        Hieruit halen we dat
+        <me>
+          \int_1^8 v(t) \; dt=x(8)-x(1)
+        </me>
+        De oppervlakte onder de grafiek van <m>v(t)</m> over het tijdsinterval <m>[1,8]</m> s is dus gelijk aan de verplaatsing gedurende dat tijdsinterval.
+      </p>
+      <sidebyside widths="45% 45%" margins="0% 0%">
+        <image source="gemiddelde-snelheid.png"/>
+        <image source="gemiddelde-snelheid2.png"/>
+      </sidebyside>
+      <p>
+        Als we als bovengrens voor het tijdsinterval een willekeurig tijdstip <m>t</m> nemen, kunnen we schrijven dat
+        <md>
+          <mrow>\amp \int_1^t v(u) \; du=x(t)-x(1)</mrow>
+          <mrow>\Leftrightarrow \; \amp x(t)=x(1)+\int_1^t v(u) \; du</mrow>
+        </md>
+        We weten echter dat <m>\dfrac{d}{dt}x(t)=v(t)</m>, dus volgt hieruit dat ook
+        <me>
+          \frac{d}{dt}\left(\int_1^t v(u)\; du \right)=v(t)
+        </me>
+        We besluiten hieruit dat afleiden en integreren eigenlijk <q>inverse processen</q> zijn. Omdat de afgeleide van een constante nul is, kunnen we wel enkel de verplaatsing <m>\Delta x</m> bepalen en niet <m>x(t)</m> zelf. Bij het afleiden gaat er dus informatie over <m>x(t)</m> verloren die we niet meer kunnen achterhalen.
+      </p>
+    </example>
+
+    <assemblage>
+      <title>Hoofdstelling van de integraalrekening</title>
+      <p>
+        De functie <m>F_a(x)=\int_a^x f(t) \; dt</m> is de functie die <m>x</m> afbeeldt op de georiënteerde oppervlakte onder de grafiek van <m>f</m> over het interval <m>[a,x]</m>. <m>F_a(x)</m> noemen we de integraalfunctie van <m>f</m> met ondergrens <m>a</m>.
+      </p>
+      <p>
+        Als <m>f</m> continu is over <m>[a,b]</m>, dan geldt dat
+        <me>
+          \frac{d}{dx}F_a(x) = \frac{d}{dx} \left( \int_a^x f(t) \; dt \right)=f(x)
+        </me>
+        De afgeleide van een integraalfunctie is dus gewoon de oorspronkelijke functie.
+      </p>
+    </assemblage>
+
+    <proof>
+      <p>
+        We beperken ons tot het geval waarvoor <m>x \in ]a,b[ </m> en berekenen <m>\frac{d}{dx}F_a(x)</m> rechtstreeks via de definitie:
+        <md>
+          <mrow>\frac{d}{dx}F_a(x) \amp \; = \lim_{\Delta x \to 0} \frac{F_a(x+\Delta x)-F_a(x)}{\Delta x}</mrow>
+          <mrow> \amp \; = \lim_{\Delta x \to 0} \frac{\int_a^{x+\Delta x} f(t) \; dt - \int_a^x f(t) \; dt}{\Delta x}</mrow>
+          <mrow> \amp \; = \lim_{\Delta x \to 0} \frac{\int_a^{x+\Delta x} f(t) \; dt + \int_x^a f(t) \; dt}{\Delta x}</mrow>
+          <mrow> \amp \; = \lim_{\Delta x \to 0} \frac{\int_x^{x+\Delta x} f(t) \; dt}{\Delta x}</mrow>
+        </md>
+        Volgens de middelwaardestelling bestaat er bestaat er een <m>c \in [x,x+\Delta x]</m> zodat 
+        <me>
+          \int_x^{x+\Delta x} f(t) \; dt = f(c) \Delta x
+        </me>
+        Hieruit volgt dan dat
+        <me>
+          \frac{d}{dx}F_a(x) = \lim_{\Delta x \to 0} \frac{f(c) \Delta x}{\Delta x} = \lim_{\Delta x \to 0} f(c) = f(x)
+        </me>
+        aangezien <m>x \to c</m> als <m>\Delta x \to 0</m>. 
+      </p>
+      <image source="hoofdstelling.png" width="60%"/>
+      <!--TODO figuur verduidelijken-->
+    </proof>
+
+    <activity>
+        <statement>
+          <p>
+            Voor welke waarde van <m>x</m> bereikt <m>\displaystyle F(x)=\int_0^x\frac{t-3}{t^2+7}dt</m> een minimum?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>F'(x)=0 \Rightarrow \dfrac{x-3}{x^2+7} = 0 \rightarrow x=3</m>
+          </p>
+        </solution>
+      </activity>
+
+  </subsection>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection>
+    <title>Bepaalde integralen berekenen m.b.v. primitieve functies</title>
+      <definition>
+          <title>Primitieve functies</title>
+          <p>
+          <m>F</m> is een primitieve functie van <m>f</m> als en slechts als <m>\dfrac{dF}{dx}=f</m>. Een functie <m>f</m> heeft een oneindig aantal primitieve functies die slechts in een constante term van elkaar verschillen.
+          </p>
+      </definition>
+
+    <p>
+      Uit de hoofdstelling volgt dat de integraalfuntie <m>F_a(x)=\int_a^x f(t) \; dt</m> een primitieve functie is van <m>f</m>. Er geldt dus dat <m>F_a(x)=F(x)+c</m>, met <m>F(x)</m> een willekeurige primitieve functie en <m>c</m> een constante. Invullen van <m>a=0</m> geeft
+      <me>
+         \int_a^a f(t) \; dt=F(a)+c \Rightarrow 0=F(a)+c \Rightarrow c=-F(a)
+      </me>
+      Dit betekent dat
+      <me>
+        \int_a^x f(t) \; dt=F(x)-F(a)
+      </me>
+      en dus dat
+      <me>
+        \int_a^b f(t) \; dt=F(b)-F(a)
+      </me>
+    </p>
+
+    <assemblage>
+      <title>Praktische berekening van bepaalde integralen</title>
+      <p>
+        Als <m>f</m> continu is over <m>[a,b]</m> en <m>F</m> een willekeurige primitieve functie van <m>f</m> is, dan is
+        <me>
+          \int_a^b f(x) \; dx = F(b)-F(a)=F(x)\Bigg\rvert^b_a
+        </me>
+      </p>
+    </assemblage>
+   
+    <interactive desmos="x59mcnl4ez" width="100%" aspect="4:3" preview="hoofdstelling-2.png"/>
+
+    <activity>
+        <statement>
+          <p>
+            Stel m.b.v. de berekening via primitieve functies de formules voor <m>\int_a^b \;dx</m>, <m>\int_a^b x\;dx</m> en  <m>\int_a^b x^2\;dx</m> opnieuw op. Algemeen geldt er dus dat
+            <me>
+              \boxed{\int_a^b x^n \; dx=\frac{x^{n+1}}{n+1}\Bigg\rvert^b_a \quad(n \in \mathbb{N}, n \neq -1)}
+            </me>
+          </p>
+        </statement>
+    </activity>
+
+    <activity>
+        <statement>
+          <p>
+            Bereken onderstaande integralen
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \int_2^9 (4x+10)\; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int_1^5 (3x^2+40)\; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int_1^2 (5x^2+3x-4)\; dx</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Controleer zelf met rekenmachine of Desmos.
+          </p>
+        </answer>
+      </activity>
+      <activity>
+        <statement>
+          <p>
+            Bepaal <m>k</m> zodat <m>\displaystyle \int_{-1}^{1}(-x^3+k)\,dx=4</m>.
+          </p>
+        </statement>
+        <solution>
+          <me>
+            -\frac{x^4}{4}\Bigg\rvert^1_{-1} + kx\Bigg\rvert^1_{-1}=4 \Rightarrow 2k=4 \Leftrightarrow k=2
+          </me>
+        </solution>
+      </activity>
+      <activity>
+        <statement>
+          <p>
+            Bepaal een functie <m>f</m> en een getal <m>a \in \mathbb{R}</m> zodat <m>\int_a^x f(t)\;dt=F_a(x)</m> als
+            <ol>
+              <li>
+                <p>
+                  <m>F_a(x)=x+5</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>F_a(x)=x^3-9x</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>f(x)=1</m> en <m>F_a(x)\Bigg\rvert^x_a = x +5 \Rightarrow (x+5)-(a+5)=x+5 \Leftrightarrow a=-5</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x)=3x^2-9</m> en <m>F_a(x)\Bigg\rvert^x_a = x^3 -9x \Rightarrow (x^3-9x)-(a^3-9a)=x^3-9x </m> <m>\Leftrightarrow a(a^2-9)=0 \Leftrightarrow a=0 \text{ of } a=\pm 3</m> </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </activity>
+  
+  </subsection>

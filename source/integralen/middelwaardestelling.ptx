@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subsection>
+    <title>Middelwaardestelling van de integraalrekening</title>
+    <p>
+      Veronderstel dat een garagepoort parabolisch van vorm is met een maximale hoogte van 2 m en een maximale breedte van 3 m. Wat is de gemiddelde hoogte van deze poort?
+    </p>
+    <sidebyside widths="45% 45%" margins="0% 0%">
+      <image source="gemiddeldehoogte.png"/>
+      <image source="gemiddeldehoogte2.png"/>
+    </sidebyside>
+    <p>
+      Als de hoogte stapsgewijs i.p.v. continu zou variëren, dan kunnen we de gemiddelde hoogte eenvoudig berekenen door alle hoogtes op te tellen en te delen door het aantal. Voor bovenstaand voorbeeld hebben we de parabool benaderd door 20 horizontale lijnstukken en de gemiddelde hoogte is bijgevolg gelijk aan <m> \frac{1}{20}\sum_{i=1}^{20} h_i </m>.
+    </p>
+    <p>
+      Als we de parabool benaderen door <m>n</m> horizontale lijnstukken met lengte <m>\Delta x</m>, dan kunnen we stellen dat <m>n=\dfrac{3}{\Delta x}</m> en de gemiddelde hoogte kan dan geschreven worden als
+      <me>
+        \frac{1}{n}\sum_{i=1}^{n} h_i=\frac{\Delta x}{3} \sum_{i=1}^{n} h_i = \frac{h_1 \Delta x+ h_2 \Delta x + \ldots +h_n \Delta x}{3}
+      </me>
+      De teller is gewoon een benadering voor de oppervlakte onder de parabool (eindige Riemannsom) en als we de limiet nemen voor <m>n \to +\infty</m>, dan krijgen we onderstaande uitdrukking voor de gemiddelde hoogte van de poort
+      <me>
+        \frac{1}{3}\int_0^3 h(x) \; dx
+      </me>
+      met <m>h(x)</m> de functie die de hoogte van de poort beschrijft. De gemiddelde hoogte is dus gewoon gelijk aan de oppervlakte onder de grafiek van de parabool gedeeld door de maximale breedte van de poort. Of, anders geformuleerd, de gemiddelde hoogte is de hoogte van de rechthoek die dezelfde breedte en oppervlakte heeft als de poort.
+    </p>
+    <figure>
+      <caption>
+          De oppervlakte van de rechthoek met hoogte <m>\frac{1}{3}\int_0^3 h(x) \; dx</m> is gelijk aan de oppervlakte onder de grafiek van de parabool
+      </caption>
+      <image source="gemiddeldehoogte3.png" width="50%"/>
+    </figure>
+
+    <assemblage>
+      <title>Middelwaardestelling</title>
+      <p>
+        Als <m>f</m> continu is over <m>[a,b]</m>, dan bestaat er een <m>c \in [a,b]</m> zodat
+        <me>
+          \int_a^b f(x) \; dx = f(c)(b-a)
+        </me>
+        Het getal <m>f(c)=\dfrac{1}{b-a}\int_a^b f(x) \; dx</m> noemen we de <term>gemiddelde waarde</term> van <m>f</m> over het interval <m>[a,b]</m>.
+      </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Bereken de gemiddelde waarde van <m>f(x)=x^2</m> over <m>[0,3]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal het getal <m>c</m> uit de middelwaardestelling.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>f(c)=\dfrac{1}{3} \int_0^3 f(x) \; dx \Rightarrow f(c) = 3 \Rightarrow c^2=3 \Rightarrow c=\sqrt{3}</m>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Gegeven dat <m>\displaystyle \int_0^1 \dfrac{1}{1+x^2} \; dx=\frac{\pi}{4}</m> (dit leer je later nog berekenen). Bepaal een getal <m>c</m> waarvoor <m>f</m> zijn gemiddelde waarde bereikt. Maak een tekening in Desmos en interpreteer dit resultaat grafisch.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>\dfrac{1}{1+x^2} = \dfrac{\pi}{4} \Leftrightarrow 1+x^2=\dfrac{4}{\pi} \Leftrightarrow x^2 = \dfrac{4-\pi}{\pi} \Rightarrow x=\sqrt{\dfrac{4-\pi}{\pi}}</m>
+        </p>
+        <sidebyside width="50%">
+          <image source="oef-gem.png"/>
+        </sidebyside>
+      </solution>
+    </activity>
+  </subsection>
