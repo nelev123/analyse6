@@ -1,0 +1,49 @@
+<!--Nog toe te voegen-->
+
+<p>
+    Leid onderstaande functies af. Je kan SageMath (zie hieronder) of Geogebra (<url href="https://www.geogebra.org/m/nurhayba">link</url>) gebruiken om jezelf te controleren. 
+  </p>
+  <sage>
+    <input>
+    f(x) = (x^2+5)^3 # functie
+    Df = diff(f,x,1) # eerste afgeleide
+    show(Df)
+    </input>
+  </sage>
+<p>
+Een iets moeilijker voorbeeld:
+</p>
+<sage>
+<input>
+    f(x)=(x^4-2)^3/(5*x-1)
+    Df=diff(f,x,1)(x)
+    show(Df)
+    show(numerator(Df)/denominator(Df)) # op gelijke noemer zetten en uitwerken
+    show(numerator(Df).factor()/denominator(Df)) # teller ontbinden
+</input>
+</sage>
+<p>
+De laatste twee lijnen illustreren hoe je termen op gelijke noemer kan zetten en ontbinden.
+</p>  
+<p>
+Als je iets wil uitrekenen, gebruik je expand, de tegenhanger van het commando factor:
+</p>
+<sage>
+<input>
+    u = expand((x-1)^4*(2*x-3)^3)
+    show(u)
+    show(factor(u))
+</input>
+</sage>    
+
+<!--Afleiden met wortels-->
+<li>
+    <p>
+      <m>f(x) = \cos \sqrt{2x-1}</m>
+    </p>
+  </li>
+  <li>
+    <p>
+      <m>f(x) = \sqrt{\sin(2x-1)}</m>
+    </p>
+  </li>

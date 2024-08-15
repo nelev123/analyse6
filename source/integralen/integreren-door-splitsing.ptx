@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-splitsing-int">
+    <title>Integreren via splitsing</title>
+    <p>
+        Deze techniek komt gewoon neer op het toepassen van de lineariteit. Voor een veeltermfunctie spreekt dit vanzelf, bijvoorbeeld
+        <me>
+            \int (5x^2-3x+6)\; dx = 5 \int x^2 \; dx -3 \int x \; dx + 6 \int dx = \frac{5}{3} x^3 -\frac{3}{2}x^2 + 6x + c \text{,}
+        </me>
+        maar soms moet de integrand wat herschreven worden vooraleer er kan gesplitst worden.
+    </p>
+    
+    <example>
+        <p>
+            <md>
+                <mrow> \amp \int \tan^2 x \; dx </mrow>
+                <mrow> = \amp \int \frac{\sin^2 x}{\cos^2 x} \; dx</mrow>
+                <mrow> = \amp \int \frac{1-\cos^2 x}{\cos^2 x} \; dx</mrow>
+                 <mrow> = \amp \int \frac{1}{\cos^2 x} \; dx - \int dx</mrow>
+                 <mrow> = \; \amp \tan x -x + c </mrow>
+            </md>
+        </p>
+    </example>
+</section>

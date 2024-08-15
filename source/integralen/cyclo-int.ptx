@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <subsection xml:id="subsec-cyclo-int">
-    <title>(7u) Cyclometrische functies integreren</title>
+    <title>(U) Cyclometrische functies integreren</title>
 
     <p>
       De afgeleiden van de inverse goniometrische functies <m>\sin^{-1}</m>, <m>\cos^{-1}</m> en <m>\tan^{-1}</m> (ook cyclometrische functies genoemd) kunnen bepaald worden via de kettingregel en de eigenschappen van inverse functies. We voeren ook alternatieve namen in voor deze functies: de boogsinus, boogcosinus en de boogtangens.

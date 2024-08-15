@@ -150,7 +150,7 @@
     </p>
   </assemblage>
 
-  <exercise>
+  <activity>
     <statement>
       <p>
         Bereken met de substitutiemethode:
@@ -173,7 +173,7 @@
         </ol>
       </p>
     </statement>
-  </exercise>
+  </activity>
 
   <p>
     Probeer onderstaande integraal met de substitutiemethode te berekenen. Je zal merken dat dit niet lukt.
@@ -187,6 +187,7 @@
     </md>
     Dit werkt omdat de integrand <m>f(x)=x (3x^2-1)^5</m> op een factor na eigenlijk gelijk is aan de afgeleide van <m>F(x)= (3x^2-1)^6</m>.
   </p>
+
   <assemblage>
     <title>Substitutiemethode als tegenhanger van de kettingregel</title>
     <p>
@@ -196,6 +197,7 @@
       </me>
     </p>
   </assemblage>
+
   <assemblage>
     <title>Tips bij het toepassen van de substitutiemethode</title>
     <p>
@@ -219,7 +221,7 @@
     </p>
   </assemblage>
 
-  <exercise>
+  <activity>
     <statement>
       <p>
         Bereken met de substitutiemethode:
@@ -247,7 +249,7 @@
         </ol>
       </p>
     </statement>
-  </exercise>
+  </activity>
 
   <p>
     Je kan de substitutiemethode natuurlijk ook toepassen op een onbepaalde integraal. 

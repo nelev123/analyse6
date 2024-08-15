@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises>
+    <introduction>
+        <p>
+         
+        </p>
+    </introduction>
+
+    <exercise>
+        <statement>
+            <p>
+                Bereken onderstaande onbepaalde integralen zonder partiele integratie te gebruiken.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\int(x^3-2x+7)\, dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\int \dfrac{x^2 \cdot \sqrt[3]{x}}{\sqrt{x}}\, dx</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\int(2x-3)^2 \, dx</m>  
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\int  \dfrac{x}{\sqrt{x^2+1}} \; dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\int  \dfrac{dx}{\sqrt{2-3x}}</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int  x \cdot \sqrt[3]{x^2+1} \, dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \frac{1}{\cos^2(3x-4)} \; dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \sin x \cos x\; dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \dfrac{4 \tan\frac{x}{2}}{1+\tan^2 \frac{x}{2}} \; dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \cot^2x \; dx</m> 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \frac{\cos x}{(1 + \sin x)^2} \; dx</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \dfrac{\sin^2 x}{\cos^4 x} \; dx</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \int \sin^2x \; dx</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\int \sin 4x \cdot \cos 3x \; dx</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\int \sin^3x \; dx</m>
+                        </p>
+                    </li>
+                </ol> 
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+            Bereken onderstaande integralen met partiële integratie.
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \int x \cos x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int x^2 \sin 2x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int_0^{\pi} (x^3+1) \sin x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int \cos^3 x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int x \sin^2 x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int \cos^4 x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int \frac{x}{\sin^2 x} \; dx</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+            (U) Bewijs onderstaande recursieformules.
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \int \sin^{n}x \; dx=-\dfrac{1}{n} \sin^{n-1} x \cdot \cos x + \frac{n-1}{n}\int \sin^{n-2}x \; dx</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \int \tan^n x \; dx=\dfrac{1}{n-1} \tan^{n-1} x - \int \tan^{n-2} x \; dx</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </exercise>
+ 
+    <exercise>
+        <statement>
+          <p>
+            (U) Bereken <m>\int \sin^5 x \; dx</m> met bovenstaande recursieformule.
+          </p>
+        </statement>
+    </exercise>
+       
+ 
+</exercises>

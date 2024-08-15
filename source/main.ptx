@@ -104,17 +104,16 @@
       </preface>
     </frontmatter>
 
-    <!-- <xi:include href="./afleiden/verloop.ptx"/> -->
     <!-- <xi:include href="./machten-logaritmen.ptx"/> -->
+    <!-- <xi:include href="./afleiden/verloop.ptx"/> -->
+    <!-- <xi:include href="./toepassingen-df.ptx" /> -->
     <!-- <xi:include href="./rijen.ptx" /> -->
     <!-- <xi:include href="./reeksen.ptx" /> Niet meer in leerplan-->
     <!-- <xi:include href="./limieten.ptx" /> -->
     <xi:include href="./bepaalde-integraal.ptx" />
-    <!-- <xi:include href="./integratietechnieken.ptx" /> -->
+    <!--onbepaalde integraal van x^n met n in Z-->
+    <xi:include href="./integratietechnieken.ptx" />
     <!-- <xi:include href="./explog.ptx" /> -->
-
-    <!-- <xi:include href="./toepassingen-df.ptx" /> -->
-   
 
     <backmatter xml:id="backmatter">
       <title>Achteraf</title>

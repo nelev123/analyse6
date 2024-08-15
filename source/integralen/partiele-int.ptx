@@ -26,6 +26,7 @@
     </md>
     Partiële integratie werkt natuurlijk enkel maar als <m>g(x)</m> kan bepaald worden en als de integraal <m>\int f'(x) \cdot g(x) \; dx</m> verder kan uitgerekend worden.
   </p>
+
   <assemblage>
     <title>Partiële integratie</title>
     <p>
@@ -44,6 +45,9 @@
       </md>
     </p>
   </assemblage>
+
+  <!--Voorbeeld toevoegen met twee PI stappen-->
+
   <example>
     <p>
       Soms leidt partiële integratie tot een vergelijking met de gevraagde integraal als onbekende. Als voorbeeld berekenen we de integraal <m>\int \sin^3 x \; dx</m>:
@@ -61,76 +65,5 @@
       </md>
     </p>
   </example>
-  <exercises>
-    <exercise>
-      <statement>
-        <p>
-          Bereken onderstaande integralen met partiële integratie:
-          <ol>
-            <li>
-              <p>
-                <m>\displaystyle \int x \cos x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int x^2 \sin 2x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int_0^{\pi} (x^3+1) \sin x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \cos^3 x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int x \sin^2 x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \cos^4 x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{x}{\sin^2 x} \; dx</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          (enkel voor 7u) Bewijs onderstaande recursieformules:
-          <ol>
-            <li>
-              <p>
-                <m>\displaystyle \int \sin^{n}x \; dx=-\dfrac{1}{n} \sin^{n-1} x \cdot \cos x + \frac{n-1}{n}\int \sin^{n-2}x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \tan^n x \; dx=\dfrac{1}{n-1} \tan^{n-1} x - \int \tan^{n-2} x \; dx</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          (enkel voor 7u) Bereken <m>\int \sin^5 x \; dx</m> met bovenstaande recursieformule.
-        </p>
-      </statement>
-    </exercise>
-  </exercises>
+  
 </subsection>
