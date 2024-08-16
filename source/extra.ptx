@@ -47,3 +47,47 @@ Als je iets wil uitrekenen, gebruik je expand, de tegenhanger van het commando f
       <m>f(x) = \sqrt{\sin(2x-1)}</m>
     </p>
   </li>
+
+    
+      <!--\begin{ex}
+      Tot welk interval moet $x$ behoren als $|f(x)-L| < \epsilon$?
+      \begin{enumerate}[label=(\alph*),leftmargin=1cm]
+      \item $f(x)=2x-1$; $L=3$; $\epsilon=0,02$
+      \item $f(x)=\sqrt{x}$; $L=1$; $\epsilon=0,1$
+      \end{enumerate}
+      \end{ex}
+  
+      \subsection{(7u) Limieten verifiëren met behulp van de definitie}
+      We beginnen met twee voorbeelden die illustreren hoe je de
+      definitie gebruikt om limieten te verifiëren.
+      \begin{enumerate}[label=(\alph*),leftmargin=1cm]
+      \item We tonen eerst aan dat $\lim_{x \to a} x = a$. We kiezen een
+        willekeurige $\epsilon > 0$ en moeten een $\delta > 0$ vinden zodat
+      $$
+      |x-a| < \delta \Rightarrow |x-a| < \epsilon
+      $$ Als we stellen dat $\delta = \epsilon$ dan is bovenstaande
+      implicatie waar en we hebben dus bewezen dat $\lim_{x \to a} x = a$.
+      \item We bewijzen dat $\lim_{x \to 2} x^2 = 4$. Gegeven een $\epsilon
+        > 0$, moeten we nu een $\delta > 0$ vinden zodat uit $|x-2| <
+        \delta$ volgt dat $|x^2-4| < \epsilon$. Er geldt
+      $$
+      |x^2-4|=|(x+2)(x-2)|=|x+2| |x-2|
+      $$ De factor $|x-2|$ kunnen we zo klein maken als we willen door de
+      keuze van $\delta$, maar we moeten zorgen dat $|x+2|$ niet te groot
+      wordt. Als we voorlopig $\delta \le 1$ kiezen dan geldt
+      $$
+      |x-2|<1 \Rightarrow 1 < x < 3 \Rightarrow 3 < x+2 < 5  \Rightarrow |x+2| < 5
+      $$
+      Dus is
+      $$
+      |x^2-4| < 5 |x-2|  \quad \text{ als } |x-2| \le 1
+      $$
+      Voor $\epsilon \ge 5$, kiezen we $\delta = 1$:
+      $$
+      |x-2| < 1 \Rightarrow   |x^2-4| < 5 |x-2| < 5 < \epsilon
+      $$
+      Voor $\epsilon < 5$, kiezen we $\delta = \dfrac{\epsilon}{5}$:
+      $$
+      |x-2| < \frac{\epsilon}{5} \Rightarrow   |x^2-4| < 5 |x-2| < \epsilon
+      $$
+      \end{enumerate}-->

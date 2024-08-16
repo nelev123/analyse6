@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Limieten op oneindig</title>
+  
+    <subsection>
+      <title>Definitie en gedrag op oneindig van functies</title>
+      <p>
+        Met behulp van limieten kunnen we berekenen hoe functiewaarden zich gedragen op <m>\pm \infty</m>.
+      </p>
+      <sbsgroup width="100%">
+        <sidebyside widths="45% 45%">
+          <p>
+            De functiewaarden van de veeltermfunctie <m>f(x)=x^3-5x^2+1</m> gaan naar <m>\pm \infty</m> als <m>x \to \pm \infty</m>. We schrijven <m>\displaystyle \lim_{x \to \pm \infty} f(x) = \pm \infty</m>.
+          </p>
+          <p>
+            De rationale functie <m>f(x)=\dfrac{2}{x+1}-3</m> heeft een horizontale asymptoot <m>y=-3</m>. We schrijven <m>\lim_{x \to \pm \infty} f(x) = -3</m>.
+          </p>
+        </sidebyside>
+        <sidebyside widths="30% 30%" >
+          <image source="limiet1.png"/>
+          <image source="limiet2.png"/>
+        </sidebyside>
+      </sbsgroup>
+      <p>
+        <m>\displaystyle \lim_{x \to \pm \infty} f(x) = L</m> betekent dat we de functiewaarden willekeurig dicht bij <m>L</m> kunnen brengen door <m>x</m> groot of klein genoeg te maken. Deze intuïtieve betekenis gieten we nu in de volgende definitie:
+      </p>
+  
+      <definition>
+        <title>Definitie van limiet op oneindig</title>
+        <p>
+          <me>\lim_{x \to +\infty} f(x) = L \Leftrightarrow \forall \epsilon \in
+            \mathbb{R}^+_0, \exists P \in \mathbb{R}^+_0: x \gt  P \Rightarrow f(x) \in \;  ]L-\epsilon,L+\epsilon [ </me>
+          <me>\lim_{x \to -\infty} f(x) = L \Leftrightarrow \forall \epsilon \in \;
+            \mathbb{R}^+_0, \exists P \in \mathbb{R}^+_0: x \lt -P \Rightarrow
+            f(x) \in  \; ]L-\epsilon,L+\epsilon [ </me>
+        </p>
+      </definition>
+  
+      <interactive desmos="jjiw0ozbhh" width="100%" aspect="4:3" preview="limiet-1.png"/>
+  
+      <p>
+        Als <m>L = \pm \infty</m>, dan bestaat de limiet niet omdat we de functiewaarden willekeurig groot (of klein) kunnen maken door <m>x</m> groot of klein genoeg te maken. We spreken dan over een <term>oneigenlijke limiet</term>.
+      </p>
+  
+      <definition>
+        <title>Definitie van oneigenlijke limiet op oneindig</title>
+        <p>
+          <me>
+            \lim_{x \to +\infty} f(x) = + \infty \Leftrightarrow \forall Q \in
+            \mathbb{R}^+_0, \exists P \in \mathbb{R}^+_0: x \gt  P \Rightarrow f(x) \gt Q
+          </me>
+          <me>
+            \lim_{x \to +\infty} f(x) = - \infty \Leftrightarrow \forall Q \in
+            \mathbb{R}^+_0, \exists P \in \mathbb{R}^+_0: x \gt  P \Rightarrow f(x) \lt -Q
+          </me>
+          en analoog voor de limieten <m>x \to -\infty</m>
+        </p>
+     </definition>
+  
+      <p>
+        We bekijken nu even hoe we met behulp van limieten de asymptoten van een grafiek kunnen bepalen. Een rechte is een asymptoot van de grafiek van een functie als de afstand tussen de grafiek van de functie en de rechte steeds kleiner wordt. Op oneindig beschouwen we horizontale en schuine asymptoten.
+      </p>
+  
+      <assemblage>
+        <title>Horizontale asymptoten</title>
+        <p>
+          De grafiek van een functie <m>f(x)</m> heeft een horizontale asymptoot <m>y=c</m> als en slechts als <m>\displaystyle\lim_{x \to +\infty} f(x)=c</m> of <m>\displaystyle\lim_{x \to -\infty} f(x)=c</m>.
+        </p>
+        <p>
+          Als <m>f(x)</m> een rationale functie is, dan heeft de grafiek enkel een horizontale asymptoot als de graad van de veeltermfunctie in de teller kleiner dan of gelijk is aan de graad van de veeltermfuntie in de noemer.
+        </p>
+      </assemblage>
+  
+      <example>
+        <title>Horizontale asymptoten</title>
+        <sidebyside widths="55% 35%">
+          <p>
+            De grafiek van de functie <m>f(x)=\dfrac{2}{x+1}-3</m> heeft een horizontale asymptoot <m>y=-3</m>:
+            <me>
+              \lim_{x \to \pm \infty } f(x)=-3
+            </me>.
+          </p>
+          <image source="limiet2.png"/>
+        </sidebyside>
+        <sidebyside widths="55% 35%">
+          <p>
+            De functie <m>f(x)=\dfrac{2x-3+\sqrt{x^2+5}}{3x+1}</m> heeft een horizontale asymptoot <m>y=1</m> als <m>x \to +\infty</m> en <m>y=\dfrac{1}{3}</m> als <m>x \to -\infty</m>:
+            <md>
+              <mrow>\lim_{x \to +\infty} f(x) = 1</mrow>
+              <mrow>\lim_{x \to -\infty} f(x) = \dfrac{1}{3}</mrow>
+            </md>
+          </p>
+          <image source="limiet6.png"/>
+        </sidebyside>
+      </example>
+  
+      <assemblage>
+        <title>Schuine asymptoten</title>
+        <p>
+          De grafiek van een functie <m>f(x)</m> heeft een schuine asymptoot <m>y=ax+b</m> als en slechts als <m>\displaystyle\lim_{x \to +\infty} (f(x)-ax-b)=0</m> of <m>\displaystyle\lim_{x \to -\infty} (f(x)-ax-b)=0</m>.
+        </p>
+        <p>
+          Deze definitie is echter niet bruikbaar om <m>a</m> en <m>b</m> te berekenen. De richtingscoëfficiënt <m>a</m> bereken je als volgt
+          <me>
+            a=\lim_{x \to \pm \infty} \frac{f(x)}{x}
+          </me>
+          en, eenmaal <m>a</m> gekend is, kan je <m>b</m> berekenen via de limiet
+          <me>
+            b=\lim_{x \to \pm \infty} (f(x)-ax)
+          </me>
+        </p>
+        <p>
+          Een rationale functie heeft een schuine asymptoot als de graad van de teller één groter is dan de graad van de noemer.
+        </p>
+      </assemblage>
+  
+      <example>
+        <title>Schuine asymptoten</title>
+        <sidebyside widths="55% 35%">
+          <p>
+            De grafiek van de functie <m>f(x)=\dfrac{x^2-4}{x-3}</m> heeft een schuine asymptoot <m>y=x+3</m>. Er geldt immers dat <me>a=\lim_{x \to \pm \infty } \dfrac{x^2-4}{x^2-3x}=1</me> en <me>b=\lim_{x \to \pm \infty } \left ( \dfrac{x^2-4}{x-3} -x \right ) = \lim_{x \to \pm \infty } \dfrac{3x-4}{x-3}=3</me>
+          </p>
+          <image source="schuine-asymptoot.png"/>
+        </sidebyside>
+        <sidebyside widths="55% 35%">
+          <p>
+            De functie <m>\sqrt{4x^2+x}+2x</m> heeft een schuine asymptoot <m>y=4x+\dfrac{1}{4}</m> als <m>x \to +\infty</m>:
+            <md>
+              <mrow>a= \; \amp \lim_{x \to +\infty } \frac{\sqrt{4x^2+x}+2x}{x}=4</mrow>
+            </md>
+            <md>
+              <mrow>b= \; \amp \lim_{x \to +\infty } \left (\sqrt{4x^2+x} - 2x \right ) = \frac{1}{4} </mrow>
+            </md>
+            Voor <m>x \to -\infty</m> is er geen schuine, maar een horizontale asymptoot:
+            <me>
+              \lim_{x \to -\infty } \left (\sqrt{4x^2+x} + 2x \right ) = - \dfrac{1}{4}
+            </me>
+          </p>
+          <image source="limiet7.png"/>
+        </sidebyside>
+      </example>
+  
+      <p>
+        Een asymptoot van een grafiek is altijd een rechte, maar je kan het idee van een asymptoot wel uitbreiden naar andere veeltermen of zelfs andere functies. Als we bijvoorbeeld kijken naar de grafiek van de functie <m>f(x)=\dfrac{2x^4-9x^2-x-4}{-2x^2+4x-3}</m>, dan zien we dat deze de grafiek van de parabool <m>y=-x^2-2x+2</m> steeds beter benadert als <m>|x|</m> groter wordt. Als we de <url href="https://youtu.be/vSzBcv8b4dU">veeltermdeling uitvoeren</url> dan zien we ook onmiddellijk waarom:
+        <me>
+          \dfrac{2x^4-9x^2-x-4}{-2x^2+4x-3} = -x^2-2x+2+\frac{-15x+2}{-2x^2+4x-3}
+        </me>
+        Er geldt dat <m>\lim_{x \to \pm \infty} \dfrac{-15x+2}{-2x^2+4x-3}=0</m>, dus hoe groter <m>|x|</m>, hoe beter de grafiek de parabool benadert. We zeggen dat de functie <m>f(x)</m> asymptotisch equivalent is met <m>-x^2-2x+2</m> als <m>x\to \pm \infty</m>.
+      </p>
+      <sidebyside width="50%">
+        <image source="asymptotisch.png"/>
+      </sidebyside>
+    </subsection>
+  
+  
+    <subsection>
+      <title><m>(\star)</m> Oneigenlijke integralen van de eerste soort </title>
+      <p>
+        De kansdichtheidsfunctie van de normale verdeling voldoet aan
+        <me>
+          \frac{1}{\sqrt{2 \pi} \sigma} \int_{-\infty}^{+\infty}  e^{-\frac{1}{2} \left ( \frac{x-\mu}{\sigma} \right )^2} \; dx = 1
+        </me>
+        Dit is een voorbeeld van een oneigenlijke integraal van de eerste soort.
+      </p>
+      <assemblage>
+        <title>Oneigenlijke integraal van de eerste soort</title>
+        <p>
+          Deze integralen definiëren we als volgt:
+          <md>
+            <mrow>\int_a^{+\infty } f(x) \; dx = \lim_{c \to +\infty} \int_a^c f(x) \; dx</mrow>
+            <mrow>\int_{-\infty}^b f(x) \; dx = \lim_{c \to -\infty} \int_c^b f(x) \; dx</mrow>
+            <mrow>\int_{-\infty}^{+\infty } f(x) \; dx = \lim_{c \to +\infty} \int_{-c}^c f(x) \; dx</mrow>
+          </md>
+          op voorwaarde dat de limieten bestaan. Als de limiet bestaat, dan zeggen we dat de oneigenlijke integraal convergent is; bestaat de limiet niet, dan is de oneigenlijke integraal divergent.
+        </p>
+      </assemblage>
+  
+      <example>
+        <title>Oneigenlijke integraal van de eerste soort</title>
+        <p>
+          We berekenen de integraal <m>\displaystyle \int_1^{+\infty} \dfrac{1}{x^2} \; dx </m>.
+          <md>
+            <mrow>\int_1^c \frac{1}{x^2} \; dx = \amp \left. - x^{-1} \right \rvert^c_1</mrow>
+            <mrow> = \amp -\frac{1}{c} + 1 </mrow>
+          </md>
+          Er geldt dus dat
+          <me>
+            \displaystyle \int_1^{+\infty} \dfrac{1}{x^2} \; dx = \lim_{c \to +\infty} \left (-\frac{1}{c} + 1 \right ) = 1
+          </me>
+          De oneigenlijke integraal is dus convergent en de oppervlakte van het gebied is eindig.
+        </p>
+        <sidebyside width="50%">
+          <image source="oneigenlijk-int.png"/>
+        </sidebyside>
+      </example>
+    </subsection>
+  
+    <subsection>
+      <title>Praktische berekening van limieten op oneindig</title>
+      <p>
+        Het berekenen van limieten voor <m>x \to \pm \infty</m> verloopt analoog zoals het berekenen van limieten van rijen. Het idee is om termen van de vorm <m>\left (\frac{1}{x} \right )^n</m> te maken omdat de limiet daarvan nul is. Enkel bij irrationale functies moet je opletten met mintekens als je limieten <m>x \to -\infty</m> berekent.
+      </p>
+  
+      <assemblage>
+        <title>Rekenregels voor limieten</title>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>\lim_{x \to \pm \infty} [f(x)+g(x)]= \left ( \lim_{x \to \pm \infty} f(x) \right )  + \left ( \lim_{x \to \pm \infty } g(x) \right ) </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to \pm \infty} [f(x)-g(x)] = \left ( \lim_{x \to \pm \infty} f(x) \right )  - \left ( \lim_{x \to \pm \infty } g(x) \right ) </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                 <m>\lim_{x \to \pm \infty} [f(x)g(x)] = \left ( \lim_{x \to \pm \infty} f(x) \right ) \left ( \lim_{x \to \pm \infty} g(x) \right ) </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to \pm \infty} [kf(x)]= k \left ( \lim_{x \to \pm \infty} f(x) \right ) \qquad ( k \in \mathbb{R})</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to \pm \infty} \dfrac{f(x)}{g(x)}=\dfrac{ \lim_{x \to \pm \infty} f(x)}{ \lim_{x \to \pm \infty} g(x)} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to \pm \infty} {f(x)}^{m/n}= \left ( \lim_{x \to \pm \infty} f(x) \right ) ^{m/n} </m>
+              </p>
+            </li>
+            <li>
+              <m>\lim_{x \to \pm \infty} ( g \circ f)(x) = g \left ( \lim_{x \to \pm \infty} f(x) \right ) </m>
+            </li>
+          </ol>
+        </p>
+      </assemblage>
+  
+      <example>
+        <title>Gedrag van een veeltermfunctie op oneindig</title>
+        <p>
+          We willen <m>\displaystyle \lim_{x \to +\infty} (x^3-5x^2+1)</m> berekenen. Invullen leidt tot de onbepaalde vorm <m>(+\infty)-(+\infty)</m>. Om deze onbepaaldheid weg te werken, herschrijven we het functievoorschrift als volgt:
+          <me>
+            x^3-5x^2+1=x^3 \left(1-\frac{5}{x}+\frac{1}{x^3}\right)
+          </me>
+          De limiet van de tweede en de derde term wordt nul:
+          <me>
+            \lim_{x \to +\infty} \frac{5}{x} = 0 \quad \text{en} \quad \lim_{x \to +\infty} \frac{1}{x^3}=0
+          </me>
+          We krijgen dus
+          <md>
+            <mrow>\amp \displaystyle \lim_{x \to +\infty} (x^3-5x^2+1)</mrow>
+            <mrow> = \amp \lim_{x \to +\infty} x^3 \cdot \lim_{x \to +\infty} \left(1-\frac{5}{x}+\frac{1}{x^3}\right)</mrow>
+            <mrow> = \amp +\infty \cdot 1=+\infty</mrow>
+          </md>
+        </p>
+      </example>
+  
+      <example>
+        <title>Horizontale asymptoot van een rationale functie</title>
+        <p>
+          Als tweede voorbeeld berekenen we <m>\displaystyle \lim_{x \to -\infty} \dfrac{x^2+x-2}{x^2+2x-3}</m>. We volgen dezelfde strategie als hierboven en zetten in teller en noemer een factor <m>x^2</m> voorop:
+          <md>
+            <mrow>\frac{x^2+x-2}{x^2+2x-3}=\frac{x^2}{x^2} \cdot \frac{1+\frac{1}{x}-\frac{2}{x^2}}{1+\frac{2}{x}-\frac{3}{x^2}}</mrow>
+            <mrow>=\frac{1+\frac{1}{x}-\frac{2}{x^2}}{1+\frac{2}{x}-\frac{3}{x^2}}</mrow>
+          </md>
+          De tweede en derde term in teller en noemer gaan opnieuw naar nul en we krijgen als resultaat
+          <me>
+            \displaystyle \lim_{x \to -\infty} \dfrac{x^2+x-2}{x^2+2x-3}=1
+          </me>
+          Hetzelfde geldt voor <m>x \to +\infty</m> en we hebben nu eigenlijk berekend dat de grafiek een horizontale asymptoot <m>y=1</m> heeft:
+        </p>
+        <sidebyside widths="50%" margins="20%">
+          <image source="limiet3.png"/>
+        </sidebyside>
+      </example>
+  
+      <example>
+        <title>Horizontale asymptoten van een irrationale functie</title>
+        <p>
+          De functie <m>\dfrac{2x-3+\sqrt{x^2+5}}{3x+1}</m> heeft een horizontale asymptoot <m>y=1</m> als <m>x \to +\infty</m> en <m>y=\dfrac{1}{3}</m> als <m>x \to -\infty</m>.
+        </p>
+        <sidebyside width="50%">
+          <image source="limiet6.png"/>
+        </sidebyside>
+        <p>
+          We gaan dit na door de limieten te berekenen. Net zoals bij veelterm- of rationale functies zetten we een macht van <m>x</m> voorop, maar we moeten wel rekening houden met het feit dat <m>\sqrt{x^2}=|x|</m>:
+          <me>
+            \lim_{x \to +\infty} \frac{2x-3+\sqrt{x^2+5}}{3x+1} = \lim_{x \to +\infty} \frac{2-\frac{3}{x}+\sqrt{1+\frac{5}{x^2}}}{3+\frac{1}{x}} = 1
+          </me>
+          <me>
+            \lim_{x \to -\infty} \frac{2x-3+\sqrt{x^2+5}}{3x+1} = \lim_{x \to -\infty} \frac{2-\frac{3}{x}-\sqrt{1+\frac{5}{x^2}}}{3+\frac{1}{x}} = \frac{1}{3}
+          </me>
+        </p>
+      </example>
+  
+      <example>
+        <title>Horizontale en schuine asymptoot van een irrationale functie</title>
+        <p>
+          De functie <m>\sqrt{4x^2+x}+2x</m> heeft een schuine asymptoot <m>y=4x+\dfrac{1}{4}</m> als <m>x \to +\infty</m> en een horizontale asymptoot <m>y=-\dfrac{1}{4}</m> als <m>x \to -\infty</m>.
+        </p>
+        <sidebyside width="50%">
+          <image source="limiet7.png"/>
+        </sidebyside>
+        <p>
+          We zoeken eerst de horizontale asymptoten door de limieten <m>x \to \pm \infty</m> te berekenen. Bij de tweede limiet moeten we de teller rationaal maken om de onbepaalde vorm <m>+\infty -\infty</m> te vermijden.
+          <me>
+            \lim_{x \to +\infty}  \sqrt{4x^2+x}+2x = +\infty
+          </me>
+          <me>
+            \lim_{x \to -\infty}  \sqrt{4x^2+x}+2x = \lim_{x \to -\infty} \frac{x}{\sqrt{4x^2+x}-2x} = \lim_{x \to -\infty} \frac{1}{-\sqrt{4+\frac{1}{x}}-2} = -\frac{1}{4}
+          </me>
+          Er is geen horizontale asymptoot voor <m>x \to +\infty</m>, dus we gaan na of de grafiek een schuine asymptoot heeft:
+          <md>
+            <mrow>a= \; \amp \lim_{x \to +\infty } \frac{\sqrt{4x^2+x}+2x}{x}</mrow>
+            <mrow> = \; \amp\lim_{x \to +\infty } \left (\sqrt{4+\frac{1}{x}}+2 \right )=4</mrow>
+          </md>
+          <md>
+            <mrow>b= \; \amp \lim_{x \to +\infty } \left (\sqrt{4x^2+x} - 2x \right ) </mrow>
+            <mrow> = \; \amp\lim_{x \to +\infty } \frac{x}{\sqrt{4x^2+x}+2x} </mrow>
+            <mrow> = \; \amp\lim_{x \to +\infty } \frac{1}{\sqrt{4+\frac{1}{x}}+2} = \frac{1}{4}</mrow>
+          </md>
+          De rechte <m>y=4x+\dfrac{1}{4}</m> is bijgevolg een schuine asymptoot.
+         </p>
+      </example>
+  
+    </subsection>
+  
+  </section>

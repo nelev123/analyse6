@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Limieten in een getal</title>
+    
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de grafiek van een functie <m>f(x)</m>. Bepaal grafisch <m>\lim_{x \to c} f(x)</m> als <m>c=0</m>, <m>c=3</m> en <m>c=4</m>. Als de limiet niet bestaat, bepaal dan de rechter- en linkerlimiet.
+        </p>
+        <sidebyside widths="50%" margins="20%">
+          <image source="limiet-grafisch.png"/>
+        </sidebyside>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande limieten. Controleer jezelf grafisch door de grafiek te plotten.
+          <ol>
+            <li>
+              <p>
+                <m>\lim_{x \to 3} \dfrac{2x^2-3x-2}{x^2-2x-3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to 2} \frac{2x^2-3x-2}{x^2-x-2}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to 1} \sqrt{1-x^2}</m>
+               </p>
+             </li>
+            <li>
+              <p>
+                <m>\lim_{x \to 4} \dfrac{\sqrt{x}-2}{x^2-16}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to -2} \dfrac{x-1}{\sqrt{x+2}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to -2} \sqrt{(x+2)^2(x-1)} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\lim_{x \to -2} \dfrac{x+3}{3-\sqrt{7-x}}</m>
+              </p>
+            </li>
+            <li>
+                <p>
+                <m>\lim_{x \to 1} \dfrac{x-5}{\sqrt{x(x-1)}}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                <m>\lim_{x \to 1} \dfrac{2x-1-\sqrt{3x-2}}{x^2-1}</m>
+                </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          (<m>\star</m>) Bereken onderstaande oneigenlijke integralen.
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \int_0^1 \dfrac{1}{2\sqrt{x}} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int_{-1}^1 \dfrac{1}{\sqrt[3]{x^2}} \; dx</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Herneem oefening 3 en bepaal nu ook de verticale asymptoten.
+        </p>
+      </statement>
+    </exercise>
+
+</subexercises>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Afleidbaarheid</title>
+    <p>
+      De afgeleide <m>f'(x)</m> van een functie <m>f(x)</m> is gelijk aan
+      <me>
+        f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}
+      </me>
+      Een functie is niet altijd afleidbaar in elk punt van zijn domein. Beschouw bijvoorbeeld de functies <m>f(x)=\sqrt{x}</m> en <m>g(x)=|x^2-4|</m>. De functie <m>f</m> is niet afleidbaar in <m>0</m>; de raaklijn aan de grafiek in <m>(0,0)</m> is verticaal. De functie <m>g</m> is ook niet afleidbaar in de twee knikpunten <m>x=-2</m> en <m>x=2</m>; in <m>(-2,0)</m> en <m>(2,0)</m> zijn er twee raaklijnen aan de grafiek.
+    </p>
+  
+    <sidebyside widths="50% 50%">
+      <image source="wortelx.png"/>
+      <image source="knikpunten.png"/>
+    </sidebyside>
+  
+    <p>
+      Als <m>f</m> afleidbaar is in <m>c</m>, dan is <m>f</m> continu in <m>c</m>. De omgekeerde stelling geldt echter niet. Er bestaan zelfs functies die overal continu zijn, maar nergens afleidbaar. Neem bijvoorbeeld maar eens een kijkje <url href="https://www.desmos.com/calculator/e3ays69kxg">hier </url>.
+    </p>
+  
+    <!--* (Stelling van Rolle) Als een functie $f$ continu is in $[a,b]$, afleidbaar in $]a,b[$ en $f(a)=f(b)$, dan bestaat er minstens één waarde $c \in ]a,b[$ zodat $f'(c)=0$.
+    * (Middelwaardestelling van Lagrange) Als een functie $f$ continu is in $[a,b]$ en afleidbaar in $]a,b[$, dan bestaat er minstens één waarde $c \in ]a,b[$ zodat $f'(c)=\dfrac{f(b)-f(a)}{b-a}$.-->
+  
+    <!--Aanvullen met afleidbaarheid-->
+  </section>

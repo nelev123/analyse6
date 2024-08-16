@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Limieten berekenen met de regel van l'Hospital</title>
+    <assemblage>
+      <title>Regel van l'Hospital</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              Als <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}= \frac{0}{0}</m>, dan is <m>\displaystyle\lim_{x \to a} \frac{f(x)}{g(x)}= \lim_{x \to a} \frac{f'(x)}{g'(x)}</m> op voorwaarde dat de tweede limiet bestaat (d.w.z. niet gelijk is aan <m>\pm \infty</m>).
+            </p>
+          </li>
+          <li>
+            <p> Als <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}= \frac{\infty}{\infty}</m>, dan is <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)}= \lim_{x \to a} \frac{f'(x)}{g'(x)}</m> op voorwaarde dat tweede limiet bestaat.
+            </p>
+          </li>
+          <li>
+            <p>
+              Bovenstaande regels gelden ook als <m>x \to \pm \infty</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande limieten.
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{\sin x}{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                 <m>\displaystyle \lim_{x \to 0} \frac{x-\sin x}{x^3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                 <m>\displaystyle \lim_{x \to \frac{\pi}{2}} \frac{\sin 2x}{\cos^2 x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 3} \frac{27-x^3}{2x^2-11x+15}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 1} \frac{x^3-1}{x^3-3x^2+3x-1}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to \pm \infty} \frac{2x^2-x+3}{3x^2+5}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      De regel van l'Hospital is een handig hulpmiddel om limieten van exponentiële en logaritmische functies te berekenen. We herhalen even de standaardlimieten:
+    </p>
+    <sidebyside widths="50% 50%" valign="top">
+      <p>
+        <md>
+          <mrow> \amp \qquad \boxed{ a \gt 1} </mrow>
+          <mrow> \amp \lim_{x \to +\infty} a^x = +\infty</mrow>
+          <mrow> \amp \lim_{x \to -\infty} a^x = 0 </mrow>
+          <mrow> \amp \lim_{x \to +\infty} \log_a x = +\infty</mrow>
+          <mrow> \amp \lim_{x \to 0+} \log_a x = -\infty</mrow>
+        </md>
+      </p>
+      <p>
+        <md>
+          <mrow> \amp \quad \boxed{0 \lt a \lt 1}</mrow>
+          <mrow> \amp \lim_{x \to +\infty} a^x = 0 </mrow>
+          <mrow> \amp \lim_{x \to -\infty} a^x = +\infty </mrow>
+          <mrow> \amp \lim_{x \to +\infty} \log_a x = -\infty</mrow>
+          <mrow> \amp \lim_{x \to 0+} \log_a x = +\infty</mrow>
+        </md>
+      </p>
+    </sidebyside>
+    <example>
+      <p>
+        De onbepaaldheid <m>\dfrac{\infty}{\infty}</m> bij het berekenen van de limiet <m>\displaystyle \lim_{x \to +\infty} \frac{2^x}{x^2}</m> wordt weggewerkt door twee keer de regel van l'Hospital toe te passen:
+        <md>
+          <mrow> \lim_{x \to +\infty} \frac{2^x}{x^2} \amp = \lim_{x \to +\infty} \frac{2^x \cdot \ln 2}{2x}</mrow>
+          <mrow> \amp = \lim_{x \to +\infty} \frac{2^x \cdot (\ln 2)^2}{2}= +\infty</mrow>
+        </md>
+      </p>
+    </example>
+    <p>
+      Door herhaaldelijk toepassen van de regel van l'Hospital kunnen we dus onmiddellijk aantonen dat een exponentiële functie met grondtal groter dan 1 sneller stijgt dan gelijk welke veeltermfunctie:
+      <me>
+        \boxed{\lim_{x \to +\infty} \frac{a^x}{x^n} = +\infty} \qquad (n \in \mathbb{N} \text{ en } a \gt 1)
+      </me>
+      Analoog kunnen we aantonen dat een logaritmische functie trager stijgt dan gelijk welke veeltermfunctie:
+      <me>
+        \boxed{\lim_{x \to +\infty} \frac{\log_a x}{x^n} = 0} \qquad (n \in \mathbb{N} \text{ en } a \neq 1)
+      </me>
+    </p>
+    <example>
+      <p>
+        <md>
+          <mrow>  \lim_{x \to +\infty} \frac{\ln x}{x^3} = \amp \lim_{x \to +\infty} \frac{\frac{1}{x}}{3x^2} </mrow>
+          <mrow> = \amp \lim_{x \to +\infty} \frac{1}{3x^3} = 0 </mrow>
+        </md>
+      </p>
+    </example>  
+    <p>
+      Voor onbepaaldheden van de vorm <m>\infty^0</m> of <m>1^\infty</m> kan je steunen op het feit dat <m>e^x</m> en <m>\ln x</m> elkaars inverse zijn.
+    </p>
+    <example>
+      <p>
+        <me>
+          \lim_{x \to +\infty} x^{1/x} = \lim_{x \to +\infty} e^{\frac{\ln x}{x}}
+        </me>
+        We hoeven dus enkel nog de limiet <m> \lim_{x \to +\infty} \frac{\ln x}{x}</m> te berekenen:
+        <me>
+          \lim_{x \to +\infty} \frac{\ln x}{x} = \lim_{x \to +\infty} \frac{\frac{1}{x}}{1} = 0 
+        </me>
+        om te kunnen besluiten dat <m>\displaystyle \lim_{x \to +\infty} x^{1/x}= e^0 = 1</m>.
+      </p>
+    </example>
+    <example>
+      <p>
+        <me>
+          \lim_{x \to 0} (1-\sin x)^{\cot x} = \lim_{x \to 0} e^{\cot x \cdot \ln(1-\sin x)}
+        </me>
+        We berekenen vervolgens de limiet 
+        <md>
+          <mrow> \lim_{x \to 0} (\cot x \cdot \ln(1-\sin x)) = \amp \lim_{x \to 0} \frac{\ln(1-\sin x)}{\tan x}</mrow>
+          <mrow> = \amp \lim_{x \to 0} \frac{\frac{1}{1-\sin x} \cdot (-\cos x)}{\frac{1}{\cos^2 x}} </mrow>
+          <mrow> = \amp \lim_{x \to 0} \frac{-\cos^3 x}{1-\sin x} = -1</mrow>
+        </md>
+        en kunnen besluiten dat
+        <me>
+          \lim_{x \to 0} (1-\sin x)^{\cot x} = e^{-1}
+        </me>.
+      </p>
+    </example>
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande limieten
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{a^x-1}{x^3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to -\infty} \frac{a^x-1}{x^3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to +\infty} \frac{\ln x}{\ln((x-1)^2+1)}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to -\infty} \frac{e^{2x}-3e^{-\frac{x}{2}}}{e^{\frac{x}{2}}+e^{-\frac{x}{2}}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{4^x-\left(\frac{1}{2} \right)^x}{2x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} x^x</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} x^{\frac{1}{x-1}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to +\infty} (x^4 \cdot e^{-x})</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+  </section>

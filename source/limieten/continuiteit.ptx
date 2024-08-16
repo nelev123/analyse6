@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Continuïteit</title>
+    <sidebyside widths="50% 50%" valign="middle">
+      <p>
+        Als je in Gent op een weekdag voor 19:00 in de rode zone wil parkeren betaal je 2,50 euro voor één uur; 6,00 euro voor 2 uur en 10,00 euro voor 3 uur. In <m>x=1</m> en <m>2</m> vertoont de grafiek van de functie die de kostprijs voorstelt een sprong. We zeggen dat de functie discontinu is in deze punten.
+      </p>
+      <image source="parkeren.png"/>
+    </sidebyside>
+  
+    <p>
+      Een functie <m>f</m> is continu in een punt <m>x=c</m> als je de grafiek door <m>(c,f(c))</m> kan tekenen zonder je potlood op te heffen. Als dat niet het geval is, dan zeggen we dat <m>f</m> discontinu is in <m>c</m>. Merk op dat continuïteit enkel gedefinieerd is in ophopingspunten van het domein. Voor de functie <m>f</m> voorgesteld in onderstaande grafiek kunnen we bijvoorbeeld wel zeggen dat die discontinu is in <m>0</m>, maar heeft het geen zin om te spreken over de continuïteit in <m>4</m> omdat dit een geïsoleerd punt is van het domein.
+    </p>
+  
+    <sidebyside widths="50%" margins="20%">
+      <image source="geisoleerd.png"/>
+    </sidebyside>
+  
+    <p>
+      Het heeft ook geen zin om te spreken over de continuïteit in <m>2</m> van de functie <m>f(x)=\dfrac{3}{x+2}</m> omdat 2 niet behoort tot het domein van <m>f</m>. We zeggen dus dat deze functie continu is in elk punt van zijn domein.
+    </p>
+  
+    <sidebyside widths="50%" margins="20%">
+      <image source="continu.png"/>
+    </sidebyside>
+  
+  
+    <assemblage>
+      <title>Definitie van continuïteit in een punt</title>
+      <p>
+        Een functie <m>f</m> is continu in een ophopingspunt <m>c</m> van zijn domein als en slechts als
+        <me>
+          \lim_{x \to c} f(x) = f(c)
+        </me>
+        Als een functie discontinu is in <m>c</m>, dan betekent dit dat
+        <ul>
+          <li>
+            <p>
+              de limiet niet bestaat of
+            </p>
+          </li>
+          <li>
+            <p>
+              de limiet bestaat, maar niet gelijk is aan de functiewaarde
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+  
+    <p>
+      De functie <m>f(x) = \begin{cases} x \qquad (x \neq 2) \\ 1 \qquad x=2 \end{cases}</m> is niet continu in <m>2</m> omdat <m>\lim_{x \to 2} f(x) = 2</m> en <m>f(2) = 1 </m>
+    </p>
+    
+    <p>
+      De functie <m>f(x)=\sqrt{4-x^2}</m> is continu in elk punt van het open interval <m>]-2,2[</m>. In <m>x=-2</m> bestaat echter enkel de rechterlimiet en in <m>x=2</m> enkel de linkerlimiet. De functie <m>f</m> is dus niet continu in deze punten, maar aangezien beide limieten wel gelijk zijn aan de respectievelijke functiewaarden, zeggen we dat <m>f</m> rechtscontinu is in <m>-2</m> en linkscontinu in <m>2</m>. De functie <m>f</m> zelf noemen we dan per definitie continu in het interval <m>[-2,2]</m>.
+    </p>
+  
+    <sidebyside widths="50%" margins="20%">
+      <image source="halvecirkel.png"/>
+    </sidebyside>
+  
+    <p>
+      Een functie die continu is in elk punt van het domein noemen we een continue functie. Alle tot nog toe gekende functies zijn continu.  Bovendien is de som, het product, <m>\ldots</m> van twee continue functies opnieuw een continue functie. Meer bepaald geldt er dat, als <m>f</m> en <m>g</m> continu zijn in <m>c</m>, dan zijn
+      <ul>
+        <li>
+          <p>
+            <m>f+g</m> en <m>f-g</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>kf</m> (met <m>k \in \mathbb{R}</m>)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>fg</m> en <m>f/g</m> op voorwaarde dat <m>g(c) \neq 0</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f^{\frac{m}{n}}</m>
+          </p>
+        </li>
+      </ul>
+      eveneens continu in <m>c</m>. Er geldt bovendien ook dat als <m>f</m> continu is in <m>c</m> en <m>g</m> continu is in <m>b=f(c)</m>, dan is de samengestelde functie <m>g \circ f</m> continu in <m>c</m>.
+    </p>
+  
+  <!--Nakijken en herformuleren: Als $\lim_{x \to c} f(x)=b$ en $g$ continu is in $b$, dan geldt er dat $\lim_{x \to c} g(f(x))=g(b) continuiteit onmiddellijk met limieten samennemen-->
+  
+  <!-- * (Stelling van de tussenliggende waarden) Als een functie $f$ continu is in een gesloten interval $[a,b]$, dan bereikt zij in $[a,b]$ ten minste éénmaal elke waarde tussen $f(a)$ en $f(b)$.
+  * (Stelling van Weierstrass) Als een functie $f$ continu is in een gesloten interval $[a,b]$, dan bereikt zij in $[a,b]$ minstens éénmaal haar minimum en haar maximum.
+  * (Stelling van Bolzano) Als een functie $f$ continu is in een gesloten interval $[a,b]$ en $f(a)$ en $f(b)$ hebben een verschillend teken, dan ligt er in $[a,b]$ minstens één nulwaarde van $f$.-->
+  
+  
+  </section>

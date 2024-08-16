@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>De insluitstelling en een belangrijke limiet</title>
+    <assemblage>
+      <title>De insluitstelling</title>
+      <p>
+        Veronderstel dat <m>f(x) \le g(x) \le h(x)</m> voor alle <m>x \neq a </m> die behoren tot een open interval dat <m>a</m> bevat. Als <m>\lim_{x \to a} f(x)= \lim_{x \to a} h(x)=L</m> dan is ook <m>\lim_{x \to a} g(x)=L</m>.
+      </p>
+    </assemblage>
+    <p>
+      We gebruiken bovenstaande stelling om te bewijzen dat
+      <me>
+        \boxed{\lim_{x \to 0} \frac{\sin x}{x}=1}
+      </me>
+      We vertrekken van het feit dat voor alle <m>x \in ]0,\pi/2[</m> geldt dat <m>\sin x \lt  x \lt \tan x</m>:
+      <md>
+        <mrow>\amp \sin x \lt x \lt \tan x</mrow>
+        <mrow>\Leftrightarrow \amp 1 \lt \frac{x}{\sin x} \lt  \frac{1}{\cos x} </mrow>
+        <mrow>\Leftrightarrow \amp \cos x \lt \frac{\sin x}{x} \lt 1  </mrow>
+      </md>
+      Uit een analoge redenering volgt dat ook voor alle <m>x \in ]-\pi/2,0[</m> geldt dat <m>\cos x \lt  \frac{\sin x}{x} \lt  1 </m>. Aangezien <m>\lim_{x \to 0} \cos x = 1</m> volgt uit de insluitstelling dat ook <m>\lim_{x \to 0} \frac{\sin x}{x}=1</m>.
+    </p>
+  
+    <exercise>
+      <statement>
+        <p>
+          Bereken onderstaande limieten met behulp van <m>\lim_{x \to 0} \dfrac{\sin x}{x}=1</m>
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{\tan x}{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{\sin 5x}{3x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{\tan 2x}{\sin 4x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim_{x \to 0} \frac{\sin x \sin 3x}{2x^2}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          (7u) Toon aan dat <m>D(\sin x)=\cos x</m> en <m>D(\cos x)=-\sin x</m>. Volg onderstaande stappen.
+          <ol>
+            <li>
+              <p>
+                Start met de afgeleide van <m>\sin x</m> en gebruik één van de formules van Simpson
+                <me>
+                  \sin p - \sin q = 2 \cos\left(\frac{p+q}{2} \right) \sin\left(\frac{p-q}{2}\right)
+                </me>
+                om het verschil <m>\sin(x+\Delta x)-\sin x</m> om te zetten naar een product.
+              </p>
+            </li>
+            <li>
+              <p>
+                Splits op in twee factoren en gebruik <m>\lim_{x \to 0}{\dfrac{\sin x}{x}}=1</m> en je krijgt onmiddellijk het resultaat.
+              </p>
+            </li>
+            <li>
+              <p>
+                De afgeleide van <m>\cos x</m> volgt dan uit het feit dat <m>\cos x = \sin \left (x+\frac{\pi}{2} \right )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Leid ook eens de formule van Simpson af uit de som- en verschilformules.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+  </section>
