@@ -19,8 +19,4 @@
       Als <m>f</m> afleidbaar is in <m>c</m>, dan is <m>f</m> continu in <m>c</m>. De omgekeerde stelling geldt echter niet. Er bestaan zelfs functies die overal continu zijn, maar nergens afleidbaar. Neem bijvoorbeeld maar eens een kijkje <url href="https://www.desmos.com/calculator/e3ays69kxg">hier </url>.
     </p>
   
-    <!--* (Stelling van Rolle) Als een functie $f$ continu is in $[a,b]$, afleidbaar in $]a,b[$ en $f(a)=f(b)$, dan bestaat er minstens één waarde $c \in ]a,b[$ zodat $f'(c)=0$.
-    * (Middelwaardestelling van Lagrange) Als een functie $f$ continu is in $[a,b]$ en afleidbaar in $]a,b[$, dan bestaat er minstens één waarde $c \in ]a,b[$ zodat $f'(c)=\dfrac{f(b)-f(a)}{b-a}$.-->
-  
-    <!--Aanvullen met afleidbaarheid-->
   </section>

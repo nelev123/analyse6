@@ -88,11 +88,8 @@
       eveneens continu in <m>c</m>. Er geldt bovendien ook dat als <m>f</m> continu is in <m>c</m> en <m>g</m> continu is in <m>b=f(c)</m>, dan is de samengestelde functie <m>g \circ f</m> continu in <m>c</m>.
     </p>
   
-  <!--Nakijken en herformuleren: Als $\lim_{x \to c} f(x)=b$ en $g$ continu is in $b$, dan geldt er dat $\lim_{x \to c} g(f(x))=g(b) continuiteit onmiddellijk met limieten samennemen-->
   
-  <!-- * (Stelling van de tussenliggende waarden) Als een functie $f$ continu is in een gesloten interval $[a,b]$, dan bereikt zij in $[a,b]$ ten minste éénmaal elke waarde tussen $f(a)$ en $f(b)$.
-  * (Stelling van Weierstrass) Als een functie $f$ continu is in een gesloten interval $[a,b]$, dan bereikt zij in $[a,b]$ minstens éénmaal haar minimum en haar maximum.
-  * (Stelling van Bolzano) Als een functie $f$ continu is in een gesloten interval $[a,b]$ en $f(a)$ en $f(b)$ hebben een verschillend teken, dan ligt er in $[a,b]$ minstens één nulwaarde van $f$.-->
+
   
   
   </section>

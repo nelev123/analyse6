@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>De insluitstelling en een belangrijke limiet</title>
+    <exercise>
+        <statement>
+          <p>
+            Bereken onderstaande limieten met behulp van <m>\lim_{x \to 0} \dfrac{\sin x}{x}=1</m>
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{\tan x}{x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{\sin 5x}{3x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{\tan 2x}{\sin 4x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{\sin x \sin 3x}{2x^2}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+</subexercises>    

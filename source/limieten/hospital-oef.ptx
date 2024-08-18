@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>De regel van l'Hospital</title>
+    <exercise>
+        <statement>
+          <p>
+            Bereken onderstaande limieten.
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{\sin x}{x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                   <m>\displaystyle \lim_{x \to 0} \frac{x-\sin x}{x^3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                   <m>\displaystyle \lim_{x \to \frac{\pi}{2}} \frac{\sin 2x}{\cos^2 x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 3} \frac{27-x^3}{2x^2-11x+15}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 1} \frac{x^3-1}{x^3-3x^2+3x-1}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to \pm \infty} \frac{2x^2-x+3}{3x^2+5}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                <m>\lim_{x \to 1} \dfrac{2x-1-\sqrt{3x-2}}{x^2-1}</m>
+                </p>
+            </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Bereken onderstaande limieten
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{a^x-1}{x^3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to -\infty} \frac{a^x-1}{x^3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to +\infty} \frac{\ln x}{\ln((x-1)^2+1)}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to -\infty} \frac{e^{2x}-3e^{-\frac{x}{2}}}{e^{\frac{x}{2}}+e^{-\frac{x}{2}}}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} \frac{4^x-\left(\frac{1}{2} \right)^x}{2x}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} x^x</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to 0} x^{\frac{1}{x-1}}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim_{x \to +\infty} (x^4 \cdot e^{-x})</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+</subexercises>

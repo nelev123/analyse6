@@ -110,10 +110,10 @@
     <xi:include href="./rijen.ptx" />
     <!-- <xi:include href="./reeksen.ptx" /> Niet meer in leerplan-->
     <xi:include href="./bepaalde-integraal.ptx" />
+    <!-- <xi:include href="./explog.ptx" /> -->
     <xi:include href="./limieten.ptx" />
     <!--onbepaalde integraal van x^n met n in Z-->
     <xi:include href="./integratietechnieken.ptx" />
-    <!-- <xi:include href="./explog.ptx" /> -->
 
     <backmatter xml:id="backmatter">
       <title>Achteraf</title>

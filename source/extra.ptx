@@ -91,3 +91,10 @@ Als je iets wil uitrekenen, gebruik je expand, de tegenhanger van het commando f
       |x-2| < \frac{\epsilon}{5} \Rightarrow   |x^2-4| < 5 |x-2| < \epsilon
       $$
       \end{enumerate}-->
+
+        <!-- * (Stelling van de tussenliggende waarden) Als een functie $f$ continu is in een gesloten interval $[a,b]$, dan bereikt zij in $[a,b]$ ten minste éénmaal elke waarde tussen $f(a)$ en $f(b)$.
+  * (Stelling van Weierstrass) Als een functie $f$ continu is in een gesloten interval $[a,b]$, dan bereikt zij in $[a,b]$ minstens éénmaal haar minimum en haar maximum.
+  * (Stelling van Bolzano) Als een functie $f$ continu is in een gesloten interval $[a,b]$ en $f(a)$ en $f(b)$ hebben een verschillend teken, dan ligt er in $[a,b]$ minstens één nulwaarde van $f$.-->
+
+      <!--* (Stelling van Rolle) Als een functie $f$ continu is in $[a,b]$, afleidbaar in $]a,b[$ en $f(a)=f(b)$, dan bestaat er minstens één waarde $c \in ]a,b[$ zodat $f'(c)=0$.
+    * (Middelwaardestelling van Lagrange) Als een functie $f$ continu is in $[a,b]$ en afleidbaar in $]a,b[$, dan bestaat er minstens één waarde $c \in ]a,b[$ zodat $f'(c)=\dfrac{f(b)-f(a)}{b-a}$.-->

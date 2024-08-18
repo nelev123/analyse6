@@ -24,7 +24,8 @@
 <exercises xml:id="exercises-limieten">
   <xi:include href="./limieten/limiet-op-oneindig-oef.ptx" />
   <xi:include href="./limieten/limiet-in-getal-oef.ptx" />
-  
+  <xi:include href="./limieten/insluitstelling-oef.ptx"/>
+  <xi:include href="./limieten/hospital-oef.ptx" />
   
 </exercises>
 

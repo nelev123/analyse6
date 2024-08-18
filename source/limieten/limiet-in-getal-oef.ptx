@@ -59,7 +59,6 @@
                 <m>\lim_{x \to 1} \dfrac{x-5}{\sqrt{x(x-1)}}</m>
                 </p>
             </li>
-
             <li>
                 <p>
                 <m>\lim_{x \to 1} \dfrac{2x-1-\sqrt{3x-2}}{x^2-1}</m>

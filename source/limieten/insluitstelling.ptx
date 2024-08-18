@@ -22,43 +22,14 @@
       Uit een analoge redenering volgt dat ook voor alle <m>x \in ]-\pi/2,0[</m> geldt dat <m>\cos x \lt  \frac{\sin x}{x} \lt  1 </m>. Aangezien <m>\lim_{x \to 0} \cos x = 1</m> volgt uit de insluitstelling dat ook <m>\lim_{x \to 0} \frac{\sin x}{x}=1</m>.
     </p>
   
-    <exercise>
+    <activity>
       <statement>
         <p>
-          Bereken onderstaande limieten met behulp van <m>\lim_{x \to 0} \dfrac{\sin x}{x}=1</m>
+          (<m>\star</m>) Vorig jaar heb je bewezen dat <m>D(\sin x)=\cos x</m> door meetkundig te redeneren. Een bewijs zonder meetkunde verloopt als volgt:
           <ol>
             <li>
               <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{\tan x}{x}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{\sin 5x}{3x}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{\tan 2x}{\sin 4x}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{\sin x \sin 3x}{2x^2}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          (7u) Toon aan dat <m>D(\sin x)=\cos x</m> en <m>D(\cos x)=-\sin x</m>. Volg onderstaande stappen.
-          <ol>
-            <li>
-              <p>
-                Start met de afgeleide van <m>\sin x</m> en gebruik één van de formules van Simpson
+                Start met de definitie van de afgeleide en gebruik één van de formules van Simpson
                 <me>
                   \sin p - \sin q = 2 \cos\left(\frac{p+q}{2} \right) \sin\left(\frac{p-q}{2}\right)
                 </me>
@@ -67,21 +38,11 @@
             </li>
             <li>
               <p>
-                Splits op in twee factoren en gebruik <m>\lim_{x \to 0}{\dfrac{\sin x}{x}}=1</m> en je krijgt onmiddellijk het resultaat.
-              </p>
-            </li>
-            <li>
-              <p>
-                De afgeleide van <m>\cos x</m> volgt dan uit het feit dat <m>\cos x = \sin \left (x+\frac{\pi}{2} \right )</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Leid ook eens de formule van Simpson af uit de som- en verschilformules.
+                Splits op in twee factoren, gebruik <m>\lim_{x \to 0}{\dfrac{\sin x}{x}}=1</m> en je krijgt onmiddellijk het resultaat.
               </p>
             </li>
           </ol>
         </p>
       </statement>
-    </exercise>
+    </activity>
   </section>

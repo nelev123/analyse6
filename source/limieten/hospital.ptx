@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section>
-    <title>Limieten berekenen met de regel van l'Hospital</title>
+    <title>De regel van l'Hospital</title>
     <assemblage>
       <title>Regel van l'Hospital</title>
       <p>
@@ -23,48 +23,11 @@
         </ul>
       </p>
     </assemblage>
-    <exercise>
-      <statement>
-        <p>
-          Bereken onderstaande limieten.
-          <ol>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{\sin x}{x}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                 <m>\displaystyle \lim_{x \to 0} \frac{x-\sin x}{x^3}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                 <m>\displaystyle \lim_{x \to \frac{\pi}{2}} \frac{\sin 2x}{\cos^2 x}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 3} \frac{27-x^3}{2x^2-11x+15}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 1} \frac{x^3-1}{x^3-3x^2+3x-1}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to \pm \infty} \frac{2x^2-x+3}{3x^2+5}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+
     <p>
       De regel van l'Hospital is een handig hulpmiddel om limieten van exponentiële en logaritmische functies te berekenen. We herhalen even de standaardlimieten:
     </p>
+
     <sidebyside widths="50% 50%" valign="top">
       <p>
         <md>
@@ -85,6 +48,7 @@
         </md>
       </p>
     </sidebyside>
+
     <example>
       <p>
         De onbepaaldheid <m>\dfrac{\infty}{\infty}</m> bij het berekenen van de limiet <m>\displaystyle \lim_{x \to +\infty} \frac{2^x}{x^2}</m> wordt weggewerkt door twee keer de regel van l'Hospital toe te passen:
@@ -94,6 +58,7 @@
         </md>
       </p>
     </example>
+
     <p>
       Door herhaaldelijk toepassen van de regel van l'Hospital kunnen we dus onmiddellijk aantonen dat een exponentiële functie met grondtal groter dan 1 sneller stijgt dan gelijk welke veeltermfunctie:
       <me>
@@ -104,6 +69,7 @@
         \boxed{\lim_{x \to +\infty} \frac{\log_a x}{x^n} = 0} \qquad (n \in \mathbb{N} \text{ en } a \neq 1)
       </me>
     </p>
+
     <example>
       <p>
         <md>
@@ -112,9 +78,11 @@
         </md>
       </p>
     </example>  
+
     <p>
       Voor onbepaaldheden van de vorm <m>\infty^0</m> of <m>1^\infty</m> kan je steunen op het feit dat <m>e^x</m> en <m>\ln x</m> elkaars inverse zijn.
     </p>
+
     <example>
       <p>
         <me>
@@ -127,6 +95,7 @@
         om te kunnen besluiten dat <m>\displaystyle \lim_{x \to +\infty} x^{1/x}= e^0 = 1</m>.
       </p>
     </example>
+
     <example>
       <p>
         <me>
@@ -144,53 +113,5 @@
         </me>.
       </p>
     </example>
-    <exercise>
-      <statement>
-        <p>
-          Bereken onderstaande limieten
-          <ol>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{a^x-1}{x^3}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to -\infty} \frac{a^x-1}{x^3}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to +\infty} \frac{\ln x}{\ln((x-1)^2+1)}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to -\infty} \frac{e^{2x}-3e^{-\frac{x}{2}}}{e^{\frac{x}{2}}+e^{-\frac{x}{2}}}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} \frac{4^x-\left(\frac{1}{2} \right)^x}{2x}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} x^x</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to 0} x^{\frac{1}{x-1}}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \lim_{x \to +\infty} (x^4 \cdot e^{-x})</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+
   </section>
