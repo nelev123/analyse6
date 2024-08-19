@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+
+<section>
+  <title>Vergelijkingen oplossen</title>
+  <introduction>
+    <p>
+      Het oplossen van de vergelijking <m>f(x)=b</m> komt eigenlijk neer op het bepalen van de inverse-functiewaarde <m>f^{-1}(b)</m>:
+      <me>
+        f(x)=b \Leftrightarrow x=f^{-1}(b)
+      </me>
+      Als <m>f</m> kan geschreven worden als de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m>, dan is de oplossing van de vergelijking <me>x=f^{-1}(b)=(f^{-1}_{1} \circ f_{2}^{-1} \circ \ldots \circ f_{n-1}^{-1} \circ f_n^{-1})(b)</me>.
+    </p>
+    <example>
+      <title>Inleidend voorbeeld</title>
+      <p>
+        Gegeven de vergelijking <m>\dfrac{3}{x-1}+2=5</m>. Het linkerlid wordt bepaald door de functie met voorschrift <m>f(x)=\dfrac{3}{x-1}+2</m>. De inverse functie is <m>f^{-1}(y)=\dfrac{3}{y-2}+1</m> en de oplossing van de vergelijking bijgevolg <m>x=f^{-1}(5)=2</m>. We krijgen natuurlijk dezelfde oplossing als we de vergelijking met de balansmethode bepalen:
+        <md>
+          <mrow>\amp \; \frac{3}{x-1}+2=5</mrow>
+          <mrow>\Leftrightarrow \amp \; \frac{3}{x-1}=3</mrow>
+          <mrow>\Leftrightarrow \amp \; \frac{1}{x-1}=1</mrow>
+          <mrow>\Leftrightarrow \amp \; x-1 = 1</mrow>
+          <mrow>\Leftrightarrow \amp \; x=2</mrow>
+        </md>
+        Merk op dat het bepalen van de inverse functie een algemener probleem is dan het oplossen van een vergelijking. Van zodra je dit voorschrift hebt, kan je eigenlijk alle vergelijkingen van de vorm <m>f(x)=b</m> snel oplossen.
+      </p>
+      <figure>
+        <caption>
+          De grafiek van de functie <m>f(x)=\frac{3}{x-1}+2</m> en de inverse functie <m>f^{-1}(x)=\frac{3}{x-2}+1</m> (streepjeslijn).
+        </caption>
+        <image  width="60%" source="desmos-inv1.png"/>
+      </figure>
+    </example>
+    <p>
+      Niet elke vergelijking heeft natuurlijk de vorm <m>f(x)=b</m>, maar we zullen ons voorlopig beperken tot vergelijkingen die kunnen herschreven worden in deze vorm of in de algemenere vorm <m>g(f_1(x)) = g(f_2(x))</m>. Als de functie <m>f</m> een bijectie is, dan heeft de vergelijking <m>f(x)=b</m> precies één oplossing op voorwaarde dat <m>b</m> behoort tot het bereik van <m>f</m>. Van zodra één van de functies in de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m> geen bijectie is, kan de vergelijking <m>f(x)=b</m> meerdere oplossingen hebben.
+    </p>
+    <example>
+      <title>Herschrijven in de vorm <m>f(x)=b</m></title>
+      <p>
+        Dit pas je toe als je het kwadraat vervolledigt bij het oplossen van een vierkantsvergelijking. 
+        <md>
+          <mrow> \amp x^2-7x+10=0</mrow>
+          <mrow> \Leftrightarrow \; \amp \left (x -\frac{7}{2} \right)^2 = -10+\frac{49}{4}</mrow>
+          <mrow> \Leftrightarrow \; \amp \left (x -\frac{7}{2} \right)^2 = \frac{9}{4}</mrow>
+          <mrow>\Leftrightarrow \; \amp  x = \frac{7}{2} \mp \frac{3}{2} </mrow>
+          <mrow>\Leftrightarrow \; \amp  x = 2 \qquad \text{of} \qquad x=5 </mrow>
+        </md>
+        Deze vergelijking heeft twee oplossingen omdat de functie <m>x \to x^2</m> geen bijectie is.
+      </p>
+      <!-- <p>
+        Het rechterlid van de goniometrische vergelijking <m>\sin x \cdot \cos x=\frac{1}{8}</m> kan je met de verdubbelingsformule voor sinus schrijven als een samengestelde functie:
+        <md>
+          <mrow>\amp \; \sin x \cdot \cos x=\frac{1}{8}</mrow>
+          <mrow>\Leftrightarrow \amp \; 2 \sin x \cdot \cos x=\frac{1}{4}</mrow>
+          <mrow>\Leftrightarrow \amp \; \sin 2x = \frac{1}{4} </mrow>
+          <mrow>\Leftrightarrow \amp \; 2x = 0,25268 +2k\pi \qquad \text{of} \qquad 2x=2,8889+2k\pi </mrow>
+          <mrow>\Leftrightarrow \amp \; x = 0,12634 + k\pi \qquad \text{of} \qquad x=1,4445+k\pi</mrow>
+        </md>
+        Deze vergelijking heeft een oneindig aantal oplossingen omdat de sinusfunctie geen bijectie is (zie verder).
+      </p> -->
+    </example>
+    <example>
+      <title>Herschrijven in de vorm <m>g(f_1(x))=g(f_2(x))</m></title>
+      <p>
+        Als je de vergelijking in de vorm <m>g(f_1(x))=g(f_2(x))</m> kan schrijven, dan geldt er alvast dat <m>f_1(x)=f_2(x)</m>. Als de functie <m>g</m> geen bijectie is, dan bestaan er ook nog andere oplossingen.
+      </p>
+      <p>
+         De vergelijking <m>(2x-1)^2-(x-2)^2=0</m> kan herschreven worden in deze vorm en de oplossingen zijn bijgevolg de <m>x</m>-coördinaten van de snijpunten van de parabolen <m>y=(2x-1)^2</m> en <m>y=(x-2)^2</m>. Algebraïsche oplossing:
+         <md>
+           <mrow>\amp \; (2x-1)^2-(x-2)^2=0 </mrow>
+           <mrow>\Leftrightarrow \amp \; (2x-1)^2=(x-2)^2</mrow>
+           <mrow>\Leftrightarrow \amp \; 2x-1=x-2 \qquad \text{of} \qquad 2x-1=-x+2</mrow>
+           <mrow>\Leftrightarrow \amp \; x=-1 \qquad \text{of} \qquad x=1</mrow>
+         </md>
+         Aangezien <m>g(x)=x^2</m> geen bijectie is, krijgen we twee oplosssingen.
+      </p>
+      <figure>
+        <caption>
+          Grafische oplossing van de vergelijking <m>(2x-1)^2-(x-2)^2=0</m>.
+        </caption>
+        <image  width="60%" source="desmos-inv4.png"/>
+      </figure>
+    </example>
+    <assemblage>
+      <title>Vergelijkingen oplossen</title>
+      <p>
+        In dit hoofdstuk los je een vergelijking op door ze te herschrijven in de één van onderstaande vormen:
+        <ul>
+          <li>
+              <p>
+                <m>f(x)=b</m> waarbij <m>f(x)</m> kan geschreven worden als een samenstelling van elementaire functies.
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>g(f_1(x))=g(f_2(x))</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+    <p>
+      Bij het oplossen van vergelijkingen moet je oppassen dat je geen extra oplossingen invoert of oplossingen vergeet.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Extra oplossingen invoeren</title>
+    <example>
+      <title><m>b</m> behoort niet tot het bereik van <m>f</m></title>
+      <p>
+        Beschouw onderstaande oplossing van de vergelijking <m>\sqrt{x-1}+2=0 </m>.
+        <md>
+          <mrow>\amp \; \sqrt{x-1}+2=0</mrow>
+          <mrow>\Leftrightarrow \amp \; \sqrt{x-1}=-2</mrow>
+          <mrow>\Rightarrow \amp \; x-1=4 </mrow>
+          <mrow>\Leftrightarrow \amp \; x=5</mrow>
+        </md>
+      </p>
+      <m>0</m> behoort niet tot het bereik van de functie <m>f(x)=\sqrt{x-1}+2</m> en de vergelijking heeft geen oplossing. In de tweede stap van het oplossingsproces is dit duidelijk te merken: een vierkantswortel is per definitie positief en kan dus niet gelijk zijn aan <m>-2</m>. Als je dit echter niet opmerkt en verder werkt, krijg je <m>x=5</m> als oplossing. In de tweede stap mag er dus niet zomaar gekwadrateerd worden. In functietaal: als <m>g(x)=\sqrt{x-1}</m>, dan is <m>g^{-1}(y)=y^2+1</m> met <m>y \ge 0</m>.
+      <figure>
+        <caption>
+          De grafiek van de functie <m>f(x)=\sqrt{x-1}+2</m> en de inverse functie <m>f^{-1}(x)=(x-2)^2 +1</m> met <m>x \ge 2</m> (streepjeslijn). De bolletjeslijn is de grafiek van <m>h(x)=(x-2)^2 +1</m> met <m>x \lt 2</m>.
+        </caption>
+        <image  width="60%" source="desmos-inv2.png"/>
+      </figure>
+      <p>
+        De vergelijking <m>\sqrt{x-1}-2=0</m> heeft wel een oplossing:
+        <md>
+          <mrow>\amp \; \sqrt{x-1}-2=0 </mrow>
+          <mrow>\Leftrightarrow \amp \; \sqrt{x-1}=2 </mrow>
+          <mrow>\Rightarrow \amp \; x-1=4 </mrow>
+          <mrow> \Leftrightarrow \amp \; x=5 </mrow>
+        </md>
+      </p>
+      <figure>
+        <caption>
+          De grafiek van de functie <m>f(x)=\sqrt{x-1}-2</m> en de inverse functie <m>f^{-1}(x)=(x+2)^2 +1</m> met <m>x \ge -2</m> (streepjeslijn).
+        </caption>
+        <image  width="60%" source="desmos-inv4.png"/>
+      </figure>
+    </example>
+    <example>
+      <title>Oplossing behoort niet tot het domein van <m>f</m></title>
+      <p>
+        Beschouw de vergelijking <m>\sqrt{x-1}-\sqrt{-x-1}=0 \Leftrightarrow \sqrt{x-1}=\sqrt{-x-1}</m>. Grafisch is onmiddellijk duidelijk dat deze vergelijking geen oplossingen heeft:
+      </p>
+      <figure>
+        <caption>
+          De vergelijking <m>\sqrt{x-1}-\sqrt{-x-1}=0</m> heeft geen oplossingen.
+        </caption>
+        <image  width="60%" source="desmos-inv5.png"/>
+      </figure>
+      <p>
+        Het domein van de functie <m>f(x)=\sqrt{x-1}-\sqrt{-x-1}</m> is gelijk aan <m>\mathbb{R} \setminus \; ]-1,1[</m> en de oplossingen van de vergelijking moeten natuurlijk steeds tot dit domein behoren. We noemen het domein van <m>f</m> de <term>bestaansvoorwaarde (BV)</term> van de vergelijking.
+      </p>
+      <p>
+        We lossen de vergelijking op:
+        <md>
+          <mrow> \amp \; \sqrt{x-1}=\sqrt{-x-1} </mrow>
+          <mrow> \Rightarrow \amp \; x-1=-x-1 </mrow>
+          <mrow> \Leftrightarrow \amp \; x=0 </mrow>
+        </md>
+        We krijgen dus <m>x=0</m> als oplossing, maar de BV sluit dit uit <m>\Rightarrow V =\emptyset</m>.
+      </p>
+      <figure>
+        <caption>
+          Kwadrateren voert een extra oplossing in die niet aan de BV voldoet.
+        </caption>
+        <image  width="60%" source="desmos-inv6.png"/>
+      </figure>
+    </example>
+    <example>
+      <title>Extra oplossing door kwadrateren</title>
+      <p>
+        Bij het herschrijven van een vergelijking tot de vorm <m>g(f_1(x))=g(f_2(x))</m> moet  natuurlijk ook steeds gelden dat een oplossing <m>x</m> door <m>g \circ f_1</m> en <m>g \circ f_2</m> afgebeeld wordt op <m>y \in ber (g \circ f_1) \cap ber (g \circ f_2)</m>. Beschouw bijvoorbeeld de vergelijking <m>\sqrt{x-1}=7-x</m>:
+        <md>
+          <mrow> \amp \; \sqrt{x-1}=7-x </mrow>
+          <mrow> \Rightarrow \amp \; x-1 = (7-x)^2 </mrow>
+          <mrow> \Leftrightarrow \amp \; x^2-15x+50=0  </mrow>
+          <mrow> \Leftrightarrow \amp \; x=5 \qquad \text{of} \qquad x=10 </mrow>
+        </md>
+        <m>x=10</m> is geen oplossing van de oorspronkelijke vergelijking want <m>g(f_2(10))=-3 \notin ber \;g(f_1(x))</m>. Aangezien het bereik van <m>g(f_1(x))</m> gelijk is aan <m>\mathbb{R}^+</m> moet er gelden dat <m>7-x \ge 0 \Leftrightarrow x \le 7</m>. Deze voorwaarde wordt vaak de kwadrateringsvoorwaarde genoemd. Samen met de bestaansvoorwaarde beperkt dit het interval waartoe de oplossingen moeten behoren tot <m>[1,7]</m> <m>\Rightarrow V=\lbrace 5 \rbrace</m>.
+      </p>
+      <figure>
+        <caption>
+          Kwadrateren voert een extra oplossing in.
+        </caption>
+        <image  width="60%" source="desmos-inv7.png"/>
+      </figure>
+    </example>
+  </subsection>
+  <!-- <subsection>
+    <title>Vergelijkingen met meerdere oplossingen</title>
+    <p>
+      Als de functie <m>f</m> een bijectie is, dan heeft de vergelijking <m>f(x)=b</m> precies één oplossing op voorwaarde dat <m>b</m> behoort tot het bereik van <m>f</m>. Van zodra één van de functies in de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m> geen bijectie is, kan de vergelijking <m>f(x)=b</m> meerdere oplossingen hebben. Een kwadratische vergelijking kan bijvoorbeeld twee oplossingen hebben. Goniometrische vergelijkingen hebben zelfs een oneindig aantal oplossingen.
+    </p>
+    <example>
+      <title>Een goniometrische vergelijking</title>
+      <p>
+         Beschouw de vergelijking <m>1+\sin(2x-3)=\dfrac{3}{2}</m>:
+        <md>
+          <mrow>\amp  \; 1+\sin(2x-3)=\frac{3}{2}</mrow>
+          <mrow>\Leftrightarrow \amp  \; \sin(2x-3)=\frac{1}{2} </mrow>
+          <mrow>\Leftrightarrow \amp  \; 2x-3=\frac{\pi}{6}+2k\pi \qquad \text{of}\qquad 2x-3=\frac{5\pi}{6}+2k\pi</mrow>
+          <mrow>\Leftrightarrow \amp  \; x = \frac{\pi}{12}+\frac{3}{2}+k\pi \qquad \text{of} \qquad x = \frac{5\pi}{12}+\frac{3}{2}+k\pi</mrow>
+        </md>
+        met <m>k \in \mathbb{Z}</m>. In het interval <m>[0,2\pi]</m> zijn er twee argumenten waarvoor de sinus gelijk is aan 1/2: <m>\dfrac{\pi}{6}</m> en <m>\dfrac{5\pi}{6}</m>. Aangezien de sinusfunctie periodiek is met periode <m>2\pi</m>, zijn ook alle argumenten van de vorm <m>x=\frac{\pi}{6}+2k\pi</m> of <m>x=\frac{5\pi}{6}+2k\pi</m> met <m>k</m> een willekeurig geheel getal oplossingen van <m>\sin x = 1/2</m>.
+      </p>
+      <figure>
+        <caption>
+          De vergelijking <m>1+\sin(2x-3)=\frac{3}{2}</m> heeft een oneindig aantal oplossingen.
+        </caption>
+        <image  width="50%" source="inverse4.png"/>
+      </figure>
+    </example>
+
+  </subsection> -->
+
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Los onderstaande vergelijkingen op. Aangezien we grafieken van samengestelde functies met <m>\sqrt{x}</m> en <m>\dfrac{1}{x}</m>
+          <!-- , <m>\sin x</m> en <m>\cos x</m>  -->
+          reeds bestudeerd hebben, moet je ook deze oplossingen ook grafisch kunnen schetsen. <alert>Oefen dit als je hiermee nog problemen hebt!</alert>
+          <ol>
+            <li>
+              <p>
+                <m>\dfrac{3}{x}+4=0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sqrt{3x+7}+2=4</m>
+              </p>
+            </li>
+            <!-- <li>
+              <p>
+                <m>\displaystyle 4\sin\left [2 \left(x-\frac{\pi}{3} \right) \right ] +1 = 2</m>
+              </p>
+            </li> -->
+            <li>
+              <p>
+                <m>-\dfrac{1}{x+1}=-2</m>
+              </p>
+            </li>
+            <!-- <li>
+              <p>
+                <m>\displaystyle \sin \left (2x+\frac{\pi}{6} \right)=-\cos\left(x-\frac{5\pi}{18} \right)</m>
+              </p>
+            </li> -->
+            <li>
+              <p>
+                <m>\sqrt{2x-1}-\sqrt{x-1}=0</m>
+              </p>
+            </li>
+            <!-- <li>
+              <p>
+                <m>\cos 4x + \sin \dfrac{x}{2}=0</m>
+              </p>
+            </li> -->
+            <li>
+              <p>
+                <m>\sqrt{5x-1}+x=5</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sqrt{x+4}+\sqrt{2x+1}=3</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <!-- <exercise>
+      <statement>
+        <p>
+          Los onderstaande vergelijkingen op. Exponentiële en logaritmische functies hebben we nog niet bestudeerd dus deze oplossingen moet je niet kunnen schetsen.
+          <ol>
+            <li>
+              <p>
+                <m>3^{2x-1}=9\sqrt{3} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\frac{\log_6 15x}{\log_6 5x}=2</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>6^{\sqrt{x}}=2</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>2^{\left (\dfrac{1}{x-8} \right)}-8=0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log_3 (5x+1)=2</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log_2 3 \cdot \log_3 5 \cdot \log_5 7 \cdot \log_7 x =4</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>3^{2x+1} = 15</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left ( \dfrac{1}{2} \right )^{x^2} = 2^{-2x+1}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\log_3(x+5)+\log_3(x-1)=2</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise> -->
+  </exercises>
+
+</section>

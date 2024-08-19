@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="inversefuncties" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Inverse functies</title>
+
+    <xi:include href="./functies/inversefuncties.ptx" />
+    <xi:include href="./algebra/vergelijkingen-inversef.ptx" />
+</chapter>    
