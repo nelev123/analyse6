@@ -4,7 +4,6 @@
     <title>Inverse functies</title>
 
     <xi:include href="./functies/inverse-inl.ptx"/>
-    <xi:include href="./functies/ndewortels.ptx" />
     <xi:include href="./functies/inverse-voorschrift.ptx" />
     <xi:include href="./algebra/vergelijkingen-inversef.ptx" />
 
@@ -47,7 +46,6 @@
       </assemblage> -->
 
     <exercises xml:id="exercises-inversefuncties">
-        <xi:include href="./functies/inverse-inl-oef.ptx" />  
-        <xi:include href="./algebra/ndewortel-oef.ptx" />      
+        <xi:include href="./functies/inverse-inl-oef.ptx" />    
     </exercises>
 </chapter>    

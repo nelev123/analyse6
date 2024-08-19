@@ -104,10 +104,10 @@
       </preface>
     </frontmatter>
 
-    <!-- <xi:include href="./machten-logaritmen.ptx"/> -->
     <!-- <xi:include href="./afleiden/verloop.ptx"/> -->
     <!-- <xi:include href="./toepassingen-df.ptx" /> -->
     <xi:include href="./inverse-functies.ptx"/>
+    <xi:include href="./machten-wortels.ptx"/>
     <xi:include href="./rijen.ptx" />
     <!-- <xi:include href="./reeksen.ptx" /> Niet meer in leerplan-->
     <xi:include href="./bepaalde-integraal.ptx" />

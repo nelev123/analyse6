@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-  <section>
-    <title>Het functievoorschrift van <m>f^{-1}</m></title>
+<section xml:id="sec-inv-voorschrift">
+    <title>Het functievoorschrift van <m>f^{-1}</m> bepalen</title>
     <p>
-      Als voorbeeld inverteren we de functie <m>f(x)=\sqrt{3x+2}</m>. Het domein van de functie vinden we door te stellen dat <m>3x+2 \ge 0 \Leftrightarrow x \ge -\frac{2}{3}</m>. Het bereik is <m>\mathbb{R}^+</m>. Dit betekent dat <m>dom f^{-1}=\mathbb{R}^+</m> en <m>ber f^{-1}=\left [ -\frac{2}{3},+\infty \right [</m>. We lossen de vergelijking <m>y=\sqrt{3x+2}</m> op naar <m>x</m> om het functievoorschrift van <m>f^{-1}</m> te bepalen:
+      Als voorbeeld inverteren we de functie <m>f(x)=\sqrt{3x+2}</m>. Het domein van de functie vinden we door te stellen dat <m>3x+2 \ge 0 \Leftrightarrow x \ge -\frac{2}{3}</m>. Het bereik is <m>\mathbb{R}^+</m>. Dit betekent dat dom <m>f^{-1}=\mathbb{R}^+</m> en ber <m>f^{-1}=\left [ -\frac{2}{3},+\infty \right [</m>. We lossen de vergelijking <m>y=\sqrt{3x+2}</m> op naar <m>x</m> om het functievoorschrift van <m>f^{-1}</m> te bepalen:
       <md>
         <mrow>\amp y = \sqrt{3x+2}</mrow>
         <mrow>\Leftrightarrow \amp \; y^2 = 3x+2 \quad (y \ge 0)</mrow>
@@ -15,23 +15,15 @@
       Als we het hebben over een functie en zijn inverse in een bepaalde context, dan hebben de variabelen <m>x</m> en <m>y</m> een welbepaalde betekenis. Als we gewoon een abstracte functie <m>f(x)</m> beschouwen, dan doet het er eigenlijk niet toe welke variabele er gebruikt wordt. We kunnen dus ook schrijven dat <m>f^{-1}(x)=\dfrac{x^2-2}{3}</m> en de grafiek van <m>f</m> en <m>f^{-1}</m> kunnen in hetzelfde assenstelsel getekend worden:
     </p>
     <interactive desmos="mli9hzkn2r" width="100%" aspect="4:2" preview="desmos-fenfmin1.png"/>
+
     <p>
-      Merk op dat <m>f(2)=\sqrt{8}=2\sqrt{2}</m> en bijgevolg dat <m>f^{-1}(2\sqrt{2})=2</m>. Dit betekent eveneens dat de oplossing van de vergelijking <m>\sqrt{3x+2}=2\sqrt{2}</m> gelijk is aan 2.
-    </p>
-    <assemblage>
-      <title><m>f^{-1}</m> en het oplossen van vergelijkingen</title>
-      <p>
-        Het oplossen van de vergelijking <m>f(x)=b</m> is equivalent met het bepalen van de inverse functiewaarde  <m>x=f^{-1}(b)</m>.
-      </p>
-    </assemblage>
-    <p>
-      Je kan een functie ook inverteren door de samenstelling uit te schrijven en elke functie in de samenstelling te inverteren. De inverse functie krijg je dan door die inverse functies in omgekeerde volgorde samen te stellen:
-    </p>
-    <sidebyside>
-      <image source="invsamenstellen.png"/>
-    </sidebyside>
-    <p>
-      Dus als <m>f=f_3 \circ f_2 \circ f_1</m>, dan is <m>f^{-1}=f^{-1}_1 \circ f^{-1}_2 \circ f^{-1}_3</m>.
+      Je kan een functie ook inverteren door de samenstelling uit te schrijven en elke functie in de samenstelling te inverteren. De inverse functie krijg je dan door die inverse functies in omgekeerde volgorde samen te stellen. Dus als <m>f=f_3 \circ f_2 \circ f_1</m>, dan is <m>f^{-1}=f^{-1}_1 \circ f^{-1}_2 \circ f^{-1}_3</m>.
+    <md>
+      <mrow> \amp f_1(x)=3x \Leftrightarrow f^{-1}(y)=\dfrac{y}{3}</mrow>
+      <mrow> \amp f_2(x) = x+2 \Leftrightarrow f^{-1}(y)=y-2</mrow>
+      <mrow> \amp f_3(x) = \sqrt{x} \Leftrightarrow f^{-1}_3=y^2 \quad \text{en}(y \gt 0)</mrow>
+    </md>
+     
     </p>
     <exercises>
       <exercise>
@@ -126,75 +118,110 @@
         </solution>
       </exercise>
     </exercises>
-    <exercises>
-      <exercise>
-        <statement>
-          <p>
-            Inverteer onderstaande functies. Probeer zeker elke methode eens uit. Als de functie niet inverteerbaar is, dan beperk je het domein zodat je wel kan inverteren. Teken ook de grafieken van <m>f</m> en <m>f^{-1}</m> met Desmos.
-            <ol>
-              <li>
-                <p>
-                  <m>f(x) = -\dfrac{1}{2} \sqrt{6x+3}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f(x) = \dfrac{4}{5+x^2}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f(x) = 2(x+1)^2 - 18</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f(x)=\begin{cases} 2x \qquad \text{als } x \lt 0 \\ x^2 \qquad \text{als }x \ge 0 \end{cases}</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  <m>  f^{-1}(y)=\dfrac{4y^2-3}{6} \quad (y \le 0)</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f^{-1}(y) =\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \ge 0</m> en <m>f^{-1}(y) =-\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \lt 0</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f^{-1}(y)=-1+\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in [-1,+\infty[</m> en <m>f^{-1}(y)=-1-\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in ]-\infty,-1[</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f^{-1}(y)=\begin{cases} \dfrac{y}{2} \quad x \lt 0 \\ \sqrt{y} \quad x \ge 0 \end{cases}</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </solution>
-      </exercise>
-      <exercise>
+   
+  <sidebyside widths="50% 45%">
+    <p>
+      Niet elke functie kan geïnverteerd worden. Beschouw bijvoorbeeld de elementaire kwadratische functie <m>f(x)=x^2</m>. Als we de grafiek van <m>f</m> spiegelen om <m>y=x</m>, dan is het resultaat niet de grafiek van een functie: voor alle <m>x</m>-waarden, behalve <m>x=0</m>, zijn er twee <m>y</m>-waarden. Het is ook onmiddellijk duidelijk dat dit komt omdat de functie <m>f</m> twee verschillende <m>x</m>-waarden, behalve nul, afbeeldt op dezelfde <m>y</m>-waarde.
+    </p>
+    <image source="inv1.png"/>
+  </sidebyside>
+
+  <definition xml:id="def-bijectie">
+    <title>Bijectie</title>
+    <statement>
+      <p>
+        Een functie <m>f</m> die de eigenschap heeft dat elke functiewaarde <m>y</m> het beeld is van precies één <m>x</m> noemen we een bijectie. Grafisch impliceert dit dat elke horizontale rechte de grafiek van <m>f</m> in hoogstens één punt snijdt. Enkel een bijectie kan geïnverteerd worden. 
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Als we van de functie <m>f(x)=x^2</m> twee verschillende functies maken door het domein op te splitsen, dan kunnen we elke functie afzonderlijk wel inverteren:
+    <ol>
+      <li>
         <p>
-          Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>.
+          <m>f_1(x)=x^2</m> voor <m>x \ge 0</m> <m>\Leftrightarrow f^{-1}_1(y)=\sqrt{y}</m>
         </p>
-      </exercise>
+      </li>
+      <li>
+        <p>
+          <m>f_2(x)=x^2</m> voor <m>x \le 0</m> <m>\Leftrightarrow f_2^{-1}(y)=-\sqrt{y}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+  <sidebyside widths="45% 45%">
+     <image source="inv2.png"/>
+     <image source="inv3.png"/>
+  </sidebyside>
+  <p>
+    De grafieken van <m>f_1</m> en <m>f^{-1}_1</m> (links) en de grafieken van <m>f_2</m> en <m>f^{-1}_2</m> (rechts).
+  </p>
+  <exercises>
+    <exercise>
+      <statement>
+        <p>
+          Inverteer onderstaande functies. Probeer zeker elke methode eens uit. Als de functie niet inverteerbaar is, dan beperk je het domein zodat je wel kan inverteren. Teken ook de grafieken van <m>f</m> en <m>f^{-1}</m> met Desmos.
+          <ol>
+            <li>
+              <p>
+                <m>f(x) = -\dfrac{1}{2} \sqrt{6x+3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x) = \dfrac{4}{5+x^2}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x) = 2(x+1)^2 - 18</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\begin{cases} 2x \qquad \text{als } x \lt 0 \\ x^2 \qquad \text{als }x \ge 0 \end{cases}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
       <solution>
         <p>
-          <m>5</m>
+          <ol>
+            <li>
+              <p>
+                <m>  f^{-1}(y)=\dfrac{4y^2-3}{6} \quad (y \le 0)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f^{-1}(y) =\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \ge 0</m> en <m>f^{-1}(y) =-\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \lt 0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f^{-1}(y)=-1+\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in [-1,+\infty[</m> en <m>f^{-1}(y)=-1-\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in ]-\infty,-1[</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f^{-1}(y)=\begin{cases} \dfrac{y}{2} \quad x \lt 0 \\ \sqrt{y} \quad x \ge 0 \end{cases}</m>
+              </p>
+            </li>
+          </ol>
         </p>
       </solution>
-    </exercises>
-</section> 
+    </exercise>
+    <exercise>
+      <p>
+        Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>.
+      </p>
+    </exercise>
+    <solution>
+      <p>
+        <m>5</m>
+      </p>
+    </solution>
+  </exercises>
 
-
-
-
+</section>

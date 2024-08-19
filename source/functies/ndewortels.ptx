@@ -159,15 +159,6 @@
             </image>
   </sidebyside>
 
-  <definition xml:id="def-bijectie">
-    <title>Bijectie</title>
-    <statement>
-      <p>
-        Een functie <m>f</m> die de eigenschap heeft dat elke functiewaarde <m>y</m> het beeld is van precies één <m>x</m> noemen we een bijectie. Grafisch impliceert dit dat elke horizontale rechte de grafiek van <m>f</m> in hoogstens één punt snijdt. Enkel een bijectie kan geïnverteerd worden. 
-      </p>
-    </statement>
-  </definition>
-
   <p>
     Om machtsfuncties met even exponent toch te kunnen inverteren moeten we het domein beperken tot positieve of negatieve argumenten.
   </p>
