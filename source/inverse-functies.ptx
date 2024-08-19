@@ -6,46 +6,10 @@
     <xi:include href="./functies/inverse-inl.ptx"/>
     <xi:include href="./functies/inverse-voorschrift.ptx" />
     <xi:include href="./algebra/vergelijkingen-inversef.ptx" />
-
-    <!-- <p>
-        We frissen even kort de belangrijkste eigenschappen van de inverse functie op.
-    </p>
-    
-      <assemblage xml:id="assemblage-inverse-functies">
-        <title>Eigenschappen van de inverse functie</title>
-        <p>
-          Gegeven een bijectie <m>f</m>. De inverse functie van <m>f</m> noteren we als <m>f^{-1}</m> en voor alle <m>x \in \textrm{dom} f</m> en <m>y \in \textrm{ber} f</m> geldt er dat:
-          <me>
-            f(x) = y \Leftrightarrow x = f^{-1}(y)
-          </me>
-          Uit deze definitie volgt onmiddellijk dat
-          <ul>
-            <li>
-              <p>
-                <m>\textrm{dom} f^{-1} = \textrm{ber} f</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\textrm{ber} f^{-1} = \textrm{dom} f</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>(a,b)</m> behoort tot de grafiek van <m>f \Leftrightarrow (b,a) </m> behoort tot de grafiek van <m>f^{-1}</m>, d.w.z. dat de grafieken elkaars spiegelbeeld zijn om de rechte met vergelijking <m>y=x</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>(f^{-1} \circ f)(x)=x</m> voor alle <m>x \in \textrm{dom} f</m> en <m>(f \circ f^{-1})(y)=y</m> voor alle <m>y \in \textrm{dom} f^{-1}</m>
-              </p>
-            </li>
-          </ul>
-          Als we de functie <m>f</m> als een proces beschouwen, dan doet <m>f^{-1}</m> dit proces teniet, d.w.z. <m>f</m> en <m>f^{-1}</m> neutraliseren elkaar.
-        </p>
-      </assemblage> -->
+    <xi:include href="./algebra/gonio-vergelijkingen.ptx" />
 
     <exercises xml:id="exercises-inversefuncties">
-        <xi:include href="./functies/inverse-inl-oef.ptx" />    
+        <xi:include href="./functies/inverse-inl-oef.ptx" />  
+        <xi:include href="./functies/inverse-voorschrift-oef.ptx" />  
     </exercises>
 </chapter>    

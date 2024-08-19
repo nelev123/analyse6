@@ -233,17 +233,4 @@
         </p>
       </answer>
     </exercise>
-
-    <exercise>
-        <statement>
-          <p>
-            Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>. Tip: je hebt het functievoorschrift <m>g^{-1}(x)</m> niet nodig.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>5</m>
-          </p>
-        </answer>
-    </exercise>
 </subexercises>

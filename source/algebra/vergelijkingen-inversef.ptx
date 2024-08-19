@@ -2,6 +2,7 @@
 
 <section>
   <title>Vergelijkingen oplossen</title>
+
   <introduction>
     <p>
       Het oplossen van de vergelijking <m>f(x)=b</m> komt eigenlijk neer op het bepalen van de inverse-functiewaarde <m>f^{-1}(b)</m>:
@@ -10,10 +11,11 @@
       </me>
       Als <m>f</m> kan geschreven worden als de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m>, dan is de oplossing van de vergelijking <me>x=f^{-1}(b)=(f^{-1}_{1} \circ f_{2}^{-1} \circ \ldots \circ f_{n-1}^{-1} \circ f_n^{-1})(b)</me>.
     </p>
+
     <example>
       <title>Inleidend voorbeeld</title>
       <p>
-        Gegeven de vergelijking <m>\dfrac{3}{x-1}+2=5</m>. Het linkerlid wordt bepaald door de functie met voorschrift <m>f(x)=\dfrac{3}{x-1}+2</m>. De inverse functie is <m>f^{-1}(y)=\dfrac{3}{y-2}+1</m> en de oplossing van de vergelijking bijgevolg <m>x=f^{-1}(5)=2</m>. We krijgen natuurlijk dezelfde oplossing als we de vergelijking met de balansmethode bepalen:
+        Gegeven de vergelijking <m>\dfrac{3}{x-1}+2=5</m>. Het linkerlid wordt bepaald door de functie met voorschrift <m>f(x)=\dfrac{3}{x-1}+2</m>. De inverse functie is <m>f^{-1}(y)=\dfrac{3}{y-2}+1</m> en de oplossing van de vergelijking bijgevolg <m>x=f^{-1}(5)=2</m>. We krijgen natuurlijk dezelfde oplossing als we de vergelijking met de balansmethode oplossen:
         <md>
           <mrow>\amp \; \frac{3}{x-1}+2=5</mrow>
           <mrow>\Leftrightarrow \amp \; \frac{3}{x-1}=3</mrow>
@@ -27,14 +29,40 @@
         <caption>
           De grafiek van de functie <m>f(x)=\frac{3}{x-1}+2</m> en de inverse functie <m>f^{-1}(x)=\frac{3}{x-2}+1</m> (streepjeslijn).
         </caption>
-        <image  width="60%" source="desmos-inv1.png"/>
+        <image  width="60%" source="vgl-inv1.png"/>
       </figure>
     </example>
+
     <p>
-      Niet elke vergelijking heeft natuurlijk de vorm <m>f(x)=b</m>, maar we zullen ons voorlopig beperken tot vergelijkingen die kunnen herschreven worden in deze vorm of in de algemenere vorm <m>g(f_1(x)) = g(f_2(x))</m>. Als de functie <m>f</m> een bijectie is, dan heeft de vergelijking <m>f(x)=b</m> precies één oplossing op voorwaarde dat <m>b</m> behoort tot het bereik van <m>f</m>. Van zodra één van de functies in de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m> geen bijectie is, kan de vergelijking <m>f(x)=b</m> meerdere oplossingen hebben.
+      Niet elke vergelijking heeft natuurlijk de vorm <m>f(x)=b</m>, maar we zullen ons voorlopig beperken tot vergelijkingen die kunnen herschreven worden in deze vorm of in de algemenere vorm <m>g(f_1(x)) = g(f_2(x))</m>.
     </p>
+
+    <p>
+      Als de functie <m>f</m> een bijectie is, dan heeft de vergelijking <m>f(x)=b</m> precies één oplossing op voorwaarde dat <m>b</m> behoort tot het bereik van <m>f</m>. Van zodra één van de functies in de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m> geen bijectie is, kan de vergelijking <m>f(x)=b</m> meerdere oplossingen hebben. Zo heeft een kwadratische vergelijking er in het algemeen twee en een goniometrische vergelijking zelfs een oneindig aantal.
+    </p>
+
     <example>
-      <title>Herschrijven in de vorm <m>f(x)=b</m></title>
+      <title>Een goniometrische vergelijking</title>
+      <p>
+         Beschouw de vergelijking <m>1+\sin(2x-3)=\dfrac{3}{2}</m>:
+        <md>
+          <mrow>\amp  \; 1+\sin(2x-3)=\frac{3}{2}</mrow>
+          <mrow>\Leftrightarrow \amp  \; \sin(2x-3)=\frac{1}{2} </mrow>
+          <mrow>\Leftrightarrow \amp  \; 2x-3=\frac{\pi}{6}+2k\pi \qquad \text{of}\qquad 2x-3=\frac{5\pi}{6}+2k\pi</mrow>
+          <mrow>\Leftrightarrow \amp  \; x = \frac{\pi}{12}+\frac{3}{2}+k\pi \qquad \text{of} \qquad x = \frac{5\pi}{12}+\frac{3}{2}+k\pi</mrow>
+        </md>
+        met <m>k \in \mathbb{Z}</m>. In het interval <m>[0,2\pi]</m> zijn er twee argumenten waarvoor de sinus gelijk is aan 1/2: <m>\dfrac{\pi}{6}</m> en <m>\dfrac{5\pi}{6}</m>. Aangezien de sinusfunctie periodiek is met periode <m>2\pi</m>, zijn ook alle argumenten van de vorm <m>x=\frac{\pi}{6}+2k\pi</m> of <m>x=\frac{5\pi}{6}+2k\pi</m> met <m>k</m> een willekeurig geheel getal oplossingen van <m>\sin x = 1/2</m>.
+      </p>
+      <figure>
+        <caption>
+          De vergelijking <m>1+\sin(2x-3)=\frac{3}{2}</m> heeft een oneindig aantal oplossingen.
+        </caption>
+        <image  width="50%" source="inverse4.png"/>
+      </figure>
+    </example>
+
+    <example>
+      <title>Herschrijven in de vorm <m>f(x)=b <mdash/> 1 </m></title>
       <p>
         Dit pas je toe als je het kwadraat vervolledigt bij het oplossen van een vierkantsvergelijking. 
         <md>
@@ -46,7 +74,7 @@
         </md>
         Deze vergelijking heeft twee oplossingen omdat de functie <m>x \to x^2</m> geen bijectie is.
       </p>
-      <!-- <p>
+      <p>
         Het rechterlid van de goniometrische vergelijking <m>\sin x \cdot \cos x=\frac{1}{8}</m> kan je met de verdubbelingsformule voor sinus schrijven als een samengestelde functie:
         <md>
           <mrow>\amp \; \sin x \cdot \cos x=\frac{1}{8}</mrow>
@@ -55,8 +83,23 @@
           <mrow>\Leftrightarrow \amp \; 2x = 0,25268 +2k\pi \qquad \text{of} \qquad 2x=2,8889+2k\pi </mrow>
           <mrow>\Leftrightarrow \amp \; x = 0,12634 + k\pi \qquad \text{of} \qquad x=1,4445+k\pi</mrow>
         </md>
-        Deze vergelijking heeft een oneindig aantal oplossingen omdat de sinusfunctie geen bijectie is (zie verder).
-      </p> -->
+        Deze vergelijking heeft een oneindig aantal oplossingen omdat de sinusfunctie periodiek is.
+      </p>
+    </example>
+
+    <example>
+      <title>Herschrijven in de vorm <m>f(x)=b <mdash/> 2 </m></title>
+      <p>
+        Het rechterlid van de goniometrische vergelijking <m>\sin x \cdot \cos x=\frac{1}{8}</m> kan je met de verdubbelingsformule voor sinus schrijven als een samengestelde functie:
+        <md>
+          <mrow>\amp \; \sin x \cdot \cos x=\frac{1}{8}</mrow>
+          <mrow>\Leftrightarrow \amp \; 2 \sin x \cdot \cos x=\frac{1}{4}</mrow>
+          <mrow>\Leftrightarrow \amp \; \sin 2x = \frac{1}{4} </mrow>
+          <mrow>\Leftrightarrow \amp \; 2x = 0,25268 +2k\pi \qquad \text{of} \qquad 2x=2,8889+2k\pi </mrow>
+          <mrow>\Leftrightarrow \amp \; x = 0,12634 + k\pi \qquad \text{of} \qquad x=1,4445+k\pi</mrow>
+        </md>
+        Deze vergelijking heeft een oneindig aantal oplossingen omdat de sinusfunctie periodiek is.
+      </p>
     </example>
     <example>
       <title>Herschrijven in de vorm <m>g(f_1(x))=g(f_2(x))</m></title>
@@ -102,6 +145,7 @@
       Bij het oplossen van vergelijkingen moet je oppassen dat je geen extra oplossingen invoert of oplossingen vergeet.
     </p>
   </introduction>
+
   <subsection>
     <title>Extra oplossingen invoeren</title>
     <example>
@@ -188,39 +232,21 @@
       </figure>
     </example>
   </subsection>
-  <!-- <subsection>
+  <subsection>
     <title>Vergelijkingen met meerdere oplossingen</title>
     <p>
       Als de functie <m>f</m> een bijectie is, dan heeft de vergelijking <m>f(x)=b</m> precies één oplossing op voorwaarde dat <m>b</m> behoort tot het bereik van <m>f</m>. Van zodra één van de functies in de samenstelling <m>f=f_n \circ f_{n-1} \circ \ldots \circ f_{2} \circ f_1</m> geen bijectie is, kan de vergelijking <m>f(x)=b</m> meerdere oplossingen hebben. Een kwadratische vergelijking kan bijvoorbeeld twee oplossingen hebben. Goniometrische vergelijkingen hebben zelfs een oneindig aantal oplossingen.
     </p>
-    <example>
-      <title>Een goniometrische vergelijking</title>
-      <p>
-         Beschouw de vergelijking <m>1+\sin(2x-3)=\dfrac{3}{2}</m>:
-        <md>
-          <mrow>\amp  \; 1+\sin(2x-3)=\frac{3}{2}</mrow>
-          <mrow>\Leftrightarrow \amp  \; \sin(2x-3)=\frac{1}{2} </mrow>
-          <mrow>\Leftrightarrow \amp  \; 2x-3=\frac{\pi}{6}+2k\pi \qquad \text{of}\qquad 2x-3=\frac{5\pi}{6}+2k\pi</mrow>
-          <mrow>\Leftrightarrow \amp  \; x = \frac{\pi}{12}+\frac{3}{2}+k\pi \qquad \text{of} \qquad x = \frac{5\pi}{12}+\frac{3}{2}+k\pi</mrow>
-        </md>
-        met <m>k \in \mathbb{Z}</m>. In het interval <m>[0,2\pi]</m> zijn er twee argumenten waarvoor de sinus gelijk is aan 1/2: <m>\dfrac{\pi}{6}</m> en <m>\dfrac{5\pi}{6}</m>. Aangezien de sinusfunctie periodiek is met periode <m>2\pi</m>, zijn ook alle argumenten van de vorm <m>x=\frac{\pi}{6}+2k\pi</m> of <m>x=\frac{5\pi}{6}+2k\pi</m> met <m>k</m> een willekeurig geheel getal oplossingen van <m>\sin x = 1/2</m>.
-      </p>
-      <figure>
-        <caption>
-          De vergelijking <m>1+\sin(2x-3)=\frac{3}{2}</m> heeft een oneindig aantal oplossingen.
-        </caption>
-        <image  width="50%" source="inverse4.png"/>
-      </figure>
-    </example>
 
-  </subsection> -->
+
+  </subsection>
 
   <exercises>
     <exercise>
       <statement>
         <p>
           Los onderstaande vergelijkingen op. Aangezien we grafieken van samengestelde functies met <m>\sqrt{x}</m> en <m>\dfrac{1}{x}</m>
-          <!-- , <m>\sin x</m> en <m>\cos x</m>  -->
+          , <m>\sin x</m> en <m>\cos x</m> 
           reeds bestudeerd hebben, moet je ook deze oplossingen ook grafisch kunnen schetsen. <alert>Oefen dit als je hiermee nog problemen hebt!</alert>
           <ol>
             <li>
@@ -233,31 +259,31 @@
                 <m>\sqrt{3x+7}+2=4</m>
               </p>
             </li>
-            <!-- <li>
+            <li>
               <p>
                 <m>\displaystyle 4\sin\left [2 \left(x-\frac{\pi}{3} \right) \right ] +1 = 2</m>
               </p>
-            </li> -->
+            </li>
             <li>
               <p>
                 <m>-\dfrac{1}{x+1}=-2</m>
               </p>
             </li>
-            <!-- <li>
+            <li>
               <p>
                 <m>\displaystyle \sin \left (2x+\frac{\pi}{6} \right)=-\cos\left(x-\frac{5\pi}{18} \right)</m>
               </p>
-            </li> -->
+            </li>
             <li>
               <p>
                 <m>\sqrt{2x-1}-\sqrt{x-1}=0</m>
               </p>
             </li>
-            <!-- <li>
+            <li>
               <p>
                 <m>\cos 4x + \sin \dfrac{x}{2}=0</m>
               </p>
-            </li> -->
+            </li>
             <li>
               <p>
                 <m>\sqrt{5x-1}+x=5</m>

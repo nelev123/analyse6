@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Bijecties en het bepalen van <m>f^{-1}</m></title>
+    
+    <exercise>
+      <statement>
+        <p>
+          Stel <m>h(x)=3-\dfrac{x+4}{x-7}</m>. Bereken <m>h(9^{-1})</m>, <m>h^{-1}(9)</m>, <m>[h(9)]^{-1}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>h(9^{-1})=\dfrac{223}{62}</m>, <m>h^{-1}(9)=\dfrac{38}{7}</m> (<m>h(x)=9</m> oplossen naar <m>x</m>) en <m>h(9)=-\dfrac{2}{7}</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Het functievoorschrift van de inverse functie van <m>f(x)=x^5+2x^3</m> kan niet bepaald worden. Gebruik Desmos om na te gaan welk van onderstaande getallen gelijk is aan <m>f^{-1}(8,10693)</m>:
+          <me>
+           1,2 \qquad 1,3 \qquad 1,4 \qquad 1,5
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <m>1,3</m>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal voor elk van onderstaande functies het domein en bereik, de inverse functie en het domein en bereik van de inverse functie.
+          <ol>
+            <li>
+              <p>
+                <m>f(x)=\dfrac{1}{3x+2}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\dfrac{2x}{x+3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\dfrac{3x-2}{4x+5}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <m>f^{-1}(y)=\dfrac{1}{3y}-\dfrac{2}{3}=\dfrac{1-2y}{3y}</m>, <m>\text{dom} f = \text{ber} f^{-1}=\mathbb{R} \setminus \left \lbrace -\frac{2}{3} \right \rbrace</m>, <m>\text{ber} f = \text{dom} f^{-1} =\mathbb{R} \setminus \left \lbrace 0 \right \rbrace </m>
+            </li>
+            <li>
+              <m>f^{-1}(y)=\dfrac{3y}{2-y}</m>, <m>\text{dom} f = \text{ber} f^{-1}=\mathbb{R} \setminus \left \lbrace 3 \right \rbrace</m>, <m>\text{ber} f = \text{dom} f^{-1} =\mathbb{R} \setminus \left \lbrace 2 \right \rbrace </m>
+            </li>
+            <li>
+              <m>f^{-1}(y)=\dfrac{5y+2}{3-4y}</m>, <m>\text{dom} f = \text{ber} f^{-1}=\mathbb{R} \setminus \left \lbrace -\frac{5}{4} \right \rbrace</m>, <m>\text{ber} f = \text{dom} f^{-1} =\mathbb{R} \setminus \left \lbrace \frac{3}{4} \right \rbrace </m>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+            Inverteer onderstaande functies. Als de functie niet inverteerbaar is, dan beperk je het domein zodat je wel kan inverteren. Teken ook de grafieken van <m>f</m> en <m>f^{-1}</m> met Desmos.
+            <ol>
+              <li>
+                <p>
+                  <m>f(x) = -\dfrac{1}{2} \sqrt{6x+3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x) = \dfrac{4}{5+x^2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x) = 2(x+1)^2 - 18</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x)=\begin{cases} 2x \qquad \text{als } x \lt 0 \\ x^2 \qquad \text{als }x \ge 0 \end{cases}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>  f^{-1}(y)=\dfrac{4y^2-3}{6} \quad (y \le 0)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f^{-1}(y) =\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \ge 0</m> en <m>f^{-1}(y) =-\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \lt 0</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f^{-1}(y)=-1+\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in [-1,+\infty[</m> en <m>f^{-1}(y)=-1-\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in ]-\infty,-1[</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f^{-1}(y)=\begin{cases} \dfrac{y}{2} \quad x \lt 0 \\ \sqrt{y} \quad x \ge 0 \end{cases}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+             Het volume van een uitgeademde luchtbel van een duiker is afhankelijk van de diepte <m>h</m> van de duiker en wordt gegeven door <m>V=\dfrac{nRT}{p_0+\rho g h}</m> met <m>n</m> het aantal mol deeltjes in de luchtbel, <m>R</m> de universele gasconstante, <m>T</m> de absolute temperatuur, <m>p_0</m> de standaard luchtdruk en <m>\rho</m> de dichtheid van het water. (Deze formule zou je in principe moeten kunnen opstellen). Bepaal <m>h=f^{-1}(V)</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>h=\dfrac{nRT-p_0V}{\rho g V}</m>
+          </p>
+        </solution>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>.
+              </p>
+        </statement>
+        <answer>
+            <p>
+              <m>5</m>
+            </p>
+        </answer>
+    </exercise>
+
+</subexercises>
