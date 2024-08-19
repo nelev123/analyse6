@@ -65,7 +65,7 @@
   </aside>
 
   <p>
-    We bekijken <m>n</m>- wortels nu even door een functiebril. De functie <m>f(x)=x^2</m> kan niet geïnverteerd worden omdat elke functiewaarde <mdash/> op <m>0</m> na <mdash/> het beeld is van twee verschillende argumenten. Zowel <m>2</m> als <m>-2</m> worden bijvoorbeeld door <m>f</m> afgebeeld op <m>4</m> en <m>f^{-1}(4)</m> is bijgevolg niet ondubbelzinnig bepaald.
+    We bekijken <m>n</m>-de wortels nu even door een functiebril. De functie <m>f(x)=x^2</m> kan niet geïnverteerd worden omdat elke functiewaarde <mdash/> op <m>0</m> na <mdash/> het beeld is van twee verschillende argumenten. Zowel <m>2</m> als <m>-2</m> worden bijvoorbeeld door <m>f</m> afgebeeld op <m>4</m> en <m>f^{-1}(4)</m> is bijgevolg niet ondubbelzinnig bepaald.
     <md>
       <mrow>f(2)=2^2=4 \quad \text{ en } \quad f(-2)=(-2)^2 = 4</mrow>
       <mrow>f^{-1}(4)= \text{ ?}</mrow>
@@ -167,44 +167,6 @@
       </p>
     </statement>
   </definition>
-
-  <p>
-    We frissen even kort de belangrijkste eigenschappen van de inverse functie op.
-  </p>
-
-  <assemblage xml:id="assemblage-inverse-functies">
-    <title>Eigenschappen van de inverse functie</title>
-    <p>
-      Gegeven een bijectie <m>f</m>. De inverse functie van <m>f</m> noteren we als <m>f^{-1}</m> en voor alle <m>x \in \textrm{dom} f</m> en <m>y \in \textrm{ber} f</m> geldt er dat:
-      <me>
-        f(x) = y \Leftrightarrow x = f^{-1}(y)
-      </me>
-      Uit deze definitie volgt onmiddellijk dat
-      <ul>
-        <li>
-          <p>
-            <m>\textrm{dom} f^{-1} = \textrm{ber} f</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>\textrm{ber} f^{-1} = \textrm{dom} f</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>(a,b)</m> behoort tot de grafiek van <m>f \Leftrightarrow (b,a) </m> behoort tot de grafiek van <m>f^{-1}</m>, d.w.z. dat de grafieken elkaars spiegelbeeld zijn om de rechte met vergelijking <m>y=x</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>(f^{-1} \circ f)(x)=x</m> voor alle <m>x \in \textrm{dom} f</m> en <m>(f \circ f^{-1})(y)=y</m> voor alle <m>y \in \textrm{dom} f^{-1}</m>
-          </p>
-        </li>
-      </ul>
-      Als we de functie <m>f</m> als een proces beschouwen, dan doet <m>f^{-1}</m> dit proces teniet, d.w.z. <m>f</m> en <m>f^{-1}</m> neutraliseren elkaar.
-    </p>
-  </assemblage>
 
   <p>
     Om machtsfuncties met even exponent toch te kunnen inverteren moeten we het domein beperken tot positieve of negatieve argumenten.
@@ -378,13 +340,6 @@
               \sqrt{(-4)^2}= 4 \quad \text{ maar } \quad (\sqrt{-4})^2  \text{ is niet gedefinieerd }
             </me>
           </p>
-          <!-- <sidebyside widths="40% 40%">
-              <image source="x2macht-neg.png"/>
-              <image source="wortel2-neg.png"/>
-          </sidebyside>
-          <p>
-            Grafiek van <m>f(x)=x^2</m> als <m>x \in \mathbb{R}^-</m> (links) en van <m>f^{-1}(y)=-\sqrt{y}</m> (rechts).
-          </p> -->
         </li>
       </dl>
     </p>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <section xml:id="finv-inl">
-  <title>Inverse functies: inleiding</title>
+  <title>Inleiding</title>
 
   <introduction>
     <p>
@@ -9,24 +9,6 @@
     </p>
   </introduction>
 
-  <!--
-  <subsection>
-    <title>Een machine als analogie voor een functie</title>
-    <p>
-      Om het concept van een functie beter te begrijpen kan je aan een machine denken. Niet zomaar gelijk welke machine, maar een machine met een invoer (input) en een uitvoer (output) zoals bijvoorbeeld <ul>
-      <li>
-        <p>
-           een fruitpers: je voert fruit in en je krijgt fruitsap terug. Wiskundig bekeken is dit niet zo'n interessante functie omdat je van fruitsap niet meer kan terugkeren naar het fruit dat je erin stopte. Een fruitpers is dus zoals de constante functie <m>f(x)=c</m> (<m>c \in \mathbb{R}</m>) die elke invoerwaarde <m>x</m> gewoon afbeeldt op <m>c</m>. We zeggen dat de functie <m>f(x)=c</m> niet inverteerbaar is (zie later). Op basis van de functiewaarde (de uitvoer) kan je niet meer achterhalen wat het argument (de invoer) was.
-        </p>
-      </li>
-      <li>
-        een lopende band die dekseltjes op doosjes met boter plaatst. Dit is een functie die wel inverteerbaar is: als je het deksel eraf haalt, heb je gewoon terug een doosje met boter.
-      </li>
-    </ul>
-      Een belangrijke beperking hierbij is wel dat een welbepaalde invoer steeds een unieke uitvoer heeft. Als je appels in de fruitpers stopt krijg je altijd appelsap, druiven geven druivensap, <ellipsis /> De verzameling van alle mogelijke objecten die je in de machine kan stoppen, noemen we het <term>domein</term> van die functie; de verzameling van alle mogelijke objecten die er aan de andere kant uitkomen, noemen we het <term>bereik</term>.
-    </p>
-  </subsection>
--->
   <subsection>
     <title>Omzetten van eenheden</title>
     <p>
@@ -42,30 +24,9 @@
         180^{\circ} = \pi \text{ rad} \Leftrightarrow \left ( \dfrac{180}{\pi} \right )^{\circ} = 1 \text{ rad} \Leftrightarrow  \left ( \dfrac{360}{\pi} \right )^{\circ} = 2 \text{ rad} \Leftrightarrow  2 \text{ rad} \approx 114,6^{\circ}
       </me>
     </p>
-    <aside>
-      <title>Notatie</title>
-      <p>
-        Het symbool <m>\Leftrightarrow</m> betekent dat dat wat voor de pijl staat equivalent is met wat erna staat. Vaak leest met dit ook als <sq><ellipsis/> als en slechts als <ellipsis/></sq>. Het symbool <m>\approx</m> betekent <sq>is ongeveer gelijk aan</sq>.
-        <notation>
-          <usage>
-            <m>\Leftrightarrow</m>
-          </usage>
-          <description>
-             <ellipsis/> is equivalent met <ellipsis/>; of <ellipsis/> als en slechts als <ellipsis/>
-          </description>
-        </notation>
-        <notation>
-          <usage>
-            <m>\approx</m>
-          </usage>
-          <description>
-            is ongeveer gelijk aan
-          </description>
-        </notation>
-      </p>
-    </aside>
+
     <p>
-      Je kan ook een <q>functiebril</q> opzetten om naar het omzetten van eenheden te kijken. Functies zijn één van de basispijlers van de wiskunde en het omzetten van eenheden is een goede context om het begrip inverse functie in te leiden. Stel dat <m>f</m> de <term>functie</term> is die een hoek in graden omzet naar een hoek in radialen. De hoek in graden stellen we voor door de variabele <m>\alpha</m> en de hoek in radialen door de variabele <m>\alpha_r</m>. Om alles wat compacter te kunnen noteren, laten we ook de eenheden weg.
+      Je kan ook een <q>functiebril</q> opzetten om naar het omzetten van eenheden te kijken. Stel dat <m>f</m> de functie is die een hoek in graden omzet naar een hoek in radialen. De hoek in graden stellen we voor door de variabele <m>\alpha</m> en de hoek in radialen door de variabele <m>\alpha_r</m>. Om alles wat compacter te kunnen noteren, laten we ook de eenheden weg:
     </p>
     <image xml:id="fig-finv-inl-hoeken" width="40%">
         <latex-image>
@@ -76,7 +37,7 @@
             \begin{pgfonlayer}{nodelayer}
           		\node [style=none, label={left:$\alpha$}] (0) at (-2, 0) {};
           		\node [style=none] (1) at (0, 0) {};
-          		\node [style=none, label={right:$\alpha _r$}] (2) at (2, 0) {};
+          		\node [style=none, label={right:$\alpha _r=f(\alpha)$}] (2) at (2, 0) {};
           		\node [style=functie klein] (3) at (0, 0) {$f$};
           	\end{pgfonlayer}
           	\begin{pgfonlayer}{edgelayer}
@@ -87,11 +48,7 @@
         </latex-image>
     </image>
     <p>
-      <m>\alpha</m> noemen we het <term>argument</term> (d.w.z. de invoer) van de functie; <m>\alpha_r</m> is de <term>functiewaarde</term> (d.w.z. de uitvoer) van de functie. We noteren
-        <me>
-          \alpha_r = f(\alpha)
-        </me>
-      Het <term>functievoorschrift</term> van de functie <m>f</m> is
+      en het functievoorschrift is
         <me>
           f(\alpha) = \dfrac{\pi}{180} \alpha
         </me>
@@ -180,21 +137,7 @@
           \end{tikzpicture}]]>
         </latex-image>
     </image>
-    <p>
-      Merk op dat de variabele <m>\alpha</m> in de uitdrukking voor <m>f(\alpha)</m> een <q>dummy</q>-variabele is. Je kan evengoed schrijven dat
-      <md>
-        <mrow>\amp f(x) = \frac{\pi}{180} x </mrow>
-        <mrow>\text{of } \; \amp f(t) = \frac{\pi}{180} t </mrow>
-        <mrow>\text{of } \; \amp f(\square) = \frac{\pi}{180} \square </mrow>
-      </md>
-      Het functievoorschrift legt gewoon vast wat er met het argument van de functie moet gebeuren en hangt niet af van het symbool dat we gebruiken om het argument voor te stellen. Stel dat <m>f(x)=2x-3</m>, dan is
-      <md>
-        <mrow>\amp f(4)=5</mrow>
-        <mrow>\amp f(t^2)=2t^2-3</mrow>
-        <mrow>\amp f(k+l)=2k+2m-3</mrow>
-        <mrow>\amp f(-x+1)=2(-x+1)-3=-2x-1</mrow>
-      </md>
-    </p>
+
     <assemblage>
       <title>Inverse functie</title>
       <idx><h>functie</h><h>inverse</h></idx>
@@ -264,7 +207,7 @@
         <me>
           V = \frac{m}{\rho}
         </me>
-        Aangezien je nu <m>V</m> hebt bepaald in functie van <m>m</m>, lees je in het rechterlid het functievoorschrift van <m>f^{-1}</m> af, namelijk <m>f^{-1}(m)=\frac{m}{V}</m>.
+        Aangezien je nu <m>V</m> hebt bepaald in functie van <m>m</m>, lees je in het rechterlid het functievoorschrift van <m>f^{-1}</m> af, namelijk <m>f^{-1}(m)=\frac{m}{\rho}</m>.
       </p>
       <image xml:id="fig-finv-inl-hoeken-6" width="50%">
           <latex-image>
@@ -333,7 +276,7 @@
             Een wandelaar stapt op een rechte lijn met een snelheid van 1 m/s. Op het tijdstip <m>t=0</m> is zijn positie <m>x=2</m> m. Op elk ander tijdstip kan zijn positie dan berekend worden met <m>x=2+t</m>.
           </p>
         <sidebyside  width="60%">
-              <image source="images/wandelen.png"/>
+              <image source="wandelen.png"/>
         </sidebyside>
         <p>
           Als we willen weten op welk tijdstip de positie gelijk is aan <m>5</m> m, dan stellen we <m>x=5</m> en lossen we de vergelijking op naar <m>t</m>:
@@ -353,551 +296,16 @@
               t=f^{-1}(x) \qquad \text{met} \qquad f^{-1}(x)=x-2
             </me>
           </p>
-          <image source="images/tabel1.png"/>
+          <image source="tabel1.png"/>
         </sidebyside>
       </example>
 
-      <exploration>
+      <activity>
         <statement>
           <p>
-            Hou bij welke formules je tegenkomt in andere vakken. Voor elke formule kies je <m>g_1</m> en <m>g_2</m> en schrijf je <m>f(g_1)</m> en <m>f^{-1}(g_2)</m> op.
+            Kies vijf formules die je kent uit andere vakken. Voor elke formule kies je <m>g_1</m> en <m>g_2</m> en schrijf je <m>f(g_1)</m> en <m>f^{-1}(g_2)</m> op.
           </p>
         </statement>
-      </exploration>
+      </activity>
   </subsection>
-
-  <subsection>
-    <title>Vergelijkingen van rechten</title>
-    <assemblage>
-      <title>Grafiek van een lineaire functie</title>
-      <p>
-         Het functievoorschrift van een <term>lineaire functie</term> <m>f</m> wordt  gegeven door <m>f(x)=ax+b</m> (<m>a,b \in \mathbb{R}</m> en <m>a \neq 0</m>). De grafiek van een lineaire functie is een schuine rechte en <m>a</m> en <m>b</m> hebben een eenvoudige meetkundige interpretatie.
-        <dl>
-          <li>
-            <title>richtingscoëfficiënt</title>
-            <p>
-              De richtingscoëfficiënt (afkorting: rico) <m>a</m> bepaalt de snelheid waarmee de functiewaarden stijgen of dalen (i.e. de <q>steilheid</q> van de rechte). Met behulp van twee willekeurige punten <m>(x_1,y_1)</m> en <m>(x_2,y_2)</m> van de rechte, bereken je de rico als volgt:
-              <me>
-              a = \frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}
-              </me>
-            </p>
-          </li>
-          <li>
-            <title>snijpunt met <m>y</m>-as</title>
-            <p>
-              <m>b</m> is de <m>y</m>-coördinaat van het snijpunt van de rechte met de <m>y</m>-as.
-            </p>
-          </li>
-        </dl>
-      </p>
-      <sidebyside widths="50%" margins="auto" valign="middle">
-      <image xml:id="fig-rico">
-          <latex-image>
-              <![CDATA[
-              \begin{tikzpicture}
-              \begin{axis}[
-                  xtick={-6,-4,...,6},
-                  ytick={-15,-10,...,10},
-                  xmax=7 ,ymax=15,ymin=-17,xmin=-7,
-                  axis lines=middle,
-                  grid=both,
-                  domain=-14:14,
-                  xlabel=$x$,
-                  ylabel=$y$
-                  ]
-              \addplot[smooth,thick,samples=100]{3*x+2};
-              \node at (axis cs:10,5) {$f(x)=x$};
-              \draw[fill=black] (axis cs:-5,-13) circle (0.08cm);
-              \draw[fill=black] (axis cs:-4,-10) circle (0.08cm);
-              \draw[fill=black] (axis cs:-3,-7) circle (0.08cm) node[inner sep=0pt,left=0.2cm] {$(x_1,y_1)$};
-              \draw[fill=black] (axis cs:0,2) circle (0.08cm) node[inner sep=0pt,left=0.2cm] {$(0,b)$};
-              \draw[fill=black] (axis cs:2,8) circle (0.08cm) node[inner sep=0pt,right=0.2cm] {$(x_2,y_2)$};
-              \draw[->,very thick,red!80!black] (axis cs:-3,-7)--(axis cs:1.95,-7) node[inner sep=2pt,pos=0.8,below]{$\Delta x$};
-              \draw[->,very thick,red!80!black] (axis cs:2,-7)--(axis cs:2,7.7) node[inner sep=2pt,pos=0.6,right]{$\Delta y$};
-              \draw[->,very thick,red!80!black] (axis cs:-5,-13)--(axis cs:-3.97,-13) node[inner sep=2pt,pos=0.5,below=0.1cm]{$1$};
-              \draw[->,very thick,red!80!black] (axis cs:-4,-13)--(axis cs:-4,-10.2) node[inner sep=2pt,pos=0.6,right=0.1cm]{$a$};
-              \end{axis}
-              \end{tikzpicture}]]>
-            </latex-image>
-          </image>
-        </sidebyside>
-    </assemblage>
-    <sidebyside widths="50% 45%">
-      <p>
-        De vergelijking van een rechte evenwijdig met de <m>x</m>- of de <m>y</m>-as opstellen is erg eenvoudig.
-        <ul>
-          <li>
-            <p>
-              De rechte door de punten <m>(-1,2)</m> en <m>(4,2)</m> is evenwijdig met de <m>x</m>-as en heeft als vergelijking <m>y=2</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-               De rechte door de punten <m>(3,1)</m> en <m>(3,5)</m> is evenwijdig met de <m>y</m>-as en heeft als vergelijking <m>x=3</m>.
-            </p>
-          </li>
-        </ul>
-      </p>
-      <image source="images/desmos-graph-hvrechten.png"/>
-    </sidebyside>
-    <p>
-      De vergelijking van een schuine rechte kan op verschillende manieren bepaald worden.
-      <ol>
-        <li>
-          <p>
-            Een schuine rechte kan altijd beschouwd worden als de grafiek van een lineaire functie <m>f(x)=ax+b</m> (<m>a,b \in \mathbb{R}</m> en <m>a \neq 0</m>). <m>a</m> en <m>b</m> kunnen dan bepaald worden door de coördinaten van twee punten in te vullen en het <m>2 \times 2</m>-stelsel in <m>a</m> en <m>b</m> op te lossen.
-          </p>
-        </li>
-        <li>
-          <p>
-            Je kan de richtingscoëfficiënt <m>a</m> grafisch bepalen of berekenen met behulp van de coördinaten van twee punten. Vervolgens kan je <m>b</m> bepalen door de coördinaten van een punt in te vullen en een lineaire vergelijking op te lossen. <m>b</m> kan soms ook onmiddellijk grafisch bepaald worden.
-          </p>
-        </li>
-        <li>
-          <p>
-            Je kan ook rechtstreeks steunen op de formule voor de vergelijking van een rechte door een punt <m>(x_1,y_1)</m> en met richtingscoëfficiënt <m>a</m>:
-            <me>
-            y=a(x-x_1)+y_1
-          </me>
-          </p>
-        </li>
-      </ol>
-    </p>
-
-    <example>
-      <p>
-        We bepalen de vergelijking van de rechte door de punten <m>(2,1)</m> en <m>(5,3)</m> op de drie verschillende manieren.
-        <ol>
-          <li>
-            <p>
-              De coördinaten van de punten invullen in de vergelijking <m>y=ax+b</m> leidt tot het stelsel <m>\begin{cases} 1=2a+b \\ 3=5a+b \end{cases}</m>. We lossen dit stelsel op met de combinatiemethode om <m>a</m> en <m>b</m> te bepalen.
-              <md>
-                <mrow>\amp \begin{cases} 2a+b=1 \\ 5a+b=3 \end{cases} \;\Bigg\rvert\begin{matrix} -5 \\ 2 \end{matrix}\Bigg\rvert\begin{matrix} 1 \\ -1\end{matrix} </mrow>
-                <mrow>\Leftrightarrow \; \amp \begin{cases} -3b=1 \\ -3a=-2\end{cases}</mrow>
-                <mrow>\Leftrightarrow \; \amp \begin{cases} b=-\dfrac{1}{3} \\a=\dfrac{2}{3}\end{cases}</mrow>
-              </md>
-              De vergelijking van de rechte is bijgevolg <m>y=\dfrac{2}{3}x-\dfrac{1}{3}</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              We bereken eerst de rico <m>a</m>
-              <me>
-                a=\frac{3-1}{5-2}=\frac{2}{3}
-              </me>
-              en berekenen vervolgens <m>b</m> door invullen van het punt <m>(2,1)</m> in <m>y=\dfrac{2}{3}x+b</m>
-              <me>
-                1=\frac{2}{3} \cdot 2 + b \Rightarrow b= -\frac{1}{3}
-              </me>
-            </p>
-          </li>
-          <li>
-            <p>
-              De derde manier leidt, na het berekenen van de rico, onmiddellijk tot
-              <me>
-                y=\frac{2}{3}(x-2)+1 \Rightarrow y=\frac{2}{3}x-\frac{1}{3}
-              </me>
-            </p>
-          </li>
-        </ol>
-      </p>
-    </example>
-
-    <activity>
-      <task>
-        <statement>
-          <p>
-            Leid de vergelijking <m>y=a(x-x_1)+y_1</m> af uit de vergelijking <m>y=ax+b</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Punt <m>(x_1,y_1)</m> invullen in <m>y=ax+b \Rightarrow b=y_1-ax_1</m>. Deze uitdrukking voor <m>b</m> terug invullen in <m>y=ax+b</m> geeft de gevraagde vergelijking.
-          </p>
-        </solution>
-      </task>
-      <task>
-        <statement>
-          <p>
-            De vergelijking van de rechte door de punten <m>(c,0)</m> en <m>(0,d)</m> is
-            <me>
-            \frac{x}{c}+\frac{y}{d}=1
-          </me>
-            Leid deze vergelijking af.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            We vertrekken van de vergelijking <m>y=a(x-x_1)+y_1</m> en vullen het punt <m>(c,0)</m> in <m>\Rightarrow y=a(x-c)</m>. Vervolgens vullen we het punt <m>(0,d)</m> in om <m>a</m> te bepalen: <m>d=a(-c) \Rightarrow a=-\frac{d}{c}</m>. De vergelijking wordt dan
-            <md>
-              <mrow>\amp  y=-\frac{d}{c}(x-c)</mrow>
-              <mrow>\Leftrightarrow \; \amp  \frac{d}{y}=-\frac{x}{c}+1</mrow>
-              <mrow>\Leftrightarrow \; \amp  \frac{x}{c}+\frac{y}{d}=1</mrow>
-            </md>
-          </p>
-        </solution>
-      </task>
-    </activity>
-  </subsection>
-
-  <exercises>
-    <subexercises>
-      <title>Vergelijkingen van rechten</title>
-      <exercise>
-        <statement>
-          <p>
-            Liggen de punten <m>(1,1)</m>, <m>(4,-1)</m> en <m>(-5,5)</m> op één rechte? Indien ja, bepaal de vergelijking van deze rechte.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            Ja, op de rechte met vergelijking <m>y=-\frac{2}{3}(x-1)+1</m>.
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal de waarde van <m>t</m> zodat het punt <m>(t,2t)</m> op de rechte door de punten <m>(3,-7)</m> en <m>(5,-15)</m> ligt.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>t=\frac{5}{6}</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal het snijpunt van de rechten <m>y=5x+3</m> en <m>y=-2x+1</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>\left(-\frac{2}{7},\frac{11}{7} \right)</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal de vergelijking van de rechte die door het punt <m>(1,1)</m> gaat en evenwijdig is met de rechte door de punten <m>(2,2)</m> en <m>(4,1)</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>y=-\frac{x}{2}+\frac{3}{2}</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal de vergelijking van de rechte door het punt <m>(4,1)</m> die loodrecht staat op de rechte <m>y=3x+5</m>. Gebruik onderstaande eigenschap:
-          </p>
-          <blockquote>
-            <p>
-              De rechten <m>y=a_1x+b_1</m> en <m>y=a_2x+b_2</m> staan loodrecht op elkaar <m>\Leftrightarrow a_1 \cdot a_2=-1</m>.
-            </p>
-          </blockquote>
-        </statement>
-        <answer>
-          <p>
-            <m>y=-\frac{x}{3}+\frac{7}{3}</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal de waarde van <m>t</m> zodat de rechte door de punten <m>(1,-2)</m> en <m>(3,3)</m> loodrecht staat op de rechte door de punten <m>(9,-1)</m> en <m>(t,1)</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>t=4</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal <m>b</m> zodat de drie rechten <m>y=2x+b</m>, <m>y=3x-5</m> en <m>y=-4x+6</m> een gemeenschappelijk snijpunt hebben.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>b=-\frac{24}{7}</m>
-          </p>
-        </answer>
-      </exercise>
-    </subexercises>
-    <subexercises>
-      <title>Inverse functies</title>
-      <exercise>
-        <statement>
-          <p>
-            Vul aan: 1 m/s <m>=</m> km/h. Gebruik deze gelijheid vervolgens om 5 m/s om te zetten naar km/h  en om 20 km/h om te zetten naar m/s.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            1 m/s <m>=</m> 3,6 km/h <m>\Rightarrow</m> 5 m/s <m>=</m> 18 km/h en 20 km/h <m>=</m> 5,6 m/s.
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-             Voor 1 Britse pond (<m>p</m>) betaal je momenteel 1,15 Euro (<m>e</m>). Stel de functie <m>p=f(e)</m> op en de inverse functie <m>e=f^{-1}(p)</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>f(e)=\frac{e}{1,15}</m> en <m>f^{-1}(p)=1,15p</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Bepaal de inverse functie van
-            <ol>
-              <li>
-                <p>
-                  <m>f(x)=x-6</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f(x)=3x</m>
-                </p>
-              </li>
-              <li>
-                <m>f(x)=-2x+1</m>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  <m>f^{-1}(y)=y+6</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f^{-1}(y)=\dfrac{y}{3}</m>
-                </p>
-              </li>
-              <li>
-                <m>f^{-1}(y)=-\dfrac{y}{2}+\dfrac{1}{2}</m>
-              </li>
-            </ol>
-          </p>
-        </answer>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            (Vervolg vorige oefening.) Teken telkens de grafiek van <m>f</m> en <m>f^{-1}</m> met Desmos. Wat merk je op? Verklaar je observatie.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            Ze zijn elkaars spiegelbeeld over de rechte <m>y=x</m>. Dit is logisch want <m>(a,b) \in </m> grafiek van <m>f</m> is equivalent met <m>(b,a) \in </m> grafiek van <m>f^{-1}</m>.
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Een temperatuur van <m>\theta</m> graden Celsius komt overeen met een temperatuur <m>\theta_F</m> van <m>\frac{9}{5} \theta+32</m> graden Fahrenheit. Bepaal <m>\theta_F=f(\theta)</m> en <m>\theta=f^{-1}(\theta_F)</m>. Teken beide grafieken met Desmos en controleer dat ze elkaars spiegelbeeld zijn over de rechte <m>y=x</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>f(\theta)=\dfrac{9}{5}\theta+32</m> en <m>f^{-1}(\theta_F)=\dfrac{5}{9} (\theta_F-32)</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            (Vervolg vorige oefening.) Tot nog toe hebben we gemakshalve de eenheden weggelaten. Hoe moeten de functievoorschriten <m>f(\theta)</m> en <m>f^{-1}(\theta_F)</m> aangepast worden als je de eenheden niet weglaat?
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>f(\theta)=\dfrac{9 \, ^{\circ}{\text{F}}}{5 \, ^{\circ}\text{C} }\theta+32 \, ^{\circ}{\text{F}}</m> en <m>f^{-1}(\theta_F)=\dfrac{5^{\circ}\text{C}}{9^{\circ}\text{F}} (\theta_F -32 ^{\circ}\text{F})</m>
-          </p>
-        </answer>
-      </exercise>
-
-      <exercise>
-        <statement>
-          <p>
-            Herneem <xref ref="finv-inl-vb-wandelaar"/> van de wandelaar, maar ga er nu vanuit dat hij loopt met een snelheid van 3 m/s.
-            <ol>
-              <li>
-                <p>
-                  Bepaal <m>x=f(t)</m> en <m>t=f^{-1}(x)</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Beide functies zijn lineair. Wat is het verband tussen hun richtingscoëfficiënten?
-                </p>
-              </li>
-              <li>
-                <p>
-                  Schets beide grafieken.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  <m>f(t)=2+3t</m> en <m>f^{-1}(x)=\dfrac{x-2}{3}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  Ze zijn elkaars inverse.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Controleer met Desmos.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            De beweging van een persoon wordt bepaald door <m>x=f(t)</m>, met <m>f(t)</m> gegeven door
-            <me>
-              f(t)=\begin{cases}
-              1+2t \quad 0\le t \le 3\\
-              7-0,5(t-3) \quad 3 \lt t \le 10
-              \end{cases}
-            </me>
-            Voor alle andere tijdstippen is de functie niet gedefinieerd. Het <term>domein</term> van <m>f</m> is nu verdeeld in verschillende intervallen met elk een verschillend functievoorschrift. Een dergelijke functie wordt <term>een stuksgewijs gedefinieerde</term> functie genoemd. Bepaal de inverse functie <m>t=f^{-1}(x)</m> en plot de grafiek in Desmos.
-          </p>
-            <interactive desmos="kydepnnda4" width="100%" aspect="4:2" preview="images/desmos-stuksgewijs.png"/>
-        </statement>
-        <answer>
-          <p>
-            <m>f^{-1}(x)=\begin{cases} \dfrac{x-1}{2} \quad 1 \le x \le 7 \\ -2x+17 \quad 3,5 \le x \lt 7 \end{cases}</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            De algemene vorm van de ideale gaswet is
-            <me>
-              pV=nRT
-            </me>
-            met <m>p</m> de druk in Pa, <m>V</m> het volume in <m>m^3</m>, <m>n</m> de stofhoeveelheid in mol, <m>T</m> de temperatuur in K en <m>R=8,31</m> J/(mol<m>\cdot</m>K) de universele gasconstante.
-            <ol>
-              <li>
-                <p>
-                  Bepaal de functievoorschriften <m>p=f(V)</m> en <m>V=f^{-1}(p)</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Bepaal de functievoorschriften <m>p=f(n)</m> en <m>n=f^{-1}(p)</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Bespreek de grafieken van <m>p=f(n)</m> en <m>n=f^{-1}(p)</m> (soort grafiek en eigenschappen i.f.v. de andere grootheden).
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  <m>f(V)=nRT \cdot \dfrac{1}{V}</m> en <m>f^{-1}(p)=nRT \cdot \dfrac{1}{p}</m>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>f(n)=\dfrac{RT}{V} \cdot n</m> en <m>f^{-1}(p)= \dfrac{V}{RT} \cdot n</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Gegeven de algemene lineaire functie <m>f(x)=ax+b</m>. Bepaal <m>f^{-1}(y)</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>f^{-1}(y)=\dfrac{y-b}{a}</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Voor een ERB (eenparig rechtlijnige beweging) geldt <m>x=f(t)</m> met <m>f(t)=v_x(t-t_b)+x_b</m> met <m>x_b</m> de positie op <m>t_b</m> en <m>v_x</m> de snelheid in de <m>x</m>-richting. Bepaal <m>t=f^{-1}(x)</m>.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>f^{-1}(x)=\dfrac{x-x_b}{v_x}+t_b</m>
-          </p>
-        </answer>
-      </exercise>
-    </subexercises>
-
-    <subexercises>
-      <title>Verkennende oefeningen</title>
-      <exercise>
-        <statement>
-          De kinetische energie <m>E_k</m> is een functie van de snelheid <m>v</m>: <m>E_k=f(v)</m> met <m>f(v)=\dfrac{mv^2}{2}</m>. Bepaal <m>v=f^{-1}(E_k)</m>.
-        </statement>
-        <answer>
-          <p>
-            <m>f^{-1}(E_k)=\sqrt{\dfrac{2 E_k}{m}}</m>
-          </p>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>. Tip: je hebt het functievoorschrift <m>g^{-1}(x)</m> niet nodig.
-          </p>
-        </statement>
-        <answer>
-          <p>
-            <m>5</m>
-          </p>
-        </answer>
-      </exercise>
-
-    </subexercises>
-  </exercises>
 </section>

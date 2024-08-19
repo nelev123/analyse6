@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Inleiding</title>
+    <exercise>
+      <statement>
+        <p>
+           Voor 1 Britse pond (<m>p</m>) betaal je momenteel 1,17 Euro (<m>e</m>). Stel de functie <m>p=f(e)</m> op en de inverse functie <m>e=f^{-1}(p)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f(e)=\frac{e}{1,17}</m> en <m>f^{-1}(p)=1,17p</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bepaal de inverse functie van
+          <ol>
+            <li>
+              <p>
+                <m>f(x)=x-6</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=3x</m>
+              </p>
+            </li>
+            <li>
+              <m>f(x)=-2x+1</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>f^{-1}(y)=y+6</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f^{-1}(y)=\dfrac{y}{3}</m>
+              </p>
+            </li>
+            <li>
+              <m>f^{-1}(y)=-\dfrac{y}{2}+\dfrac{1}{2}</m>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          (Vervolg vorige oefening.) Teken telkens de grafiek van <m>f</m> en <m>f^{-1}</m> met Desmos. Wat merk je op? Verklaar je observatie.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Ze zijn elkaars spiegelbeeld over de rechte <m>y=x</m>. Dit is logisch want <m>(a,b) \in </m> grafiek van <m>f</m> is equivalent met <m>(b,a) \in </m> grafiek van <m>f^{-1}</m>.
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Een temperatuur van <m>\theta</m> graden Celsius komt overeen met een temperatuur <m>\theta_F</m> van <m>\frac{9}{5} \theta+32</m> graden Fahrenheit. Bepaal <m>\theta_F=f(\theta)</m> en <m>\theta=f^{-1}(\theta_F)</m>. Teken beide grafieken met Desmos en controleer dat ze elkaars spiegelbeeld zijn over de rechte <m>y=x</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f(\theta)=\dfrac{9}{5}\theta+32</m> en <m>f^{-1}(\theta_F)=\dfrac{5}{9} (\theta_F-32)</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          (Vervolg vorige oefening.) Tot nog toe hebben we gemakshalve de eenheden weggelaten. Hoe moeten de functievoorschriten <m>f(\theta)</m> en <m>f^{-1}(\theta_F)</m> aangepast worden als je de eenheden niet weglaat?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f(\theta)=\dfrac{9 \, ^{\circ}{\text{F}}}{5 \, ^{\circ}\text{C} }\theta+32 \, ^{\circ}{\text{F}}</m> en <m>f^{-1}(\theta_F)=\dfrac{5^{\circ}\text{C}}{9^{\circ}\text{F}} (\theta_F -32 ^{\circ}\text{F})</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Herneem <xref ref="finv-inl-vb-wandelaar"/> van de wandelaar, maar ga er nu vanuit dat hij loopt met een snelheid van 3 m/s.
+          <ol>
+            <li>
+              <p>
+                Bepaal <m>x=f(t)</m> en <m>t=f^{-1}(x)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Beide functies zijn lineair. Wat is het verband tussen hun richtingscoëfficiënten?
+              </p>
+            </li>
+            <li>
+              <p>
+                Schets beide grafieken.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>f(t)=2+3t</m> en <m>f^{-1}(x)=\dfrac{x-2}{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                Ze zijn elkaars inverse.
+              </p>
+            </li>
+            <li>
+              <p>
+                Controleer met Desmos.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          De beweging van een persoon wordt bepaald door <m>x=f(t)</m>, met <m>f(t)</m> gegeven door
+          <me>
+            f(t)=\begin{cases}
+            1+2t \quad 0\le t \le 3\\
+            7-0,5(t-3) \quad 3 \lt t \le 10
+            \end{cases}
+          </me>
+          Voor alle andere tijdstippen is de functie niet gedefinieerd. Bepaal de inverse functie <m>t=f^{-1}(x)</m> en plot de grafiek in Desmos.
+        </p>
+          <interactive desmos="kydepnnda4" width="100%" aspect="4:2" preview="images/desmos-stuksgewijs.png"/>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{-1}(x)=\begin{cases} \dfrac{x-1}{2} \quad 1 \le x \le 7 \\ -2x+17 \quad 3,5 \le x \lt 7 \end{cases}</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          De algemene vorm van de ideale gaswet is
+          <me>
+            pV=nRT
+          </me>
+          met <m>p</m> de druk in Pa, <m>V</m> het volume in <m>m^3</m>, <m>n</m> de stofhoeveelheid in mol, <m>T</m> de temperatuur in K en <m>R=8,31</m> J/(mol<m>\cdot</m>K) de universele gasconstante.
+          <ol>
+            <li>
+              <p>
+                Bepaal de functievoorschriften <m>p=f(V)</m> en <m>V=f^{-1}(p)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bepaal de functievoorschriften <m>p=f(n)</m> en <m>n=f^{-1}(p)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bespreek de grafieken van <m>p=f(n)</m> en <m>n=f^{-1}(p)</m> (soort grafiek en eigenschappen i.f.v. de andere grootheden).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>f(V)=nRT \cdot \dfrac{1}{V}</m> en <m>f^{-1}(p)=nRT \cdot \dfrac{1}{p}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(n)=\dfrac{RT}{V} \cdot n</m> en <m>f^{-1}(p)= \dfrac{V}{RT} \cdot n</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Gegeven de algemene lineaire functie <m>f(x)=ax+b</m>. Bepaal <m>f^{-1}(y)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{-1}(y)=\dfrac{y-b}{a}</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Voor een ERB (eenparig rechtlijnige beweging) geldt <m>x=f(t)</m> met <m>f(t)=v_x(t-t_b)+x_b</m> met <m>x_b</m> de positie op <m>t_b</m> en <m>v_x</m> de snelheid in de <m>x</m>-richting. Bepaal <m>t=f^{-1}(x)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{-1}(x)=\dfrac{x-x_b}{v_x}+t_b</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+            Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>. Tip: je hebt het functievoorschrift <m>g^{-1}(x)</m> niet nodig.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>5</m>
+          </p>
+        </answer>
+    </exercise>
+</subexercises>

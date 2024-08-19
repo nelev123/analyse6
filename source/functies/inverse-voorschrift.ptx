@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+  <section>
+    <title>Het functievoorschrift van <m>f^{-1}</m></title>
+    <p>
+      Als voorbeeld inverteren we de functie <m>f(x)=\sqrt{3x+2}</m>. Het domein van de functie vinden we door te stellen dat <m>3x+2 \ge 0 \Leftrightarrow x \ge -\frac{2}{3}</m>. Het bereik is <m>\mathbb{R}^+</m>. Dit betekent dat <m>dom f^{-1}=\mathbb{R}^+</m> en <m>ber f^{-1}=\left [ -\frac{2}{3},+\infty \right [</m>. We lossen de vergelijking <m>y=\sqrt{3x+2}</m> op naar <m>x</m> om het functievoorschrift van <m>f^{-1}</m> te bepalen:
+      <md>
+        <mrow>\amp y = \sqrt{3x+2}</mrow>
+        <mrow>\Leftrightarrow \amp \; y^2 = 3x+2 \quad (y \ge 0)</mrow>
+        <mrow>\Leftrightarrow \amp \; x = \frac{y^2-2}{3} \quad (y \ge 0)</mrow>
+      </md>
+      In de eerste stap kwadrateren we de vergelijking en moeten we er expliciet bijschrijven dat <m>y \ge 0</m> omdat we anders extra oplossingen invoeren. Het functievoorschrift is dus <m>f^{-1}(y)=\dfrac{y^2-2}{3}</m> met <m>y \ge 0</m>.
+    </p>
+    <p>
+      Als we het hebben over een functie en zijn inverse in een bepaalde context, dan hebben de variabelen <m>x</m> en <m>y</m> een welbepaalde betekenis. Als we gewoon een abstracte functie <m>f(x)</m> beschouwen, dan doet het er eigenlijk niet toe welke variabele er gebruikt wordt. We kunnen dus ook schrijven dat <m>f^{-1}(x)=\dfrac{x^2-2}{3}</m> en de grafiek van <m>f</m> en <m>f^{-1}</m> kunnen in hetzelfde assenstelsel getekend worden:
+    </p>
+    <interactive desmos="mli9hzkn2r" width="100%" aspect="4:2" preview="desmos-fenfmin1.png"/>
+    <p>
+      Merk op dat <m>f(2)=\sqrt{8}=2\sqrt{2}</m> en bijgevolg dat <m>f^{-1}(2\sqrt{2})=2</m>. Dit betekent eveneens dat de oplossing van de vergelijking <m>\sqrt{3x+2}=2\sqrt{2}</m> gelijk is aan 2.
+    </p>
+    <assemblage>
+      <title><m>f^{-1}</m> en het oplossen van vergelijkingen</title>
+      <p>
+        Het oplossen van de vergelijking <m>f(x)=b</m> is equivalent met het bepalen van de inverse functiewaarde  <m>x=f^{-1}(b)</m>.
+      </p>
+    </assemblage>
+    <p>
+      Je kan een functie ook inverteren door de samenstelling uit te schrijven en elke functie in de samenstelling te inverteren. De inverse functie krijg je dan door die inverse functies in omgekeerde volgorde samen te stellen:
+    </p>
+    <sidebyside>
+      <image source="invsamenstellen.png"/>
+    </sidebyside>
+    <p>
+      Dus als <m>f=f_3 \circ f_2 \circ f_1</m>, dan is <m>f^{-1}=f^{-1}_1 \circ f^{-1}_2 \circ f^{-1}_3</m>.
+    </p>
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Gegeven <m>f(x)=mx+b</m>. Bepaal het functievoorschrift van <m>f^{-1}</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>f^{-1}(y)=\dfrac{y-b}{m}</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Stel <m>h(x)=3-\dfrac{x+4}{x-7}</m>. Bereken <m>h(9^{-1})</m>, <m>h^{-1}(9)</m>, <m>[h(9)]^{-1}</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>h(9^{-1})=\dfrac{223}{62}</m>, <m>h^{-1}(9)=\dfrac{38}{7}</m> (<m>h(x)=9</m> oplossen naar <m>x</m>) en <m>h(9)=-\dfrac{2}{7}</m>.
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Het functievoorschrift van de inverse functie van <m>f(x)=x^5+2x^3</m> kan
+            niet bepaald worden. Gebruik Desmos om na te gaan welk van onderstaande getallen gelijk is aan <m>f^{-1}(8,10693)</m>:
+            <me>
+            1,2 \qquad 1,3 \qquad 1,4 \qquad 1,5
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>1,3</m>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Bepaal voor elk van onderstaande functies het domein en bereik, de inverse functie en het domein en bereik van de inverse functie.
+            <ol>
+              <li>
+                <p>
+                  <m>f(x)=\dfrac{1}{3x+2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x)=\dfrac{2x}{x+3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x)=\dfrac{3x-2}{4x+5}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <m>f^{-1}(y)=\dfrac{1}{3y}-\dfrac{2}{3}=\dfrac{1-2y}{3y}</m>, <m>dom f = ber f^{-1}=\mathbb{R} \setminus \left \lbrace -\frac{2}{3} \right \rbrace</m>, <m>ber f = dom f^{-1} =\mathbb{R} \setminus \left \lbrace 0 \right \rbrace </m>
+              </li>
+              <li>
+                <m>f^{-1}(y)=\dfrac{3y}{2-y}</m>, <m>dom f = ber f^{-1}=\mathbb{R} \setminus \left \lbrace 3 \right \rbrace</m>, <m>ber f = dom f^{-1} =\mathbb{R} \setminus \left \lbrace 2 \right \rbrace </m>
+              </li>
+              <li>
+                <m>f^{-1}(y)=\dfrac{5y+2}{3-4y}</m>, <m>dom f = ber f^{-1}=\mathbb{R} \setminus \left \lbrace -\frac{5}{4} \right \rbrace</m>, <m>ber f = dom f^{-1} =\mathbb{R} \setminus \left \lbrace \frac{3}{4} \right \rbrace </m>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+             Het volume van een uitgeademde luchtbel van een duiker is afhankelijk van de diepte <m>h</m> van de duiker en wordt gegeven door <m>V=\dfrac{nRT}{p_0+\rho g h}</m> met <m>n</m> het aantal mol deeltjes in de luchtbel, <m>R</m> de universele gasconstante, <m>T</m> de absolute temperatuur, <m>p_0</m> de standaard luchtdruk en <m>\rho</m> de dichtheid van het water. (Deze formule zou je in principe moeten kunnen opstellen). Bepaal <m>h=f^{-1}(V)</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>h=\dfrac{nRT-p_0V}{\rho g V}</m>
+          </p>
+        </solution>
+      </exercise>
+    </exercises>
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Inverteer onderstaande functies. Probeer zeker elke methode eens uit. Als de functie niet inverteerbaar is, dan beperk je het domein zodat je wel kan inverteren. Teken ook de grafieken van <m>f</m> en <m>f^{-1}</m> met Desmos.
+            <ol>
+              <li>
+                <p>
+                  <m>f(x) = -\dfrac{1}{2} \sqrt{6x+3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x) = \dfrac{4}{5+x^2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x) = 2(x+1)^2 - 18</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f(x)=\begin{cases} 2x \qquad \text{als } x \lt 0 \\ x^2 \qquad \text{als }x \ge 0 \end{cases}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  <m>  f^{-1}(y)=\dfrac{4y^2-3}{6} \quad (y \le 0)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f^{-1}(y) =\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \ge 0</m> en <m>f^{-1}(y) =-\sqrt{\dfrac{4-5y}{y}}</m> als <m>x \lt 0</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f^{-1}(y)=-1+\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in [-1,+\infty[</m> en <m>f^{-1}(y)=-1-\sqrt{\dfrac{y+18}{2}}</m> als <m>x \in ]-\infty,-1[</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>f^{-1}(y)=\begin{cases} \dfrac{y}{2} \quad x \lt 0 \\ \sqrt{y} \quad x \ge 0 \end{cases}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+      <exercise>
+        <p>
+          Veronderstel dat <m>g(x)=x^7+x^3</m>. Bereken <m>(g^{-1}(4))^7 + (g^{-1}(4))^3 +1</m>.
+        </p>
+      </exercise>
+      <solution>
+        <p>
+          <m>5</m>
+        </p>
+      </solution>
+    </exercises>
+</section> 
+
+
+
+
