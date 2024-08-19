@@ -3,6 +3,7 @@
 <chapter xml:id="inversefuncties" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Inverse functies</title>
 
-    <xi:include href="./functies/inversefuncties.ptx" />
+    <xi:include href="./functies/inverse-inl.ptx"/>
+    <!-- <xi:include href="./functies/inversefuncties.ptx" /> -->
     <xi:include href="./algebra/vergelijkingen-inversef.ptx" />
 </chapter>    
