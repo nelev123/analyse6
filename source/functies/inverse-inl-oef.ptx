@@ -154,7 +154,7 @@
           </me>
           Voor alle andere tijdstippen is de functie niet gedefinieerd. Bepaal de inverse functie <m>t=f^{-1}(x)</m> en plot de grafiek in Desmos.
         </p>
-          <interactive desmos="kydepnnda4" width="100%" aspect="4:2" preview="images/desmos-stuksgewijs.png"/>
+          <interactive desmos="kydepnnda4" width="100%" aspect="4:2" />
       </statement>
       <answer>
         <p>

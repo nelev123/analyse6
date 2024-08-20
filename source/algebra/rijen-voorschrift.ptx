@@ -202,7 +202,7 @@
       <exercise>
         <statement>
             <p>
-                Een bos heeft momenteel een populatie van 300 konijnen en dit aantal neemt jaarlijks toe met <m>15/%</m>. Om de groei wat in te perken worden er jaarlijks ook 100 konijnen door de boswachter gedood. Stel een recursief voorschrift op voor de rij die het aantal konijnen voorstelt. 
+                Een bos heeft momenteel een populatie van 300 konijnen en dit aantal neemt jaarlijks toe met 15%. Om de groei wat in te perken worden er jaarlijks ook 100 konijnen door de boswachter gedood. Stel een recursief voorschrift op voor de rij die het aantal konijnen voorstelt. 
             </p>
         </statement>
         <solution>
