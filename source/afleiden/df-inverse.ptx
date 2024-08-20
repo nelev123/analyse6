@@ -2,6 +2,17 @@
 
 <section xml:id="sec-df-inverse">
     <title>Inverse functies afleiden</title>
+
+    <example>
+      <title>De afgeleide van <m>\sqrt{x}</m></title>
+      <p>
+          We leiden de gelijkheid <m>(\sqrt{x})^2 = x </m> af en passen hierbij de kettingregel toe op het linkerlid:
+          <md>
+              <mrow> \amp 2 \sqrt{x} D(\sqrt{x}) = 1 </mrow>
+              <mrow> \Rightarrow \;  \amp D(\sqrt{x}) = \dfrac{1}{2 \sqrt{x}} = \frac{1}{2} x^{-\sfrac{1}{2}}</mrow>
+          </md>
+      </p>
+    </example>
        
     <p>
       We kunnen natuurlijk ook een algemene formule opstellen om inverse functies af te leiden. Hierbij steunen we op de kettingregel, de definitie van inverse functie
@@ -10,20 +21,20 @@
       </me>
       en het feit dat <m>y=(f \circ f^{-1})(y)</m>. We leiden eerst de formule af met behulp van Leibniz-notatie:
       <md>
-        <mrow>\amp \; y=f(x) \qquad (\forall y \in dom \, f^{-1})</mrow>
+        <mrow>\amp \; y=f(x) \qquad (\forall y \in \text{dom} \, f^{-1})</mrow>
         <mrow>\Rightarrow \amp \; \frac{dy}{dy}=\frac{dy}{dx} \frac{dx}{dy}</mrow>
         <mrow>\Rightarrow \amp \; \boxed{\frac{dx}{dy}=\frac{1}{\dfrac{dy}{dx}}}</mrow>
       </md>
       en nog eens met de <m>'</m> notatie
       <md>
-        <mrow>\amp \; y=f(f^{-1}(y)) \qquad (\forall y \in dom \, f^{-1})</mrow>
+        <mrow>\amp \; y=f(f^{-1}(y)) \qquad (\forall y \in \text{dom} \, f^{-1})</mrow>
         <mrow>\Rightarrow \amp \; 1 = f'(f^{-1}(y)) \cdot \left [f^{-1}(y) \right]'</mrow>
         <mrow>\Rightarrow \amp \; \left [f^{-1}(y) \right]' = \frac{1}{f'(f^{-1}(y))}</mrow>
         <mrow>\Rightarrow \amp \; \boxed{\left [f^{-1}(y) \right]' = \frac{1}{f'(x)}}</mrow>
       </md>
     </p>
 
-    <example>
+    <example xml:id="ex-afg-ndewortel">
       <title>De afgeleide van <m>\sqrt[n]{x}</m></title>
       <p>
         We passen bovenstaande formule toe om <m>D(\sqrt[n]{x})</m> te bepalen. Er geldt dat <m>y=x^n \Leftrightarrow x=y^{\sfrac{1}{n}}</m> en <m>\dfrac{dy}{dx}=nx^{n-1}</m>. Bijgevolg is

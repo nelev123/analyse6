@@ -3,28 +3,7 @@
 <subexercises xml:id="exercises-gekoppelde-df">
 <title>Gekoppelde veranderingen</title>
 
-<exercise>
-<statement>
-    <p>
-       Een kegelvormige berg zand groeit langzaam aan. 
-    </p>
-    <image source="kegel.png" width="30%"> </image>
-    <p>
-        <ol>
-            <li>
-                <p>
-                  Schrijf de ogenblikkelijke verandering van het volume, <m>\dfrac{dV}{dt}</m>, in functie van <m>\dfrac{dh}{dt}</m> en <m>\dfrac{dr}{dt}</m> met <m>h</m> de hoogte en <m>r</m> de straal van het grondvlak.  
-                </p>
-            </li>
-            <li>
-                <p>
-                   Veronderstel dat de berg zo groeit dat de hoogte altijd gelijk is aan de helft van de straal en dat het zand naar beneden valt met een snelheid van 0,50 m<m>^3</m> per minuut. Hoe snel verandert de hoogte van de berg als de straal gelijk is aan 2,0 m?
-                </p>
-            </li>
-        </ol>
-    </p>
-</statement>
-</exercise>
+
 <exercise>
     <statement>
         <p>
@@ -47,20 +26,7 @@
         </p>
     </statement>
 </exercise>
-<exercise>
-    <statement>
-        <p>
-            Een ladder met een lengte van 4,0 m staat tegen een muuur. Plots schuift de onderkant van de ladder weg van de muur met een snelheid van 1,2 m/s. Bepaal de snelheid waarmee de bovenkant van de ladder naar beneden glijdt langs de muur op het moment dat de onderkant van de ladder zich op een afstand van 1,5 m van de muur bevindt.
-        </p>
-    </statement>
-</exercise>
-<exercise>
-    <statement>
-        <p>
-           Gas ontsnapt uit een bolvormige ballon met een snelheid van 900 cm<m>^3</m>/min. Hoe snel verandert de oppervlakte van deze ballon als de straal gelijk is aan <m>355</m> cm?
-        </p>
-    </statement>
-</exercise>
+
 <exercise>
     <statement>
         <p>
@@ -98,6 +64,4 @@
     </statement>
 </exercise>
 
-
-    
 </subexercises>

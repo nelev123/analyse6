@@ -11,5 +11,6 @@
         
         <xi:include href="./algebra/ndewortel-oef.ptx" />    
         <xi:include href="./algebra/machten-rationaal-oef.ptx" />
+        <xi:include href="./afleiden/df-macht-oef.ptx"/>
     </exercises>
 </chapter>

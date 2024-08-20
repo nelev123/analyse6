@@ -104,7 +104,6 @@
       </preface>
     </frontmatter>
 
-    <xi:include href="./toepassingen-df.ptx" />
     <xi:include href="./inverse-functies.ptx"/>
     <xi:include href="./machten-wortels.ptx"/>
     <xi:include href="./rijen.ptx" />
@@ -166,8 +165,7 @@
       </statement>
     </exercise> -->
     <xi:include href="./limieten.ptx" />
-    <!--onbepaalde integraal van x^n met n in Z-->
-    <!-- <xi:include href="./integratietechnieken.ptx" /> -->
+    <xi:include href="./integratietechnieken.ptx" />
 
     <backmatter xml:id="backmatter">
       <title>Achteraf</title>

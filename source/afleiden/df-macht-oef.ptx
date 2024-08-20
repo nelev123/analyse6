@@ -46,5 +46,21 @@
             </p>
         </statement>
     </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                <m>f(x) = \cos \sqrt{2x-1}</m>
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+                <m>f(x) = \sqrt{\sin(2x-1)}</m>  
+            </p>
+        </statement>
+    </exercise>
     
 </subexercises>
