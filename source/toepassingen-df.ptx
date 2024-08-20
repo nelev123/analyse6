@@ -10,20 +10,7 @@
     </p>
 </introduction>
 
-<xi:include href="./afleiden/df-context.ptx"/>
-
-<xi:include href="./afleiden/df-macht.ptx"/>
-
-<xi:include href="./afleiden/df-inverse.ptx" />
-
-<xi:include href="./afleiden/differentiaal.ptx" />
-
-<xi:include href="./afleiden/df-gonio.ptx" />
-
 <xi:include href="./afleiden/extremumvraagstukken.ptx" />
-
-<xi:include href="./afleiden/impliciet-afleiden.ptx" />
-
 <xi:include href="./afleiden/gekoppelde-df.ptx" />
 
 <exercises xml:id="exercises-toepassingen-df-oef">

@@ -5,6 +5,7 @@
 
     <xi:include href="./functies/ndewortels.ptx" />
     <xi:include href="./algebra/machten-rationaal.ptx" />
+    <xi:include href="./afleiden/df-macht.ptx"/>
 
     <exercises xml:id="exercises-machten-rationaal">
         

@@ -1,5 +1,33 @@
 <!--Nog toe te voegen-->
 
+<activity>
+  <statement>
+      <p>
+          De coördinaat van een deeltje dat een eenparig cirkelvormige beweging uitvoert (d.w.z. beweegt op een cirkel met constante snelheid) wordt gegeven door
+          <me>
+            \begin{cases}
+            x = R \cos \theta(t) \\
+            y = R \sin \theta(t)
+            \end{cases}
+          </me>
+          met <m>R</m> de straal van de cirkel en <m>\theta</m> de hoek die het deeltje met de positieve <m>x</m>-as maakt op tijdstip <m>t</m>. Toon aan dat de snelheid van het deeltje gelijk is aan <m>v=R \dfrac{d\theta}{dt}</m> door onderstaande berekeningen uit te voeren:
+          <ol>
+              <li>
+                  <p>
+                      Bereken eerst <m>v_x=\dfrac{dx}{dt}</m> en <m>v_y=\dfrac{dy}{dt}</m>.
+                  </p>
+              </li>
+              <li>
+                  <p>
+                      De grootte van de snelheid kan je dan bepalen via <m>v=\sqrt{v_x^2+v_y^2}</m>.
+                  </p>
+              </li>
+          </ol>
+          Wat is de betekenis van <m>\dfrac{d\theta}{dt}</m>?
+      </p>
+  </statement>
+</activity> ECB
+
 <p>
     Leid onderstaande functies af. Je kan SageMath (zie hieronder) of Geogebra (<url href="https://www.geogebra.org/m/nurhayba">link</url>) gebruiken om jezelf te controleren. 
   </p>

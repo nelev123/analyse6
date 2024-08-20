@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>Vergelijkingen oplossen</title>
+
+    <exercise>
+      <statement>
+        <p>
+          Los onderstaande vergelijkingen op.
+          <ol>
+            <li>
+              <p>
+                <m>\dfrac{3}{x}+4=0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sqrt{3x+7}+2=4</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle 4\sin\left [2 \left(x-\frac{\pi}{3} \right) \right ] +1 = 2</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>-\dfrac{1}{x+1}=-2</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sin \left (2x+\frac{\pi}{6} \right)=-\cos\left(x-\frac{5\pi}{18} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sqrt{2x-1}-\sqrt{x-1}=0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\cos 4x + \sin \dfrac{x}{2}=0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sqrt{5x-1}+x=5</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sqrt{x+4}+\sqrt{2x+1}=3</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+</subexercises>

@@ -6,10 +6,11 @@
     <xi:include href="./functies/inverse-inl.ptx"/>
     <xi:include href="./functies/inverse-voorschrift.ptx" />
     <xi:include href="./algebra/vergelijkingen-inversef.ptx" />
-    <xi:include href="./algebra/gonio-vergelijkingen.ptx" />
 
     <exercises xml:id="exercises-inversefuncties">
         <xi:include href="./functies/inverse-inl-oef.ptx" />  
-        <xi:include href="./functies/inverse-voorschrift-oef.ptx" />  
+        <xi:include href="./functies/inverse-voorschrift-oef.ptx" /> 
+        <xi:include href="./algebra/vergelijkingen-inversef-oef.ptx" />
+        <xi:include href="./afleiden/df-inverse.ptx" /> <!--starten met sqrt x als voorbeeld en afleiden van machtsfuncties nog aanpassen-->
     </exercises>
 </chapter>    
