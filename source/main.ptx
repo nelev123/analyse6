@@ -109,7 +109,7 @@
     <xi:include href="./rijen.ptx" />
     <!-- <xi:include href="./reeksen.ptx" /> Niet meer in leerplan-->
     <xi:include href="./bepaalde-integraal.ptx" />
-    <!-- <xi:include href="./explog.ptx" /> -->
+    <xi:include href="./explog.ptx" />
          <!-- <exercise>
       <statement>
         <p>
