@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <exercise>
+      <statement>
+        <p>
+          Verbeter onderstaande uitspraken:
+          <ol>
+            <li>
+              <p>
+                Bij een toename van 4% per dag hoort een toename van 7 <m>\cdot</m> 4% per week.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bij een afname van 16% per uur hoort een afname van <m>\frac{1}{4} \cdot 16</m>% per kwartier.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bij een groeifactor van 0,6 per uur hoort een groeifactor van <m>\frac{1}{2} \cdot 0,6</m>% per halfuur.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Het aantal salmonellabacteriën op een stukje vlees neemt exponentieel toe. Op <m>t=3</m> zijn er 6000 bacteriën en op <m>t=8</m> zijn er 13000. Hierbij is <m>t</m> de tijd in uren.
+          <ol>
+            <li>
+              <p>
+                Geef de groeifactor per uur (tot op 3 decimalen).
+              </p>
+            </li>
+            <li>
+              <p>
+                Geef het groeipercentage per uur.
+              </p>
+            </li>
+            <li>
+              <p>
+                 Stel de formule op voor het aantal bacteriën <m>N</m> na <m>t</m> uur.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Een microbioloog bestudeert een cultuur van de colibacterie. De beginpopulatie telt 250 bacteriën. Bij een temperatuur van 35 <m>^{\circ}</m>C verdubbelt de populatie per uur. Na 4 uur verlaagt hij de temperatuur tot 30 <m>^{\circ}</m>C. Zes uur na deze temperatuursverlaging telt hij 16000 bacteriën. Bereken het groeipercentage per uur bij een temperatuur van 30 <m>^{\circ}</m>C.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Veronderstel dat het skelet van een kat een verhouding
+          <m>^{14}{\text{C}}/^{12}{\text{C}}</m> heeft die slechts 61% is van de verhouding in levende organismen. Bereken wanneer de kat is gestorven als je weet dat de halfwaardetijd van <m>^{14}{\text{C}}</m> gelijk is aan 5730 jaar.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Op 30 september 1999 kwam er bij een kernramp in Tokai-Mura een hoeveelheid radioactief jodium 131 vrij. In een straal van 2 km rond de kerncentrale werd 10 keer de normale waarde gemeten en 130 mensen werden geëvacueerd. Bepaal wanneer deze mensen terug naar huis kunnen als je weet dat de activiteit van jodium 131 per 4 dagen 30% afneemt.
+        </p>
+      </statement>
+    </exercise>
+</subexercises>

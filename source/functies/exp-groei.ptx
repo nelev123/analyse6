@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Exponentiële groeiprocessen</title>
+    <example>
+      <title>Covid-19 besmettingen</title>
+      <p>
+        Stel dat er op een bepaald moment 1700 bevestigde covid-19 besmettingen per dag zijn en dat dit aantal op weekbasis stijgt met 20%.
+        <ul>
+          <li>
+            <p>
+              Hoeveel besmettingen zijn er over een maand? Een toename van 20% op weekbasis betekent dat er na een maand ongeveer 3525 besmettingen per dag zijn:
+              <me>1700 \cdot (1,20)^4=3525,12</me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Wat is het stijgingspercentage per maand en per dag? Een stijging van 20% per week betekent ongeveer een stijging van 107% per maand
+              <me>
+                (1,20)^4=2,074
+              </me>
+              of een stijging van ongeveer 3% per week
+              <me>
+                (1,20)^{\frac{1}{7}}=1,026
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Hoelang duurt het vooraleer er <m>10^4</m> besmettingen zijn? Om dit te berekenen, lossen we onderstaande vergelijking op:
+              <md>
+                <mrow>\amp 10^4=1700 \cdot (1,20)^t</mrow>
+                <mrow>\Rightarrow \; \amp \frac{10^4}{1700}=(1,20)^t</mrow>
+                <mrow>\Rightarrow \; \amp \log \left ( \frac{10^4}{1700} \right ) = \log(1,20)t</mrow>
+                <mrow>\Rightarrow \; \amp t = \frac{\log \left ( \frac{10^4}{1700} \right)}{\log(1,20)}=9,72</mrow>
+              </md>
+              Dit duurt dus 9,72 weken of 68 dagen.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </example>
+
+    <assemblage>
+      <title>Exponentiële groei</title>
+      <p>
+        Een functie van de vorm
+        <me>
+          f(x) = b a^x
+        </me>
+        met <m>b \gt 0</m> en <m>a \in \mathbb{R}^+_0 \setminus \lbrace 1 \rbrace</m>  modelleert een exponentieel groeiproces. De constante <m>a</m> noemen we de groeifactor.
+      </p>
+      <p>
+        Een exponentieel groeiproces wordt gekarakteriseerd door een vaste procentuele toename of afname per tijdseenheid.
+        <ul>
+          <li>
+            <p>
+              Een toename van <m>p</m>% per tijdseenheid correspondeert met een
+              groeifactor <m>a=1+\frac{p}{100}</m>. <m>a</m> is dan groter dan 1 en we
+              spreken over positieve groei.
+            </p>
+          </li>
+          <li>
+            <p>
+              Een afname van <m>p</m>% per tijdseenheid correspondeert met een
+              groeifactor <m>a=1-\frac{p}{100}</m>. <m>a</m> is dan kleiner dan 1 en we
+              spreken over negatieve groei.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <example>
+      <title>Radioactief verval</title>
+      <p>
+        De halwaardetijd <m>t_{1/2}</m> van een radioactieve atoomkern is de tijd waarop het aantal radioactieve kernen telkens halveert. Zo is de halfwaardetijd van <m>^{59}{\text{Fe}}</m> gelijk aan <m>44,50</m> dagen en de halfwaardetijd van <m>^{238}{\text{U}}</m> gelijk aan <m>4,47 \times 10^9</m> jaar. De groeifactor is dus gelijk aan <m>1/2</m> als we de halwaardetijd als tijdseenheid nemen en gelijk aan <m>\displaystyle 2^{-1/t_{1/2}}</m> met een tijdseenheid van één seconde. Het aantal radioactieve kernen <m>N</m> i.f.v. de tijd in seconden wordt dan gegeven door:
+        <me>
+          N(t)=N_0 \, 2^{-t/t_{1/2}}
+        </me>
+      </p>
+    </example>
+
+
+  </section>

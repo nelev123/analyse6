@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Logaritmische functies</title>
+    <p>
+      Een exponentiële functie is bijectief en kan dus geïnverteerd
+      worden. We nemen als voorbeeld de functie <m>f(x)=2^x</m>. De bewerking <m>2^x=y</m>, kunnen we inverteren door het nemen van het logaritme met grondtal 2: <m>x=\log_2 y</m>. De inverse functie van <m>f</m> is dus de logaritmische functie met als functievoorschrift <m>f^{-1}(x)=\log_2 x</m>. De grafiek van <m>\log_2 x</m> is de spiegeling van de grafiek van <m>2^x</m> rond de rechte <m>y=x</m>:
+    </p>
+    <sidebyside width="50%">
+      <image source="explog.png"/>
+    </sidebyside>
+    <assemblage>
+      <title>Logaritmische functies</title>
+      <p>
+        Algemeen definiëren we de logaritmische functie <m>f(x)=\log_a(x)</m> als volgt:
+        <me>
+        a^x=y \Leftrightarrow \log_a(y)=x
+        </me>
+        met het grondtal <m>a \in \mathbb{R}^+_0 \setminus \lbrace 1
+        \rbrace</m>. Aangezien <m>a^x</m> en <m>\log_a (x)</m> elkaars inverse zijn geldt er steeds dat
+        <md>
+          <mrow>a^{\log_a(x)}=x</mrow>
+          <mrow>\log_a (a^x)=x</mrow>
+        </md>
+        De eigenschappen voor logaritmische functies volgen onmiddellijk uit deze van de exponentiële functies. Ter illustratie zie je hieronder enkele grafieken (<url href="https://www.desmos.com/calculator/jsjovmnhm6"/>):
+      </p>
+      <sidebyside width="50%">
+        <image source="desmos-log.png"/>
+      </sidebyside>
+    </assemblage>
+    <p>
+      De rekenregels voor logaritmen zijn <m>\forall a,b, x_1,x_2 \in \mathbb{R}^+_0</m> (<m>a,b \neq 1</m>) en <m>\forall n \in \mathbb{R}</m>:
+      <md>
+        <mrow>\amp \log_a (x_1 \cdot x_2) =  \log_a x_1 + \log_a x_2 </mrow>
+        <mrow>\amp \log_a \left ( \frac{x_1}{x_2} \right ) =  \log_a x_1 - \log_a x_2 </mrow>
+        <mrow>\amp \log_a x^n = n \log_a x</mrow>
+        <mrow>\amp \log_a x = \frac{\log_b x}{\log_b a}</mrow>
+      </md>
+    </p>
+
+  </section>

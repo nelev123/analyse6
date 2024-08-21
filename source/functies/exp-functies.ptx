@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Exponentiële functies</title>
+    <p>
+      Een exponentiële functie is een functie waarbij de variabele in de exponent voorkomt.
+    </p>
+    <assemblage>
+      <title>Exponentiële functie</title>
+      <p>
+        Als <m>a \in \mathbb{R}^+_0 \setminus \lbrace 1 \rbrace</m> dan definiëren we de exponentiële functie <m>f</m> met grondtal <m>a</m> als
+        <me>
+          f(x)=a^x
+        </me>
+      </p>
+      <p>
+        Exponentiële functies met <m>a \gt 1</m> hebben de volgende eigenschappen:
+        <ul>
+          <li>
+            <p>
+               dom <m>f = \mathbb{R}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              ber<m>f = \mathbb{R}^+_0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              strikt stijgend
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{x \to +\infty} f(x) = +\infty</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{x \to -\infty} f(x) = 0</m>, dus de <m>x</m>-as is een horizontale asymptoot op <m>-\infty</m>.
+            </p>
+          </li>
+        </ul>
+        Enkele exponentiële functies met positieve groeifactor (<url href="https://www.desmos.com/calculator/tlcihijmwf"/>):
+       </p>
+       <sidebyside width="50%">
+         <image source="expfuncties.png"/>
+       </sidebyside>
+       <p>
+         Exponentiële functies met <m>a \lt 1</m> hebben de volgende eigenschappen:
+         <ul>
+           <li>
+             <p>
+                dom <m>f = \mathbb{R}</m>
+             </p>
+           </li>
+           <li>
+             <p>
+               dom <m>f = \mathbb{R}^+_0</m>
+             </p>
+           </li>
+           <li>
+             <p>
+               strikt dalend
+             </p>
+           </li>
+           <li>
+             <p>
+               <m>\lim_{x \to +\infty} f(x) = 0</m>, dus de <m>x</m>-as is een horizontale asymptoot op <m>+\infty</m>.
+             </p>
+           </li>
+           <li>
+             <p>
+               <m>\lim_{x \to -\infty} f(x) = +\infty</m>
+             </p>
+           </li>
+         </ul>
+         Enkele exponentiële functies met negatieve groeifactor (<url href="https://www.desmos.com/calculator/lncbhicuix"/>):
+        </p>
+        <sidebyside width="50%">
+          <image source="expfuncties2.png"/>
+        </sidebyside>
+    </assemblage>
+
+  </section>
