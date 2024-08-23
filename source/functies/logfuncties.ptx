@@ -7,7 +7,39 @@
       worden. We nemen als voorbeeld de functie <m>f(x)=2^x</m>. De bewerking <m>2^x=y</m>, kunnen we inverteren door het nemen van het logaritme met grondtal 2: <m>x=\log_2 y</m>. De inverse functie van <m>f</m> is dus de logaritmische functie met als functievoorschrift <m>f^{-1}(x)=\log_2 x</m>. De grafiek van <m>\log_2 x</m> is de spiegeling van de grafiek van <m>2^x</m> rond de rechte <m>y=x</m>:
     </p>
     <sidebyside width="50%">
-      <image source="explog.png"/>
+      <image xml:id="fig-exp-functies-2">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+          \begin{axis}
+          [
+          xmin=-2,%
+          xmax=6,%
+          ymin=-1,%
+          ymax=100,%
+          axis lines=middle,%
+          %xtick={-2,0,...,10},%
+          %ytick={-15,-10,...,15},%
+          minor x tick num={1},%
+          minor y tick num={1},%
+          %x=0.7cm,%
+          %y=0.7cm,%
+          grid=both,%
+          xlabel=x,%
+          ylabel=f(x),%
+          legend style={fill=cyan!15!white},%
+          legend pos = north west
+          ]
+          \addplot[domain=-2:6,samples=300,very thick]{2^x};
+          \addplot[domain=-2:6,samples=300,very thick,dashed]{2.5^x};
+          \addplot[domain=-2:6,samples=300,very thick,dotted]{3^x};
+          \addplot[domain=-2:6,samples=300,very thick,dashdotdotted]{4^x};
+          \legend{$2^x$,$(\frac{5}{2})^x$,$3^x$,$4^x$}
+          \end{axis}
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
     </sidebyside>
     <assemblage>
       <title>Logaritmische functies</title>

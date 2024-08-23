@@ -1,99 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<exercises>
-    <exercise>
+<section>
+    <title>Exponentiële en logaritmische functies afleiden</title>
+    <activity>
       <statement>
         <p>
-          Gegeven <m>f(x)=5x^{\sqrt{2}}</m> en <m>g(x)=x^{\sqrt{8}}</m>. Stel het voorschrift op van de functie <m>f \circ g</m>.
-         </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          Bepaal de inverse functie van
-          <ol>
-            <li>
-              <p>
-                <m>f(x)=2^{x-5}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>f(x)=6^x+7</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>f(x)=3 \cdot 5^{x-7}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>f(x)=\log_4(3x+1)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>f(x)=5+3\log_6(2x+1)</m>
-              </p>
-            </li>
-          </ol>
+          Toon aan dat <m>\displaystyle D(\ln(x))=D(\log_e(x))=\frac{1}{x}</m>. Tip: gebruik <m>\displaystyle \lim_{x\to +\infty} \left(1+\frac{1}{x} \right)^x=e</m>.
         </p>
       </statement>
-    </exercise>
-        <exercise>
-    <statement>
+    </activity>
+
+    <p>
+      Aangezien het domein van <m>\ln x</m> gelijk is <m>\mathbb{R}^+_0</m> is zijn afgeleide overal strikt positief en de functie <m>\ln x</m> is dus strikt stijgend in het interval <m>]0,+\infty[</m>. We berekenen vervolgens de afgeleide van <m>\log_a x</m>:
+      <me>
+          D \left ( \log_a x \right ) = D \left ( \frac{\ln x}{\ln a} \right )= \frac{1}{x \ln a}
+      </me>
+      Voor <m>a \gt 1</m> is de afgeleide opnieuw strikt positief en dus <m>\log_a x</m> strikt stijgend; voor <m>0 \lt a \lt  1</m> is de afgeleide strikt negatief en <m>\log_a x</m> dus strikt dalend.
+    </p>
+
+    <p>
+      De afgeleide van <m>e^x</m> kunnen we berekenen door te steunen op het feit dat <m>e^x</m> en <m>\ln x</m> inverse functies zijn:
+      <md>
+        <mrow>\amp \ln e^x  = x </mrow>
+        <mrow>\Rightarrow \; \amp  \frac{1}{e^x} \cdot D(e^x) = 1</mrow>
+        <mrow>\Rightarrow \; \amp  D(e^x) = e^x</mrow>
+      </md>
+      Door <m>a^x</m> te schrijven als <m>e^{x \ln a}</m> kunnen we tenslotte ook de afgeleide van <m>a^x</m> berekenen:
+      <me>
+        D(a^x)=D(e^{x \ln a})=e^{x \ln a} \cdot \ln a = a^x \ln a
+      </me>
+      Op dezelfde manier kunnen nu ook de algemene formule bewijzen voor de afgeleide van een machtsfunctie:
+      <me>
+        D(x^r) = D(e^{r \ln x}) = e^{r \ln x} \cdot \frac{r}{x} = r \frac{x^r}{r} =r x^{r-1} \quad (\forall r \in \mathbb{R}, \forall x \in \mathbb{R}^+_0)
+      </me>
+    </p>
+    <assemblage>
+      <title>Afgeleiden van exponentiële en logaritmische functies</title>
       <p>
-        Los onderstaande vergelijkingen op. 
-        <ol>
-          <li>
-            <p>
-              <m>3^{2x-1}=9\sqrt{3} </m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\frac{\log_6 15x}{\log_6 5x}=2</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>6^{\sqrt{x}}=2</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>2^{\left (\dfrac{1}{x-8} \right)}-8=0</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\log_3 (5x+1)=2</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\log_2 3 \cdot \log_3 5 \cdot \log_5 7 \cdot \log_7 x =4</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>3^{2x+1} = 15</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\left ( \dfrac{1}{2} \right )^{x^2} = 2^{-2x+1}</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>\log_3(x+5)+\log_3(x-1)=2</m>
-            </p>
-          </li>
-        </ol>
+        <md>
+          <mrow>\amp D(\ln x) = \frac{1}{x} </mrow>
+          <mrow>\amp D \left ( \log_a x \right ) = \frac{1}{x \ln a} </mrow>
+          <mrow>\amp D(e^x) = e^x </mrow>
+          <mrow>\amp D(a^x) = a^x \cdot \ln a </mrow>
+          <mrow>\amp D(x^r) = r x^{r-1} </mrow>
+        </md>
       </p>
-    </statement>
-  </exercise>
-  </exercises>
+    </assemblage>
+
+
+
+
+
+  </section>

@@ -41,12 +41,28 @@
        <title>Onbepaalde integralen</title>
        <p>
         <md>
-          <mrow> \amp D(x^r) = n x^{n-1} \quad (n \in \mathbb{Z}) \amp \amp \int x^n \; dx =\frac{x^{n+1}}{n+1} + c  \quad ( n \neq -1)</mrow>
+          <mrow> \amp D(x^r) = r x^{r-1} \quad (r \in \mathbb{R}) \amp \amp \int x^r \; dx =\frac{x^{r+1}}{r+1} + c  \quad ( r \neq -1)</mrow>
           <mrow> \amp D(\sin x) = \cos x \amp \amp \int \cos x \; dx =  \sin x + c </mrow>
           <mrow> \amp D(\cos x) = - \sin x \amp \amp \int \sin x \; dx = - \cos x + c </mrow>
           <mrow> \amp D(\tan x) = \frac{1}{\cos^2 x} \amp \amp \int \frac{1}{\cos^2 x}  \; dx =  \tan x + c </mrow>
           <mrow> \amp D(\cot x) = - \frac{1}{\sin^2 x} \amp \amp \int \frac{1}{\sin^2 x}  \; dx =  -\cot x + c </mrow>
+          <mrow>\amp D(\ln x) = \frac{1}{x} \amp \amp  \int \frac{1}{x} \, dx = \ln |x| +C </mrow>
+          <mrow>\amp D(e^x) = e^x \amp \amp  \int e^x  \, dx = e^x + C </mrow>
+          <mrow>\amp D(a^x) = a^x \cdot \ln a  \amp  \amp \int a^x  \, dx = \frac{a^x}{\ln a} + C</mrow>
         </md>  
       </p>
       </assemblage>
+
+      <remark>
+        <p>
+          De functie <m>\dfrac{1}{x}</m> is de afgeleide van <m>\ln x</m> en <m>\ln (-x)</m>:
+          <md>
+            <mrow> \amp x \in \mathbb{R}^+_0 \Rightarrow D(\ln x)=\frac{1}{x}</mrow>
+            <mrow> \amp  x \in \mathbb{R}^-_0 \Rightarrow D(\ln(-x))=\frac{1}{-x} \cdot (-1)
+              =\frac{1}{x} </mrow>
+          </md>
+          De onbepaalde integraal <m>\displaystyle \int \frac{1}{x} \, dx</m> is dus gelijk aan
+          <m>\ln |x| +C</m>.
+        </p>
+      </remark>
   </section>
