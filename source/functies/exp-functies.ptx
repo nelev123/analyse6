@@ -65,7 +65,7 @@
             grid=both,%
             xlabel=x,%
             ylabel=f(x),%
-            legend style={fill=cyan!15!white},%
+            legend style={fill=achtergrond},%
             legend pos = north west
             ]
             \addplot[domain=-2:6,samples=300,very thick]{2^x};
@@ -131,7 +131,7 @@
               grid=both,%
               xlabel=x,%
               ylabel=f(x),%
-              legend style={fill=cyan!15!white},%207,230,252
+              legend style={fill=achtergrond},
               legend pos = north west
               ]
               \addplot[domain=-2:6,samples=300,very thick]{2^x};
