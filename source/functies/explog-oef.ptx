@@ -6,8 +6,22 @@
     <exercise>
       <statement>
         <p>
+          Gegeven <m>f(x)=2^x</m> en <m>g(x)=\dfrac{x+1}{x+2}</m>. Bereken <m>(f \circ g)(-1)</m> en <m>(f \circ g)(0)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
           Gegeven <m>f(x)=5x^{\sqrt{2}}</m> en <m>g(x)=x^{\sqrt{8}}</m>. Stel het voorschrift op van de functie <m>f \circ g</m>.
          </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Als je de grafiek van <m>\log x</m> volgens de <m>y</m>-as uitrekt met een factor <m>3,32</m> dan krijg je een goede benadering voor de grafiek van <m>\log_2 x</m>. Waar of niet waar? Leg uit.
+        </p>
       </statement>
     </exercise>
     <exercise>
@@ -97,5 +111,8 @@
         </ol>
       </p>
     </statement>
+    <!--Eventuele extra oefeningen:
+       $|\log x|= 2$
+       $2^{\dfrac{1}{x-8}}=5$ -->
   </exercise>
   </subexercises>

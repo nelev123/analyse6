@@ -2,6 +2,15 @@
 
 <subexercises>
   <title>Exponentiële groeiprocessen</title>
+
+    <exercise>
+    <statement>
+      <p>
+        Veronderstel dat je 8000 euro stort op je bankrekening en dat de bank je een jaarlijkse interest van 5\% betaalt. Hoeveel geld staat er op je bankrekening na 1 jaar, na 2 jaar, na <m>t</m> jaar?
+      </p>
+    </statement>
+    </exercise>
+
     <exercise>
       <statement>
         <p>
@@ -76,4 +85,5 @@
         </p>
       </statement>
     </exercise>
+
 </subexercises>

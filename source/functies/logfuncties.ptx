@@ -7,36 +7,34 @@
       worden. We nemen als voorbeeld de functie <m>f(x)=2^x</m>. De bewerking <m>2^x=y</m>, kunnen we inverteren door het nemen van het logaritme met grondtal 2: <m>x=\log_2 y</m>. De inverse functie van <m>f</m> is dus de logaritmische functie met als functievoorschrift <m>f^{-1}(x)=\log_2 x</m>. De grafiek van <m>\log_2 x</m> is de spiegeling van de grafiek van <m>2^x</m> rond de rechte <m>y=x</m>:
     </p>
     <sidebyside width="50%">
-      <image xml:id="fig-exp-functies-2">
+      <image xml:id="fig-exp-functies-3">
         <latex-image>
           <![CDATA[
-          \begin{tikzpicture}
-          \begin{axis}
-          [
-          xmin=-2,%
-          xmax=6,%
-          ymin=-1,%
-          ymax=100,%
-          axis lines=middle,%
-          %xtick={-2,0,...,10},%
-          %ytick={-15,-10,...,15},%
-          minor x tick num={1},%
-          minor y tick num={1},%
-          %x=0.7cm,%
-          %y=0.7cm,%
-          grid=both,%
-          xlabel=x,%
-          ylabel=f(x),%
-          legend style={fill=cyan!15!white},%
-          legend pos = north west
-          ]
-          \addplot[domain=-2:6,samples=300,very thick]{2^x};
-          \addplot[domain=-2:6,samples=300,very thick,dashed]{2.5^x};
-          \addplot[domain=-2:6,samples=300,very thick,dotted]{3^x};
-          \addplot[domain=-2:6,samples=300,very thick,dashdotdotted]{4^x};
-          \legend{$2^x$,$(\frac{5}{2})^x$,$3^x$,$4^x$}
-          \end{axis}
-          \end{tikzpicture}
+            \begin{tikzpicture}
+            \begin{axis}
+            [
+            xmin=-10,%
+            xmax=10,%
+            ymin=-10,%
+            ymax=10,%
+            axis lines=middle,%
+            %xtick={-2,0,...,10},%
+            %ytick={-15,-10,...,15},%
+            minor x tick num={1},%
+            minor y tick num={1},%
+            %x=0.7cm,%
+            %y=0.7cm,%
+            grid=both,%
+            xlabel=x,%
+            ylabel=f(x),%
+            legend pos = north west
+            ]
+            \addplot[domain=-10:10,samples=500,very thick]{2^x};
+            \addplot[domain=-10:10,samples=300,very thick,dotted]{x};
+            \addplot[domain=0:10,samples=300,very thick,dashed]{ln(x)/ln(2)};
+            \legend{$2^x$,,$\log_2(x)$}
+            \end{axis}
+            \end{tikzpicture}
           ]]>
         </latex-image>
       </image>
@@ -54,14 +52,141 @@
           <mrow>a^{\log_a(x)}=x</mrow>
           <mrow>\log_a (a^x)=x</mrow>
         </md>
-        De eigenschappen voor logaritmische functies volgen onmiddellijk uit deze van de exponentiële functies. Ter illustratie zie je hieronder enkele grafieken (<url href="https://www.desmos.com/calculator/jsjovmnhm6"/>):
+      </p>
+      <p>
+        Logaritmische functies met <m>a \gt 1</m> hebben de volgende eigenschappen: 
+        <ul>
+          <li>
+            <p>
+               dom <m>f = \mathbb{R}^+_0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              ber<m>f = \mathbb{R}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              strikt stijgend
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{x \to +\infty} f(x) = +\infty</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{x \to 0+} f(x) = -\infty</m>, dus de <m>y</m>-as is een verticale asymptoot.
+            </p>
+          </li>
+        </ul>
       </p>
       <sidebyside width="50%">
-        <image source="desmos-log.png"/>
+        <image xml:id="fig-log-functies">
+          <latex-image>
+            <![CDATA[
+                \begin{tikzpicture}
+                \begin{axis}
+                [
+                xmin=0,%
+                xmax=10,%
+                ymin=-5,%
+                ymax=5,%
+                axis lines=middle,%
+                %xtick={-2,0,...,10},%
+                %ytick={-15,-10,...,15},%
+                minor x tick num={1},%
+                minor y tick num={1},%
+                %x=0.7cm,%
+                %y=0.7cm,%
+                grid=both,%
+                xlabel=x,%
+                ylabel=f(x),%
+                legend style={fill=achtergrond},%
+                legend pos = south east
+                ]
+                \addplot[domain=0:10,samples=300,very thick]{ln(x)/ln(2)};
+                \addplot[domain=0:10,samples=300,very thick,dashed]{ln(x)/ln(3)};
+                \addplot[domain=0:10,samples=300,very thick,dotted]{ln(x)/ln(4)};
+                \addplot[domain=0:10,samples=300,very thick,dashdotdotted]{ln(x)/ln(5)};
+                \legend{$\log_2(x)$,$\log_3(x)$,$\log_4(x)$,$\log_5(x)$}
+                \end{axis}
+                \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </sidebyside>
+      <p>
+        Logaritmische functies met <m>a \lt 1</m> hebben de volgende eigenschappen: 
+        <ul>
+          <li>
+            <p>
+               dom <m>f = \mathbb{R}^+_0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              ber<m>f = \mathbb{R}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              strikt dalend
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{x \to +\infty} f(x) = -\infty</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\lim_{x \to 0+} f(x) = +\infty</m>, dus de <m>y</m>-as is een verticale asymptoot.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <sidebyside width="50%">
+        <image xml:id="fig-log-functies-2">
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}
+            \begin{axis}
+                  [
+                  xmin=0,%
+                  xmax=10,%
+                  ymin=-5,%
+                  ymax=4,%
+                  axis lines=middle,%
+                  %xtick={-2,0,...,10},%
+                  %ytick={-15,-10,...,15},%
+                  minor x tick num={1},%
+                  minor y tick num={1},%
+                  %x=0.7cm,%
+                  %y=0.7cm,%
+                  grid=both,%
+                  xlabel=x,%
+                  ylabel=f(x),%
+                  legend style={fill=achtergrond},%
+                  legend pos = north east
+                  ]
+                  \addplot[domain=0:10,samples=300,very thick]{ln(x)/ln(0.7)};
+                  \addplot[domain=0:10,samples=300,very thick,dashed]{ln(x)/ln(0.5)};
+                  \addplot[domain=0:10,samples=300,very thick,dotted]{ln(x)/ln(0.3)};
+                  \addplot[domain=0:10,samples=300,very thick,dashdotdotted]{ln(x)/ln(0.1)};
+                  \legend{$\log_{\frac{7}{10}}(x)$,$\log_{\frac{1}{2}}(x)$,$\log_{\frac{3}{10}}(x)$,$\log_{\frac{1}{10}}(x)$}
+                  \end{axis}
+                  \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
       </sidebyside>
     </assemblage>
+
     <p>
-      De rekenregels voor logaritmen zijn <m>\forall a,b, x_1,x_2 \in \mathbb{R}^+_0</m> (<m>a,b \neq 1</m>) en <m>\forall n \in \mathbb{R}</m>:
+      We herhalen voor de volledigheid nog even de rekenregels voor logaritmen (<m>\forall a,b, x_1,x_2 \in \mathbb{R}^+_0</m> (<m>a,b \neq 1</m>) en <m>\forall n \in \mathbb{R}</m>):
       <md>
         <mrow>\amp \log_a (x_1 \cdot x_2) =  \log_a x_1 + \log_a x_2 </mrow>
         <mrow>\amp \log_a \left ( \frac{x_1}{x_2} \right ) =  \log_a x_1 - \log_a x_2 </mrow>

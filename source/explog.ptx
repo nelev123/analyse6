@@ -4,9 +4,10 @@
 
   <title>Exponentiële en logaritmische functies</title>
 
-  <xi:include href="./functies/exp-groei.ptx" />
+  <xi:include href="./functies/macht-irrationaal.ptx" />
   <xi:include href="./functies/exp-functies.ptx" />
   <xi:include href="./functies/logfuncties.ptx" />
+  <xi:include href="./functies/exp-groei.ptx" />
   <xi:include href="./afleiden/df-explog.ptx" />
 
 
@@ -14,8 +15,8 @@
 
 
   <exercises xml:id="exercises-explogfuncties">
-    <xi:include href="./functies/exp-groei-oef.ptx" />
     <xi:include href="./functies/explog-oef.ptx" />
+    <xi:include href="./functies/exp-groei-oef.ptx" />
   </exercises>
 
 </chapter>
