@@ -165,5 +165,87 @@
         </statement>
     </exercise>
        
+    <exercise>
+      <statement>
+        <p>
+          Bereken de onbepaalde integralen:
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \int e^{-2x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{1}{7^{3x-2}} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{3x^2-5}{x} \, dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \tan x \; dx</m>  
+              </p>  
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \ln(x) \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{\ln^3 x}{x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{2^{3x-1}}{5^x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \ln(x^2)\; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{12}{x \ln x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \ln^2 x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{e^{\frac{1}{x}}}{x^2} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \frac{5^x}{5^x+3^x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int x^2 e^{3x} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int x \, 2^x \; dx</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <!--$\displaystyle \int \ln(x^2+2)\; dx$
+        \item $\displaystyle \int 2xe^{-x} \; dx$
+        \item $\displaystyle \int \frac{\ln x}{x^2} \; dx$-->
+      </statement>
+    </exercise>
  
 </exercises>

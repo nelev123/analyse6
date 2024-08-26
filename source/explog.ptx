@@ -11,12 +11,10 @@
   <xi:include href="./afleiden/df-explog.ptx" />
 
 
-
-
-
   <exercises xml:id="exercises-explogfuncties">
     <xi:include href="./functies/explog-oef.ptx" />
     <xi:include href="./functies/exp-groei-oef.ptx" />
+    <xi:include href="./afleiden/df-explog-oef.ptx" />
   </exercises>
 
 </chapter>

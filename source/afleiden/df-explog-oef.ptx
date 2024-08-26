@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <subexercises>
-
+<title>Exponentiële en logaritmische functies afleiden</title>
     <exercise>
       <statement>
         <p>
@@ -54,17 +54,17 @@
             </li>
             <li>
               <p>
-                (7u) <m>\displaystyle f(x)=x^x</m>
+                (U) <m>\displaystyle f(x)=x^x</m>
               </p>
             </li>
             <li>
               <p>
-                (7u) <m>\displaystyle f(x)=x^{\frac{1}{x}}</m>
+                (U) <m>\displaystyle f(x)=x^{\frac{1}{x}}</m>
               </p>
             </li>
             <li>
               <p>
-                (7u) <m>\displaystyle f(x)=(\ln x)^{-x}</m>
+                (U) <m>\displaystyle f(x)=(\ln x)^{-x}</m>
               </p>
             </li>
           </ol>
@@ -75,88 +75,68 @@
     <exercise>
       <statement>
         <p>
-          Bereken de onbepaalde integralen:
-          <ol>
-            <li>
-              <p>
-                <m>\displaystyle \int e^{-2x} \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{1}{7^{3x-2}} \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{3x^2-5}{x} \, dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \tan x \; dx</m>  
-              </p>  
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \ln(x) \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \text{Bgtan } x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{\ln^3 x}{x} \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{2^{3x-1}}{5^x} \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \ln(x^2)\; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{12}{x \ln x} \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \ln^2 x \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int \frac{e^{\frac{1}{x}}}{x^2} \; dx</m>
-              </p>
-            </li>
-            <!--<li>
-              <p>
-                <m>\displaystyle \int \frac{5^x}{5^x+3^x} \; dx<m>
-              </p>
-            </li>-->
-            <li>
-              <p>
-                <m>\displaystyle \int x^2 e^{3x} \; dx</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\displaystyle \int x \, 2^x \; dx</m>
-              </p>
-            </li>
-          </ol>
+          Bereken de <m>n</m>-de afgeleide van <m>f(x)=2^{-2x}+x^n</m>.
         </p>
-        <!--$\displaystyle \int \ln(x^2+2)\; dx$
-        \item $\displaystyle \int 2xe^{-x} \; dx$
-        \item $\displaystyle \int \frac{\ln x}{x^2} \; dx$-->
+      </statement>
+    </exercise>
+    
+    <exercise>
+      <statement>
+        <p>
+          De grafiek van <m>f(x)=3 a^x</m> gaat door het punt <m>P(-1,6)</m>. Bepaal de vergelijking van de raaklijn en de normaal aan de grafiek van <m>f</m> in het punt <m>P</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          (U) Gegeven de functie <m>f(x)=\dfrac{ 5 \ln x}{x}</m> en een rechte <m>t</m> die door de oorsprong gaat en de grafiek van <m>f</m> in een punt <m>P</m> raakt. Bepaal de coördinaat van <m>P</m>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          (U) Controleer door de grafiek te tekenen dat <m>f(x)=\ln
+          (x+\sqrt{x^2+1})</m> inverteerbaar is. Bepaal vervolgens de inverse
+          functie.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          (<m>\star</m>) Het verval van een radioactief isotoop verloopt volgens de vergelijking
+          <me>
+            \frac{d}{dt}m(t) = -0,00043 m(t)
+          </me>
+          Hierbij wordt de tijd <m>t</m> in jaren en de massa in gram uitgedrukt. Op <m>t=0</m> bedraagt de massa 260 gram.
+          <ul>
+            <li>
+              <p>
+                Bepaal formule voor <m>m(t)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Bereken de halveringstijd.
+              </p>
+            </li>
+            <li>
+              <p>
+                Op welk tijdstip is nog 10% van de beginmassa over?
+              </p>
+            </li>
+            <li>
+              <p>
+                Bereken de vervalsnelheid in gram/jaar na 10 jaar.
+              </p>
+            </li>
+          </ul>
+        </p>
       </statement>
     </exercise>
 </subexercises>

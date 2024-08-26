@@ -153,6 +153,11 @@
             </li>
             <li>
               <p>
+                <m>\displaystyle \int \text{Bgtan } x \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
                 <m>\displaystyle \int \text{Bgcos } 2x \; dx</m>
               </p>
             </li>

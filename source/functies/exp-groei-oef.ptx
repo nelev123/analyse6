@@ -6,9 +6,74 @@
     <exercise>
     <statement>
       <p>
-        Veronderstel dat je 8000 euro stort op je bankrekening en dat de bank je een jaarlijkse interest van 5\% betaalt. Hoeveel geld staat er op je bankrekening na 1 jaar, na 2 jaar, na <m>t</m> jaar?
+        Veronderstel dat je 8000 euro stort op je bankrekening en dat de bank je een jaarlijkse interest van 5% betaalt. Hoeveel geld staat er op je bankrekening na 1 jaar, na 2 jaar, na <m>t</m> jaar?
       </p>
     </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          De volgende tabel bevat informatie over de bevolking van Latijns-Amerika. 
+        </p>
+        <tabular top="major">
+          <row>
+            <cell>
+              jaar
+            </cell>
+            <cell>
+              1960
+            </cell>
+            <cell>
+              1965
+            </cell>
+            <cell>
+              1970
+            </cell>
+            <cell>
+              1975
+            </cell>
+            <cell>
+              1980
+            </cell>
+            <cell>
+              1985
+            </cell>
+            <cell>
+              1990
+            </cell>
+          </row>
+          <row bottom="major">
+            <cell>
+              aantal (in miljoenen)
+            </cell>
+            <cell>
+              205
+            </cell>
+            <cell>
+              227
+            </cell>
+            <cell>
+              252
+            </cell>
+            <cell>
+              279
+            </cell>
+            <cell>
+              309
+            </cell>
+            <cell>
+              343
+            </cell>
+            <cell>
+              380
+            </cell>
+          </row>
+        </tabular>
+        <p>
+          Bepaal de groeifactor vijf jaar tot op 2 decimalen nauwkeurig en schat het aantal inwoners in 2025.
+        </p>
+      </statement>
     </exercise>
 
     <exercise>
