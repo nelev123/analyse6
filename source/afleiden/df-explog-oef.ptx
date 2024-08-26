@@ -2,6 +2,60 @@
 
 <subexercises>
 <title>Exponentiële en logaritmische functies afleiden</title>
+
+    <exercise>
+      <statement>
+        <p> 
+          Soms wordt drinkwater door menselijke of dierlijke afvalstoffen besmet met colibacteriën. Het drinkwaterbedrijf zal in zo'n geval het water extra gaan zuiveren. Stel dat in het begin van de extra zuivering het aantal colibacteriën gegeven wordt door
+          <me>
+            N(t) = 1800 e^{-0,15t}
+          </me>
+          met <m>t</m> de tijd in uren.
+          <ol>
+            <li>
+              <p>
+                Bereken de groeisnelheid van het aantal bacteriën op <m>t=2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Van zodra het aantal bacteriën met 99% is afgenomen, stopt de extra zuivering. Bereken, in uren nauwkeurig, hoelang dit duurt.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          De buitentemperatuur van een winternacht kan benaderd worden door de volgende functie:
+          <me>
+            \theta(t) = e^{-\frac{3}{2}(t-2)} - e^{-\frac{1}{2}(t-2)}
+          </me>
+          met <m>t</m> de tijd in uren en <m>\theta</m> de temperatuur in graden Celsius. <m>t=0</m> komt overeen met 23u 's avonds. Beantwoord de volgende vragen. Je mag ICT gebruiken.
+          <ol>
+            <li>
+              <p>
+                Wannneer begon het te vriezen?
+              </p>
+            </li>
+            <li>
+              <p>
+                Wanneer begon de temperatuur weer te stijgen?
+              </p>
+            </li>
+            <li>
+              <p>
+                Wanneer steeg de temperatuur het snelst?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
     <exercise>
       <statement>
         <p>
@@ -75,6 +129,14 @@
     <exercise>
       <statement>
         <p>
+          Bepaal het verloop (stijgen/dalen, extrema en buigpunten) van de functie <m>f(x)= e^{-\frac{x^2}{2}}</m>. Teken de grafiek eerst met Desmos en controleer na elke stap je berekeningen.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
           Bereken de <m>n</m>-de afgeleide van <m>f(x)=2^{-2x}+x^n</m>.
         </p>
       </statement>
@@ -114,7 +176,7 @@
             \frac{d}{dt}m(t) = -0,00043 m(t)
           </me>
           Hierbij wordt de tijd <m>t</m> in jaren en de massa in gram uitgedrukt. Op <m>t=0</m> bedraagt de massa 260 gram.
-          <ul>
+          <ol>
             <li>
               <p>
                 Bepaal formule voor <m>m(t)</m>.
@@ -135,7 +197,7 @@
                 Bereken de vervalsnelheid in gram/jaar na 10 jaar.
               </p>
             </li>
-          </ul>
+          </ol>
         </p>
       </statement>
     </exercise>
