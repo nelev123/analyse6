@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <title>(U) Cyclometrische functies</title>
+
+    <exercise>
+        <statement>
+            <p>
+                Bereken zonder rekenmachine
+                <ol>
+                    <li>
+                        <p>
+                            <m>\text{Bgsin}(1) </m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\text{Bgsin}\left ( -\frac{\sqrt{2}}{2} \right)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\text{Bgcos}\left ( \frac{\sqrt{3}}{2} \right) </m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m> \text{Bgtan}\left ( -1 \right)</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\sin \left (2 \text{Bgtan } \dfrac{\sqrt{2}}{2} \right ) </m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+            <p>
+              Leid onderstaande functies af: 
+              <ol>
+                <li>
+                    <p>
+                        <m>f(x) =\text{Bgsin } 5x</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>f(x) = x^2\text{Bgtan } x - x</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>f(x) = (\text{Bgcos } x)^2</m>
+                    </p>
+                </li>
+              </ol>
+            </p>
+        </statement>
+    </exercise>
+
+
+    
+</subexercises>

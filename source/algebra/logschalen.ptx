@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-logschalen">
+<example>
     <title>Logaritmische schalen: decibels</title>
 
     <aside>
@@ -44,4 +44,6 @@
             </statement>
         </exercise>
     </exercises>
+</example>
+
 </section>
