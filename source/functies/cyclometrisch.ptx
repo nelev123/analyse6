@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-cyclometrisch">
+    <title>(U) Cyclometrische functies</title>
+    <p>
+        Cyclometrische functies zijn de inverse functies van de goniometrische functies. Op je rekenmachine zijn ze aangeduid met de knopjes <m>\sin^{-1}</m>, <m>\cos^{-1}</m> en <m>\tan^{-1}</m> en je hebt ze natuurlijk al gebruikt om hoeken te bepalen. De naam cyclometrisch wijst op het feit dat de functiewaarden eigenlijk lengtes van cirkelbogen zijn. 
+    </p>
+    
+    <p>
+        Aangezien de goniometrische functies periodiek zijn, moeten ze natuurlijk beperkt worden vooraleer ze kunnen geïnverteerd worden.
+    </p>
+    
+    <assemblage>
+        <title>Cyclometrische functies</title>
+        <sidebyside widths="50% 50%">
+          <p>
+            De boogsinus is de inverse functie van <m>\sin x</m> beperkt tot <m>\left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</m>.   Er geldt dus dat het domein gelijk is aan het interval <m>[-1,1]</m> en het bereik is het interval <m>\left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</m>.
+            <md>
+              <mrow>y= \sin x \quad \text{en} \quad x \in \left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</mrow>
+              <mrow>\Updownarrow</mrow>
+              <mrow>x=\text{Bgsin } y</mrow>
+            </md>
+            De afgeleide is
+            <me>D(\text{Bgsin } x)=\frac{1}{\sqrt{1-x^2}}</me>
+          </p>
+          <image source="Bgsin.png"/>
+        </sidebyside>
+        <sidebyside widths="50% 50%">
+          <p>
+            De boogcosinus is de inverse functie van <m>\cos x</m> beperkt tot <m>\left [ 0,\pi \right ]</m>. Er geldt dus dat het domein gelijk is aan het interval <m>[-1,1]</m> en het bereik is het interval <m>\left [0,\pi \right ]</m>.
+            <md>
+              <mrow>y= \cos x \quad \text{en} \quad x \in \left [0,\pi\right ]</mrow>
+              <mrow>\Updownarrow</mrow>
+              <mrow>x=\text{Bgcos } y</mrow>
+            </md>
+            De afgeleide is
+            <me>D(\text{Bgcos } x)=-\frac{1}{\sqrt{1-x^2}}</me>
+          </p>
+          <image source="Bgcos.png"/>
+        </sidebyside>
+        <sidebyside widths="50% 50%">
+          <p>
+            De boogtangens is de inverse functie van <m>\tan x</m> beperkt tot <m>\left ] -\frac{\pi}{2},\frac{\pi}{2} \right [</m>. Er geldt dus dat het domein gelijk is aan <m>\mathbb{R}</m> en het bereik is het interval <m>\left ]-\frac{\pi}{2},\frac{\pi}{2} \right [ </m>.
+            <md>
+              <mrow>y= \tan x \quad \text{en} \quad x \in \left ] -\frac{\pi}{2},\frac{\pi}{2} \right [ </mrow>
+              <mrow>\Updownarrow</mrow>
+              <mrow>x=\text{Bgtan } y</mrow>
+            </md>
+            De afgeleide is
+            <me>D(\text{Bgtan } x)=\frac{1}{1+x^2}</me>
+          </p>
+          <image source="Bgtan.png"/>
+        </sidebyside>
+    </assemblage>  
+
+    <activity>
+        <statement>
+            <p>
+                Bewijs de formules voor de afgeleiden van de cyclometrische functies.
+            </p>
+        </statement>
+    </activity>
+
+    <activity>
+        <statement>
+            <p>
+                Bewijs dat <m>\forall x \in [-1,1]:\text{Bgsin}(x)+\text{Bgcos}(x)=\dfrac{\pi}{2}</m>. Tip: denk aan complementaire hoeken!
+            </p>
+        </statement>
+    </activity>
+
+    <activity>
+        <statement>
+            <p>
+                Schets de grafiek van <m>\text{Bgcot}x</m> en toon aan dat 
+                <ul>
+                    <li>
+                        <p>
+                            <m>\text{Bgcot}(a)= \text{Bgtan}\left (\dfrac{1}{a} \right)</m> als <m>a \in \mathbb{R}^+_0</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\text{Bgcot}(a)= \pi + \text{Bgtan}\left (\dfrac{1}{a} \right)</m> als <m>a \in \mathbb{R}^-_0</m> 
+                        </p>
+                    </li>
+                </ul>
+
+            </p>
+        </statement>
+    </activity>
+
+</section>

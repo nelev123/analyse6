@@ -3,61 +3,6 @@
 <subsection xml:id="subsec-cyclo-int">
     <title>(U) Cyclometrische functies integreren</title>
 
-    <p>
-      De afgeleiden van de inverse goniometrische functies <m>\sin^{-1}</m>, <m>\cos^{-1}</m> en <m>\tan^{-1}</m> (ook cyclometrische functies genoemd) kunnen bepaald worden via de kettingregel en de eigenschappen van inverse functies. We voeren ook alternatieve namen in voor deze functies: de boogsinus, boogcosinus en de boogtangens.
-    </p>
-
-    <assemblage>
-      <title>Cyclometrische functies</title>
-      <sidebyside widths="50% 50%">
-        <p>
-          De boogsinus is de inverse functie van <m>\sin x</m> beperkt tot <m>\left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</m>.   Er geldt dus dat het domein gelijk is aan het interval <m>[-1,1]</m> en het bereik is het interval <m>\left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</m>.
-          <md>
-            <mrow>y= \sin x \quad \text{en} \quad x \in \left [-\frac{\pi}{2},\frac{\pi}{2} \right ]</mrow>
-            <mrow>\Updownarrow</mrow>
-            <mrow>x=\text{Bgsin } y</mrow>
-          </md>
-          De afgeleide is
-          <me>D(\text{Bgsin } x)=\frac{1}{\sqrt{1-x^2}}</me>
-        </p>
-        <image source="Bgsin.png"/>
-      </sidebyside>
-      <sidebyside widths="50% 50%">
-        <p>
-          De boogcosinus is de inverse functie van <m>\cos x</m> beperkt tot <m>\left [ 0,\pi \right ]</m>. Er geldt dus dat het domein gelijk is aan het interval <m>[-1,1]</m> en het bereik is het interval <m>\left [0,\pi \right ]</m>.
-          <md>
-            <mrow>y= \cos x \quad \text{en} \quad x \in \left [0,\pi\right ]</mrow>
-            <mrow>\Updownarrow</mrow>
-            <mrow>x=\text{Bgcos } y</mrow>
-          </md>
-          De afgeleide is
-          <me>D(\text{Bgcos } x)=-\frac{1}{\sqrt{1-x^2}}</me>
-        </p>
-        <image source="Bgcos.png"/>
-      </sidebyside>
-      <sidebyside widths="50% 50%">
-        <p>
-          De boogtangens is de inverse functie van <m>\tan x</m> beperkt tot <m>\left ] -\frac{\pi}{2},\frac{\pi}{2} \right [</m>. Er geldt dus dat het domein gelijk is aan <m>\mathbb{R}</m> en het bereik is het interval <m>\left ]-\frac{\pi}{2},\frac{\pi}{2} \right [ </m>.
-          <md>
-            <mrow>y= \tan x \quad \text{en} \quad x \in \left ] -\frac{\pi}{2},\frac{\pi}{2} \right [ </mrow>
-            <mrow>\Updownarrow</mrow>
-            <mrow>x=\text{Bgtan } y</mrow>
-          </md>
-          De afgeleide is
-          <me>D(\text{Bgtan } x)=\frac{1}{1+x^2}</me>
-        </p>
-        <image source="Bgtan.png"/>
-      </sidebyside>
-    </assemblage>
-
-    <activity>
-        <statement>
-            <p>
-                Bewijs de formules voor de afgeleiden van de cyclometrische functies.
-            </p>
-        </statement>
-    </activity>
-
     <example>
         <p>
             <md>
@@ -81,30 +26,6 @@
     </example>
 
     <exercises xml:id="exercises-cyclo-int">
-    <exercise>
-        <statement>
-            <p>
-              Leid onderstaande functies af: 
-              <ol>
-                <li>
-                    <p>
-                        <m>f(x) =\text{Bgsin } 5x</m>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <m>f(x) = x^2\text{Bgtan } x - x</m>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        <m>f(x) = (\text{Bgcos } x)^2</m>
-                    </p>
-                </li>
-              </ol>
-            </p>
-        </statement>
-    </exercise>
     <exercise>
       <statement>
         <p>
@@ -149,6 +70,11 @@
             <li>
               <p>
                 <m>\displaystyle \int \frac{x+7}{\sqrt{1-x^2}} \; dx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \int \text{Bgtan } x \; dx</m>
               </p>
             </li>
             <li>

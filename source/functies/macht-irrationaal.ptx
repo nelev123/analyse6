@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-macht-irrationaal">
+    <title>Machten met irrationale exponent</title> 
+
+    <p>
+        Machten met irrationale exponent exact definiëren zou ons iets te ver leiden dus houden we het bij een intuïtieve benadering. Onderstaande tabel toont de waarde van <m>3^{\sqrt{2}}</m> op basis van steeds betere benaderingen van <m>\sqrt{2}</m>:
+    </p>
+
+    <tabular top="major">
+        <row>
+          <cell>
+            benadering van <m>\sqrt{2}</m>
+          </cell>
+          <cell>
+            benadering van<nbsp /><m>3^{\sqrt{2}}</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>1.41</m>
+          </cell>
+          <cell>
+            <m>4.73</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>1.4142</m>
+          </cell>
+          <cell>
+            <m>4.7288</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>1.414214</m>
+          </cell>
+          <cell>
+            <m>4.728804</m>
+          </cell>
+        </row>
+        <row bottom="major">
+          <cell>
+            <m>1.41421356</m>
+          </cell>
+          <cell>
+            <m>4.72880439</m>
+          </cell>
+        </row>
+    </tabular>
+
+    <p>
+        Op basis van een rij van rationale getallen die <m>\sqrt{2}</m> steeds beter benaderen, kunnen we dus een rij van rationale benaderingen van <m>3^{\sqrt{2}}</m> bepalen. Men kan bovendien aantonen dat deze rij convergeert naar een reeël getal dat dan als <m>3^{\sqrt{2}}</m> wordt genoteerd.
+    </p>
+
+    
+</section>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Exponentiële groeiprocessen</title>
+    <example>
+      <title>Covid-19 besmettingen</title>
+      <p>
+        Stel dat er op een bepaald moment 1700 bevestigde covid-19 besmettingen per dag zijn en dat dit aantal op weekbasis stijgt met 20%.
+        <ul>
+          <li>
+            <p>
+              Hoeveel besmettingen zijn er over een maand? Een toename van 20% op weekbasis betekent dat er na een maand ongeveer 3525 besmettingen per dag zijn:
+              <me>1700 \cdot (1,20)^4=3525,12</me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Wat is het stijgingspercentage per maand en per dag? Een stijging van 20% per week betekent ongeveer een stijging van 107% per maand
+              <me>
+                (1,20)^4=2,074
+              </me>
+              of een stijging van ongeveer 3% per week
+              <me>
+                (1,20)^{\frac{1}{7}}=1,026
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Hoelang duurt het vooraleer er <m>10^4</m> besmettingen zijn? Om dit te berekenen, lossen we onderstaande vergelijking op:
+              <md>
+                <mrow>\amp 10^4=1700 \cdot (1,20)^t</mrow>
+                <mrow>\Rightarrow \; \amp \frac{10^4}{1700}=(1,20)^t</mrow>
+                <mrow>\Rightarrow \; \amp \log \left ( \frac{10^4}{1700} \right ) = \log(1,20)t</mrow>
+                <mrow>\Rightarrow \; \amp t = \frac{\log \left ( \frac{10^4}{1700} \right)}{\log(1,20)}=9,72</mrow>
+              </md>
+              Dit duurt dus 9,72 weken of 68 dagen.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </example>
+
+    <assemblage>
+      <title>Exponentiële groei</title>
+      <p>
+        Een functie van de vorm
+        <me>
+          f(x) = b a^x
+        </me>
+        met <m>b \gt 0</m> en <m>a \in \mathbb{R}^+_0 \setminus \lbrace 1 \rbrace</m>  modelleert een exponentieel groeiproces. De constante <m>a</m> noemen we de groeifactor.
+      </p>
+      <p>
+        Een exponentieel groeiproces wordt gekarakteriseerd door een vaste procentuele toename of afname per tijdseenheid.
+        <ul>
+          <li>
+            <p>
+              Een toename van <m>p</m>% per tijdseenheid correspondeert met een
+              groeifactor <m>a=1+\frac{p}{100}</m>. <m>a</m> is dan groter dan 1 en we
+              spreken over positieve groei.
+            </p>
+          </li>
+          <li>
+            <p>
+              Een afname van <m>p</m>% per tijdseenheid correspondeert met een
+              groeifactor <m>a=1-\frac{p}{100}</m>. <m>a</m> is dan kleiner dan 1 en we
+              spreken over negatieve groei.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <example>
+      <title>Interest en het getal van Euler</title>
+      <p>
+        Als je 8000 euro stort op een bankrekening met een interest van <m>2</m>% per jaar dan heb je na één jaar <m>8000 \cdot 1,02 = 8160</m> euro. Stel nu dat je elke zes maanden <m>1</m>% interest uitbetaald krijgt. Na één jaar beschik je dan over een kapitaal van <m>8000 \cdot (1,01)^2=8160,8</m> euro. Als je elke 3 maanden <m>0,5</m>% interest krijgt, dan heb je na één jaar <m>8000 \cdot (1,005)^4=8161,204</m> euro, en zo verder <m>\ldots</m> 
+      </p>
+
+      <p>
+        Als we het aantal keer dat de interest per jaar wordt uitbetaald voorstellen door <m>n</m> en uitgaan van een, niet zo realistische, interest van 100%, krijgen we voor de groeifactor na 1 jaar:
+      </p>
+
+      <tabular top="major">
+        <row bottom="minor">
+          <cell>
+            <m>n</m>
+          </cell>
+          <cell>
+            groeifactor na 1 jaar
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>1</m>
+          </cell>
+          <cell>
+            <m>2</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>2</m>
+          </cell>
+          <cell>
+            <m>(1,5)^2=2,25</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>3</m>
+          </cell>
+          <cell>
+            <m>\left (1+ \frac{1}{3} \right )^3=2,37037</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>4</m>
+          </cell>
+          <cell>
+            <m>\left (1+ \frac{1}{4} \right )^4=2,44141</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>6</m>
+          </cell>
+          <cell>
+            <m>\left (1+ \frac{1}{6} \right )^6=2,52163</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>12</m>
+          </cell>
+          <cell>
+            <m>\left (1+ \frac{1}{12} \right )^{12}=2,61304</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>365</m>
+          </cell>
+          <cell>
+            <m>2,71457</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>8760</m>
+          </cell>
+          <cell>
+            <m>2,71827</m>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            <m>525600</m>
+          </cell>
+          <cell>
+            <m>2,71828</m>
+          </cell>
+        </row>
+        <row bottom="major">
+        </row>
+      </tabular>
+      <p>
+        De groeifactor na één jaar convergeert naar het getal van Euler!<fn><m>e=\lim_{n \to \infty}\left(1+\dfrac{1}{n} \right)^n </m></fn> Het getal <m>e</m> kan je dus eigenlijk beschouwen als de <sq>basis</sq> groeifactor.
+      </p>
+    </example>
+
+    <example>
+      <title>Radioactief verval</title>
+      <p>
+        De halwaardetijd <m>t_{1/2}</m> van een radioactieve atoomkern is de tijd waarop het aantal radioactieve kernen telkens halveert. Zo is de halfwaardetijd van <m>^{59}{\text{Fe}}</m> gelijk aan <m>44,50</m> dagen en de halfwaardetijd van <m>^{238}{\text{U}}</m> gelijk aan <m>4,47 \times 10^9</m> jaar. De groeifactor is dus gelijk aan <m>1/2</m> als we de halwaardetijd als tijdseenheid nemen en gelijk aan <m>\displaystyle 2^{-1/t_{1/2}}</m> met een tijdseenheid van één seconde. Het aantal radioactieve kernen <m>N</m> i.f.v. de tijd in seconden wordt dan gegeven door:
+        <me>
+          N(t)=N_0 \, 2^{-t/t_{1/2}}
+        </me>
+      </p>
+    </example>
+
+    <activity>
+      <introduction>
+        <p>
+          Exponentiele functies worden vaak met een logaritmische schaal weergegeven. Vergelijk bijvoorbeeld onderstaande grafieken van het radioactief verval van <m>^{59}{\text{Fe}}</m>. 
+        </p>
+        <sidebyside>
+          <image xml:id="fig-linschaal">
+            <latex-image>
+              <![CDATA[
+                  \begin{tikzpicture}[scale=0.5]
+                  \begin{axis}
+                  [
+                  xmin=-1,%
+                  xmax=400,%
+                  ymin=-1,%
+                  ymax=100,%
+                  axis lines=middle,%
+                  %xtick={-2,0,...,10},%
+                  %ytick={-15,-10,...,15},%
+                  minor x tick num={1},%
+                  minor y tick num={1},%
+                  %x=0.7cm,%
+                  %y=0.7cm,%
+                  grid=both,%
+                  xlabel=t (dagen),%
+                  ylabel=N,%
+                  legend pos = north west
+                  ]
+                  \addplot[domain=0:400,samples=300,very thick]{100*(0.5)^(x/44.5)};
+                  %\legend{$2^x$,$(\frac{5}{2})^x$,$3^x$,$4^x$}
+                  \end{axis}
+                  \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>  
+          <image xml:id="fig-logschaal">
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[scale=0.5]
+                \begin{semilogyaxis}
+                [
+                xmin=-1,%
+                xmax=400,%
+                ymin=-1,%
+                ymax=100,%
+                axis lines=middle,%
+                %xtick={-2,0,...,10},%
+                %ytick={-15,-10,...,15},%
+                minor x tick num={1},%
+                minor y tick num={2},%
+                %x=0.7cm,%
+                %y=0.7cm,%
+                grid=both,%
+                xlabel=t (dagen),%
+                ylabel=N,%
+                legend pos = north west
+                ]
+                \addplot[domain=0:400,samples=300,very thick]{100*(0.5)^(x/44.5)};
+                %\legend{$2^x$,$(\frac{5}{2})^x$,$3^x$,$4^x$}
+                \end{semilogyaxis}
+                \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>  
+        </sidebyside>
+        <p>
+            Bij de rechtse grafiek is <m>\log N</m> op de verticale as uitgezet i.p.v <m>N</m> zelf.
+        </p> 
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Verklaar waarom de grafiek op logaritmische schaal een rechte is.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Bepaal op basis van de grafiek de halfwaardetijd zo nauwkeurig mogelijk.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Wanneer snijdt de grafiek de <m>x</m>-as en wat is de betekenis van de negatieve functiewaarden?
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+
+  </section>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+  <title>Exponentiële en logaritmische functies</title>
+  
+    <exercise>
+      <statement>
+        <p>
+          Gegeven <m>f(x)=2^x</m> en <m>g(x)=\dfrac{x+1}{x+2}</m>. Bereken <m>(f \circ g)(-1)</m> en <m>(f \circ g)(0)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven <m>f(x)=5x^{\sqrt{2}}</m> en <m>g(x)=x^{\sqrt{8}}</m>. Stel het voorschrift op van de functie <m>f \circ g</m>.
+         </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Als je de grafiek van <m>\log x</m> volgens de <m>y</m>-as uitrekt met een factor <m>3,32</m> dan krijg je een goede benadering voor de grafiek van <m>\log_2 x</m>. Waar of niet waar? Leg uit.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal de inverse functie van
+          <ol>
+            <li>
+              <p>
+                <m>f(x)=2^{x-5}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=6^x+7</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=3 \cdot 5^{x-7}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\log_4(3x+1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=5+3\log_6(2x+1)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Het afkoelen van een kopje koffie kan gemodelleerd worden met de functie
+          <me>
+            \theta(t) = 20 + 60 (0,881)^t
+          </me>
+          met <m>\theta</m> de temperatuur in <m>^{\circ}</m>C en <m>t</m> de tijd in minuten.
+          <ul>
+            <li>
+              <p>
+                Bepaal de begin- en eindtemperatuur van de koffie.
+              </p>
+            </li>
+            <li>
+              <p>
+                Hoelang duurt het vooraleer de koffie afgekoeld is tot 50 <m>^{\circ}</m>C?
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </exercise>
+        <exercise>
+    <statement>
+      <p>
+        Los onderstaande vergelijkingen op. 
+        <ol>
+          <li>
+            <p>
+              <m>\log_3 (5x+1)=2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>3^{2x-1}=9\sqrt{3} </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2^{\left (\dfrac{1}{x-8} \right)}-8=0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_2 3 \cdot \log_3 5 \cdot \log_5 7 \cdot \log_7 x =4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>6^{\sqrt{x}}=2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>3^{2x+1} = 15</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2^{x+1}=3^x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left ( \dfrac{1}{2} \right )^{x^2} = 2^{-2x+1}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{\log_6 15x}{\log_6 5x}=2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_3(x+5)+\log_3(x-1)=2</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <!--Eventuele extra oefeningen:
+       $|\log x|= 2$
+       $2^{\dfrac{1}{x-8}}=5$ 
+       $ (log 3x)(log x)=4$
+       $5^{3^x}=7$
+        $\dfrac{10^x+1}{10^x+2}=0,8$
+        $10^{2x}+10^{x}=12$
+        $\log_7(x+5)-\log_7(x-1)=2$
+       $8^{x+1}+8 \cdot 4^x = 5 \cdot 2^{x-1}$ -->
+  </exercise>
+  </subexercises>
