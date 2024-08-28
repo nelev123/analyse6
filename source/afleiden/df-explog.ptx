@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section>
+    <title>Exponentiële en logaritmische functies afleiden</title>
+    <activity>
+      <statement>
+        <p>
+          Toon aan dat <m>\displaystyle D(\ln(x))=D(\log_e(x))=\frac{1}{x}</m>. Tip: gebruik <m>\displaystyle \lim_{x\to +\infty} \left(1+\frac{1}{x} \right)^x=e</m>.
+        </p>
+      </statement>
+    </activity>
+
+    <p>
+      Aangezien het domein van <m>\ln x</m> gelijk is <m>\mathbb{R}^+_0</m> is zijn afgeleide overal strikt positief en de functie <m>\ln x</m> is dus strikt stijgend in het interval <m>]0,+\infty[</m>. We berekenen vervolgens de afgeleide van <m>\log_a x</m>:
+      <me>
+          D \left ( \log_a x \right ) = D \left ( \frac{\ln x}{\ln a} \right )= \frac{1}{x \ln a}
+      </me>
+      Voor <m>a \gt 1</m> is de afgeleide opnieuw strikt positief en dus <m>\log_a x</m> strikt stijgend; voor <m>0 \lt a \lt  1</m> is de afgeleide strikt negatief en <m>\log_a x</m> dus strikt dalend.
+    </p>
+
+    <p>
+      De afgeleide van <m>e^x</m> kunnen we berekenen door te steunen op het feit dat <m>e^x</m> en <m>\ln x</m> inverse functies zijn:
+      <md>
+        <mrow>\amp \ln e^x  = x </mrow>
+        <mrow>\Rightarrow \; \amp  \frac{1}{e^x} \cdot D(e^x) = 1</mrow>
+        <mrow>\Rightarrow \; \amp  D(e^x) = e^x</mrow>
+      </md>
+      Door <m>a^x</m> te schrijven als <m>e^{x \ln a}</m> kunnen we tenslotte ook de afgeleide van <m>a^x</m> berekenen:
+      <me>
+        D(a^x)=D(e^{x \ln a})=e^{x \ln a} \cdot \ln a = a^x \ln a
+      </me>
+      Op dezelfde manier kunnen nu ook de algemene formule bewijzen voor de afgeleide van een machtsfunctie:
+      <me>
+        D(x^r) = D(e^{r \ln x}) = e^{r \ln x} \cdot \frac{r}{x} = r \frac{x^r}{r} =r x^{r-1} \quad (\forall r \in \mathbb{R}, \forall x \in \mathbb{R}^+_0)
+      </me>
+    </p>
+    <assemblage>
+      <title>Afgeleiden van exponentiële en logaritmische functies</title>
+      <p>
+        <md>
+          <mrow>\amp D(\ln x) = \frac{1}{x} </mrow>
+          <mrow>\amp D \left ( \log_a x \right ) = \frac{1}{x \ln a} </mrow>
+          <mrow>\amp D(e^x) = e^x </mrow>
+          <mrow>\amp D(a^x) = a^x \cdot \ln a </mrow>
+          <mrow>\amp D(x^r) = r x^{r-1} </mrow>
+        </md>
+      </p>
+    </assemblage>
+
+
+
+
+
+  </section>

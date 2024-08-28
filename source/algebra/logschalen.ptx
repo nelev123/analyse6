@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<example>
+    <title>Logaritmische schalen: decibels</title>
+
+    <aside>
+        <p>
+            Enkele andere voorbeelden van logaritmische schalen zijn bijvoorbeeld de pH-schaal, de schaal van Beaufort voor windkracht en de schaal van Richter voor de sterkte van aardbevingen.
+        </p>
+    </aside>
+    <p>
+        De geluidsintensiteit <m>I</m> is het vermogen per oppervlakte-eenheid van een geluidsgolf. De hoordrempel voor een mens bedraagt ongeveer <m>10^{-12}</m> W/m<m>^2</m> en de pijngrens ligt rond de 25 W/m<m>^2</m>. Het verschil tussen deze twee waarden is enorm en de geluidsintensiteit op zich is dus niet echt een praktische grootheid. Dit kan opgelost worden door gebruik te maken van een logaritmische schaal. Het geluidsniveau <m>L</m> in decibel (dB) wordt gedefinieerd als 
+        <me>
+            L = 10 \log{\frac{I}{I_0}}
+        </me>
+        waarbij <m>I_0=10^{-12}</m> W/m<m>^2</m> als referentieniveau genomen wordt. Een logaritmische schaal geeft dus relatieve veranderingen weer.
+    </p>
+
+    <sidebyside>
+        <image source="decibel.png"/>
+    </sidebyside>
+
+    <activity>
+        <statement>
+            <p>
+                Een toename van 10 dB betekent dat de geluidsintensiteit toegenomen is met een factor 10. Verklaar!
+            </p>
+        </statement>
+    </activity>
+
+    <exercises xml:id="exercises-logschaal">
+        <exercise>
+            <statement>
+                <p>
+                    Een normaal gesprek heeft een geluidsniveau van 65 dB en het maximale geluidsniveau op festivals bedraagt 100 dB. Bereken de verhouding van beide geluidsintensiteiten.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Als het geluidsniveau toeneemt met 10 dB dan klinkt dit voor ons twee keer zo luid. Veronderstel dat een televisie een geluidsniveau van 50 dB heeft. Bij welk geluidsniveau klinkt die televisie 8 keer zo luid?
+                </p>
+            </statement>
+        </exercise>
+    </exercises>
+</example>
+
+</section>

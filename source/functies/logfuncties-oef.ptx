@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<subexercises>
+    <exercise>
+      <statement>
+        <p>
+          Gegeven <m>f(x)=5x^{\sqrt{2}}</m> en <m>g(x)=x^{\sqrt{8}}</m>. Stel het voorschrift op van de functie <m>f \circ g</m>.
+         </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Bepaal de inverse functie van
+          <ol>
+            <li>
+              <p>
+                <m>f(x)=2^{x-5}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=6^x+7</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=3 \cdot 5^{x-7}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=\log_4(3x+1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f(x)=5+3\log_6(2x+1)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+        <exercise>
+    <statement>
+      <p>
+        Los onderstaande vergelijkingen op. 
+        <ol>
+          <li>
+            <p>
+              <m>3^{2x-1}=9\sqrt{3} </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{\log_6 15x}{\log_6 5x}=2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>6^{\sqrt{x}}=2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2^{\left (\dfrac{1}{x-8} \right)}-8=0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_3 (5x+1)=2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_2 3 \cdot \log_3 5 \cdot \log_5 7 \cdot \log_7 x =4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>3^{2x+1} = 15</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left ( \dfrac{1}{2} \right )^{x^2} = 2^{-2x+1}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\log_3(x+5)+\log_3(x-1)=2</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+  </subexercises>
